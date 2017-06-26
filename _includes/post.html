@@ -1,16 +1,16 @@
 <div class="entry">
 
-	<div class="entry-content">
+	<div class="post-entry-content">
 
 	  <header>
-	    <h1 class="entry-title"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h1> 
-	    <p class="entry-meta">
+	    <h1 class="entry-title" style="padding-left: 5px"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></h1> 
+	    <p class="entry-meta" style="padding-left: 5px">
 		    {{ page.date | date: "%b %-d, %Y" }}
 		    {% if page.category %} • Category: {{ page.category|capitalize }}{% endif %}
 	    </p>
 	  </header>
 
-	  <article class="entry-body">
+	  <article class="entry-body" style="padding-left: 5px; padding-right: 5px">
 	  	{% if content %}
 	  		{{ content }}
   		{% else %}
