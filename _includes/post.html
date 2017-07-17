@@ -13,8 +13,10 @@
 	  <article class="entry-body" style="padding-left: 5px; padding-right: 5px">
         BOOOOOO
 	  	{% if content %}
+        CONTENT
 	  		{{ content }}
   		{% else %}
+        NO CONTENT
 	  		{{ page.excerpt }}
 	  		{% if page.content contains '<!-- more -->' %}
 	  		<p><a href="{{ page.url | prepend: site.baseurl }}">Read more »</a></p>
