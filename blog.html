@@ -7,9 +7,13 @@ author_footer: false
 order: 3
 ---
 <div class="content-wrapper">
+{% capture content %}
 {% for post in site.posts %}
         <!--{% assign page = post %}-->
         {% include post.html%}
         BLAHHHHH 
 {% endfor %}
+{% endcapture %}
+{{ content | toc_generator }}
+{{ content }}
 </div>
