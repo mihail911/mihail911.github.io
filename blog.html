@@ -9,7 +9,6 @@ order: 3
 <div class="content-wrapper">
 {% for post in site.posts %}
         {% assign page = post %}
-        {{ page.title }}
-        {{ post.url}}
+        <a href="{{ page.url | prepend: site.baseurl }}"> {{ page.title }} </a>
 {% endfor %}
 </div>
