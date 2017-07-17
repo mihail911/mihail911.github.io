@@ -11,12 +11,12 @@
 	  </header>
 
 	  <article class="entry-body" style="padding-left: 5px; padding-right: 5px">
-        BOOOOOO
+        <!--BOOOOOO-->
 	  	{% if content %}
-        CONTENT
+        <!--CONTENT-->
 	  		{{ content }}
   		{% else %}
-        NO CONTENT
+        <!--NO CONTENT-->
 	  		{{ page.excerpt }}
 	  		{% if page.content contains '<!-- more -->' %}
 	  		<p><a href="{{ page.url | prepend: site.baseurl }}">Read more »</a></p>
