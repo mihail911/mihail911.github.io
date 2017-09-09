@@ -5,6 +5,7 @@ html{color:#000;background:#FDF3E7;}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6
 body {
     font: 14px/18px,sans-serif;
     padding-bottom: 40px;
+    overflow-y: scroll;
 }
 
 a {
@@ -400,7 +401,7 @@ em {
   background: #fafafa;
   padding: 10px 12px;
   border-radius: 5px;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 /* terminal */
