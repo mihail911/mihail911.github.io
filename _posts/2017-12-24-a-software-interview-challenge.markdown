@@ -5,7 +5,7 @@ comments: true
 categories: blog
 ---
 
-For a while now, people have had a strange fascination with completing various mini-challenges that are usually physically taxing, thoroughly unpleasant, and sometimes seemingly impossible. What I have in mind include tasks such as the <a href="https://en.wikipedia.org/wiki/Cinnamon_challenge">cinammon challenge</a>, <a href="https://en.wikipedia.org/wiki/Saltine_cracker_challenge">saltine challenge</a>, and the <a href="https://en.wikipedia.org/wiki/Milk_chugging">gallon challenge</a>. 
+For a while now, people have had a strange fascination with completing various mini-challenges that are usually physically and mentally taxing, thoroughly unpleasant, and sometimes seemingly impossible. What I have in mind includes tasks such as the <a href="https://en.wikipedia.org/wiki/Cinnamon_challenge">cinammon challenge</a>, <a href="https://en.wikipedia.org/wiki/Saltine_cracker_challenge">saltine challenge</a>, and the <a href="https://en.wikipedia.org/wiki/Milk_chugging">gallon challenge</a>. 
 <br> <br>
 
 
