@@ -28,7 +28,7 @@ During my interview cycles, I would sometimes find myself in positions where I w
 
 <br> 
 
-So how hard would it actually be to complete this challenge? Ignoring for a moment the logistical nightmare it would be to line up these various legs appropriately on a given day, here is my back-of-the-envelop calculation for lower and upper bounds on time it would take to complete the challenge in its entirety:
+So how hard would it actually be to complete this challenge? Ignoring for a moment the logistical nightmare it would be to line up these various legs appropriately on a given day, here is my back-of-the-envelope calculation for lower and upper bounds on time it would take to complete the challenge in its entirety:
 
 <ul>
     <li> Informational call: 15 minutes - 30 minutes</li>
