@@ -118,16 +118,16 @@ em {
 #intro {    
     margin-top: 10px;
     font-size: 16px;
-    width: 400px;
+    width: 100%;
     padding: 10px;
-    line-height: 24px;
-    float: right;
+    line-height: 28px;
 }
 
 #news {
     width: 100%;
     margin: 15px 0px 0px 10px;
     float: left;
+    line-height: 28px;
 }
 
 #picture {
