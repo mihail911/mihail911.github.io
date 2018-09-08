@@ -1,0 +1,14 @@
+---
+layout: page
+title: Blog 
+permalink: /blog/
+comments: false 
+author_footer: false
+order: 3
+---
+<div class="content-wrapper">
+{% for post in site.posts %}
+        {% assign page = post %}
+        <img src="/images/notepad.png" alt="Git" class="contact-img"> <a href="{{ page.url | prepend: site.baseurl }}" style="font-size:20px"> {{ page.title }} </a> <br>
+{% endfor %}
+</div>
