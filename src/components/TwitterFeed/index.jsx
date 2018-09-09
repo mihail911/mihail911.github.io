@@ -1,6 +1,7 @@
 import React from 'react';
 
 class TwitterFeed extends React.Component {
+  // Ensure that twitter timeline reloads every time, since it can sometimes be spotty
   componentDidMount() {
     if (typeof twttr.widgets !== 'undefined') {
       twttr.widgets.load()
