@@ -9,9 +9,8 @@ class Links extends React.Component {
       telegram: author.telegram,
       twitter: author.twitter,
       github: author.github,
-      vk: author.vk,
-      rss: author.rss,
-      email: author.email
+      email: author.email,
+      linkedin: author.linkedin
     };
 
     return (
@@ -22,33 +21,20 @@ class Links extends React.Component {
               <i className="icon-twitter" />
             </a>
           </li>
+          {/* TODO (mihail): Figure out how to make background for icons red when hovered */}
           <li className="links__list-item">
             <a href={`https://www.github.com/${links.github}`} target="_blank" >
               <i className="icon-github" />
             </a>
           </li>
           <li className="links__list-item">
-            <a href={`https://www.vk.com/${links.vk}`} target="_blank" >
-              <i className="icon-vkontakte" />
-            </a>
-          </li>
-        </ul>
-        <ul className="links__list">
-          <li className="links__list-item">
             <a href={`mailto:${links.email}`}>
               <i className="icon-mail" />
             </a>
           </li>
           <li className="links__list-item">
-            <a href={`telegram:${links.telegram}`}>
-              <i className="icon-paper-plane" />
-            </a>
-          </li>
-        </ul>
-        <ul className="links__list">
-          <li className="links__list-item">
-            <a href={links.rss}>
-              <i className="icon-rss" />
+            <a href={`https://www.linkedin.com/in/${links.linkedin}`}>
+              <i className="icon-linkedin" />
             </a>
           </li>
         </ul>

@@ -21,11 +21,9 @@ module.exports = {
     author: {
       name: 'Mihail Eric',
       email: '#',
-      telegram: '#',
-      twitter: '#',
-      github: '#',
-      rss: '#',
-      vk: '#'
+      twitter: 'mihail_eric',
+      github: 'mihail911',
+      linkedin: 'mihaileric'
     },
     copyright: 'Copyright'
   },
