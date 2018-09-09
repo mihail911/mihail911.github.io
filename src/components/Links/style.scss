@@ -17,12 +17,6 @@
             border-radius: 3px;
             text-align: center;
             background: $color-gray-bg;
-            &:hover,
-            &:focus {
-                & -item {
-                    color: $color-red;
-                }
-            }
             & a {
                 border: 0;
                 & i {
@@ -34,7 +28,7 @@
                 &:hover,
                 &:focus {
                     & i {
-                        color: $color-base;
+                        color: $color-primary;
                     }
                 }
             }
