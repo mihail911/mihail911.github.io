@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 import '../../assets/fonts/fontello-771c82e0/css/fontello.css';
+import '../../assets/fonts/fontello-b224adf3/css/fontello.css';
 
 class Links extends React.Component {
   render() {
@@ -34,6 +35,11 @@ class Links extends React.Component {
           <li className="links__list-item">
             <a href={`https://www.linkedin.com/in/${links.linkedin}`}>
               <i className="icon-linkedin" />
+            </a>
+          </li>
+          <li className="links__list-item">
+            <a href="https://scholar.google.com/citations?user=4kJYLpcAAAAJ&hl=en">
+              <i className="icon-graduation-cap" />
             </a>
           </li>
         </ul>
