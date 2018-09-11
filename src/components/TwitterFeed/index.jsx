@@ -2,6 +2,7 @@ import React from 'react';
 
 class TwitterFeed extends React.Component {
   // Ensure that twitter timeline reloads every time, since it can sometimes be spotty
+  // Also this https://www.stevenmercatante.com/how-to-add-twitter-buttons-to-a-gatsby-site/
   componentDidMount() {
     if (typeof twttr.widgets !== 'undefined') {
       twttr.widgets.load()
