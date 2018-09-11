@@ -22,8 +22,13 @@
                 & i {
                     text-align: left;
                     font-size: 27px;
-                    margin-left: -1px;
+                    margin-left: -1.5px;
                     color: lighten($color-base, 20%);
+                    &.icon-graduation-cap {
+                        font-size: 22px;
+                        margin-bottom: -5px;
+                        margin-left: -5px;
+                    }
                 }
                 &:hover,
                 &:focus {
