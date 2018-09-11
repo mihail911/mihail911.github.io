@@ -38,17 +38,18 @@
         &-category {
             &-link {
                 font-size: $typographic-small-font-size;
-                color: $color-secondary;
+                color: $color-base;
                 font-weight: 500;
                 text-transform: uppercase;
                 &:hover,
                 &:focus {
-                    color: $color-primary;
+                    color: $color-base;
                 }
             }
         }
     }
     &__readmore {
+        font-weight: bold;
         font-size: $typographic-base-font-size;
         color: $color-primary;
         &:hover,
