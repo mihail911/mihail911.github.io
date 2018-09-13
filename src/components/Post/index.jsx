@@ -19,6 +19,7 @@ class Post extends React.Component {
           <span className="post__meta-divider" />
           <span className="post__meta-category" key={categorySlug}>
             {
+              // Add tag button for every tag for given post
               tags.map((tag) => {
                 let matchingTagSlug = findMatchingTagSlug(tag, tagSlugs);
                 // Couldn't find matching tag slug so default to first tag slug, rather than
@@ -45,7 +46,6 @@ class Post extends React.Component {
           <Link className="post__title-link" to={slug}>{title}</Link>
         </h2>
         <p className="post__description">{description}</p>
-        <Link className="post__readmore" to={slug}>Read</Link>
       </div>
     );
   }

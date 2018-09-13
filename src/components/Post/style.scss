@@ -2,9 +2,15 @@
 @import "../../assets/scss/mixins";
 
 .post {
+    padding: 5px;
+    border: 2px solid $color-white;
     @include margin-bottom(1.25);
     &:last-child {
         @include margin-bottom(.5);
+    }
+    &:hover,
+    &:focus {
+        border: 2px solid $color-primary;
     }
     &__title {
         font-size: $typographic-base-font-size * 1.6875;
