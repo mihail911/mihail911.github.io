@@ -29,13 +29,14 @@ class Post extends React.Component {
                   console.log('Matching tag not found');
                 }
                 return (
-                  // TODO: Fix spacing around tag buttons and make them redirect correctly
-                  // replace with TagButton
-                  <TagButton
-                    key={tag}
-                    tagSlug={matchingTagSlug}
-                    tag={tag}
-                  />
+                  <span>
+                    <TagButton
+                      key={tag}
+                      tagSlug={matchingTagSlug}
+                      tag={tag}
+                    />
+                    <span className="post__meta-mini-spacer" />
+                  </span>
                 );
               })
 
