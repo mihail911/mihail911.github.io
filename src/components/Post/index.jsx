@@ -1,13 +1,15 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import moment from 'moment';
+import TagButton from '../TagButton';
 import './style.scss';
+
+import { findMatchingTagSlug } from '../../util/tagUtils';
 
 class Post extends React.Component {
   render() {
-    const { title, date, category, description } = this.props.data.node.frontmatter;
-    const { slug, categorySlug } = this.props.data.node.fields;
-
+    const { title, date, category, description, tags } = this.props.data.node.frontmatter;
+    const { slug, categorySlug, tagSlugs } = this.props.data.node.fields;
     return (
       <div className="post">
         <div className="post__meta">
@@ -16,9 +18,27 @@ class Post extends React.Component {
           </time>
           <span className="post__meta-divider" />
           <span className="post__meta-category" key={categorySlug}>
-            <Link to={categorySlug} className="post__meta-category-link">
-              {category}
-            </Link>
+            {
+              tags.map((tag) => {
+                let matchingTagSlug = findMatchingTagSlug(tag, tagSlugs);
+                // Couldn't find matching tag slug so default to first tag slug, rather than
+                // throwing error
+                if (matchingTagSlug == null) {
+                  matchingTagSlug = tagSlugs[0];
+                  console.log('Matching tag not found');
+                }
+                return (
+                  // TODO: Fix spacing around tag buttons and make them redirect correctly
+                  // replace with TagButton
+                  <TagButton
+                    key={tag}
+                    tagSlug={matchingTagSlug}
+                    tag={tag}
+                  />
+                );
+              })
+
+            }
           </span>
         </div>
         <h2 className="post__title">

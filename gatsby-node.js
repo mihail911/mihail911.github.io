@@ -68,7 +68,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               context: { tag }
             });
           });
-
+          // TODO (mihail): Remove this since I don't want to have a page per category
           let categories = [];
           if (_.get(edge, 'node.frontmatter.category')) {
             categories = categories.concat(edge.node.frontmatter.category);
