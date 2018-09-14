@@ -37,19 +37,21 @@ class PostTemplateDetails extends React.Component {
     );
 
     return (
-      <div>
+      <div className="post-full-wrapper">
         {homeBlock}
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
-            <div className="post-single__body" dangerouslySetInnerHTML={{ __html: post.html }} />
             <div className="post-single__date">
-              <em>Published {moment(post.frontmatter.date).format('D MMM YYYY')}</em>
+              <em>{moment(post.frontmatter.date).format('MMM YYYY')}</em>
             </div>
+            <div className="post-single__body" dangerouslySetInnerHTML={{ __html: post.html }} />
           </div>
           <div className="post-single__footer">
             {tagsBlock}
             <hr />
+            {/* TODO (mihail): Do something better with the footer. Link to newsletter?
+            Link to social media? */}
             <p className="post-single__footer-text">
               {subtitle}
               <a href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer">
