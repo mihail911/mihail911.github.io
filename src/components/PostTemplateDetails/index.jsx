@@ -3,6 +3,7 @@ import Link from 'gatsby-link';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
 import PostSocialPanel from '../PostSocialPanel';
+import RelatedPostsSidebar from '../RelatedPostsSidebar';
 import './style.scss';
 
 class PostTemplateDetails extends React.Component {
@@ -12,8 +13,25 @@ class PostTemplateDetails extends React.Component {
     const tags = post.fields.tagSlugs;
 
     const homeBlock = (
-      <div>
-        <Link className="post-single__home-button" to="/">All Articles</Link>
+      <div className="post-single__sidebar" >
+        <div>
+          <Link to="/">All Articles</Link>
+        </div>
+        <div className="post-single__sidebar__related-posts-title">
+          Related Posts
+        </div>
+        <div className="post-single__sidebar__related-posts-items">
+          <div>
+            <Link to="/" className="post-single__sidebar__related-posts-items-link">
+              one one one one on on on on
+            </Link>
+          </div>
+          <div>
+            <Link to="/" className="post-single__sidebar__related-posts-items-link">
+              two two two
+            </Link>
+          </div>
+        </div>
       </div>
     );
 

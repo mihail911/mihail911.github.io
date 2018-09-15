@@ -2,7 +2,6 @@
 @import "../../assets/scss/mixins";
 
 .post-single {
-    //max-width: $layout-post-single-max-width;
     &__inner {
         max-width: $layout-post-single-max-width;
         padding: 0 15px;
@@ -99,14 +98,13 @@
             }
         }
     }
-    &__home-button {
+    &__sidebar {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        max-width: 90px;
+        max-width: 200px;
         font-size: $typographic-base-font-size;
         padding: 0 16px;
-        height: 35px;
         line-height: 35px;
         text-align: center;
         color: lighten($color-base, 20%);
@@ -117,8 +115,22 @@
         &:hover,
         &:focus {
             color: $color-base;
-            background: darken($color-gray-bg, 5%);
+            //background: darken($color-gray-bg, 5%);
             border: 0;
+        }
+        &__related-posts-title {
+            font-weight: bold;
+        }
+        &__related-posts-items {
+            text-align: left;
+            line-height: 25px;
+            margin-bottom: 10px;
+            &-link {
+                &:hover,
+                &:focus {
+                    border-bottom: 1px solid $color-base;
+                }
+            }
         }
     }
 }
@@ -159,7 +171,7 @@
                 @include margin-bottom(1.125);
             }
         }
-        &__home-button {
+        &__sidebar {
             position: fixed;
             max-width: auto;
             margin: 0;
