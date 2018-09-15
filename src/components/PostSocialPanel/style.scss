@@ -1,0 +1,19 @@
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/variables";
+
+.post-social-panel {
+  text-align: center;
+  margin-top: -40px;
+  &-prompt {
+    margin-top: -30px;
+    //font-weight: bold;
+    font-style: italic;
+    font-size: $typographic-base-font-size * 1.1;
+  }
+  &-twitter {
+     margin-top: 20px;
+  }
+  &-divider {
+    margin: 0 10px;
+  }
+}

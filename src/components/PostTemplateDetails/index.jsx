@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
+import PostSocialPanel from '../PostSocialPanel';
 import './style.scss';
 
 class PostTemplateDetails extends React.Component {
@@ -53,11 +54,8 @@ class PostTemplateDetails extends React.Component {
             {/* TODO (mihail): Do something better with the footer. Link to newsletter?
             Link to social media? */}
             <p className="post-single__footer-text">
-              {subtitle}
-              <a href={`https://twitter.com/${author.twitter}`} target="_blank" rel="noopener noreferrer">
-                <br /> <strong>{author.name}</strong> on Twitter
-              </a>
             </p>
+            <PostSocialPanel />
             {commentsBlock}
           </div>
         </div>
