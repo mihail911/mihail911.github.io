@@ -29,7 +29,7 @@ class Post extends React.Component {
                   console.log('Matching tag not found');
                 }
                 return (
-                  <span>
+                  <span key={tag}>
                     <TagButton
                       key={tag}
                       tagSlug={matchingTagSlug}
