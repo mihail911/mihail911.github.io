@@ -4,7 +4,6 @@ date: "2018-09-01T23:46:37.121"
 layout: post
 draft: false
 path: "/posts/the-human-blah/"
-category: "Design Inspiration"
 tags:
   - "Design"
   - "Gatsby"

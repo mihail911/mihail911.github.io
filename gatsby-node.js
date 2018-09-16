@@ -12,7 +12,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     const postTemplate = path.resolve('./src/templates/post-template.jsx');
     const pageTemplate = path.resolve('./src/templates/page-template.jsx');
     const tagTemplate = path.resolve('./src/templates/tag-template.jsx');
-    const categoryTemplate = path.resolve('./src/templates/category-template.jsx');
 
     graphql(`
     {
@@ -28,7 +27,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             frontmatter {
               tags
               layout
-              category
             }
           }
         }
@@ -68,21 +66,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               context: { tag }
             });
           });
-          // TODO (mihail): Remove this since I don't want to have a page per category
-          let categories = [];
-          if (_.get(edge, 'node.frontmatter.category')) {
-            categories = categories.concat(edge.node.frontmatter.category);
-          }
-
-          categories = _.uniq(categories);
-          _.each(categories, (category) => {
-            const categoryPath = `/categories/${_.kebabCase(category)}/`;
-            createPage({
-              path: categoryPath,
-              component: categoryTemplate,
-              context: { category }
-            });
-          });
         }
       });
 
@@ -116,11 +99,6 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     if (node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map(tag => `/tags/${_.kebabCase(tag)}/`);
       createNodeField({ node, name: 'tagSlugs', value: tagSlugs });
-    }
-
-    if (typeof node.frontmatter.category !== 'undefined') {
-      const categorySlug = `/categories/${_.kebabCase(node.frontmatter.category)}/`;
-      createNodeField({ node, name: 'categorySlug', value: categorySlug });
     }
   }
 };

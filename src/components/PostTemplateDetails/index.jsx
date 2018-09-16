@@ -12,7 +12,6 @@ class PostTemplateDetails extends React.Component {
     const post = this.props.data.markdownRemark;
     const tags = post.fields.tagSlugs;
     const relatedPosts = post.frontmatter.related;
-    console.log('related', relatedPosts);
 
     const homeBlock = (
       <div className="post-single__sidebar" >
