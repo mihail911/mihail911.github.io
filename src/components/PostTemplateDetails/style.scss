@@ -128,10 +128,11 @@
             font-weight: bold;
         }
         &__related-posts-items {
-            text-align: left;
+            text-align: center;
             line-height: 25px;
             margin-bottom: 10px;
             &-link {
+                //word-break: break-all;
                 &:hover,
                 &:focus {
                     color: $color-primary;

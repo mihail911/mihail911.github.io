@@ -11,6 +11,8 @@ class PostTemplateDetails extends React.Component {
     const { subtitle, author } = this.props.data.site.siteMetadata;
     const post = this.props.data.markdownRemark;
     const tags = post.fields.tagSlugs;
+    const relatedPosts = post.frontmatter.related;
+    console.log('related', relatedPosts);
 
     const homeBlock = (
       <div className="post-single__sidebar" >
@@ -21,16 +23,18 @@ class PostTemplateDetails extends React.Component {
           Related Posts
         </div>
         <div className="post-single__sidebar__related-posts-items">
-          <div>
-            <Link to="/" className="post-single__sidebar__related-posts-items-link">
-              Article 1 about one thing
-            </Link>
-          </div>
-          <div>
-            <Link to="/" className="post-single__sidebar__related-posts-items-link">
-              Article 2 about something else
-            </Link>
-          </div>
+          {
+            relatedPosts.map( (relatedPost) => {
+              const [title, postSlug] = relatedPost.split(':');
+              return (
+                <div key={title}>
+                  <Link key={title} to={postSlug} className="post-single__sidebar__related-posts-items-link">
+                    {title}
+                  </Link>
+                </div>
+              );
+            })
+          }
         </div>
       </div>
     );
