@@ -15,7 +15,7 @@ class PostTemplateDetails extends React.Component {
     const homeBlock = (
       <div className="post-single__sidebar" >
         <div>
-          <Link to="/">All Articles</Link>
+          <Link to="/" className="post-single__sidebar-all-articles">All Articles</Link>
         </div>
         <div className="post-single__sidebar__related-posts-title">
           Related Posts
@@ -23,12 +23,12 @@ class PostTemplateDetails extends React.Component {
         <div className="post-single__sidebar__related-posts-items">
           <div>
             <Link to="/" className="post-single__sidebar__related-posts-items-link">
-              one one one one on on on on
+              Article 1 about one thing
             </Link>
           </div>
           <div>
             <Link to="/" className="post-single__sidebar__related-posts-items-link">
-              two two two
+              Article 2 about something else
             </Link>
           </div>
         </div>

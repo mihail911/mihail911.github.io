@@ -115,8 +115,14 @@
         &:hover,
         &:focus {
             color: $color-base;
-            //background: darken($color-gray-bg, 5%);
             border: 0;
+        }
+        &-all-articles {
+           &:hover,
+           &:focus {
+               color: $color-primary;
+               border-bottom: 1px solid $color-primary;
+           }
         }
         &__related-posts-title {
             font-weight: bold;
@@ -128,7 +134,8 @@
             &-link {
                 &:hover,
                 &:focus {
-                    border-bottom: 1px solid $color-base;
+                    color: $color-primary;
+                    border-bottom: 1px solid $color-primary;
                 }
             }
         }
