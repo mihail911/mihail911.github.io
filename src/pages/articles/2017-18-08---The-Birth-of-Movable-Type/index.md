@@ -9,6 +9,9 @@ tags:
   - "Open source"
   - "Gatsby"
   - "Typography"
+related:
+  - "The Humane Blah:/posts/the-human-blah/"
+  - "A Brief History of Typography:/posts/a-brief-history-of-typography/"
 description: "German inventor Johannes Gutenberg developed a method of movable type and used it to create one of the western world’s first major printed books, the “Forty–Two–Line” Bible."
 ---
 

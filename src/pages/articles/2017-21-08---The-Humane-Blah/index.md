@@ -1,17 +1,17 @@
 ---
-title: "A Brief History of Typography"
-date: "2016-02-02T22:40:32.169Z"
+title: "The Humane Blah"
+date: "2018-09-01T23:46:37.121"
 layout: post
 draft: false
-path: "/posts/a-brief-history-of-typography/"
+path: "/posts/the-human-blah/"
 category: "Design Inspiration"
 tags:
-  - "Linotype"
-  - "Monotype"
+  - "Design"
+  - "Gatsby"
   - "History of typography"
-  - "Helvetica"
+  - "Web Development"
 related:
-  - "The Humane Blah:/posts/the-human-blah/"  
+  - "The Humane Blah:/posts/the-human-blah/"
 description: "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat."
 ---
 
