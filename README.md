@@ -120,3 +120,5 @@ SOFTWARE.
 ## TODO
 - Fix date to be longer on each post (instead of 3 letters)
 - Fix so that tags on each post are rounded and same color as other ones
+- Clean up category stuff sprinkled throughout site
+- Possibly change default font
