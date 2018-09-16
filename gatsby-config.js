@@ -7,15 +7,15 @@ module.exports = {
     menu: [
       {
         label: 'Blog',
-        path: '/'
-      },
-      {
-        label: 'About',
-        path: '/about/'
+        path: '/blog/'
       },
       {
         label: 'Projects',
         path: '/contact/'
+      },
+      {
+        label: 'Teaching',
+        path: '/teaching/'
       }
     ],
     author: {
