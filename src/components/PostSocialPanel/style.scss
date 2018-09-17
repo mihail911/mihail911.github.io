@@ -6,9 +6,11 @@
   margin-top: -40px;
   &-prompt {
     margin-top: -30px;
-    //font-weight: bold;
     font-style: italic;
     font-size: $typographic-base-font-size * 1.1;
+    &-smiley {
+      font-style: normal;
+    }
   }
   &-twitter {
      margin-top: 20px;

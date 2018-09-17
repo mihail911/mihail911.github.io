@@ -16,6 +16,7 @@ class PostSocialPanel extends React.Component {
       <div className="post-social-panel">
         <div className="post-social-panel-prompt">
           Like what you read? I would love to hear from you!
+          <span className="post-social-panel-prompt-smiley"> 🙂</span>
         </div>
         <div className="post-social-panel-twitter">
           {/* Tweet button */}
