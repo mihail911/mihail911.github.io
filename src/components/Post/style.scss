@@ -10,7 +10,7 @@
     }
     &:hover,
     &:focus {
-        border: 2px solid $color-primary;
+        border: 2px solid $color-primary4;
         border-radius: 5px;
     }
     &__title {
@@ -23,7 +23,7 @@
             &:hover,
             &:focus {
                 color: $color-base;
-                border-bottom: 1px solid $color-base;
+                border-bottom: 1px solid $color-primary4;
             }
         }
     }
@@ -35,7 +35,7 @@
     &__meta {
         &-time {
             font-size: $typographic-small-font-size;
-            color: $color-base;
+            color: $color-background;
             font-weight: 500;
             text-transform: uppercase;
         }
@@ -48,7 +48,7 @@
         &-category {
             &-link {
                 font-size: $typographic-small-font-size;
-                color: $color-base;
+                color: lighten($color-base, 20%);;
                 font-weight: 500;
                 text-transform: uppercase;
                 &:hover,

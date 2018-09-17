@@ -75,8 +75,7 @@ class PostTemplateDetails extends React.Component {
             <hr />
             {/* TODO (mihail): Do something better with the footer. Link to newsletter?
             Link to social media? */}
-            <p className="post-single__footer-text">
-            </p>
+            <p className="post-single__footer-text" />
             <PostSocialPanel />
             {commentsBlock}
           </div>

@@ -1,11 +1,10 @@
 @import "../Post/style";
 
-// Styling for category wrapper
 .buttonWrapper {
-  background-color: #ffb66b;//#ffcccc;
+  background-color: $color-secondary;
   border-radius: 10px;
   padding: 5px;
   &:hover {
-    background-color: #f2983c;//#ff99cc;
+    background-color: darken($color-secondary, 10%);
   }
 }

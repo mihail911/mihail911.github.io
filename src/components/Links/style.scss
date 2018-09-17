@@ -16,14 +16,13 @@
             line-height: 34px;
             border-radius: 3px;
             text-align: center;
-            background: $color-gray-bg;
             & a {
                 border: 0;
                 & i {
                     text-align: left;
                     font-size: 27px;
                     margin-left: -1.5px;
-                    color: lighten($color-base, 20%);
+                    color: darken($color-primary2, 5%);
                     &.icon-graduation-cap {
                         font-size: 22px;
                         margin-bottom: -5px;

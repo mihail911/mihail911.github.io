@@ -8,8 +8,8 @@ import { findMatchingTagSlug } from '../../util/tagUtils';
 
 class Post extends React.Component {
   render() {
-    const { title, date, category, description, tags } = this.props.data.node.frontmatter;
-    const { slug, categorySlug, tagSlugs } = this.props.data.node.fields;
+    const { title, date, description, tags } = this.props.data.node.frontmatter;
+    const { slug, tagSlugs } = this.props.data.node.fields;
     return (
       <div className="post">
         <div className="post__meta">
@@ -17,7 +17,7 @@ class Post extends React.Component {
             {moment(date).format('MMMM YYYY')}
           </time>
           <span className="post__meta-divider" />
-          <span className="post__meta-category" key={categorySlug}>
+          <span className="post__meta-category" key={slug}>
             {
               // Add tag button for every tag for given post
               tags.map((tag) => {
