@@ -15,25 +15,27 @@ class PostTemplateDetails extends React.Component {
 
     const homeBlock = (
       <div className="post-single__sidebar" >
-        <div>
-          <Link to="/" className="post-single__sidebar-all-articles">All Articles</Link>
+        <div className="post-single__sidebar-all-articles">
+          <Link to="/" className="post-single__sidebar-all-articles-link">Back to Home</Link>
         </div>
         <div className="post-single__sidebar__related-posts-title">
-          Related Posts
+          Related Articles
         </div>
         <div className="post-single__sidebar__related-posts-items">
+          <ul>
           {
-            relatedPosts.map( (relatedPost) => {
+            relatedPosts.map((relatedPost) => {
               const [title, postSlug] = relatedPost.split(':');
               return (
-                <div key={title}>
+                <li key={title}>
                   <Link key={title} to={postSlug} className="post-single__sidebar__related-posts-items-link">
                     {title}
                   </Link>
-                </div>
+                </li>
               );
             })
           }
+          </ul>
         </div>
       </div>
     );
