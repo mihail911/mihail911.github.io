@@ -20,7 +20,7 @@ module.exports = {
     ],
     author: {
       name: 'Mihail Eric',
-      email: '#',
+      email: 'mihail911@gmail.com',
       twitter: 'mihail_eric',
       github: 'mihail911',
       linkedin: 'mihaileric'
