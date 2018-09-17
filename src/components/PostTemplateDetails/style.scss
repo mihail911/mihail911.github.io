@@ -128,7 +128,7 @@
         &-all-articles-link {
            &:hover,
            &:focus {
-               color: $color-primary;
+               color: darken($color-primary, 10%);
            }
         }
         &__related-posts-title {

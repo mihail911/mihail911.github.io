@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
 import PostSocialPanel from '../PostSocialPanel';
-import RelatedPostsSidebar from '../RelatedPostsSidebar';
 import './style.scss';
 
 class PostTemplateDetails extends React.Component {
