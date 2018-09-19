@@ -118,6 +118,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## TODO
+- Fix way of specifying related posts (don't hardcode it!)
+- Add excerpts programmatically https://using-remark.gatsbyjs.org/excerpts/
 - Possibly change default font
 - Fix favicon thing
 - Transfer all old content 
