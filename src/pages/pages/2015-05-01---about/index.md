@@ -14,7 +14,7 @@ Graduate student at [Stanford University](https://www.stanford.edu/) where I stu
 
 ## What Interests Me 🤖
 Natural language understanding and anything related to machine learning. I spent years building dialogue agents, especially of the goal-oriented variety, and have worked on [computational semantics](https://en.wikipedia.org/wiki/Computational_semantics) and [textual inference](https://nlp.stanford.edu/~wcmac/papers/nli-diss.pdf).  
-I also believe artificial intelligence will be one of the **transformative paradigm shifts in human history**, so thinking about the implications of that keeps me pretty busy 🙂
+I also believe artificial intelligence will be one of the **most transformative paradigm shifts in human history**, so thinking about the implications of that keeps me pretty busy 🙂
 
 
 ## Fun Stuff 📲
