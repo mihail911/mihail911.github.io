@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         label: 'Projects',
-        path: '/contact/'
+        path: '/projects/'
       },
       {
         label: 'Teaching',

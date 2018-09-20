@@ -1,0 +1,8 @@
+@import "../../assets/scss/mixins";
+@import "../../assets/scss/variables";
+
+.section-title {
+  text-align: center;
+  font-size: $typographic-base-font-size * 1.4;
+  margin-bottom: 15px;
+}
