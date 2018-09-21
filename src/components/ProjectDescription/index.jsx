@@ -1,6 +1,7 @@
 import React from 'react';
-import biblePic from '../../pages/42-line-bible.jpg';
+import biblePic from '../../pages/pages/imgs/42-line-bible.jpg';
 import './style.scss';
+import Link from 'gatsby-link'
 
 
 class ProjectDescription extends React.Component {
@@ -13,16 +14,18 @@ class ProjectDescription extends React.Component {
         </div>
         <div className="project-details">
           <div className="title">
-            Title
-          </div>
-          <div className="authors">
-            Authors
+            <a href={this.props.link}>
+              {this.props.title}
+            </a>
           </div>
           <div className="description">
-            Description
+            {this.props.description}
+          </div>
+          <div className="authors">
+            {this.props.authors}
           </div>
           <div className="meta">
-            Meta
+            {this.props.meta}
           </div>
         </div>
       </div>
