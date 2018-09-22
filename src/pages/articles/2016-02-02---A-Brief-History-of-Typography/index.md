@@ -6,11 +6,9 @@ draft: false
 path: "/posts/a-brief-history-of-typography/"
 tags:
   - "Linotype"
-  - "Monotype"
   - "History of typography"
   - "Helvetica"
-related:
-  - "The Humane Blah:/posts/the-human-blah/"  
+  - "Typefaces"
 description: "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat."
 ---
 

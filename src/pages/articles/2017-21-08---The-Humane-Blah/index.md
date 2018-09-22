@@ -9,8 +9,6 @@ tags:
   - "Gatsby"
   - "History of typography"
   - "Web Development"
-related:
-  - "The Humane Blah:/posts/the-human-blah/"
 description: "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat."
 ---
 

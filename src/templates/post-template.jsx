@@ -68,7 +68,6 @@ export const pageQuery = graphql`
         tags
         date
         description
-        related
       }
     }
   }
