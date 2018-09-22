@@ -88,6 +88,7 @@
                     color: lighten($color-base, 20%);
                     line-height: $typographic-base-line-height;
                     font-size: $typographic-small-font-size;
+                    font-weight: 500;
                     padding: 8px 16px;
                     text-transform: uppercase;
                     &:hover,
