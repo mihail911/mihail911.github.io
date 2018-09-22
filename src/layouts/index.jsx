@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import '../assets/scss/init.scss';
+import favicon from '../favicon_2.ico';
 
 class Layout extends React.Component {
   render() {
@@ -8,7 +9,12 @@ class Layout extends React.Component {
 
     return (
       <div className="layout">
-        <Helmet defaultTitle="Mihail Eric" />
+        <Helmet
+          defaultTitle="Mihail Eric"
+          link={[
+            { rel: 'shortcut icon', type: 'image/x-icon', href: `${favicon}` }
+          ]}
+        />
         {children()}
       </div>
     );
