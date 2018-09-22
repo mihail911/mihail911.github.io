@@ -1,15 +1,31 @@
 import React from 'react';
+import { Set } from 'immutable';
 import Link from 'gatsby-link';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
 import PostSocialPanel from '../PostSocialPanel';
 import './style.scss';
 
+const MAX_RELATED_POSTS_TO_SHOW = 5;
+
 class PostTemplateDetails extends React.Component {
   render() {
     const post = this.props.data.markdownRemark;
+    // Get collection of all tags for given post
+    const postTags = Set(post.frontmatter.tags);
     const tags = post.fields.tagSlugs;
-    const relatedPosts = post.frontmatter.related;
+
+    const allPosts = this.props.data.allMarkdownRemark.edges;
+    // Get all related posts that have some tags in common with current post (except post itself)
+    const relatedPosts = allPosts.map((currPost) => {
+      const tagIntersect = postTags.intersect(currPost.node.frontmatter.tags);
+      if (tagIntersect.size > 0 && (currPost.node.frontmatter.title !== post.frontmatter.title)) {
+        return [currPost.node.frontmatter.title, currPost.node.fields.slug];
+      }
+      return null;
+    }).filter((elem) => {
+       return elem !== null;
+    });
 
     const homeBlock = (
       <div className="post-single__sidebar" >
@@ -22,8 +38,9 @@ class PostTemplateDetails extends React.Component {
         <div className="post-single__sidebar__related-posts-items">
           <ul>
           {
-            relatedPosts.map((relatedPost) => {
-              const [title, postSlug] = relatedPost.split(':');
+            // Display related posts in sidebar
+            relatedPosts.slice(0, MAX_RELATED_POSTS_TO_SHOW).map((relatedPost) => {
+              const [title, postSlug] = relatedPost;
               return (
                 <li key={title}>
                   <Link key={title} to={postSlug} className="post-single__sidebar__related-posts-items-link">

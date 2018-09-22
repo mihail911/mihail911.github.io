@@ -38,6 +38,25 @@ export const pageQuery = graphql`
         url
       }
     }
+    allMarkdownRemark(
+        limit: 1000,
+        filter: { frontmatter: { layout: { eq: "post" }, draft: { ne: true } } },
+        sort: { order: DESC, fields: [frontmatter___date] }
+      ){
+      edges {
+        node {
+          fields {
+            slug
+            tagSlugs
+          }
+          frontmatter {
+            title
+            tags
+            date
+          }
+        }
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
