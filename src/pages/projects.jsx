@@ -25,3 +25,26 @@ class ProjectsRoute extends React.Component {
 }
 
 export default ProjectsRoute;
+
+export const pageQuery = graphql`
+  query ProjectQuery {
+    site {
+      siteMetadata {
+        title
+        subtitle
+        copyright
+        menu {
+          label
+          path
+        }
+        author {
+          name
+          email
+          twitter
+          github
+          linkedin
+        }
+      }
+    }
+  }
+`;
