@@ -25,7 +25,7 @@ I am the creator of a mobile app for learning artificial intelligence, machine l
 
 **August 2018**: Check out my [Medium post](https://hackernoon.com/why-all-the-excitement-about-artificial-intelligence-435957ba9ed3) on why AI is so exciting.  
 **July 2018**: I was selected as a [top reviewer for ACL 2018](https://acl2018.org/2018/07/02/top-reviewers/)! Thanks to the community for the acknowledgment!  
-**February 2018**: I led a Deep Learning Workshop at the Harvard Westlake School's annual hackathon. Check out the slides here and the [accompanying code](https://github.com/mihail911/deep-hwack).  
+**February 2018**: I led a Deep Learning Workshop at the Harvard Westlake School's annual hackathon. Check out the [slides here](./Deep-HWack.pdf) and the [accompanying code](https://github.com/mihail911/deep-hwack).  
 **August 2017**: I gave a talk on [key-value retrieval networks](https://arxiv.org/abs/1705.05414) at [SIGDial 2017](http://workshops.sigdial.org/conference18/main.htm) in Saarbrücken, Germany. Thanks to all the organizers for a fantastic conference!  
 **July 2017**: Our recent paper on the [pragmatics of commands](https://arxiv.org/abs/1705.03454) was accepted to the [International Conference on Computational Semantics (IWCS) 2017](https://www.lirmm.fr/iwcs2017/).  
 **April 2017**: I gave a talk on our work studying [seq2seq architectures for dialogue](https://arxiv.org/abs/1701.04024) at [EACL 2017](http://eacl2017.org/)! I also presented the work at the Stanford Computer Forum Poster Session and gave a presentation about our dialogue research at the [Ford Research and Innovation Center](https://corporate.ford.com/careers/experienced-professionals/silicon-valley.html).  
