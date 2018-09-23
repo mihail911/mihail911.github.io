@@ -8,7 +8,7 @@ tags:
   - "Natural Language Processing"
   - "Dataset"
   - "Dialogue"
-description: "Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat."
+description: "To help spur conversational assistant research, we release a corpus of 3,031 grounded, multi-turn dialogues in three distinct domains appropriate for an in-car assistant: calendar scheduling, weather information retrieval, and point-of-interest navigation."
 ---
 
 Task-oriented dialogue focuses on conversational agents that participate in user-initiated dialogues on domain-specific topics. Traditionally, the task-oriented dialogue community has often been hindered by a lack of sufficiently large and diverse datasets for training models across a variety of different domains. 
@@ -68,6 +68,7 @@ We also include some information regarding the type and number of slots per doma
 | **# Distinct Slot Values**      | 79 |  65 | 140 |
 
 Our dataset was designed so that each dialogue had the grounded world information that is often crucial for training task-oriented dialogue systems, while at the same time being sufficiently lexically and semantically versatile. We hope that this dataset will be useful in building diverse and robust task-oriented dialogue systems!
+
 ## Download 
 
 Our data is made publicly available for download at the following link: [dataset](http://nlp.stanford.edu/projects/kvret/kvret_dataset_public.zip)  
