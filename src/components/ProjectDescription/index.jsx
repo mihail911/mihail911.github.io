@@ -1,16 +1,23 @@
 import React from 'react';
-import biblePic from '../../pages/pages/imgs/42-line-bible.jpg';
+import nameToPic from '../../pages/pages/imgs';
 import './style.scss';
-import Link from 'gatsby-link'
-
 
 class ProjectDescription extends React.Component {
   // TODO (mihail): Figure out how to increase width of entry
   render() {
+    let containerClassName = 'container';
+    // Set a specific styling element for container div if it is at top or bottom or screen, namely
+    // adding a bottom border
+    if (this.props.edge) {
+      containerClassName = 'container-edge';
+    }
+
     return (
-      <div className="container">
+      <div className={containerClassName}>
         <div className="image">
-          <img src={biblePic} alt="alt text" />
+          <a href={this.props.link}>
+            <img src={nameToPic[this.props.picName]} alt={this.props.title} />
+          </a>
         </div>
         <div className="project-details">
           <div className="title">
