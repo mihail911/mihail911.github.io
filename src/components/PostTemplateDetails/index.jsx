@@ -32,9 +32,12 @@ class PostTemplateDetails extends React.Component {
         <div className="post-single__sidebar-all-articles">
           <Link to="/" className="post-single__sidebar-all-articles-link">Back to Home</Link>
         </div>
-        <div className="post-single__sidebar__related-posts-title">
-          Related Articles
-        </div>
+        {
+          relatedPosts.size > 0 ?
+            <div className="post-single__sidebar__related-posts-title">
+              Related Articles
+            </div> : null
+        }
         <div className="post-single__sidebar__related-posts-items">
           <ul>
           {
