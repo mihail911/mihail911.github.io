@@ -1,0 +1,68 @@
+---
+title: "Review of SIGDial/SemDial 2017"
+date: "2017-09-04T23:46:37.121"
+layout: post
+draft: false
+path: "/posts/review-of-sigdial-semdial-2017/"
+tags:
+  - "Natural Language Processing"
+  - "Dialogue"
+  - "Deep Learning"
+description: "Following my attendance at the 18th Annual Meeting on Discourse and Dialogue, I offer a discussion of the most promising directions for future dialogue research, as gleaned from discussions with other researchers at the conference."
+---
+This year, I had the great fortune of attending the 18th Annual Meeting on Discourse and Dialogue (SIGDial) held in Saarbrücken, Germany. These proceedings were held jointly with SemDial, so the conference brought together an impressive group of researchers tackling dialogue from all angles. In this post, I would like to discuss some of the overarching themes that recurred in this year’s proceedings. I’ll discuss any relevant papers as appropriate in my commentary, though for a more complete (albeit sporadic) collection of my notes from presentations during the conference check out [this post](https://github.com/mihail911/conference-summaries/tree/master/sigsemdial2017). 
+). 
+
+A disclaimer before I get started: this is not going to be an extensive discussion about deep learning in dialogue. While these days it’s difficult to avoid the RNN hegemony that seems to universally occupy NLP conferences and research, the dialogue community at SIGDial approached the topic of deep learning with a wary acceptance. Though conversations during breaks inevitably touched on the questions “*are we going to see purely end-to-end dialogue systems soon?*” and “*are we done with modular approaches?*”, in general, the prevailing sentiment was **NOT** that dialogue is just another nail to bludgeon with the mighty deep learning hammer.
+
+![dialogue another nail for deep learning](./dialogue-deep-learning-nail.png)
+
+Instead the community tends to liken the dialogue problem more to building a functional combustion engine, where invariably the deep learning hammer can come in handy, but armed with only a hammer, building the engine can be quite difficult. I like this analogy, as it demonstrates an appreciation for the complexity of the task. The dialogue problem has not gotten easier just because we have deep learning. 
+
+![combustion engine of dialogue](./dialogue-combustion-engine.png)
+
+Broadly speaking, I found the following themes guided much of the discussion at SIGDial:  
+1) Revisiting optimal dialogue data
+2) Moving beyond slot-filling
+3) The inadequacy of evaluation metrics. 
+
+## Revisiting Optimal Dialogue Data
+
+In his phenomenal opening keynote talk entitled *Finding the Goldilocks Zone For Conversational Data*, [Oliver Lemon](https://sites.google.com/site/olemon/) posed a series of questions regarding what “just right” means for dialogue corpora: 
+1) Can our current models process real, spontaneous dialogue with all its disfluencies and irregularities? 
+2) How much data do we need to learn real variations in human behavior? 
+3) How can we build data-efficient systems? 
+
+Indeed, handling real human dialogue often calls into question the robustness of our present-day models. How well can we expect the best dialogue systems to handle all the *um’s*, *uh’s*, and *like’s* that pervade everyday conversational speech? Not surprisingly, the answer is not well at all. 
+
+In their paper [Challenging Neural Dialogue Models with Natural Data: Memory Networks Fail on Incremental Phenomena](http://www.saardial.uni-saarland.de/?page_id=299), Shalyminov et. al. investigated the performance of Facebook’s flagship [memory networks](https://arxiv.org/abs/1410.3916) on the [bAbI dialogue Task 1](https://research.fb.com/downloads/babi/) on clean synthetic data and synthetic data that was augmented by inserting two phenomena readily present in human speech: restarts and self-corrections. It’s worth noting that these phenomena were inserted at a rate that was conservative compared to actual human speech (21% vs. 40% naturally occurring). 
+
+While memory networks show 100% performance on perfectly clean data, their performance drops to 53% even when trained and tested on this augmented data (dubbed bAbI+). The size of the train set had to be increased by about **1000x** just to see performance reach 80.5%. As a point of comparison, an incremental semantic parser which is linguisticaly-informed with a grammar achieves 100% on *both bAbI and bAbI+*. 
+
+There are a few takeaways here. First off, this level of brittleness is **astounding and a bit concerning**. It goes without say that deep learning models are data-hungry beasts in most problem spaces. In the case of dialogue, these models need substantial data to learn simplistic patterns and regularities. Their data-hungry nature makes them fairly inconvenient in a problem sphere where corpus collection is expensive, and publicly-available datasets are not sizeable enough to learn a reasonable percentage of all the syntactic and semantic complexity that dialogue offers. We also certainly would not want to have to provide sufficient data that depicts all conceivable placements of *um* in an utterance, just so the model can learn when it’s safe to ignore it. 
+
+That’s one set of issues, certainly, but the more prominent question is *why even go out of our way to build an ImageNet-sized dialogue corpus*? It seems that we shouldn’t have to bend over backwards to have the data accommodate the model, and should instead devise ways that the model can accommodate the data. 
+
+Moreover, it seems deeply concerning (no pun intended) that we can easily break such models by simply inserting a stray *like* in an utterance as any teenager would in regular speech. Milica Gasic from Cambridge University noted that this invites certain lines of inquiry such as one-shot learning. Indeed, I’m convinced that models that are drastically more data efficient will continue to be important for future dialogue efforts. 
+
+Oliver Lemon also spent some part of the talk discussing his group’s very successful run in the [Alexa challenge](https://developer.amazon.com/alexaprize) (spoiler: they came in 3rd place in the semis, 1st in the next round, and are now headed to the finals in Vegas!). The challenge involved building socialbots that can engage with humans on popular topics for 20 minutes, but the part of the challenge that seemed especially interesting was the fact that the bots that schools submitted would periodically be deployed to *actual* Alexa systems to talk to *real* people. In this way, school’s systems were able to get up to 200 ratings per day on dialogue quality. This is a phenomenal real-world user signal to guide model develoment. 
+
+In addition to the ratings, these interactions were surely a source of rich and noisy real human conversations (purportedly there were some dialogues that were over 100 exchanges!). This platform for collecting user dialogue quality data seems to be an ideal type of signal to hill-climb on, notwithstanding noisiness and sparsity. Especially when you compare to the traditional style of dialogue human evaluation where you throw up your model on AMT and have it talk to people you’re paying, I think the community should move toward platforms where many dialogue models can be evaluated in consolidated and consistent ways. It’s a real-world signal and it measures real-world human engagement which seems like one of the most sure-fire ways to answer the question guiding most dialogue work: *how humanlike is it?* Some researchers at Carnegie Mellon are already actively building such a community-driven platform ([Dialport](https://www.lti.cs.cmu.edu/projects/speech-processing/dialport-enabling-spoken-dialog-research-real-data)), and I certainly hope to see continued community acceptance for such means of acquiring user data. 
+
+## Moving Beyond Slot-Filling
+
+A recurring sentiment at the conference was a desire to move beyond slot-value filling dialogue approaches to “more interesting problems.” In particular there is a whole body of problems that have not been extensively studied including **agent planning, working with complex constraints, negotiation, and more sophisticated reasoning such as pragmatics**. At the conference there was even a special session devoted to projects in negotiation dialogue. 
+
+In the case of negotations, which is a regime somewhere between pure task-oriented dialogue and open-ended chatbots, more thought must be given to the optimal scheme for efficient data collection. Here an outstanding question is how can one elicit the necessary emotional investment in users that permits realistic negotation conversations? At the core of negotiation is some set of *partially-overlapping goals coupled with constraints of varying flexibility*. I imagine the best dialogues would then be those where agents are fastidiously trying to satisfy their constraints, which certainly requires some genuine investment in the problem. A colleague in my lab has seen that putting the right incentives in place to enable that investment is a very challenging task and one that will surely determine the future quality of negotiation dialogue datasets.
+
+Another salient research direction at the conference was enabling full-blown multimodal human-robot dialogue, oftentimes with an actual physical humanoid machine. In her keynote, [Elisabeth Andre](https://www.informatik.uni-augsburg.de/lehrstuehle/hcm/staff/andre/) discussed her group’s work on affective computing via modelling of nonverbal behavior. Here the problems investigated include recognition of social cues such as facial expressions, gaze, postures, and body movements, as well as interaction patterns such as displays of social engagement. This is often done through the use of body cameras followed by real-time processing via computer vision. Some of the humanoid robots in her group’s work are trained to both recognize and generate facial expressions. Here, if in the course of a dialogue a human expresses visible sadness as they talk about some event, the robot is taught to empathetically respond through sad facial expressions and appropriate utterances. 
+
+In some of her group’s other work, robots are trained to detect nonverbal cues such as shifts in posture, directions of gazes, and voice tones. We can see how cues such as gaze detection can become important components for object and social grounding, as well as turn management. One paper presented at the conference, [Attentive listening system with backchanneling, response generation and flexible turn-taking](http://www.aclweb.org/anthology/W17-5516), sought to increase user engagement through continuous prediction of end-of-utterances, which allowed their humanoid to more intelligently insert backchannel responses.
+
+I tend to like this type of more full-stack dialogue interaction. While there is a lot of information that is contained in pure text and we have **a long** way to go before we have full textual understanding, grounded visual information also offers a wealthy source of information that we are not really incorporating in models. Dialogue models must learn to bridge the gap between text and grounded visual understanding, which I believe is the motivation beyond works such as the [CLEVR](http://cs.stanford.edu/people/jcjohns/clevr/) dataset and [Visual QA](http://visualqa.org/). Indeed, I believe visual understanding will help imbue models with more common sense reasoning. This is necessary to fully situate agents in the real world. For example, it seems difficult to have an agent speak about a *cat* without any comprehension that a *cat* is an entity in the world governed by a set of physical principles with a well-defined action space. All attributes of a cat necessary that are necessary to have this understanding are not easily represented in textual corpora. By the same logic, to build adequately humanlike dialogue agents, it seems important to incorporate humans’ various visual and emotional cues.
+
+## Inadequacy of Evaluation Metrics
+
+While there were not really any papers at the conference on better alternative metrics, evaluation was inevitably something that was on everyone’s mind and certainly crept into many discussions. Interpretability also came up when discussing how to debug models and use human-interpretable information to guide performance improvement. Many of these thoughts were formalized during the expert panel discussion on natural language generation, led by Verena Rieser, Hadar Shemtov, Amanda Stent, and Milica Gasic. 
+
+On the topic of interpretability, Amanda Stent noted that black box end-to-end systems will never fly in a corporate setting because there is some model accountability that is lost when the internal workings are an enigma. In other words, someone needs to be able to explain to their boss why something isn’t working. While I can understand these practical considerations, I also wondered if people could sleep easy if purely end-to-end models *just worked* and were significantly better than everything else on the market. Here the audience got a bit quieter, but some people chimed in that functional behavior is all we really care about at the end of the day and if things just work, then we don’t need to ask ourselves too many meta questions about [consciousness](https://en.wikipedia.org/wiki/Chinese_room) and what-have-you. That being said, it seems **extremely unlikely** that we’ll be able to get away with progressing dialogue systems without any interpretability. 
