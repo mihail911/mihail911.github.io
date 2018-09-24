@@ -18,7 +18,9 @@ $color-gray-border: lighten($color-base, 77%);
 $color-gray-bg: lighten($color-base, 79%);
 
 // Typographic
-$typographic-font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+//$typographic-font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$typographic-font-family: "Merriweather", sans-serif;
+$typographic-header-font-family: "Merriweather Sans", sans-serif;
 
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 16px;
