@@ -6,11 +6,11 @@ draft: false
 path: "/posts/review-of-sigdial-semdial-2017/"
 tags:
   - "Natural Language Processing"
-  - "Dialogue"
+  - "Artificial Intelligence"
   - "Deep Learning"
 description: "Following my attendance at the 18th Annual Meeting on Discourse and Dialogue, I offer a discussion of the most promising directions for future dialogue research, as gleaned from discussions with other researchers at the conference."
 ---
-This year, I had the great fortune of attending the 18th Annual Meeting on Discourse and Dialogue (SIGDial) held in Saarbrücken, Germany. These proceedings were held jointly with SemDial, so the conference brought together an impressive group of researchers tackling dialogue from all angles. In this post, I would like to discuss some of the overarching themes that recurred in this year’s proceedings. I’ll discuss any relevant papers as appropriate in my commentary, though for a more complete (albeit sporadic) collection of my notes from presentations during the conference check out [this post](https://github.com/mihail911/conference-summaries/tree/master/sigsemdial2017). 
+This year, I had the great fortune of attending the 18th Annual Meeting on Discourse and Dialogue (SIGDial) held in Saarbrücken, Germany. These proceedings were held jointly with SemDial, so the conference brought together an impressive group of researchers tackling dialogue from all angles. In this post, I would like to discuss some of the overarching themes that recurred in this year’s proceedings. I’ll discuss any relevant papers as appropriate in my commentary, though for a more complete (albeit sporadic) collection of my notes from presentations during the conference check out [this post](https://github.com/mihail911/conference-summaries/tree/master/sigsemdial2017) 
 ). 
 
 A disclaimer before I get started: this is not going to be an extensive discussion about deep learning in dialogue. While these days it’s difficult to avoid the RNN hegemony that seems to universally occupy NLP conferences and research, the dialogue community at SIGDial approached the topic of deep learning with a wary acceptance. Though conversations during breaks inevitably touched on the questions “*are we going to see purely end-to-end dialogue systems soon?*” and “*are we done with modular approaches?*”, in general, the prevailing sentiment was **NOT** that dialogue is just another nail to bludgeon with the mighty deep learning hammer.
