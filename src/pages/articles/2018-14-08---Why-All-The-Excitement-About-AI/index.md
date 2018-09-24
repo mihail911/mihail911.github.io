@@ -39,9 +39,10 @@ In 1965, Gordon Moore, the cofounder of Intel, [announced](http://www.lithoguru.
 
 This claim has become a self-fulfilling prophecy whereby industry chip developers have pursued aggressive technological development programs to sustain the pace of doubling transistor count **roughly every eighteen months**! Moore’s law has been consistently upheld for more than four decades.
 
-![Transistor count on standard microprocessor over time](./transistor-count-over-time.png)
-
-Number of transistors on standard microprocessors over time. The y-axis uses a logarithmic scale, hence why the plot is roughly linear.
+<figure>
+	<img src="./transistor-count-over-time.png" alt="Number of transistors on standard microprocessors over time">
+	<figcaption>Number of transistors on standard microprocessors over time. The y-axis uses a logarithmic scale, hence why the plot is roughly linear</figcaption>
+</figure>
 
 So what? You can put a lot more electric components on a chip hidden in my laptop. It’s not like I can count them. What’s the big deal?
 
@@ -110,8 +111,10 @@ ImageNet was an annual challenge held until 2017 that involved a number of tasks
 
 The object recognition portion of the challenge involved giving participating teams several million images labelled according to 1000 categories. The goal was to build a system that could produce the most correct labels for the given images.
 
-![An image of birds from the ImageNet challenge](./imagenet-bird-image.png)
-         *An image from the ImageNet dataset. What is this a picture of?*
+<figure>
+	<img src="./imagenet-bird-image.png" alt="An image from the ImageNet dataset. What is this a picture of?">
+	<figcaption>An image from the ImageNet dataset. What is this a picture of?*</figcaption>
+</figure>
 
 In the [2012 competition](http://www.image-net.org/challenges/LSVRC/2012/results.html), the Toronto team trained a deep learning model that achieved **16.4% error, compared to the previous best of 25.8%** (lower is better)!
 
