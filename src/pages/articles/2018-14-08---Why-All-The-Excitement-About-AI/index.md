@@ -102,8 +102,8 @@ ImageNet was an annual challenge held until 2017 that involved a number of tasks
 
 The object recognition portion of the challenge involved giving participating teams several million images labelled according to 1000 categories. The goal was to build a system that could produce the most correct labels for the given images.
 
-![An image of birds from the ImageNet challenge](./imagenet-image.png)
-An image from the ImageNet dataset. What is this a picture of?
+![An image of birds from the ImageNet challenge](./imagenet-bird-image.png)
+         *An image from the ImageNet dataset. What is this a picture of?*
 
 In the [2012 competition](http://www.image-net.org/challenges/LSVRC/2012/results.html), the Toronto team trained a deep learning model that achieved **16.4% error, compared to the previous best of 25.8%** (lower is better)!
 
@@ -119,5 +119,5 @@ The excitement is in the air both within academia as well as industry. There is 
 
 If artificial intelligence lives up to its promises, it will revolutionize the world as we know it.
 
----
+
 *Thanks to [Sabera Talukder](https://twitter.com/SaberaTalukder) for all the helpful feedback and insights on early versions of this article.*
