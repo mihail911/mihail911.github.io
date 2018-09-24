@@ -26,14 +26,13 @@ class PostTemplateDetails extends React.Component {
     }).filter((elem) => {
        return elem !== null;
     });
-
     const homeBlock = (
       <div className="post-single__sidebar" >
         <div className="post-single__sidebar-all-articles">
           <Link to="/" className="post-single__sidebar-all-articles-link">Back to Home</Link>
         </div>
         {
-          relatedPosts.size > 0 ?
+          relatedPosts.length > 0 ?
             <div className="post-single__sidebar__related-posts-title">
               Related Articles
             </div> : null
