@@ -15,14 +15,14 @@ Task-oriented dialogue focuses on conversational agents that participate in user
 
 In an effort to help alleviate this problem, we release a corpus of *3,031 multi-turn dialogues in three distinct domains* appropriate for an in-car assistant: calendar scheduling, weather information retrieval, and point-of-interest navigation. Our dialogues are grounded through knowledge bases ensuring that they are versatile in their natural language without being completely free form. The dialogues include exchanges such as the following:
 
-|         |            |  |
-| ------------- |:-------------:| -----:|
-| **DRIVER** | | I need to find the time and parties attending my optometrist appointment. |
-| **CAR**      |     |  I have 3 appointments scheduled, with Alex, your sister, and Jeff. Which are you referring to? |
-| **DRIVER**      |     | I want to know about the one that Alex is joining me at. |
-| **CAR**      |     | That optometrist appointment is at 4 pm. |
-| **DRIVER**      |     | Thanks |
-| **CAR**      |     | No problem. |
+|            |  |
+| ------------- |:-------------:| 
+| **DRIVER** | I need to find the time and parties attending my optometrist appointment. |
+| **CAR**      |  I have 3 appointments scheduled, with Alex, your sister, and Jeff. Which are you referring to? |
+| **DRIVER**       | I want to know about the one that Alex is joining me at. |
+| **CAR**      | That optometrist appointment is at 4 pm. |
+| **DRIVER**       | Thanks |
+| **CAR**        | No problem. |
 
 ## Data Collection
 
@@ -47,18 +47,18 @@ While specifying the attribute types and values in each task presented to the *D
 Below we include statistics for our dataset:
 
 |         |            |  |
-| ------------- |:-------------:| -----:|
-| **Training Dialogues** | | 2,425 |
-| **Validation Dialogues**      |     |  302 |
-| **Test Dialogues**      |     | 304 |
-| **Calendar Scheduling Dialogues**      |     | 1,034 |
-| **Navigation Dialogues**      |     | 1,000 |
-| **Weather Dialogues**      |     | 997 |
-| **Avg. # Utterances Per Dialogue**      |     | 5.25 |
-| **Avg. # Tokens Per Utterance**      |     | 9 |
-| **Vocabulary Size**      |     | 1,601 |
-| **# of Distinct Entities**      |     | 284 |
-| **# of Entity (or Slot) Types**      |     | 15 |
+| ------------- | ------: |
+| **Training Dialogues** | 2,425 |
+| **Validation Dialogues**         |  302 |
+| **Test Dialogues**      |    304 |
+| **Calendar Scheduling Dialogues**         | 1,034 |
+| **Navigation Dialogues**      |     1,000 |
+| **Weather Dialogues**      |     997 |
+| **Avg. # Utterances Per Dialogue**         | 5.25 |
+| **Avg. # Tokens Per Utterance**        | 9 |
+| **Vocabulary Size**      |     1,601 |
+| **# of Distinct Entities**         | 284 |
+| **# of Entity (or Slot) Types**        | 15 |
 
 We also include some information regarding the type and number of slots per domain:
 

@@ -78,7 +78,7 @@ img {
 }
 
 hr {
-    margin-top: 52px;
+    margin-top: 20px;
     margin-bottom: 52px;
     border: 0;
     color: $color-base;
@@ -99,6 +99,17 @@ a {
     &:active {
         color: $typographic-link-s-font-color;
     }
+}
+
+td, th {
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+    text-align: center;
+    border-right: 1px solid hsla(0, 0%, 0%, 0.12);
+    padding-left: 3px;
+    padding-right: 3px;
+}
+td:first-child, th:first-child {
+    text-align: left;
 }
 
 b,
