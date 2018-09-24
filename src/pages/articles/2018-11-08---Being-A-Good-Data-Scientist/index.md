@@ -13,19 +13,19 @@ description: "A discussion of the most important skills necessary for being an e
 
 In my experience doing machine learning and data science, there are a lot of different elements you have to know quite well to be effective as a machine learning engineer or data scientist. These include the following:
 
-## General Programming Familiarity
+## 1. General Programming Familiarity
 
  I consider data scientists to be engineers, where instead of coding a web app as a frontend engineer would do, they are responsible for architecting data processing pipelines, designing and implementing models, and developing infrastructure for system evaluation and metrics computation. 
  
  As you can imagine, performing these tasks requires a reasonable amount of fluency with a high-level programming language (think [Python](https://www.python.org/), [R](https://www.r-project.org/), [Matlab](https://www.mathworks.com/products/matlab.html), or [Julia](https://julialang.org/)), as well as data science specific libraries (think [Pandas](https://pandas.pydata.org/), [Scikit-learn](http://scikit-learn.org/stable/), [Matplotlib](https://matplotlib.org/), or [Tensorflow](https://www.tensorflow.org/)). Developing this skill alone is something that can make up a year or more of an undergraduate computer science degree.
  
- ## Mathematical Maturity
+ ## 2. Mathematical Maturity
  
  Data scientists must be comfortable with a variety of mathematical topics. These include [statistics](https://en.wikipedia.org/wiki/Statistics), [probability theory](https://en.wikipedia.org/wiki/Probability_theory), and [linear algebra](https://en.wikipedia.org/wiki/Linear_algebra), to name a few. Very often in a traditional data science role, you will have to read academic papers describing some model or dataset and be able to utilize and implement the key ideas of the paper. This requires being comfortable understanding mathematical concepts and notation, which can be quite hard since research papers are **rarely written** as if they are trying to be a New York Times popular science book, comprehensible by the general public. 
  
  I would also argue that developing this skill is *more important* than the programming familiarity, since this is what makes data scientists…well scientists. You need to build intuition for the models you are implementing, data you are processing, and analyses you are performing, since this intuition will help you to truly do your job well.
  
- ## Data Insights
+ ## 3. Data Insights
  
  Using, understanding, and manipulating data is a very different skill from other traditional engineering jobs. I remember once walking into an interview for a data science role some years ago. After a brief introduction, the interviewer literally pulled up a CSV file in Sublime text with just a bunch of numbers in different columns and said *“Here are our records for the past month of customers using our product. What would you do with this?”* 
  
