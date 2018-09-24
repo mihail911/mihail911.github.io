@@ -53,7 +53,11 @@ And that’s just CPU (central processing unit) power. Today GPUs (graphical pro
 
 It turns out that for certain highly-optimized mathematical operations (such as matrix multiplication), GPUs can achieve speeds that are more than [**10 times faster than CPUs**](https://medium.com/@andriylazorenko/tensorflow-performance-test-cpu-vs-gpu-79fcd39170c).
 
-> With all these new computational superpowers, just imagine the types of questions society can ask and problems it can address.
+<figure>
+	<blockquote>
+		<p>With all these new computational superpowers, just imagine the types of questions society can ask and problems it can address.</p>
+	</blockquote>
+</figure>
 
 Modern AI systems eat up compute like the Cookie Monster breaking a diet, so this technology has truly broadened our horizons. With all these new computational superpowers, just imagine the types of questions society can ask and problems it can address.
 
@@ -96,7 +100,11 @@ In an analogous fashion, with AI, years of better compute power, increasing data
 
 All of these factors came together in 2012 when a team from the University of Toronto led by Geoff Hinton trained a deep learning model that **trounced the competition** in the ImageNet challenge.
 
-> For academics, this type of an improvement is career-making. For the rest of the world, this type of an improvement is society-changing.
+<figure>
+	<blockquote>
+		<p>For academics, this type of an improvement is career-making. For the rest of the world, this type of an improvement is society-changing.</p>
+	</blockquote>
+</figure>
 
 ImageNet was an annual challenge held until 2017 that involved a number of tasks related to classifying and categorizing images. It was the premier competition for building systems with vision capabilities.
 
