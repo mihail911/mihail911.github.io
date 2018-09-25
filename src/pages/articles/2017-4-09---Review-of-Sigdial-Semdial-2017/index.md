@@ -6,7 +6,7 @@ draft: false
 path: "/posts/review-of-sigdial-semdial-2017/"
 tags:
   - "Natural Language Processing"
-  - "Artificial Intelligence"
+  - "A.I."
   - "Deep Learning"
 description: "Following my attendance at the 18th Annual Meeting on Discourse and Dialogue, I offer a discussion of the most promising directions for future dialogue research, as gleaned from discussions with other researchers at the conference."
 ---

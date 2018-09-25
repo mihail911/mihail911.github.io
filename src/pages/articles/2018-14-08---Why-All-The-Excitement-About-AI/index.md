@@ -5,7 +5,7 @@ layout: post
 draft: false
 path: "/posts/why-all-the-excitement-about-ai/"
 tags:
-  - "Artificial Intelligence"
+  - "A.I."
   - "Machine Learning"
   - "Deep Learning"
 description: "Given all the recent buzz around artificial intelligence, I discuss three reasons for why we are seeing such widespread interest in the field today."

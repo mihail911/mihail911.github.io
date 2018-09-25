@@ -15,7 +15,7 @@
             background-clip: padding-box;
         }
         &-title {
-            font-size: $typographic-base-font-size * 1.825;
+            font-size: $typographic-base-font-size * 2.025;
             font-weight: 500;
             @include line-height(1.125);
             @include margin(.5, 0, .5, 0);

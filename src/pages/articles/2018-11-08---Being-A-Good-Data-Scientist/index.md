@@ -5,7 +5,7 @@ layout: post
 draft: false
 path: "/posts/being-a-good-machine-learning-data-scientist/"
 tags:
-  - "Artificial Intelligence"
+  - "A.I."
   - "Data Science"
   - "Machine Learning"
 description: "A discussion of the most important skills necessary for being an effective machine learning engineer or data scientist. "

@@ -5,7 +5,7 @@ layout: post
 draft: false
 path: "/posts/fundamental-deep-learning-algorithms-to-learn/"
 tags:
-  - "Artificial Intelligence"
+  - "A.I."
   - "Deep Learning"
   - "Machine Learning"
 description: "A discussion of fundamental deep learning algorithms people new to the field should learn along with a recommended course of study."
