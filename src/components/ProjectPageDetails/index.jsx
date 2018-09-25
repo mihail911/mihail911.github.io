@@ -93,7 +93,7 @@ class ProjectPageDetails extends React.Component {
           title="Wordwise Inference and Entailment Now"
           picName="wien"
           link="https://www.semanticscholar.org/paper/WIEN-%3A-Wordwise-Inference-and-Entailment-Now-Or-%3A-Billovits-Eric/b525f726265aca03d07021b0e9dec14c6ace0890"
-          authors="Chris Billovits* and Mihail Eric* and Chris Guthrie"
+          authors="Chris Billovits* and Mihail Eric* and Chris Guthrie*"
           description="We implement a random forest classifier with a carefully engineered and selected collection of linguistic and semantic features for the task of natural language inference, achieving an F1 of 80.9% on the SemEval-2014 Dataset."
           meta="Preprint 2016"
           edge="true"
