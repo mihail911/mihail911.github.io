@@ -11,7 +11,7 @@ tags:
 description: "A discussion of fundamental deep learning algorithms people new to the field should learn along with a recommended course of study."
 ---
 
-When approaching deep learning for the first time, There is a huge difference between what I consider *foundational algorithms* (those that power just about every neural network model that has existed ever) and *architectures*.
+When approaching deep learning for the first time, there is a huge difference between what I consider *foundational algorithms* (those that power just about every neural network model that has existed ever) and *architectures*.
 
 I think this distinction is important because it will help you determine how best to *learn both*. I would argue the foundational algorithms are **more important to start with**, and they are a prerequisite for the architecture types.
 
