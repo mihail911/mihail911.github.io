@@ -8,7 +8,7 @@ tags:
   - "Natural Language Processing"
   - "A.I."
   - "Deep Learning"
-description: "Following my attendance at the 18th Annual Meeting on Discourse and Dialogue, I offer a discussion of the most promising directions for future dialogue research, as gleaned from discussions with other researchers at the conference."
+description: "Following my attendance at the 18th Annual Meeting on Discourse and Dialogue, I summarize the most promising directions for future dialogue research, as gleaned from discussions with other researchers at the conference."
 ---
 This year, I had the great fortune of attending the 18th Annual Meeting on Discourse and Dialogue (SIGDial) held in Saarbrücken, Germany. These proceedings were held jointly with SemDial, so the conference brought together an impressive group of researchers tackling dialogue from all angles. In this post, I would like to discuss some of the overarching themes that recurred in this year’s proceedings. I’ll discuss any relevant papers as appropriate in my commentary, though for a more complete (albeit sporadic) collection of my notes from presentations during the conference check out [this post](https://github.com/mihail911/conference-summaries/tree/master/sigsemdial2017) 
 ). 
