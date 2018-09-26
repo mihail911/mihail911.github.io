@@ -118,8 +118,5 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## TODO
-- Fix formatting of quotes, lines, tables, captions on images, size of font on posts (make larger)
+- Fix underline on links in markdown
 - Add excerpts programmatically https://using-remark.gatsbyjs.org/excerpts/
-- Possibly change default font
-- Transfer all old content 
-- Add newsletter link
