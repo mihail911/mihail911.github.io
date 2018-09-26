@@ -4,7 +4,12 @@ layout: page
 path: "/teaching"
 ---
 
-As someone whose academic career has been enriched by the many amazing courses, books, and materials made available by educators, I am a strong believer in sharing knowledge and intuitive pedagogy. In the past, I have been a teaching assistant at Stanford for the following courses:
+I believe that teaching is the best way to learn. 
+
+I am the creator of the Artificial Intelligence School, a mobile app for learning the basics of artificial intelligence, machine learning, and deep learning. 
+Check it out on the [App Store](https://itunes.apple.com/us/app/artificial-intelligence-school/id1369987569?mt=8b) and [Google Play](https://play.google.com/store/apps/details?id=com.theaischool).
+ 
+In the past, I have been a teaching assistant at Stanford for the following courses:
 
 - [CS106A (Programming Methodology)](http://web.stanford.edu/class/cs106a/)
 - [CS106B (Programming Abstractions)](http://web.stanford.edu/class/cs106b/)

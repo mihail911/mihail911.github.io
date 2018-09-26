@@ -13,7 +13,7 @@ Engineer at [RideOS](https://rideos.ai/) working on ensuring the safe, global ro
 Graduate student at [Stanford University](https://www.stanford.edu/) where I studied computer science and artificial intelligence. I spent 3 wonderful years as a researcher in the [Stanford Natural Language Processing Group](https://nlp.stanford.edu/), where I had the unbelievable fortune to work with [Christopher Manning](https://nlp.stanford.edu/manning/), [Percy Liang](https://cs.stanford.edu/~pliang/), [Christopher Potts](https://web.stanford.edu/~cgpotts/), and other brilliant people. 
 
 ## What Interests Me 🤖
-Natural language understanding and anything related to machine learning. I spent years building dialogue agents, especially of the goal-oriented variety, and have worked on [computational semantics](https://en.wikipedia.org/wiki/Computational_semantics) and [textual inference](https://nlp.stanford.edu/~wcmac/papers/nli-diss.pdf).  
+Natural language understanding and anything related to machine learning. I spent years building goal-oriented dialogue agents and have worked on [computational semantics](https://en.wikipedia.org/wiki/Computational_semantics) and [textual inference](https://nlp.stanford.edu/~wcmac/papers/nli-diss.pdf).  
 I also believe artificial intelligence will be one of the **most transformative paradigm shifts in human history**, so thinking about the implications of that keeps me pretty busy 🙂
 
 
@@ -23,7 +23,7 @@ I am the creator of a mobile app for learning artificial intelligence, machine l
 
 ## News 📰
 
-**August 2018**: Check out my [Medium post](https://hackernoon.com/why-all-the-excitement-about-artificial-intelligence-435957ba9ed3) on why AI is so exciting.  
+**August 2018**: Check out my [blog post](/posts/why-all-the-excitement-about-ai/) on why AI is so exciting.  
 **July 2018**: I was selected as a [top reviewer for ACL 2018](https://acl2018.org/2018/07/02/top-reviewers/)! Thanks to the community for the acknowledgment!  
 **February 2018**: I led a Deep Learning Workshop at the Harvard Westlake School's annual hackathon. Check out the [slides here](./Deep-HWack.pdf) and the [accompanying code](https://github.com/mihail911/deep-hwack).  
 **August 2017**: I gave a talk on [key-value retrieval networks](https://arxiv.org/abs/1705.05414) at [SIGDial 2017](http://workshops.sigdial.org/conference18/main.htm) in Saarbrücken, Germany. Thanks to all the organizers for a fantastic conference!  
