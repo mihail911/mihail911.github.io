@@ -3,16 +3,33 @@
 
 .mailchimp-signup {
   text-align: center;
-  //margin-top: -40px;
+  margin-bottom: 40px;
   &-prompt {
     margin-top: 20px;
     font-style: italic;
     font-size: $typographic-base-font-size * 1.1;
   }
   &-form {
-    margin: 10px 0 10px 0;
+    margin: 20px auto;
+    padding: 25px 0 25px 0;
+    background-color: $color-gray-bg;
+    border-radius: 3px;
+    width: 60%;
+    text-align: center;
   }
   &-divider {
     margin: 0 10px;
+  }
+  &-email-input {
+    border-radius: 2px;
+    margin: 0 8px 0 8px;
+  }
+  &-subscribe {
+    background-color: $color-primary4;
+    padding: 5px 7px 5px 7px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-family: $typographic-font-family;
   }
 }
