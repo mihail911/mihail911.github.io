@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     url: 'https://mihaileric.com',
     title: 'Mihail Eric',
-    subtitle: 'Engineer, researcher, and educator.',
+    subtitle: 'Engineer, researcher, educator.',
     disqusShortname: 'mihaileric',
     menu: [
       {
