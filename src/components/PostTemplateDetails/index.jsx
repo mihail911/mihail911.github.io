@@ -4,6 +4,7 @@ import Link from 'gatsby-link';
 import moment from 'moment';
 import Disqus from '../Disqus/Disqus';
 import PostSocialPanel from '../PostSocialPanel';
+import MailchimpSignupForm from '../MailchimpSignupForm'
 import './style.scss';
 
 const MAX_RELATED_POSTS_TO_SHOW = 5;
@@ -95,6 +96,7 @@ class PostTemplateDetails extends React.Component {
             Link to social media? */}
             <p className="post-single__footer-text" />
             <PostSocialPanel />
+            <MailchimpSignupForm />
             {commentsBlock}
           </div>
         </div>

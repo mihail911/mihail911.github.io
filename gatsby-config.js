@@ -101,6 +101,12 @@ module.exports = {
           })
       }
     },
+    {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint: 'https://mihaileric.us19.list-manage.com/subscribe/post?u=62eb9837d59164bc45efac84e&amp;id=b3f700cf59'
+      }
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
