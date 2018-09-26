@@ -3,7 +3,7 @@
 .buttonWrapper {
   background-color: $color-secondary;
   border-radius: 10px;
-  padding: 5px;
+  padding: 4px 9px 4px 9px;
   &:hover {
     background-color: darken($color-secondary, 10%);
   }
