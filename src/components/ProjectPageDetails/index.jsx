@@ -17,7 +17,7 @@ class ProjectPageDetails extends React.Component {
           picName="aiSchool"
           link="https://itunes.apple.com/us/app/artificial-intelligence-school/id1369987569?mt=8"
           authors="Mihail Eric"
-          description="AI School is a mobile app designed to teach the basics of artificial intelligence, machine learning, and deep learning. Includes a comprehensive lesson plan to teach the fundamental principles."
+          description="AI School is a mobile app designed to teach the basics of artificial intelligence, machine learning, and deep learning. Includes a comprehensive lesson plan for learning fundamental principles."
           meta="Available on both the App Store and Google Play!"
           edge="true"
         />
@@ -64,7 +64,7 @@ class ProjectPageDetails extends React.Component {
           picName="sceneseer"
           link="https://arxiv.org/abs/1703.00050"
           authors="Angel X. Chang, Mihail Eric, Manolis Savva, Christopher D. Manning"
-          description="We demonstrate the efficacy of a new neural dialogue agent that is able to effectively sustain grounded, multi-domain discourse through a novel key-value retrieval mechanism."
+          description="We present SceneSeer: an interactive text to 3D scene generation system with a learned spatial knowledge base that allows a user to design 3D scenes using natural language."
           meta="Preprint 2017, arXiv:1703.00050"
           edge="true"
         />
