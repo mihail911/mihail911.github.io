@@ -60,7 +60,7 @@ class MailchimpSignupForm extends React.Component {
         <div className="mailchimp-signup-form">
           <form onSubmit={this.handleSubmit}>
             <label>
-              Email*
+              Email
               <input className="mailchimp-signup-email-input" id="mailchimp-signup-email" type="text" name="mailchimp-signup-email" value={this.state.email} onChange={this.handleChange} />
             </label>
             <input className="mailchimp-signup-subscribe" type="submit" value="Subscribe" />
