@@ -55,7 +55,7 @@ class MailchimpSignupForm extends React.Component {
     return (
       <div className="mailchimp-signup">
         <div className="mailchimp-signup-prompt">
-          I also run a newsletter with cool AI articles, projects, and code (no spam). Sign up to get updates!
+          I also run a newsletter with cool AI articles and projects (no spam). Sign up to get updates!
         </div>
         <div className="mailchimp-signup-form">
           <form onSubmit={this.handleSubmit}>
