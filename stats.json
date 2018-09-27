@@ -65,8 +65,8 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-templates-post-template-jsx": [
-      "component---src-templates-post-template-jsx-4c1d1c2d2f5cc72398a3.js",
-      "component---src-templates-post-template-jsx-4c1d1c2d2f5cc72398a3.js.map"
+      "component---src-templates-post-template-jsx-ab0642351350b7586b5b.js",
+      "component---src-templates-post-template-jsx-ab0642351350b7586b5b.js.map"
     ],
     "path---tags-data-science": [
       "path---tags-data-science-bfb67808935532d8cd60.js",
@@ -77,8 +77,8 @@
       "path---posts-a-software-interview-challenge-6bc1a1e857ca9c638ddb.js.map"
     ],
     "path---index": [
-      "path---index-65f12bba760c8803c85d.js",
-      "path---index-65f12bba760c8803c85d.js.map"
+      "path---index-521967ca622b09840194.js",
+      "path---index-521967ca622b09840194.js.map"
     ],
     "path---posts-why-all-the-excitement-about-ai": [
       "path---posts-why-all-the-excitement-about-ai-6acab51f2db65f884565.js",
@@ -115,8 +115,8 @@
       "component---src-pages-blog-jsx-e23c8e4b47838d23591a.js.map"
     ],
     "path---posts-being-a-good-machine-learning-data-scientist": [
-      "path---posts-being-a-good-machine-learning-data-scientist-0a6162792ad57ba83528.js",
-      "path---posts-being-a-good-machine-learning-data-scientist-0a6162792ad57ba83528.js.map"
+      "path---posts-being-a-good-machine-learning-data-scientist-90504a615d8c5e7f3782.js",
+      "path---posts-being-a-good-machine-learning-data-scientist-90504a615d8c5e7f3782.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
@@ -127,8 +127,8 @@
       "component---src-pages-index-jsx-029c4a0db57aee7eb3bd.js.map"
     ],
     "app": [
-      "app-fab2e69eb0b09b98eb24.js",
-      "app-fab2e69eb0b09b98eb24.js.map"
+      "app-95b81d60c6d59189c71a.js",
+      "app-95b81d60c6d59189c71a.js.map"
     ],
     "path---tags-machine-learning": [
       "path---tags-machine-learning-1893f4667e86eae1d9a0.js",
@@ -143,8 +143,8 @@
       "path---tags-deep-learning-602083c4047739ee3664.js.map"
     ],
     "path---about": [
-      "path---about-f38669b7a1b2f6b7ab7d.js",
-      "path---about-f38669b7a1b2f6b7ab7d.js.map"
+      "path---about-f3993bda9d6da6ff94bd.js",
+      "path---about-f3993bda9d6da6ff94bd.js.map"
     ]
   }
 }
