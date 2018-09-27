@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.scss';
-import ProjectDescription from '../ProjectDescription'
+import ProjectDescription from '../ProjectDescription';
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import '../assets/scss/init.scss';
-import favicon from '../favicon_2.ico';
+import favicon from '../favicon.ico';
 
 class Layout extends React.Component {
   render() {

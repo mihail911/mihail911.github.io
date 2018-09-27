@@ -1,5 +1,5 @@
 import React from 'react';
-import nameToPic from '../../pages/pages/imgs';
+import nameToPic from '../../imgs';
 import './style.scss';
 
 class ProjectDescription extends React.Component {
