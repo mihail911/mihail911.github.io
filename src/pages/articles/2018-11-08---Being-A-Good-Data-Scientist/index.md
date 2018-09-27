@@ -11,7 +11,7 @@ tags:
 description: "A discussion of the most important skills necessary for being an effective machine learning engineer or data scientist. "
 ---
 
-In my experience doing machine learning and data science, there are a lot of different elements you have to know quite well to be effective as a machine learning engineer or data scientist. These include the following:
+In my experience doing machine learning and data science, there are a lot of different elements you have to know quite well to be effective at your job. These include the following:
 
 ## 1. General Programming Familiarity
 
