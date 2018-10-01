@@ -13,7 +13,7 @@ description: "A discussion of R-CNN, a historic object detection architecture co
 
 ![Region proposals with convolutional neural networks dog with ball object detection ](./dog_with_ball.png)
 
-In this article, I want to discuss one of the seminal object detection architectures of the last decade: **region proposals with convolutional neural networks** 
+In this post, I want to discuss one of the seminal object detection architectures of the last decade: **region proposals with convolutional neural networks** 
 (or R-CNN for short). R-CNN is one of the earliest models that piggybacked
 off the computer vision deep learning revolution begun with the advent of [AlexNet](https://en.wikipedia.org/wiki/AlexNet).
 
@@ -40,15 +40,15 @@ As a motivating example, let's say we wanted to run an R-CNN object detection on
 ![Cat with dog starting image for object detection for r-cnn](./cat_and_dog.png)
 
 Adorable, I know. The first step of the process involves extracting *region proposals* from the image, which 
-are essentially smaller subimages that could potentially hold an object. There are a number of algorithms that can
+are essentially smaller subimages that could potentially contain an object. There are a number of algorithms that can
 be used to generate region proposals, though the one that R-CNN uses is called [*selective search*](http://www.huppelen.nl/publications/selectiveSearchDraft.pdf). This algorithm
-iteratively combines subimages in a bottom-up fashion, using various similarity metrics such as color and texture. 
+iteratively combines subimages in a bottom-up fashion, using various image similarity metrics such as color and texture. 
 
 R-CNN extracts around 2000 region proposals per image, which would look as follows:
 
 ![Cat with dog object detection with region proposals for r-cnn](./cat_and_dog_region_proposals.png)
 
-Now for each proposal, R-CNN runs the proposal through a high-capacity [convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) to extract a learned
+Now R-CNN runs each proposal through a high-capacity [convolutional neural network](https://en.wikipedia.org/wiki/Convolutional_neural_network) to extract a learned
 feature representation, which ideally holds meaningful information about the objects in the image. 
 
 For example, the algorithm would take a proposal such as the following:
@@ -60,7 +60,7 @@ vector:
 
 ![Region proposal through convolutional neural network](./region_proposal_through_convolutional_network.png)
 
-Now, this feature vector is run through a collection of linear support vector machines (SVM for short), where each SVM
+Afterwards, this feature vector is run through a collection of linear support vector machines (SVM for short), where each SVM
 is designed to classify for a single object class. In other words, there is an SVM trained to detect *boat*, another 
 one for *parrot*, etc. 
 
@@ -92,7 +92,7 @@ With all that, we have completed an execution of R-CNN!
 The running example from the last section showed us what it looks like when we have a trained, fresh-out-of-the-oven
 R-CNN to detect objects with. But how do we actually get to a fully-fledged system? 
 
-We will first focus on details regarding the first step of the R-CNN pipeline: the convolutional neural network. The CNN used 
+We will first focus on details regarding the convolutional neural network step of the R-CNN pipeline. The CNN used 
 for the model is [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf),
 a standard deep CNN with five convolutional layers and two fully-connected layers.
 
@@ -101,8 +101,8 @@ a standard deep CNN with five convolutional layers and two fully-connected layer
 	<figcaption>AlexNet architecture diagram, taken from the original paper</figcaption>
 </figure>
 
-One of R-CNN's biggest contributions is the use of *supervised pre-training* for object detection. When training the CNN
-component, we first train it on a large auxiliary dataset such as the [ILSVRC2012 classification dataset](http://image-net.org/challenges/LSVRC/2012/). 
+One of R-CNN's biggest contributions is the use of *supervised pre-training* for object detection. When building the CNN
+component, we first train it on a large auxiliary dataset such as the [ILSVRC 2012 classification dataset](http://image-net.org/challenges/LSVRC/2012/). 
 
 Note, that this
 dataset only contains *image-level labels*. In other words, the CNN is trained as if it is being used as a pure object
@@ -127,11 +127,13 @@ bounding boxes for a given class, whereas a negative example is a region proposa
 less than 0.3. In the original paper, these IoU thresholds were determined empirically, and picking them carefully turned out to have quite a difference
 on R-CNN's performance.  
 
-Finally, the bounding box regressors were regularized least squares regressors that were trained using (*P*, *G*) pairs, where
-*P* is a region proposal and *G* is a ground-truth bounding box. An important detail in this stage of training is how we determine
+Finally, the bounding box regressors were built using regularized least squares regressors and a dataset of (*P*, *G*) pairs, where
+*P* is a region proposal and *G* is a ground-truth bounding box. 
+
+An important detail in this stage of training is how we determine
 which ground-truth box maps appropriately to a given proposal, as this drastically affects how feasible the learning problem is. 
 This entails a meaningful definition of *nearness*. For the purposes of R-CNN, a proposal *P* is assigned to the *G* with 
-which it has maximal IoU overlap, as long as that overlap exceeds some empirically-determined threshold (0.6 in the case of R-CNN). 
+which it has maximal IoU overlap, as long as that overlap exceeds some empirically-determined threshold (0.6 in the case of the original R-CNN). 
 
 These are all the training phases of R-CNN. It is worth noting that training the entire system is actually quite complex. There are effectively three separate steps of the 
 training process that require data:
@@ -148,6 +150,11 @@ The R-CNN architecture achieved a [mean average precision](https://medium.com/@j
 of 53.3% on the VOC 2012 dataset, which was an increase of **more than 30% over the previous best**. That is absolutely crazy!
 
 In addition, the architecture achieved a mAP of 31.4% on the ILSVRC 2013 competition, substantially ahead of the second-best score of 24.3%.
+
+What's also worth noting is the difference doing supervised pretraining with domain-specific fine-tuning made in terms of performance. This
+design decision was tested in the context of the VOC 2007 dataset, and it resulted in an increase of 8.0 mAP percentage points!
+
+Finally, comparing R-CNN to pure feature-based models indicated that R-CNN achieves a mAP that is more than 20% higher on PASCAL VOC. 
 
 ## Final Thoughts
 
