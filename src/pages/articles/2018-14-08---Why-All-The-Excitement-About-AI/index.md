@@ -113,7 +113,7 @@ The object recognition portion of the challenge involved giving participating te
 
 <figure>
 	<img src="./imagenet-bird-image.png" alt="An image from the ImageNet dataset. What is this a picture of?">
-	<figcaption>An image from the ImageNet dataset. What is this a picture of?*</figcaption>
+	<figcaption>An image from the ImageNet dataset. What is this a picture of?</figcaption>
 </figure>
 
 In the [2012 competition](http://www.image-net.org/challenges/LSVRC/2012/results.html), the Toronto team trained a deep learning model that achieved **16.4% error, compared to the previous best of 25.8%** (lower is better)!
