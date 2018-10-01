@@ -1,0 +1,420 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><script>window.twttr = (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0],
+                  t = window.twttr || {};
+                if (d.getElementById(id)) return t;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "https://platform.twitter.com/widgets.js";
+                fjs.parentNode.insertBefore(js, fjs);
+
+                t._e = [];
+                t.ready = function(f) {
+                  t._e.push(f);
+                };
+
+                return t;
+              }(document, "script", "twitter-wjs"));</script><link rel="preload" href="/component---src-layouts-index-jsx-b504d383bf535d8d5521.js" as="script"/><link rel="preload" href="/component---src-templates-post-template-jsx-ab0642351350b7586b5b.js" as="script"/><link rel="preload" href="/path---posts-object-detection-with-rcnn-eccef86e7e12749cba08.js" as="script"/><link rel="preload" href="/app-6a020c86979534cac2b5.js" as="script"/><link rel="preload" href="/commons-42e22243a7c7bc28ab91.js" as="script"/><link href="https://fonts.googleapis.com/css?family=Alegreya:400,400i,700,700i|Alegreya+Sans:500" rel="stylesheet"/><link rel="sitemap" type="application/xml" href="/sitemap.xml"/><title data-react-helmet="true">Object Detection with R-CNN - Mihail Eric</title><link data-react-helmet="true" rel="shortcut icon" type="image/x-icon" href="/static/favicon.64d552ee.ico"/><meta data-react-helmet="true" name="description" content="A discussion of R-CNN, a historic object detection architecture combining region proposals with convolutional neural networks."/><style id="gatsby-inlined-css">/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 2.5rem}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 .125rem;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}html{font-size:100}body{font-family:Alegreya,sans-serif;color:#222;line-height:1.625;font-size:1.25rem;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}h1,h2,h3,h4,h5,h6{font-family:Alegreya Sans,sans-serif;font-weight:500}h1{font-size:3.125rem;line-height:3.25rem;margin-top:6.5rem;margin-bottom:1.625rem}h2{font-size:2.10938rem;line-height:2.1125rem;margin-top:1.625rem;margin-bottom:.8125rem}h3{font-size:1.71875rem;margin-top:3.25rem}h3,h4{line-height:1.625rem;margin-bottom:.8125rem}h4{font-size:1.5rem;margin-top:2.4375rem}h5,h6{font-size:1.25rem;line-height:1.625rem;margin-top:4.0625rem;margin-bottom:.8125rem}img{max-width:100%;margin:inherit auto}hr,img{border:0;display:block}hr{color:#222;height:26px;margin:1.25rem auto 3.25rem;background-size:100% 26px;background-image:linear-gradient(180deg,transparent 1px,transparent 11px,#222 0,#222 15px,transparent 0,transparent 26px);width:6.25rem}a{color:#186dcc;text-decoration:none}a:active,a:focus,a:hover{color:#ffc45d}td,th{border-bottom:1px solid rgba(0,0,0,.12);text-align:center;border-right:1px solid rgba(0,0,0,.12);padding-left:.1875rem;padding-right:.1875rem}td:first-child,th:first-child{text-align:left}b,strong{font-weight:700}ul{list-style:square;margin-bottom:1.625rem}ul li{padding:0 .3125rem;margin-bottom:.625rem}p{line-height:1.625rem;margin-bottom:1.625rem}blockquote{padding:0;font-style:italic;text-align:center}figure{display:block;width:100%;height:auto}figcaption{line-height:1.21875rem;margin-top:.40625rem;color:#222;font-size:1rem;font-style:italic;margin-bottom:0;text-align:center}.layout{max-width:66.875rem;margin-left:auto;margin-right:auto}.layout:after,.layout:before{content:"";display:table}.layout:after{clear:both}.content__inner{padding:1.5625rem 1.25rem}@media screen and (min-width:685px){figure.float-left,figure.float-right{max-width:19.375rem;padding:0 1.625rem}.float-right{float:right}.float-left{float:left}.content{width:calc(99.9% * 7/12 - 0.78125rem)}.content:nth-child(1n){float:left;margin-right:1.875rem;clear:none}.content:last-child{margin-right:0}.content:nth-child(12n){margin-right:0;float:right}.content:nth-child(12n+1){clear:both}.content__inner{padding:1.875rem 1.25rem}}@media screen and (min-width:960px){.content{width:calc(99.9% * 2/3 - 0.625rem)}.content:nth-child(1n){float:left;margin-right:1.875rem;clear:none}.content:last-child{margin-right:0}.content:nth-child(3n){margin-right:0;float:right}.content:nth-child(3n+1){clear:both}.content__inner{padding:2.5rem 2.1875rem}}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.tags__list-item-link{color:#222}.tags__list-item-link:focus,.tags__list-item-link:hover{color:#2f6eb2;border-bottom:1px solid #2f6eb2}.menu{margin-bottom:1.625rem}.menu__list{list-style:none;padding:0;margin:0}.menu__list-item{padding:0;margin:.625rem 0}.menu__list-item-link{font-size:1.5rem;color:#222;font-weight:400;border:0}.menu__list-item-link:focus,.menu__list-item-link:hover{color:#186dcc;border-bottom:1px solid #186dcc}.menu__list-item-link--active{color:#222;border-bottom:1px solid #222}.links{margin-bottom:1.625rem}.links__list{display:-ms-flexbox;display:flex;list-style:none;padding:0;margin:.625rem -.1875rem}.links__list-item{padding:0;margin:0 .1875rem;height:34px;width:2.125rem;line-height:2.125rem;border-radius:.1875rem;text-align:center}.links__list-item a{border:0}.links__list-item a i{text-align:left;font-size:1.6875rem;margin-left:-.09375rem;color:#51a4ff}.links__list-item a i.icon-graduation-cap{font-size:1.375rem;margin-bottom:-.3125rem;margin-left:-.3125rem}.links__list-item a:focus i,.links__list-item a:hover i{color:#2f6eb2}@font-face{font-family:fontello;src:url(/static/fontello.96eee913.eot);src:url(/static/fontello.96eee913.eot#iefix) format("embedded-opentype"),url(/static/fontello.07ad3c83.woff2) format("woff2"),url(/static/fontello.9aee3ebc.woff) format("woff"),url(/static/fontello.554de365.ttf) format("truetype"),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxtZXRhZGF0YT5Db3B5cmlnaHQgKEMpIDIwMTcgYnkgb3JpZ2luYWwgYXV0aG9ycyBAIGZvbnRlbGxvLmNvbTwvbWV0YWRhdGE+CjxkZWZzPgo8Zm9udCBpZD0iZm9udGVsbG8iIGhvcml6LWFkdi14PSIxMDAwIiA+Cjxmb250LWZhY2UgZm9udC1mYW1pbHk9ImZvbnRlbGxvIiBmb250LXdlaWdodD0iNDAwIiBmb250LXN0cmV0Y2g9Im5vcm1hbCIgdW5pdHMtcGVyLWVtPSIxMDAwIiBhc2NlbnQ9Ijg1MCIgZGVzY2VudD0iLTE1MCIgLz4KPG1pc3NpbmctZ2x5cGggaG9yaXotYWR2LXg9IjEwMDAiIC8+CjxnbHlwaCBnbHlwaC1uYW1lPSJtYWlsIiB1bmljb2RlPSImI3hlODAwOyIgZD0iTTkyOSAxMXY0MjhxLTE4LTIwLTM5LTM2LTE0OS0xMTUtMjM4LTE4OS0yOC0yNC00Ni0zN3QtNDgtMjgtNTctMTNoLTJxLTI2IDAtNTcgMTN0LTQ4IDI4LTQ2IDM3cS04OCA3NC0yMzggMTg5LTIxIDE2LTM5IDM2di00MjhxMC03IDYtMTN0MTItNWg4MjJxNyAwIDEyIDV0NiAxM3ogbTAgNTg2djE0dC0xIDctMSA3LTMgNS01IDQtOCAyaC04MjJxLTcgMC0xMi02dC02LTEycTAtOTQgODMtMTU5IDEwNy04NCAyMjMtMTc2IDQtMyAyMC0xN3QyNS0yMSAyNS0xNyAyOC0xNiAyNC01aDJxMTEgMCAyNCA1dDI4IDE2IDI1IDE3IDI1IDIxIDIwIDE3cTExNiA5MiAyMjQgMTc2IDMwIDI0IDU2IDY1dDI2IDczeiBtNzEgMjF2LTYwN3EwLTM3LTI2LTYzdC02My0yN2gtODIycS0zNiAwLTYzIDI3dC0yNiA2M3Y2MDdxMCAzNyAyNiA2M3Q2MyAyNmg4MjJxMzcgMCA2My0yNnQyNi02M3oiIGhvcml6LWFkdi14PSIxMDAwIiAvPgoKPGdseXBoIGdseXBoLW5hbWU9InR3aXR0ZXIiIHVuaWNvZGU9IiYjeGYwOTk7IiBkPSJNOTA0IDYyMnEtMzctNTQtOTAtOTMgMC04IDAtMjMgMC03My0yMS0xNDV0LTY0LTEzOS0xMDMtMTE3LTE0NC04Mi0xODEtMzBxLTE1MSAwLTI3NiA4MSAxOS0yIDQzLTIgMTI2IDAgMjI0IDc3LTU5IDEtMTA1IDM2dC02NCA4OXExOS0zIDM0LTMgMjQgMCA0OCA2LTYzIDEzLTEwNCA2MnQtNDEgMTE1djJxMzgtMjEgODItMjMtMzcgMjUtNTkgNjR0LTIyIDg2cTAgNDkgMjUgOTEgNjgtODMgMTY0LTEzM3QyMDgtNTVxLTUgMjEtNSA0MSAwIDc1IDUzIDEyN3QxMjcgNTNxNzkgMCAxMzItNTcgNjEgMTIgMTE1IDQ0LTIxLTY0LTgwLTEwMCA1MiA2IDEwNCAyOHoiIGhvcml6LWFkdi14PSI5MjguNiIgLz4KCjxnbHlwaCBnbHlwaC1uYW1lPSJmYWNlYm9vayIgdW5pY29kZT0iJiN4ZjA5YTsiIGQ9Ik01MzUgODQzdi0xNDdoLTg3cS00OCAwLTY1LTIwdC0xNy02MHYtMTA2aDE2NGwtMjItMTY1aC0xNDJ2LTQyNGgtMTcxdjQyNGgtMTQydjE2NWgxNDJ2MTIycTAgMTA0IDU4IDE2MXQxNTUgNTdxODIgMCAxMjctN3oiIGhvcml6LWFkdi14PSI1NzEuNCIgLz4KCjxnbHlwaCBnbHlwaC1uYW1lPSJyc3MiIHVuaWNvZGU9IiYjeGYwOWU7IiBkPSJNMjE0IDEwMHEwLTQ1LTMxLTc2dC03Ni0zMS03NiAzMS0zMSA3NiAzMSA3NiA3NiAzMSA3Ni0zMSAzMS03NnogbTI4Ni02OXExLTE1LTktMjYtMTAtMTItMjctMTJoLTc1cS0xNCAwLTI0IDl0LTExIDIzcS0xMiAxMjgtMTAzIDIxOXQtMjE5IDEwM3EtMTQgMS0yMyAxMXQtOSAyNHY3NXEwIDE2IDEyIDI2IDkgMTAgMjQgMTBoM3E4OS03IDE3MC00NXQxNDUtMTAxcTYzLTYzIDEwMS0xNDV0NDUtMTcxeiBtMjg2LTFxMS0xNS0xMC0yNi0xMC0xMS0yNi0xMWgtODBxLTE0IDAtMjUgMTB0LTEwIDIzcS03IDEyMC01NyAyMjh0LTEyOSAxODgtMTg4IDEyOS0yMjcgNTdxLTE0IDEtMjQgMTF0LTEwIDI0djgwcTAgMTYgMTEgMjYgMTAgMTAgMjUgMTBoMXExNDctOCAyODAtNjd0MjM4LTE2NHExMDQtMTA0IDE2NC0yMzh0NjctMjgweiIgaG9yaXotYWR2LXg9Ijc4NS43IiAvPgoKPGdseXBoIGdseXBoLW5hbWU9ImxpbmtlZGluIiB1bmljb2RlPSImI3hmMGUxOyIgZD0iTTE5NSA1MDF2LTU1M2gtMTg0djU1M2gxODR6IG0xMiAxNzFxMC00MS0yOS02OHQtNzUtMjdoLTFxLTQ2IDAtNzQgMjd0LTI4IDY4cTAgNDEgMjkgNjh0NzUgMjcgNzQtMjcgMjktNjh6IG02NTAtNDA3di0zMTdoLTE4M3YyOTZxMCA1OS0yMyA5MnQtNzEgMzNxLTM1IDAtNTgtMTl0LTM2LTQ4cS02LTE3LTYtNDV2LTMwOWgtMTg0cTEgMjIzIDEgMzYxdDAgMTY1bC0xIDI3aDE4NHYtODBoLTFxMTEgMTggMjMgMzF0MzEgMjkgNDkgMjQgNjQgOXE5NSAwIDE1My02M3Q1OC0xODZ6IiBob3Jpei1hZHYteD0iODU3LjEiIC8+Cgo8Z2x5cGggZ2x5cGgtbmFtZT0iZ2l0aHViIiB1bmljb2RlPSImI3hmMTEzOyIgZD0iTTM1NyAxNzFxMC0yMi03LTQ1dC0yNC00My00MC0xOS00MSAxOS0yNCA0My03IDQ1IDcgNDYgMjQgNDMgNDEgMTkgNDAtMTkgMjQtNDMgNy00NnogbTM1NyAwcTAtMjItNy00NXQtMjQtNDMtNDAtMTktNDEgMTktMjQgNDMtNyA0NSA3IDQ2IDI0IDQzIDQxIDE5IDQwLTE5IDI0LTQzIDctNDZ6IG05MCAwcTAgNjctMzkgMTE0dC0xMDQgNDdxLTIzIDAtMTA5LTEyLTQwLTYtODgtNnQtODcgNnEtODUgMTItMTA5IDEyLTY2IDAtMTA0LTQ3dC0zOS0xMTRxMC00OSAxOC04NXQ0NS01OCA2OC0zMyA3OC0xNyA4My00aDk0cTQ2IDAgODMgNHQ3OCAxNyA2OSAzMyA0NSA1OCAxOCA4NXogbTEyNSA5OXEwLTExNi0zNC0xODUtMjItNDMtNTktNzR0LTc5LTQ4LTk1LTI3LTk2LTEyLTkzLTNxLTQzIDAtNzkgMnQtODIgNy04NSAxNy03NyAyOS02NyA0NS00OCA2NHEtMzUgNjktMzUgMTg1IDAgMTMyIDc2IDIyMS0xNSA0NS0xNSA5NSAwIDY0IDI4IDEyMSA2MSAwIDEwNi0yMnQxMDYtNjlxODIgMjAgMTcyIDIwIDgzIDAgMTU3LTE4IDU4IDQ2IDEwNCA2N3QxMDUgMjJxMjktNTcgMjktMTIxIDAtNDktMTUtOTQgNzYtODkgNzYtMjIyeiIgaG9yaXotYWR2LXg9IjkyOC42IiAvPgoKPGdseXBoIGdseXBoLW5hbWU9InN0YWNrb3ZlcmZsb3ciIHVuaWNvZGU9IiYjeGYxNmM7IiBkPSJNNzE5LTYxaC02MjR2MjY4aC04OXYtMzU3aDgwM3YzNTdoLTkwdi0yNjh6IG0tNTI1IDI5M2wxOCA4NyA0MzctOTItMTgtODd6IG01NyAyMDhsMzggODIgNDA0LTE4OS0zNy04MXogbTExMiAxOTlsNTcgNjkgMzQzLTI4Ny01Ny02OHogbTIyMiAyMTFsMjY2LTM1OC03MS01My0yNjcgMzU3eiBtLTQwMS04MjF2ODloNDQ3di04OWgtNDQ3eiIgaG9yaXotYWR2LXg9Ijg1Ny4xIiAvPgoKPGdseXBoIGdseXBoLW5hbWU9Imluc3RhZ3JhbSIgdW5pY29kZT0iJiN4ZjE2ZDsiIGQ9Ik01NzEgMzUwcTAgNTktNDEgMTAxdC0xMDEgNDItMTAxLTQyLTQyLTEwMSA0Mi0xMDEgMTAxLTQyIDEwMSA0MiA0MSAxMDF6IG03NyAwcTAtOTEtNjQtMTU2dC0xNTUtNjQtMTU2IDY0LTY0IDE1NiA2NCAxNTYgMTU2IDY0IDE1NS02NCA2NC0xNTZ6IG02MSAyMjlxMC0yMS0xNS0zNnQtMzctMTUtMzYgMTUtMTUgMzYgMTUgMzYgMzYgMTUgMzctMTUgMTUtMzZ6IG0tMjgwIDEyM3EtNCAwLTQzIDB0LTU5IDAtNTQtMi01Ny01LTQwLTExcS0yOC0xMS00OS0zMnQtMzMtNDlxLTYtMTYtMTAtNDB0LTYtNTgtMS01MyAwLTU5IDAtNDMgMC00MyAwLTU5IDEtNTMgNi01OCAxMC00MHExMi0yOCAzMy00OXQ0OS0zMnExNi02IDQwLTExdDU3LTUgNTQtMiA1OSAwIDQzIDAgNDIgMCA1OSAwIDU0IDIgNTggNSAzOSAxMXEyOCAxMSA1MCAzMnQzMiA0OXE2IDE2IDEwIDQwdDYgNTggMSA1MyAwIDU5IDAgNDMgMCA0MyAwIDU5LTEgNTMtNiA1OC0xMCA0MHEtMTEgMjgtMzIgNDl0LTUwIDMycS0xNiA2LTM5IDExdC01OCA1LTU0IDItNTkgMC00MiAweiBtNDI4LTM1MnEwLTEyOC0zLTE3Ny01LTExNi02OS0xODB0LTE3OS02OXEtNTAtMy0xNzctM3QtMTc3IDNxLTExNiA2LTE4MCA2OXQtNjkgMTgwcS0zIDQ5LTMgMTc3dDMgMTc3cTUgMTE2IDY5IDE4MHQxODAgNjlxNDkgMyAxNzcgM3QxNzctM3ExMTYtNiAxNzktNjl0NjktMTgwcTMtNDkgMy0xNzd6IiBob3Jpei1hZHYteD0iODU3LjEiIC8+Cgo8Z2x5cGggZ2x5cGgtbmFtZT0idHVtYmxyIiB1bmljb2RlPSImI3hmMTczOyIgZD0iTTUyNyAxMDhsNDQtMTMycS0xMi0xOS02MS0zN3QtOTktMThxLTU4LTEtMTA3IDE1dC03OSA0MS01MyA1OS0zMSA2Ny05IDY2djMwNGgtOTR2MTIwcTQwIDE0IDcyIDM5dDUxIDUwIDMyIDU3IDE5IDU1IDggNDlxMSAzIDMgNXQ0IDJoMTM2di0yMzdoMTg2di0xNDBoLTE4NnYtMjg5cTAtMTcgMy0zMXQxMy0zMCAyOC0yMyA0NS04cTQ0IDEgNzUgMTZ6IiBob3Jpei1hZHYteD0iNTcxLjQiIC8+Cgo8Z2x5cGggZ2x5cGgtbmFtZT0iZHJpYmJibGUiIHVuaWNvZGU9IiYjeGYxN2Q7IiBkPSJNNTcxIDEzcS0yMyAxMzQtNzggMjc4aC0xbC0xLTFxLTktMy0yNC05dC01Ni0yNy03Ny00Ni03My02NC01Ny04MmwtOSA2cTEwMy04NCAyMzQtODQgNzMgMCAxNDIgMjl6IG0tMTAzIDMzOXEtMTEgMjctMjkgNjItMTc0LTUyLTM3Ni01MiAwLTQgMC0xMiAwLTY5IDI0LTEzMnQ2OS0xMTJxMjggNDkgNjkgOTN0ODAgNjkgNzMgNDUgNTUgMjdsMjEgN3EyIDEgNyAydDcgM3ogbS01OSAxMThxLTY3IDExOS0xMzcgMjExLTc3LTM2LTEzMC0xMDR0LTcyLTE1MnExNjkgMCAzMzkgNDV6IG0zODEtMTc4cS0xMTcgMzMtMjI4IDE2IDQ5LTEzMyA3MS0yNjIgNjIgNDIgMTA0IDEwNnQ1MyAxNDB6IG0tNDQ5IDQxNHEtMSAwLTEtMSAwIDEgMSAxeiBtMzI5LTgxcS0xMDMgOTEtMjQxIDkxLTQzIDAtODctMTAgNzMtOTUgMTM3LTIxNCAzOSAxNSA3MyAzNHQ1NCAzNCAzNiAzMiAyMSAyM3ogbTEyNS0yNzFxLTIgMTI5LTgzIDIyOWwtMS0xcS01LTctMTEtMTN0LTI0LTI1LTQwLTM0LTU1LTM2LTc0LTM2cTE0LTMwIDI1LTUzIDEtMyAzLTEwdDUtOXEyMCAyIDQxIDR0NDEgMSAzOS0xIDM1LTIgMzItMyAyNy00IDIwLTMgMTQtM3ogbTYyLTRxMC0xMTctNTctMjE1dC0xNTYtMTU2LTIxNS01OC0yMTYgNTgtMTU1IDE1Ni01OCAyMTUgNTggMjE1IDE1NSAxNTYgMjE2IDU4IDIxNS01OCAxNTYtMTU2IDU3LTIxNXoiIGhvcml6LWFkdi14PSI4NTcuMSIgLz4KCjxnbHlwaCBnbHlwaC1uYW1lPSJza3lwZSIgdW5pY29kZT0iJiN4ZjE3ZTsiIGQ9Ik02NTUgMjU3cTAgMjgtMTEgNTF0LTI3IDM4LTQxIDI3LTQ2IDE5LTQ5IDEzbC01OCAxNHEtMTcgNC0yNSA2dC0xOSA2LTE3IDktOSAxMi00IDE2cTAgNDMgODAgNDMgMjQgMCA0My02dDMwLTE2IDIxLTE5IDIzLTE2IDI3LTdxMjYgMCA0MiAxOHQxNiA0M3EwIDMxLTMyIDU1dC03OSAzOC0xMDEgMTNxLTM4IDAtNzQtOXQtNjctMjYtNDktNDgtMTktNzJxMC0zNCAxMC02MHQzMi00MiA0NC0yNyA1OC0xOGw4MS0yMHE1MS0xMiA2My0yMCAxOC0xMSAxOC0zNCAwLTIxLTIzLTM2dC01OC0xNHEtMjkgMC01MSA5dC0zNyAyMi0yNSAyNS0yNiAyMS0zMCA5cS0yOCAwLTQyLTE3dC0xNC00MXEwLTUyIDY4LTg4dDE2Mi0zN3E0MSAwIDc4IDEwdDY5IDMwIDQ5IDUyIDE5IDc0eiBtMjAyLTEyMXEwLTg5LTYzLTE1MnQtMTUxLTYzcS03MyAwLTEzMSA0NS00My05LTgzLTktODAgMC0xNTMgMzF0LTEyNiA4NC04MyAxMjUtMzEgMTUzcTAgNDEgOSA4NC00NSA1OC00NSAxMzAgMCA4OSA2MyAxNTJ0MTUxIDYzcTczIDAgMTMxLTQ1IDQzIDkgODQgOSA3OSAwIDE1Mi0zMXQxMjYtODQgODQtMTI1IDMwLTE1M3EwLTQxLTgtODQgNDQtNTggNDQtMTMweiIgaG9yaXotYWR2LXg9Ijg1Ny4xIiAvPgoKPGdseXBoIGdseXBoLW5hbWU9InZrb250YWt0ZSIgdW5pY29kZT0iJiN4ZjE4OTsiIGQ9Ik0xMDcwIDU2MHExMy0zNi04NC0xNjQtMTMtMTgtMzYtNDgtMjItMjgtMzEtNDB0LTE3LTI3LTctMjQgOC0xOSAxOC0yNCAzMi0zMHEyLTEgMi0yIDc5LTczIDEwNy0xMjMgMi0zIDQtN3Q0LTE1LTEtMTktMTQtMTUtMzMtN2wtMTQyLTNxLTE0LTItMzIgM3QtMjkgMTNsLTExIDZxLTE3IDEyLTM5IDM2dC0zOCA0My0zNCAzMy0zMiA4cS0xIDAtNC0ydC0xMC04LTEyLTE2LTktMjktNC00NHEwLTgtMi0xNXQtNC0xMGwtMi0zcS0xMC0xMS0zMC0xMmgtNjRxLTQwLTMtODEgOXQtNzQgMjktNTcgMzctNDAgMzJsLTE0IDE0cS01IDUtMTUgMTd0LTQwIDUwLTU5IDg1LTY4IDExNy03MyAxNTJxLTQgOS00IDE1dDIgOWwyIDNxOSAxMSAzMiAxMWwxNTMgMXE3LTEgMTMtM3Q5LTVsMy0ycTktNiAxMy0xOCAxMS0yOCAyNi01N3QyMy00Nmw5LTE2cTE2LTM0IDMxLTU4dDI3LTM4IDIzLTIyIDE5LTggMTUgM3ExIDEgMyAzdDcgMTIgNyAyNiA1IDQ2IDAgNjlxLTEgMjMtNSA0MXQtNyAyNmwtNCA2cS0xNCAxOS00NyAyNC04IDIgMyAxNCA4IDEwIDIxIDE3IDI5IDE0IDEzMyAxMyA0Ni0xIDc1LTcgMTItMyAxOS04dDEyLTEzIDUtMTggMi0yNSAwLTMxLTItNDAgMC00NnEwLTYtMS0yM3QwLTI3IDItMjIgNi0yMiAxMy0xNHE0LTEgOS0ydDE1IDYgMjEgMTkgMjkgMzggMzggNjBxMzMgNTggNjAgMTI1IDIgNiA1IDEwdDYgNmwzIDIgMiAxdDggMiAxMSAwbDE2MCAxcTIyIDMgMzYtMXQxNy0xMHoiIGhvcml6LWFkdi14PSIxMDcxLjQiIC8+Cgo8Z2x5cGggZ2x5cGgtbmFtZT0ic2xhY2siIHVuaWNvZGU9IiYjeGYxOTg7IiBkPSJNODQ4IDQxN3EzNCAwIDU3LTIzdDI0LTU2cTAtNTQtNTItNzNsLTk2LTMzIDMxLTkzcTQtMTIgNC0yNiAwLTMzLTI0LTU3dC01Ni0yNHEtMjYgMC00OCAxNXQtMjkgNDBsLTMxIDkyLTE3My01OSAzMS05MXE0LTE0IDQtMjcgMC0zMy0yMy01N3QtNTctMjRxLTI3IDAtNDggMTV0LTI5IDQxbC0zMSA5MS04NS0zMHEtMTctNS0yOC01LTM0IDAtNTcgMjJ0LTIzIDU3cTAgMjYgMTYgNDd0NDAgMzBsODcgMjktNTkgMTc1LTg3LTMwcS0xNC01LTI3LTUtMzMgMC01NiAyM3QtMjMgNTZxMCAyNiAxNSA0OHQ0MCAyOWw4OCAzMC0zMCA4OHEtNCAxNC00IDI3IDAgMzMgMjMgNTd0NTcgMjRxMjYgMCA0OC0xNnQyOS00MGwzMC04OSAxNzMgNTktMzAgODlxLTQgMTMtNCAyNiAwIDMzIDIzIDU3dDU3IDI0cTI2IDAgNDgtMTV0MzAtNDBsMjktOTAgOTEgMzFxMTEgMyAyNCAzIDMzIDAgNTctMjJ0MjQtNTVxMC0yNS0xNy00NXQtNDEtMjlsLTg4LTMwIDU5LTE3NyA5MSAzMnExMyA0IDI2IDR6IG0tNDQzLTE0NmwxNzMgNTgtNTkgMTc2LTE3My02MHoiIGhvcml6LWFkdi14PSI5MjguNiIgLz4KCjxnbHlwaCBnbHlwaC1uYW1lPSJwYXBlci1wbGFuZSIgdW5pY29kZT0iJiN4ZjFkODsiIGQ9Ik05ODQgODQ0cTE5LTEzIDE1LTM2bC0xNDItODU3cS0zLTE2LTE4LTI1LTgtNS0xOC01LTYgMC0xMyAzbC0yNTMgMTA0LTEzNS0xNjVxLTEwLTEzLTI3LTEzLTcgMC0xMiAyLTExIDQtMTcgMTN0LTcgMjF2MTk1bDQ4MiA1OTAtNTk2LTUxNi0yMjEgOTFxLTIwIDgtMjIgMzAtMSAyMyAxOCAzM2w5MjggNTM2cTkgNSAxOCA1IDExIDAgMjAtNnoiIGhvcml6LWFkdi14PSIxMDAwIiAvPgoKPGdseXBoIGdseXBoLW5hbWU9IndoYXRzYXBwIiB1bmljb2RlPSImI3hmMjMyOyIgZD0iTTU1MCAzMDdxNyAwIDU0LTI1dDUwLTMwcTEtMiAxLTggMC0xOC05LTQyLTktMjItNDAtMzd0LTU3LTE1cS0zMiAwLTEwNiAzNS01NSAyNS05NSA2NnQtODIgMTAzcS00MSA2MC00MCAxMDh2NXEyIDUwIDQxIDg4IDE0IDEyIDI5IDEyIDQgMCAxMC0xdDExLTFxMTEgMCAxNS0zdDgtMTZxNS0xMSAxOS00OXQxNC00MXEwLTEyLTE5LTMzdC0yMC0yNnEwLTMgMy04IDE5LTQxIDU3LTc2IDMxLTMwIDg0LTU3IDctNCAxMy00IDggMCAzMCAyN3QyOSAyOHogbS0xMTQtMjk2cTcxIDAgMTM2IDI4dDExMiA3NCA3NSAxMTIgMjggMTM2LTI4IDEzNi03NSAxMTItMTEyIDc1LTEzNiAyOC0xMzUtMjgtMTEyLTc1LTc1LTExMi0yOC0xMzZxMC0xMTMgNjctMjA1bC00NC0xMzAgMTM1IDQzcTg4LTU4IDE5Mi01OHogbTAgNzcxcTg2IDAgMTY0LTM0dDEzNC04OSA5MC0xMzUgMzMtMTYzLTMzLTE2My05MC0xMzQtMTM0LTkwLTE2NC0zNHEtMTA4IDAtMjAzIDUzbC0yMzMtNzUgNzYgMjI2cS02MCA5OS02MCAyMTcgMCA4NiAzMyAxNjN0OTAgMTM1IDEzNCA4OSAxNjMgMzR6IiBob3Jpei1hZHYteD0iODU3LjEiIC8+Cgo8Z2x5cGggZ2x5cGgtbmFtZT0ib2Rub2tsYXNzbmlraSIgdW5pY29kZT0iJiN4ZjI2MzsiIGQ9Ik0zNTcgMzQ0cS0xMDUgMC0xNzkgNzR0LTc0IDE3OXEwIDEwNSA3NCAxNzl0MTc5IDc0IDE3OS03NCA3NS0xNzlxMC0xMDUtNzUtMTc5dC0xNzktNzR6IG0wIDM3OHEtNTEgMC04OC0zN3QtMzYtODhxMC01MiAzNi04OHQ4OC0zNyA4OCAzNyAzNyA4OHEwIDUyLTM3IDg4dC04OCAzN3ogbTI5Mi00MDlxNy0xNSA4LTI3dC0yLTIzLTE1LTIxLTI0LTIxLTM0LTIzcS02NC00MS0xNzYtNTNsNDEtNDAgMTQ5LTE0OXExNy0xNyAxNy00MXQtMTctNDFsLTctN3EtMTctMTctNDEtMTd0LTQxIDE3cS0zOCAzOC0xNDkgMTQ5bC0xNDktMTQ5cS0xOC0xNy00Mi0xN3QtNDAgMTdsLTcgN3EtMTcgMTctMTcgNDF0MTcgNDFsMTQ5IDE0OSA0MCA0MHEtMTEzIDEyLTE3NyA1My0yMSAxNC0zNCAyM3QtMjQgMjEtMTUgMjEtMiAyMyA4IDI3cTYgMTEgMTYgMjB0MjMgMTIgMzItMSAzNi0yMHEzLTIgOC02dDI0LTEzIDM5LTE3IDUxLTE0IDYzLTZxNTEgMCA5NyAxNHQ2NyAyOGwyMSAxNHExOSAxNSAzNyAyMHQzMSAxIDIzLTEyIDE2LTIweiIgaG9yaXotYWR2LXg9IjcxNC4zIiAvPgo8L2ZvbnQ+CjwvZGVmcz4KPC9zdmc+#fontello) format("svg");font-weight:400;font-style:normal}[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-mail:before{content:"\E800"}.icon-twitter:before{content:"\F099"}.icon-facebook:before{content:"\F09A"}.icon-rss:before{content:"\F09E"}.icon-linkedin:before{content:"\F0E1"}.icon-github:before{content:"\F113"}.icon-stackoverflow:before{content:"\F16C"}.icon-instagram:before{content:"\F16D"}.icon-tumblr:before{content:"\F173"}.icon-dribbble:before{content:"\F17D"}.icon-skype:before{content:"\F17E"}.icon-vkontakte:before{content:"\F189"}.icon-slack:before{content:"\F198"}.icon-paper-plane:before{content:"\F1D8"}.icon-whatsapp:before{content:"\F232"}.icon-odnoklassniki:before{content:"\F263"}@font-face{font-family:fontello;src:url(/static/fontello.b6c4a020.eot);src:url(/static/fontello.b6c4a020.eot#iefix) format("embedded-opentype"),url(/static/fontello.73524efb.woff2) format("woff2"),url(/static/fontello.60bd1456.woff) format("woff"),url(/static/fontello.4f46b3db.ttf) format("truetype"),url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBzdGFuZGFsb25lPSJubyI/Pgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxtZXRhZGF0YT5Db3B5cmlnaHQgKEMpIDIwMTggYnkgb3JpZ2luYWwgYXV0aG9ycyBAIGZvbnRlbGxvLmNvbTwvbWV0YWRhdGE+CjxkZWZzPgo8Zm9udCBpZD0iZm9udGVsbG8iIGhvcml6LWFkdi14PSIxMDAwIiA+Cjxmb250LWZhY2UgZm9udC1mYW1pbHk9ImZvbnRlbGxvIiBmb250LXdlaWdodD0iNDAwIiBmb250LXN0cmV0Y2g9Im5vcm1hbCIgdW5pdHMtcGVyLWVtPSIxMDAwIiBhc2NlbnQ9Ijg1MCIgZGVzY2VudD0iLTE1MCIgLz4KPG1pc3NpbmctZ2x5cGggaG9yaXotYWR2LXg9IjEwMDAiIC8+CjxnbHlwaCBnbHlwaC1uYW1lPSJncmFkdWF0aW9uLWNhcCIgdW5pY29kZT0iJiN4ZjE5ZDsiIGQ9Ik05OTAgMzg0bDEwLTE3N3EyLTM4LTQ2LTcxdC0xMzEtNTItMTgwLTIwLTE4MCAyMC0xMzEgNTItNDYgNzFsMTAgMTc3IDMyMC0xMDFxMTItNCAyNy00dDI3IDR6IG0yOTYgMTgwcTAtMTItMTMtMTdsLTYyNS0xOTZxLTItMS01LTF0LTYgMWwtMzY0IDExNXEtMjQtMTktMzktNjN0LTE5LTk5cTM1LTIwIDM1LTYxIDAtMzktMzItNjBsMzItMjQycTEtNy00LTEzLTUtNy0xNC03aC0xMDdxLTggMC0xMyA3LTYgNi01IDEzbDMzIDI0MnEtMzMgMjEtMzMgNjAgMCA0MSAzNiA2MiA3IDExNSA1NSAxODRsLTE4NiA1OHEtMTIgNS0xMiAxN3QxMiAxOGw2MjUgMTk2cTMgMSA2IDF0NS0xbDYyNS0xOTZxMTMtNSAxMy0xOHoiIGhvcml6LWFkdi14PSIxMjg1LjciIC8+CjwvZm9udD4KPC9kZWZzPgo8L3N2Zz4=#fontello) format("svg");font-weight:400;font-style:normal}[class*=" icon-"]:before,[class^=icon-]:before{font-family:fontello;font-style:normal;font-weight:400;speak:none;display:inline-block;text-decoration:inherit;width:1em;margin-right:.2em;text-align:center;-webkit-font-feature-settings:normal;font-feature-settings:normal;font-variant:normal;text-transform:none;line-height:1em;margin-left:.2em;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-graduation-cap:before{content:"\F19D"}.sidebar{width:100%}.sidebar__inner{position:relative;padding:1.5625rem 1.25rem 0}.sidebar__author-photo{display:inline-block;margin-bottom:0;border-radius:50%;background-clip:padding-box}.sidebar__author-title{font-size:2.53125rem;font-weight:500;line-height:1.82813rem;margin:.8125rem 0}.sidebar__author-title-link,.sidebar__author-title-link:focus,.sidebar__author-title-link:hover{color:#222}.sidebar__author-subtitle{color:#35587f;font-style:italic;margin-top:-.3125rem;line-height:1.625rem;margin-bottom:1.625rem}.sidebar__copyright{color:#b6b6b6;font-size:1rem}@media screen and (min-width:685px){.sidebar{width:calc(99.9% * 5/12 - 1.09375rem)}.sidebar:nth-child(1n){float:left;margin-right:1.875rem;clear:none}.sidebar:last-child{margin-right:0}.sidebar:nth-child(12n){margin-right:0;float:right}.sidebar:nth-child(12n+1){clear:both}.sidebar__inner{padding:1.875rem 1.25rem 0}.sidebar__inner:after{background:#e6e6e6;background:linear-gradient(180deg,#e6e6e6 0,#e6e6e6 48%,#fff);position:absolute;content:"";width:.0625rem;height:540px;top:30px;right:-10px;bottom:0}}@media screen and (min-width:960px){.sidebar{width:calc(99.9% * 1/3 - 1.25rem)}.sidebar:nth-child(1n){float:left;margin-right:1.875rem;clear:none}.sidebar:last-child{margin-right:0}.sidebar:nth-child(3n){margin-right:0;float:right}.sidebar:nth-child(3n+1){clear:both}.sidebar__inner{padding:2.5rem}}.page{margin-bottom:3.25rem}.page__title{font-size:3.125rem;font-weight:500;line-height:3.25rem;margin-top:0;margin-bottom:2.35625rem}.page__body{font-size:1.25rem;line-height:1.625rem;margin:0 0 1.625rem}.post-social-panel{text-align:center;margin-top:-2.5rem}.post-social-panel-prompt{margin-top:-1.875rem;font-style:italic;font-size:1.375rem}.post-social-panel-prompt-smiley{font-style:normal}.post-social-panel-twitter{margin-top:1.25rem}.post-social-panel-divider{margin:0 .625rem}.mailchimp-signup{text-align:center;margin-bottom:2.5rem}.mailchimp-signup-prompt{margin-top:1.25rem;font-style:italic;font-size:1.375rem}.mailchimp-signup-form{margin:1.25rem auto;padding:1.875rem 0;background-color:#ebebeb;border-radius:.1875rem;width:60%;text-align:center}.mailchimp-signup-divider{margin:0 .625rem}.mailchimp-signup-email-input{border-radius:.1875rem;margin:0 .625rem 0 .5rem}.mailchimp-signup-email-text{font-weight:700}.mailchimp-signup-subscribe{background-color:#0d95e8;padding:.3125rem .5rem;border-radius:.25rem;color:#fff;font-weight:700;font-family:Alegreya,sans-serif}.post-single__inner{max-width:59.0625rem;padding:0 .9375rem;margin:0 auto}.post-single__title{font-size:2.5rem;max-width:49.375rem;margin:1.625rem auto 0;font-weight:600;text-align:center;line-height:2.68125rem}.post-single__body figure{margin-bottom:1.625rem}.post-single__body figure blockquote{font-style:italic;text-align:center;margin-top:0;padding:1.625rem 0}.post-single__body figure blockquote p{max-width:49.375rem;font-size:2.10213rem;margin-top:0;margin-bottom:1.625rem;line-height:2.4375rem}.post-single__body a{text-decoration:underline}.post-single__body .gatsby-highlight{max-width:49.375rem;margin-left:.9375rem;margin-right:.9375rem;margin-bottom:1.625rem}.post-single__body :not(div){max-width:49.375rem;margin-left:auto;margin-right:auto}.post-single__footer{max-width:49.375rem;margin:1.625rem .9375rem 3.25rem;line-height:1.625rem}.post-single__footer-text a{text-decoration:underline}.post-single__date{text-align:center;max-width:49.375rem;margin-top:-.625rem;margin-left:auto;margin-right:auto}.post-single__tags{margin-bottom:.8125rem}.post-single__tags-list{text-align:center;list-style:none;margin:0 -.3125rem;padding:0}.post-single__tags-list-item{display:inline-block;margin:.625rem .3125rem}.post-single__tags-list-item-link{background:#ffc45d;text-decoration:none;border:0;border-radius:.625rem;color:#555;line-height:1.625;font-size:1rem;font-weight:500;padding:.5rem 1rem;text-transform:uppercase}.post-single__tags-list-item-link:focus,.post-single__tags-list-item-link:hover{color:#222;background:#ffb12a;border:0}.post-single__sidebar{display:block;margin-left:auto;margin-right:auto;width:12.5rem;max-width:12.5rem;font-size:1.25rem;padding:0 1rem;line-height:2.1875rem;text-align:center;color:#35587f;background:#d0e6ff;border-radius:.1875rem;margin-top:1.625rem}.post-single__sidebar:focus,.post-single__sidebar:hover{border:0}.post-single__sidebar-all-articles{text-align:left;font-weight:700;font-size:1.5rem;border-bottom:1px solid #35587f;margin-bottom:.625rem}.post-single__sidebar-all-articles-link{color:#35587f}.post-single__sidebar-all-articles-link:focus,.post-single__sidebar-all-articles-link:hover{color:#0f2339}.post-single__sidebar__related-posts-title{font-weight:700;font-size:1.5rem;text-align:left;border-bottom:1px solid #35587f}.post-single__sidebar__related-posts-items{text-align:left;line-height:1.125rem;margin-bottom:-.625rem;margin-left:-1.25rem}.post-single__sidebar__related-posts-items li{color:#2f6eb2}.post-single__sidebar__related-posts-items-link:focus,.post-single__sidebar__related-posts-items-link:hover{color:#2f6eb2;font-weight:700}@media screen and (min-width:685px){.post-single__body .gatsby-highlight,.post-single__footer{margin-left:auto;margin-right:auto}}@media screen and (min-width:960px){.post-single__inner{padding:0}.post-single__title{font-size:3.75rem;line-height:3.65625rem;margin-top:3.65625rem;margin-bottom:2.4375rem}.post-single__body,.post-single__body p{font-size:1.40625rem;line-height:1.82813rem;margin-bottom:1.82813rem}.post-single__sidebar{position:fixed;max-width:auto;margin:0;top:30px;left:30px}}.post{padding:.625rem;border:2px solid #fff;margin-bottom:2.03125rem}.post:last-child{margin-bottom:.8125rem}.post:focus,.post:hover{border:2px solid #186dcc;border-radius:.3125rem}.post__title{font-size:2.10938rem;line-height:2.4375rem;margin-top:.40625rem;margin-bottom:.8125rem}.post__title-link{color:#222}.post__title-link:focus,.post__title-link:hover{color:#222;border-bottom:1px solid #186dcc}.post__description{font-size:1.25rem;line-height:1.625rem;margin-bottom:1.21875rem}.post__meta-time{font-size:1rem;color:#35587f;font-weight:500;text-transform:uppercase}.post__meta-divider{margin:0 .3125rem}.post__meta-mini-spacer{margin:0 .1875rem}.post__meta-category-link{font-size:1rem;color:#555;font-weight:500;text-transform:uppercase}.post__meta-category-link:focus,.post__meta-category-link:hover{color:#222}.post__readmore{font-weight:700;font-size:1.25rem;color:#2f6eb2}.post__readmore:focus,.post__readmore:hover{color:#2f6eb2;border-bottom:1px solid #2f6eb2}.buttonWrapper{background-color:#ffc45d;border-radius:.625rem;padding:.25rem .5625rem}.buttonWrapper:hover{background-color:#ffb12a}.post{padding:.625rem;border:2px solid #fff;margin-bottom:2.03125rem}.post:last-child{margin-bottom:.8125rem}.post:focus,.post:hover{border:2px solid #186dcc;border-radius:.3125rem}.post__title{font-size:2.10938rem;line-height:2.4375rem;margin-top:.40625rem;margin-bottom:.8125rem}.post__title-link{color:#222}.post__title-link:focus,.post__title-link:hover{color:#222;border-bottom:1px solid #186dcc}.post__description{font-size:1.25rem;line-height:1.625rem;margin-bottom:1.21875rem}.post__meta-time{font-size:1rem;color:#35587f;font-weight:500;text-transform:uppercase}.post__meta-divider{margin:0 .3125rem}.post__meta-mini-spacer{margin:0 .1875rem}.post__meta-category-link{font-size:1rem;color:#555;font-weight:500;text-transform:uppercase}.post__meta-category-link:focus,.post__meta-category-link:hover{color:#222}.post__readmore{font-weight:700;font-size:1.25rem;color:#2f6eb2}.post__readmore:focus,.post__readmore:hover{color:#2f6eb2;border-bottom:1px solid #2f6eb2}.section-title{text-align:center;font-weight:700;font-size:1.75rem;margin:1.25rem 0 .9375rem}.container{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;border:2px solid #6ab1ff;border-bottom-width:0;border-radius:.3125rem}.container .project-details{max-width:70%;line-height:1.25rem;margin:.625rem 0 .625rem .625rem}.container .image{width:30%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;margin-left:.1875rem}.container .authors{margin:.25rem 0;color:#35587f}.container .description{margin:.25rem 0 .625rem;color:#186dcc}.container .title{font-weight:700;text-align:center;font-size:1.5rem;margin-bottom:.625rem;margin-right:.0625rem}.container .meta{font-style:italic;color:#35587f}.container-edge{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;border:2px solid #6ab1ff;border-radius:.3125rem}.container-edge .project-details{max-width:70%;line-height:1.25rem;margin:.625rem 0 .625rem .625rem}.container-edge .image{width:30%;-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center;margin-left:.1875rem}.container-edge .authors{margin:.25rem 0;color:#35587f}.container-edge .description{margin:.25rem 0 .625rem;color:#186dcc}.container-edge .title{font-weight:700;text-align:center;font-size:1.5rem;margin-bottom:.625rem;margin-right:.0625rem}.container-edge .meta{font-style:italic;color:#35587f}</style></head><body><div id="___gatsby"><div class="layout" data-reactroot="" data-reactid="1" data-react-checksum="1550091684"><!-- react-empty: 2 --><div data-reactid="3"><!-- react-empty: 4 --><div class="post-full-wrapper" data-reactid="5"><div class="post-single__sidebar" data-reactid="6"><div class="post-single__sidebar-all-articles" data-reactid="7"><a class="post-single__sidebar-all-articles-link" href="/" data-reactid="8">Back to Home</a></div><div class="post-single__sidebar__related-posts-title" data-reactid="9">Related Articles</div><div class="post-single__sidebar__related-posts-items" data-reactid="10"><ul data-reactid="11"><li data-reactid="12"><a class="post-single__sidebar__related-posts-items-link" href="/posts/fundamental-deep-learning-algorithms-to-learn/" data-reactid="13">Fundamental Deep Learning Algorithms To Learn</a></li><li data-reactid="14"><a class="post-single__sidebar__related-posts-items-link" href="/posts/why-all-the-excitement-about-ai/" data-reactid="15">Why All The Excitement About Artificial Intelligence</a></li><li data-reactid="16"><a class="post-single__sidebar__related-posts-items-link" href="/posts/being-a-good-machine-learning-data-scientist/" data-reactid="17">Being a Good Machine Learning Engineer/Data Scientist</a></li><li data-reactid="18"><a class="post-single__sidebar__related-posts-items-link" href="/posts/review-of-sigdial-semdial-2017/" data-reactid="19">Review of SIGDial/SemDial 2017</a></li></ul></div></div><div class="post-single" data-reactid="20"><div class="post-single__inner" data-reactid="21"><h1 class="post-single__title" data-reactid="22">Object Detection with R-CNN</h1><div class="post-single__date" data-reactid="23"><em data-reactid="24">October 2018</em></div><div class="post-single__body" data-reactid="25"><p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/dog_with_ball-db327d9f059c1de766b4eaa6acb2039b-f3e7c.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 748px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 75.1336898395722%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAAEDklEQVQ4yxWSW2xUVRSGx5hoQCNSaZtSkAIBAS8IktICFnqbdi5n5sycmTMzZ+bM9cz92hl6YRIEq6JggEqIEoIFgokaQdRQtDxUISaKMeEmUdE3Q+RBJRr1AUw+NztZL3uv9e21/vWbGpvn8fjyBbStWkRTWxNLVy9m9PAoez/bTyiv8uh999PwyGwaHnyA5lmzaHnoYZpmzWbRnDm0zm1gTsNcGlsbaVk4j6bmBkwt81tobHyM5vlNNLY0sbitlaUi2lYtYX3HOp5auYLRkWHGd4zTs7mHtoWtImchK0TOM0sW8MSTS3h2zTJWr1vGmg0rMXVLnXQ7Ouh1dmL2bcGr9aGH+/HnrGgpmavfXefe+effO5RrdUJpH7Gqh2hOIpm1oWUlvHEzqmHBl7BickcsKGkLgZyD8JCHZMVBoeomNuZC0W388P3P3P7zL377/W9OnTxDshymtDNEbXuQyoiKPuRCE3AtJ6Ol7feAVtS0DSVlQRUPkZSdeEYiXHJz4NABzn50jvPnvmBmaoY39h4kXy1QGU9QGQtRrfpJVL0kyi78ot4VHRRAfRBFtOzP21DzdqJihGh2kGLdYOr0Jxw8OsGRD9/izRMT7J7cxfFT7zD+Uo2oIVNNBzEKHuIFF0ZaIRL3YFLjNkG34zQGsBk9+LN9eBNdGKMhxrdv5+Vddb786SJnv5nm6KcnuHzjChMv1ilHJOpDSRLFIHpaJpZTCMedmDxCp1ROwxuV2OLpwKVtxuPewrYdVbaNjJJyKBw+cIzpqc9xOOO8+8EZLpyfJhkbIFNW0Esy0ZKTQF5CDYul6FHRbtJPOKmgJsXWdDOv7Rxl8vgRUgkNaUMncSPP3bv/ceXadW7+eosb13+kGFMI+nqRgl3Yoxvp1zbhjpgxKX4LwZBT2GUAa2gTkYTMWDFJKhvG77FwYv8+frl1m6++vsK3l65y5y4UswU0axeVnBg3I5xhqBSyGoFIPybZJXwnfjMyAaFjH7lcgHJKJxhXqdeHuDh1lpOnp5DVCP12Dx9PzzB55G2Ovb6bTEAmndepbk1QLEdwawIYMRTRjSa8pxMaUoilndQKGvlcnGuXLzHz3vu4e7tJ+X0iNGJembBi5cLUaSHNVqqlGEHNyfP2Daw3P4cpWdLJZnW0uESfpxOncyMxn5nJw4f44+Yt9u15hWoqSj4sYKoXQ0xjE3r5hNWyFS+BtINEXsPq7mZgoAtTIO4moLtwB2wMWjehC91SAQfDWzNMvPoCY7U8I7Usw7UMesSN5OtGCm/GLLfT1buC9fI6rJEelKidQiqGyRm04PD2owSFH1ULYQFPi0JD+EwP9FMrRtlWSTJeyjGcCIn7QczSWgYH2nm6fTmdve109K5F9vSJWpn/AZe6ilROAE4dAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Region proposals with convolutional neural networks dog with ball object detection "
+        title=""
+        src="/static/dog_with_ball-db327d9f059c1de766b4eaa6acb2039b-f3e7c.png"
+        srcset="/static/dog_with_ball-db327d9f059c1de766b4eaa6acb2039b-388be.png 240w,
+/static/dog_with_ball-db327d9f059c1de766b4eaa6acb2039b-726d8.png 480w,
+/static/dog_with_ball-db327d9f059c1de766b4eaa6acb2039b-f3e7c.png 748w"
+        sizes="(max-width: 748px) 100vw, 748px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>In this post, I want to discuss one of the seminal object detection architectures of the last decade: <strong>region proposals with convolutional neural networks</strong>
+(or R-CNN for short). R-CNN is one of the earliest models that piggybacked
+off the computer vision deep learning revolution begun with the advent of <a href="https://en.wikipedia.org/wiki/AlexNet">AlexNet</a>.</p>
+<p>When it was released, R-CNN completely trounced the existing state-of-the-art in object detection. Though it has since been
+replaced by more powerful algorithms, the R-CNN paper still fundamentally changed the way in which people think about object
+detection and its symbiotic relationship with deep learning. </p>
+<p>There is a lot to unpack in the <a href="https://arxiv.org/abs/1311.2524">R-CNN paper</a>, as the authors did a fantastic job of meticulously evaluating their model, running
+ablation studies, making appropriate visualizations, etc. I am going to distill the paper’s contents to what I believe are the most
+salient kernels of insight. But I recognize we are all busy people 😉, so for those that want a super abbreviated
+version, here’s a TLDR of the paper:</p>
+<ol>
+<li><strong>Supervised pretraining using external data followed by domain-specific fine-tuning makes a huge difference with model performance</strong>  </li>
+<li><strong>Using convolutional networks to extract powerful feature representations from images changes the game in object detection</strong></li>
+</ol>
+<p>… And for those that want a longer version, read onward! </p>
+<h2>How R-CNN Works</h2>
+<p>R-CNN is a sophisticated system with a lot of moving parts, so let’s start our analysis of it at the end.
+When all is said and done, what does the final system actually look like?</p>
+<p>As a motivating example, let’s say we wanted to run an R-CNN object detection on the following image: </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/cat_and_dog-d1ca74c7b503381e4b6e6ae117d36e08-a560a.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 56.21621621621622%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADOklEQVQozxWSa0yTBxSGvyyLW/ZDN8VlJWxINgILaZyoBKcbLI4Zhs5IVpE1DEFFw6UlaNJWNyc6oUAnmDiaDZThhkg6LMK4iNCCXNyQtgG6IiWFchuVSkUldjd99u3H+fEm57znnCevMNlXy9TtOuYGG/Da23ky2c/j8S6W7pp46OxmWdSPnL3YDJVYbxiYs97EP3GL5XEziyOtzFuvMTtg4H+f0Y4qhKXRdv6cHuCZ1wkP3FhbLuMbF7XPxVPvGH8tuLD88jNGXTHnjmZRkJtFj6FaHDbg+93EfXsn87YW5izNTA00I1yv0FMpNheoNWg1ajR74yjN3c8d4yU6ai9i6zJRry+n/sJ5ShQHUaXIqCk6zb1RG/8szvDE48Z714rb0o3b2oOw6nkJAS9KWPncGta8sJq8Pds5sDUMzY4wvkn5AFVqMuX5J7mi01KYk4FGvovqU7n81lyPo9eEvd2Ix2bm4eQQ00OiYeQbbxEcEIJkVSBBa4NRJcUji5YSERRIcsxGZFvWk7Erju+OK9DlpKHL+oy6wmNczFejVR6h+KgSbe4h2qp0Is8bCKd2RhL8ymu8+rKE8HXh6A7LkMVGo8tOZl/MBmLekbIhNJRP39tM5o7NFKQloEqO5+wROaV5BzhxOJUStYgqPYULJ3IQ9Ps2Eh3yOi+tWM3bwaEUKjI4k56Is0JJ19dyhvUK4jdJCRA/WC8JJDYshI+kbyLfFkFndSnTw/3MjgzyQ1E+8g+3IOR/HM7ubVFERb5LUsJOmirL6SzO5MesBOqUn1Aicjy5JwrJyrVIA4PYu3UTcRHraDinYnawlT8sbWJs2pjoaqJco0C409GIw3Ib36wLe58Zo76M7rJjVGbLMKt306qMpbcolavf6mirrWKst5WrBUpG2y8z0VPPcOMlbum/xHblPE1lXyE8Xfby2DOJxznCjH2APuNP4unvkxgVQaNiO0M1Wvz3Z8Dv49nSHH6PiwVHv5i5FoYb9Jj1Z6g7fpAa1ecYxUXCvMvOA7EWxqwsuh24RR556Wl8kZ2B3dTA30se/n10D//CFMszDhbHrcw7fmWi7zoj4nU935/l2mkl+sxEKpRJ/Ad0cVVNi3aV8QAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Cat with dog starting image for object detection for r-cnn"
+        title=""
+        src="/static/cat_and_dog-d1ca74c7b503381e4b6e6ae117d36e08-3d61e.png"
+        srcset="/static/cat_and_dog-d1ca74c7b503381e4b6e6ae117d36e08-d182c.png 240w,
+/static/cat_and_dog-d1ca74c7b503381e4b6e6ae117d36e08-5220f.png 480w,
+/static/cat_and_dog-d1ca74c7b503381e4b6e6ae117d36e08-3d61e.png 960w,
+/static/cat_and_dog-d1ca74c7b503381e4b6e6ae117d36e08-a560a.png 1110w"
+        sizes="(max-width: 960px) 100vw, 960px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Adorable, I know. The first step of the process involves extracting <em>region proposals</em> from the image, which
+are essentially smaller subimages that could potentially contain an object. There are a number of algorithms that can
+be used to generate region proposals, though the one that R-CNN uses is called <a href="http://www.huppelen.nl/publications/selectiveSearchDraft.pdf"><em>selective search</em></a>. This algorithm
+iteratively combines subimages in a bottom-up fashion, using various image similarity metrics such as color and texture. </p>
+<p>R-CNN extracts around 2000 region proposals per image, which would look as follows:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/cat_and_dog_region_proposals-9da6a68b2f9d8aa09f9cb0497cbd4678-d13b4.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 55.77617328519856%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADN0lEQVQozx2Se0zUBQDHf6st/ypDx3YiJkxY7QrcwIaELoFYNWTNLmGBsFAoAe8gu1165tADIQ5OTAUBH5glCKl3JHLXeHQQdILnGdwdr/G4OOHimZLEbMSn3/r/u+++j48w3lXL75Y6pqwNzDmaWR7t5OnQzzx2tvBkuJ2lsV9ZHOzAVlvF/TuittvI3yNmlgZbme9twmO9xaN7dbg6axloqUZ4MtDMM1c3q9NDMDeK1XCJuf4uVmeG+Xd6kGeeYR401GMoKaL0cCan5Adpr71Cv+kGC30tzDvb+OOhkcn7jUz0NCHUnz9LeZ6Gk9k55CkUqGVRFGcmcu/GBUxXy7D+ZOJ2WRm3z52hRJHGkSQZ3xeeYNpuZWXGxbJnnLkBGy6rGZftF4SXnpcgWSNh3XPr8V7jhXJPNAciXuPLmEB0yZGokuM5n/sVNSVfUyj/jKOJu6nOVWDR1+BoNdJnvIWnp5nF0Ye4e0XDbZsD8V/vj+9aH17x3ow64X32hgch9fUhfmcIe7cHkx4bTcVROTp5KrrMj6krVHL1hArtoXSKcuQUZKXSWFEg/mBE0OwOIcBLwsaXNyD1exVduoyEt7dzVpFEcmQo0SHBhAYGsCc8lIx3QilIeQ9Vwrto9sdz7os0jh9MpVStRp2awmlVBsKFhBAi/Dfx4gteBG3aglaezqk0GUOVcjryk3BWZhMXtpV1YoNgiQ+7AvyIeWML+yKktF3S8sjWwVRvD7XF+aTEvIWQFytFtjOM8G0RJMXGcbeqjDZtJt9lxVKXHYd23y5OysLYuNaboA2+JO54k5jX/dAXK5kUX520NuEWUXKZ73DxWA6Cra2RYauFxckxBixmDGWnMZ9RUpX1EeYjH2D6PJIu7ScYKktp/eEa450mbhYdxmmsZsxcj73hMu3lx7F9q6Ppm1yElb9mRbMRPIO/4e7rxnLzGslRO5CFSmk4FEXf9SKWZydgaY7VBTfL7iFm+y0i4Hex68sxl2uoO5ZGjTIJfb4CwTPi4PGog5nBB8yPOZgQ91Ad2E+u/FOcrXr+mZ9i5c+p/3l76rKzMGTF47SISQ3Yf7xMZ1U+ek0OFRkfclERz3/yZ1OOf3UD9wAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Cat with dog object detection with region proposals for r-cnn"
+        title=""
+        src="/static/cat_and_dog_region_proposals-9da6a68b2f9d8aa09f9cb0497cbd4678-3d61e.png"
+        srcset="/static/cat_and_dog_region_proposals-9da6a68b2f9d8aa09f9cb0497cbd4678-d182c.png 240w,
+/static/cat_and_dog_region_proposals-9da6a68b2f9d8aa09f9cb0497cbd4678-5220f.png 480w,
+/static/cat_and_dog_region_proposals-9da6a68b2f9d8aa09f9cb0497cbd4678-3d61e.png 960w,
+/static/cat_and_dog_region_proposals-9da6a68b2f9d8aa09f9cb0497cbd4678-d13b4.png 1108w"
+        sizes="(max-width: 960px) 100vw, 960px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Now R-CNN runs each proposal through a high-capacity <a href="https://en.wikipedia.org/wiki/Convolutional_neural_network">convolutional neural network</a> to extract a learned
+feature representation, which ideally holds meaningful information about the objects in the image. </p>
+<p>For example, the algorithm would take a proposal such as the following:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/cat_and_dog_single_region_proposal-373293157e3ee3fe74e3ab3a4f1fd234-cb1cf.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 55.75539568345324%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAADOElEQVQozxWSb1DTBRjH9yKvFx3HWZGARlF2p8mS2JFcp1QnZCV0mHgspZuDBMKx0kM5EDQO0DlBl7pYyPmXVAYKuFsOgvFn8dcxYGMxJoxNwUWUYodhZffp14vvu+c+930+zyOa6r6Cr0/PjO0Gc85WHk3+xB/uDuZdZh5OWFjw9vJwvAubvhqbqY7pwRYWJzpZcLXx+4gRv/Ua0321TFkuM/bjWUTzY8LAZDf4RmDaiaOhmnlHF//67EKG+WvKzlB9DTfKSjiZk8ExZTbddRdwtdTywNHKb6Nt+Id+YOaWAd+AEdH1Mzq+LyrkqEyOSi6nNGE9p3YmMaBT0XpSxbBej0GlwnC4BK1ciurjTVwuL2NudJB/Zr38ec/D3M9WvNYOvDYLooCnQol4ehnLlgQR9EwQez/ZSFrsago2r6FcHk9eWirakmJqjqs5LDQs2xLPhZK93DLUMdbejLOlgdnB//UMcWdYAEaGrUSyNIzwgGBWPB/GgZQPSV4XwZoVIUhjJWxb9wZZifFUFSip2C2jUpbE1SO5nDu0D7UiA/UeJUdz0mk5W84vtmZEBxOieCvwBcIDg3n95VUc35VMyjsxnFB8KgAjee9NMZLXVrJtfTSKeAmnpHHsl27iSOZ2NF/JKcqSU5GXR/7OVE4fUCLSSiUkvrScZ5csJUJoq1bsojR9K+7vcugs3YG9UskHEjHPBYYSGRzC1lfCiBO/imyDmK7zJ5gesgjp43xpETs2xiA69NFq0mOiiI16m+0JiRirTmNWZ1OTvZlaZSLHUt/lYFI0IQFBRIW+SFb0Wt4Xh2PUFAiXvcmM9SZ3B0x42prQ7t+NaLDDiNtkYN47zmi/hUadBrMmF50imfb8JEy5cXRXfE591Te01V3E03CJWtUeXM0XmWzXY2+spvPbQoYvaWiqKET0ZPE+CyP9zPa0c6/HTP85LZmxMaRJVtGcsQGHrojHE07we2DCweNeM7+6+vD1GrBfE7bRFnM1P40r+z6jsUxw6J908mB8mDlrp/CoA9wVwF/LZZTnZHLbVM/fPjdP7rhZvG3nkaOH+4Izv7MXj6UBe1M1Fl0J14uVVH6xhTNfpvAfEK1RPEN9UWQAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Cat with dog object detection with single region proposal for r-cnn"
+        title=""
+        src="/static/cat_and_dog_single_region_proposal-373293157e3ee3fe74e3ab3a4f1fd234-3d61e.png"
+        srcset="/static/cat_and_dog_single_region_proposal-373293157e3ee3fe74e3ab3a4f1fd234-d182c.png 240w,
+/static/cat_and_dog_single_region_proposal-373293157e3ee3fe74e3ab3a4f1fd234-5220f.png 480w,
+/static/cat_and_dog_single_region_proposal-373293157e3ee3fe74e3ab3a4f1fd234-3d61e.png 960w,
+/static/cat_and_dog_single_region_proposal-373293157e3ee3fe74e3ab3a4f1fd234-cb1cf.png 1112w"
+        sizes="(max-width: 960px) 100vw, 960px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>This proposal would be forward-propagated through a convolutional neural network to generate a 4096-dimensional feature
+vector:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/region_proposal_through_convolutional_network-febb271944965e81e21ee84813f1184e-4c80f.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 64.38529784537388%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABsUlEQVQ4y52STUtbQRSGL0pVqlYRty66KkJFu/FrK7pSqkWTRjfutCLWvSiUulFw40ZbkhALpTRd1FCItFD0D6hE8TYfYnRVafRqsTGY3JnHm6sJNUaMvnA4w8x7nhnOGYUMSSkRRiT1zeFiZmSQH7NvWPv6iZUPLpYXHEgh0t5MKdmA+mVBX7uF+sdV2Jqq6Wp+xuuXXXyeGgfjXN4FKMSFcbC3H2trC563A7wbfs6TygqGX3SmfTkD5cWC1e9LuGenWXjVjne0jfdjQyy5nHcHJiWEDicaf0IqP7985PfqCpydQOyv0RL9Rug14E3NJmNLSJGt9DowZVRPVax7Viy7Fnp2uukJd2Pbs9ER7sB77DU9utRvf2FCJszs1twovxQKg0U8CBSYURp8hKIqjO9PmJ64jOcOXDzykKfmUxIopdhfwkN/MWWBcpQthcn9ydyBKUMkHsF56MR+aDfCgf3AjsPIc5F5/DF/uj05DSVrw+P3HErqRi2h4Yv62DzdNLPvn4+N6Abr0XVCsVDad+sLk5NLyqN5qA3U0bTdTH2ogYbtRjM/DdbQG+678hf/1zn4LKe5ysEMXAAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="Region proposal through convolutional neural network"
+        title=""
+        src="/static/region_proposal_through_convolutional_network-febb271944965e81e21ee84813f1184e-3d61e.png"
+        srcset="/static/region_proposal_through_convolutional_network-febb271944965e81e21ee84813f1184e-d182c.png 240w,
+/static/region_proposal_through_convolutional_network-febb271944965e81e21ee84813f1184e-5220f.png 480w,
+/static/region_proposal_through_convolutional_network-febb271944965e81e21ee84813f1184e-3d61e.png 960w,
+/static/region_proposal_through_convolutional_network-febb271944965e81e21ee84813f1184e-6fd10.png 1440w,
+/static/region_proposal_through_convolutional_network-febb271944965e81e21ee84813f1184e-4c80f.png 1578w"
+        sizes="(max-width: 960px) 100vw, 960px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Afterwards, this feature vector is run through a collection of linear support vector machines (SVM for short), where each SVM
+is designed to classify for a single object class. In other words, there is an SVM trained to detect <em>boat</em>, another
+one for <em>parrot</em>, etc. </p>
+<p>Each SVM outputs a score for the given class, indicating the likelihood that the region proposal
+contains that class. Note, that the exact classes that can be identified depend on the dataset used for training.</p>
+<p>This step of the process looks as follows: </p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/vector_through_svm_classifiers-cc139d6728db3205c0297a8f04c010ee-90f45.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 50.38265306122449%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABy0lEQVQoz11SwUocQRCdY3Iy2ZzXQPIziddIjNfkbgLJB4jgl3hbWGfQRPAiojELugk7IAhL1qiHCEtGo6w9PV1d/VI9Pevs5sFjerqqXlVXVYQJOOdgnS3P7Wwdc4M5LJy/wauzecwLX58v4MXpS6z+Xr33H3OMaGwYgx2X3596gPg6wUa2gSRLsHm9ieRPgvhvjO5dtxbEtGhUVmVr+nsv6gqx5kL/vauy+eK1kLyPA0vu6VgXKpyGRp6rKtJXqypllnYwyBGUzqG1qrJNIxoOLfb3CQcHhL09I1TizDg5sXK22N1VQoN+35cXXuCRZRY7OwpfJc7Hf+sQRiNG1GoZPHpMaDYZjQbj2XOLy0uDxUWDmRmL5izjwUPG+w9FKZjnVFa7vU1oPLGYfcoSz+JHOD4mRFdXjG6XcHhY4OjIIE0JxjAGA5J/K/daaHBxEabPvnEifHPD+P7D+xTodHL0ehZK8WQPR1XX/8eo6mW9DRNLESZU9rm0BMF+n7C0pLGyolEUYXreuB4bvH2nEcfhuf6eiGSiIcHtLWN5WePjpwK/zmy9h8Mho9UibG3R/ep4gTS1WFuz6KX1QCZ3zif//IXQbpMMKST5BxoN25gXGlISAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="support vector machine classifiers per class"
+        title=""
+        src="/static/vector_through_svm_classifiers-cc139d6728db3205c0297a8f04c010ee-3d61e.png"
+        srcset="/static/vector_through_svm_classifiers-cc139d6728db3205c0297a8f04c010ee-d182c.png 240w,
+/static/vector_through_svm_classifiers-cc139d6728db3205c0297a8f04c010ee-5220f.png 480w,
+/static/vector_through_svm_classifiers-cc139d6728db3205c0297a8f04c010ee-3d61e.png 960w,
+/static/vector_through_svm_classifiers-cc139d6728db3205c0297a8f04c010ee-6fd10.png 1440w,
+/static/vector_through_svm_classifiers-cc139d6728db3205c0297a8f04c010ee-90f45.png 1568w"
+        sizes="(max-width: 960px) 100vw, 960px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>R-CNN will then label the region proposal with the class corresponding to the highest-scoring SVM, in this case
+<em>dog</em>. </p>
+<p>After R-CNN has scored each region proposal with a class-specific SVM, the bounding box for the proposal is refined
+using a class-specific bounding-box regressor. This could adjust the region in the following way:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/bounding_box_regressor-d8584173ba8e116ced1aa45323a79b44-dba13.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 67.91147994467497%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACFklEQVQ4y5WU3UuTYRiHPeuwf6CjiAgMRkUnRXlQjA5WeVAhEaOyGAgqaBOMMOlLLdAwqEzTMRVT2HCiUCsdziliGA5nOkebC8WMzc053XLv+169W26IzHT3ye/5cT/3xf18ZrElJEnaVJGAawz/mJng+BekH+PMmDoZM7Sy9tNOyD2Kf86RqknWxSMrHTAmCGivqVFmKyjLzaG64CavSot5cyePwU4dNoOeJZd970AQKD53miMHDvGy6DqVeWfIOXqYWyezqb93l+7GesxdrXsHSohMmjqwtLeg097m8/0r9L2uwVTzELupgZGmx1g7GpJFuwDjE+SxGFmHXws4h4YIOqchuAyrAYILbhwDfXgd3zLoUD4UUfwj9ykkvOwIhVc2vZRmi3YEigmNBL7jG76Mf/giPpsqocsjcf9v7LOexzdylY3o6jbwDh1urC8R9jQTdr9P6YqrcYtvZM3bjhCL/h+4PUnqzOWrRPrYPn+HPRTY+D1DZHaU6PQozE/h7e/FaeklsuggNPeVwPx0Zhf7aUkZhUolz/Jz0T8pp7minKYCNRMfDUz1G/F7JvcGTKSkGJeOKTi4bz8VahVFqlNcOKGg8Oxx6ko16GursHR/yAQo8KmlnpZHlegeaOjRqqgu0fA8/wa2tlrsxrdYu3Qkn8GuSxZljYX8iE47PXUvcJnaYNEjfxIOFiYGGXhXxYTZmLbDv+156331EAhpAAAAAElFTkSuQmCC'); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="class specific bounding box regressor for dog"
+        title=""
+        src="/static/bounding_box_regressor-d8584173ba8e116ced1aa45323a79b44-3d61e.png"
+        srcset="/static/bounding_box_regressor-d8584173ba8e116ced1aa45323a79b44-d182c.png 240w,
+/static/bounding_box_regressor-d8584173ba8e116ced1aa45323a79b44-5220f.png 480w,
+/static/bounding_box_regressor-d8584173ba8e116ced1aa45323a79b44-3d61e.png 960w,
+/static/bounding_box_regressor-d8584173ba8e116ced1aa45323a79b44-6fd10.png 1440w,
+/static/bounding_box_regressor-d8584173ba8e116ced1aa45323a79b44-dba13.png 1446w"
+        sizes="(max-width: 960px) 100vw, 960px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>When the process is finished, the detected object for the region could look as follows:</p>
+<p>
+  <a
+    class="gatsby-resp-image-link"
+    href="/static/scored_dog_region_proposal-0528a87ac19d57d3af61cf7e7fca4ce1-d90da.png"
+    style="display: block"
+    target="_blank"
+    rel="noopener"
+  >
+  
+  <span
+    class="gatsby-resp-image-wrapper"
+    style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;"
+  >
+    <span
+      class="gatsby-resp-image-background-image"
+      style="padding-bottom: 42.840095465393794%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAACP0lEQVQoz13RW0jTARTHcZ+ioqde8sGHoowSH7pAWFJIUZbdROiq0lJJE5HEVJCwwokW5mWaBkoamkpSmSVYmnlN13Kz1Oacy5lMbX91F2+zXb45c4T+ng4HzodzOG4OhwMHYDFo6GhQkptjprrCzLxuEMvEAFZBw9SAHGGoD+v0MIv6Qcyj3zCMyNEPSlkwTeKM03HGzQVa9T00VbSQnjRCXMhrdK3vsAx0ou9q4ENmGoWRImqyxfzqqsOkamasuw5N6wtmhNHVoM1mWy6K8ou5evQYUaePkHjZl+zIQF4+TKQyX0JVnoSM8BCyIkNRy9owaVUY1QomlDJmDcJq0Gq1LhdJMXFscFuHx3p3wvz9OOW9jbN7PQk8uJ9H8dFIooJ5Gi/ieeZ9shJuUZBym69vn7FoWgPaVzasL0jFa9NGdmz2IObCGcThQUiizyM64csez51c9/Em1t+H+EsnKUlPpjwvl6RrF1EqvizP2+32teA9Ary2c3zfIYrEd2gUh9F09wolN/3Z5b6FA+4enNu9FUmCCKGvGaNKyqucNGRtzSug7f9TnBkd6kctbWFE2s7HymKybgRRFuFHR0YoHTWl9LyvRVZZyI/GcpT1ZXx6nELrk1SG+xX/TnZt6AItM9MYVAoM8naktdUE+x2mRhzL3KAczAIOdQ+G3s9oOt/QVfqAquQI8iMC0H5fc7ILXJifXUKNWKf02KYEFsbHliAzmJZ6wm/+TOiwmKaZmRzHqPuJoFWj7e1mzmRY9ZS/QP89ypndauoAAAAASUVORK5CYII='); background-size: cover; display: block;"
+    >
+      <img
+        class="gatsby-resp-image-image"
+        style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;"
+        alt="scored dog region proposal"
+        title=""
+        src="/static/scored_dog_region_proposal-0528a87ac19d57d3af61cf7e7fca4ce1-3d61e.png"
+        srcset="/static/scored_dog_region_proposal-0528a87ac19d57d3af61cf7e7fca4ce1-d182c.png 240w,
+/static/scored_dog_region_proposal-0528a87ac19d57d3af61cf7e7fca4ce1-5220f.png 480w,
+/static/scored_dog_region_proposal-0528a87ac19d57d3af61cf7e7fca4ce1-3d61e.png 960w,
+/static/scored_dog_region_proposal-0528a87ac19d57d3af61cf7e7fca4ce1-6fd10.png 1440w,
+/static/scored_dog_region_proposal-0528a87ac19d57d3af61cf7e7fca4ce1-d90da.png 1676w"
+        sizes="(max-width: 960px) 100vw, 960px"
+      />
+    </span>
+  </span>
+  
+  </a>
+    </p>
+<p>Note, this running example was only for a single region proposal. Running the algorithm on the other
+regions should detect that there is also a cat in the image. </p>
+<p>With all that, we have completed an execution of R-CNN!</p>
+<h2>How R-CNN is Built</h2>
+<p>The running example from the last section showed us what it looks like when we have a trained, fresh-out-of-the-oven
+R-CNN to detect objects with. But how do we actually get to a fully-fledged system? </p>
+<p>We will first focus on details regarding the convolutional neural network step of the R-CNN pipeline. The CNN used
+for the model is <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet</a>,
+a standard deep CNN with five convolutional layers and two fully-connected layers.</p>
+<figure>
+	
+  <a class="gatsby-resp-image-link" href="/static/alexnet-2d0de2a234a9e17c084b48657a3e48fa-1e6b8.png" style="display: block" target="_blank" rel="noopener">
+  
+  <span class="gatsby-resp-image-wrapper" style="position: relative; display: block; ; max-width: 960px; margin-left: auto; margin-right: auto;">
+    <span class="gatsby-resp-image-background-image" style="padding-bottom: 31.803962460896766%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAz0lEQVQY002RCQqFQAxD5/6XFMF93zfUfl6g8oWSmTZNUyfM82zHcdi+78J1XRXbttk4jsLzPK1pGuHzPNb3vfC6LluWRXx6+UKe51YUhZVlKQHQz9TqujaGtm0rUfLkEJ2mybIsEy9NUw0PEAlEuq5Tc1VVnwCIC2rEMAyfMFzPE2wZINDENEjcmf4vzOQ4juWM1ZIk0ZrwcciGcMnJIWRcQEbYBX0tajSDiLsYIu4ULvWAzSiK5IxwFzRy5iHe99UPB+/71plHQQxxOP4oP6kDypu3Jze6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;">
+      <img class="gatsby-resp-image-image" style="width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;" alt="The AlexNet convolutional neural network architecture" title="" src="/static/alexnet-2d0de2a234a9e17c084b48657a3e48fa-3d61e.png" srcset="/static/alexnet-2d0de2a234a9e17c084b48657a3e48fa-d182c.png 240w,
+/static/alexnet-2d0de2a234a9e17c084b48657a3e48fa-5220f.png 480w,
+/static/alexnet-2d0de2a234a9e17c084b48657a3e48fa-3d61e.png 960w,
+/static/alexnet-2d0de2a234a9e17c084b48657a3e48fa-6fd10.png 1440w,
+/static/alexnet-2d0de2a234a9e17c084b48657a3e48fa-1e6b8.png 1918w" sizes="(max-width: 960px) 100vw, 960px">
+    </span>
+  </span>
+  
+  </a>
+    
+	<figcaption>AlexNet architecture diagram, taken from the original paper</figcaption>
+</figure>
+<p>One of R-CNN’s biggest contributions is the use of <em>supervised pre-training</em> for object detection. When building the CNN
+component, we first train it on a large auxiliary dataset such as the <a href="http://image-net.org/challenges/LSVRC/2012/">ILSVRC 2012 classification dataset</a>. </p>
+<p>Note, that this
+dataset only contains <em>image-level labels</em>. In other words, the CNN is trained as if it is being used as a pure object
+classifier rather than an object detector. The CNN is trained to the point where it is within a few percentage points of
+the top-scoring performance of AlexNet. </p>
+<p>After this is done, we fine-tune the CNN parameters, using a domain-specific dataset. For the purposes of R-CNN object
+detection, either the <a href="http://host.robots.ox.ac.uk/pascal/VOC/">PASCAL VOC dataset</a> or the <a href="http://image-net.org/challenges/LSVRC/2013/">ILSVRC 2013 detection dataset</a> is used
+to further tune the CNN parameters.</p>
+<p>Practically speaking, the 1000-way classification
+layer of a typical AlexNet (for the 1000 classes in the ILSVRC 2012 dataset) is replaced with an (<em>N</em>+1)-way classification,
+where <em>N</em> is the number of object classes in the new dataset being used and an extra class is added for the <em>background</em>
+label. <em>N</em> is 20 in the case of VOC and 200 in the case of ILSVRC 2013.</p>
+<p>The CNN is then trained further using these domain-specific datasets. Each region proposal is considered a positive for the
+class with which it has an <a href="https://www.pyimagesearch.com/2016/11/07/intersection-over-union-iou-for-object-detection/">intersection-over-union</a> (IoU) of at least 0.5 with a ground-truth bounding box from the dataset. </p>
+<p>Next, the training of the linear SVM classifiers also employs the domain-specific dataset. However, in this case the definition of
+a positive/negative example is slightly different from the definition for the CNN training. In particular, a positive example is simply one of the ground-truth
+bounding boxes for a given class, whereas a negative example is a region proposal which has an IoU of
+less than 0.3. In the original paper, these IoU thresholds were determined empirically, and picking them carefully turned out to have quite a difference
+on R-CNN’s performance.  </p>
+<p>Finally, the bounding box regressors were built using regularized least squares regressors and a dataset of (<em>P</em>, <em>G</em>) pairs, where
+<em>P</em> is a region proposal and <em>G</em> is a ground-truth bounding box. </p>
+<p>An important detail in this stage of training is how we determine
+which ground-truth box maps appropriately to a given proposal, as this drastically affects how feasible the learning problem is.
+This entails a meaningful definition of <em>nearness</em>. For the purposes of R-CNN, a proposal <em>P</em> is assigned to the <em>G</em> with
+which it has maximal IoU overlap, as long as that overlap exceeds some empirically-determined threshold (0.6 in the case of the original R-CNN). </p>
+<p>These are all the training phases of R-CNN. It is worth noting that training the entire system is actually quite complex. There are effectively three separate steps of the
+training process that require data:</p>
+<ul>
+<li>CNN fine-tuning</li>
+<li>SVM classifier training</li>
+<li>Bounding box regressor training</li>
+</ul>
+<h2>Experiments</h2>
+<p>When R-CNN first was proposed, it was a state-of-the-art object detector on a number of standard datasets, so it is worth mentioning
+some of the model’s achievements. </p>
+<p>The R-CNN architecture achieved a <a href="https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173">mean average precision</a> (mAP) score
+of 53.3% on the VOC 2012 dataset, which was an increase of <strong>more than 30% over the previous best</strong>. That is absolutely crazy!</p>
+<p>In addition, the architecture achieved a mAP of 31.4% on the ILSVRC 2013 competition, substantially ahead of the second-best score of 24.3%.</p>
+<p>What’s also worth noting is the difference doing supervised pretraining with domain-specific fine-tuning made in terms of performance. This
+design decision was tested in the context of the VOC 2007 dataset, and it resulted in an increase of 8.0 mAP percentage points!</p>
+<p>Finally, comparing R-CNN to pure feature-based models indicated that R-CNN achieves a mAP that is more than 20% higher on PASCAL VOC. </p>
+<h2>Final Thoughts</h2>
+<p>R-CNN fundamentally changed the landscape of object detection at the time of its conception, and it has radically influenced
+the design of modern-day detection algorithms. </p>
+<p>In spite of that, one of the major shortcomings of R-CNN was the speed
+with which it worked. For example, as the original paper noted, simply computing region proposals and features would take <em>13 seconds per image on a GPU.</em>
+This is clearly too slow for a real-time object detection algorithm. </p>
+<p>Follow-up work sought to reduce the runtime of the model, especially time spent on computing region proposals. We will discuss
+these improved algorithms including Fast R-CNN, Faster R-CNN, and YOLO in subsequent blog posts. </p>
+<p>In the meantime, if you are interested in further checking out some of R-CNN’s implementation details, you can <a href="https://github.com/rbgirshick/rcnn">see the original repo</a>.</p></div></div><div class="post-single__footer" data-reactid="26"><div class="post-single__tags" data-reactid="27"><ul class="post-single__tags-list" data-reactid="28"><li class="post-single__tags-list-item" data-reactid="29"><a class="post-single__tags-list-item-link" href="/tags/machine-learning/" data-reactid="30">Machine Learning</a></li><li class="post-single__tags-list-item" data-reactid="31"><a class="post-single__tags-list-item-link" href="/tags/computer-vision/" data-reactid="32">Computer Vision</a></li><li class="post-single__tags-list-item" data-reactid="33"><a class="post-single__tags-list-item-link" href="/tags/deep-learning/" data-reactid="34">Deep Learning</a></li></ul></div><hr data-reactid="35"/><p class="post-single__footer-text" data-reactid="36"></p><div class="post-social-panel" data-reactid="37"><div class="post-social-panel-prompt" data-reactid="38"><!-- react-text: 39 -->Like what you read? I would love to hear from you!<!-- /react-text --><span class="post-social-panel-prompt-smiley" data-reactid="40"> 🙂</span></div><div class="post-social-panel-twitter" data-reactid="41"><span data-reactid="42"><a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=@mihail_eric" data-size="large" data-reactid="43">Tweet</a></span><span class="post-social-panel-divider" data-reactid="44"></span><span data-reactid="45"><a class="twitter-follow-button" href="https://twitter.com/mihail_eric" data-show-count="false" data-show-screen-name="false" data-size="large" data-reactid="46">Follow</a></span></div></div><div class="mailchimp-signup" data-reactid="47"><div class="mailchimp-signup-prompt" data-reactid="48">I also run a newsletter with cool AI articles and projects (no spam). Sign up to get updates!</div><div class="mailchimp-signup-form" data-reactid="49"><form data-reactid="50"><label data-reactid="51"><span class="mailchimp-signup-email-text" data-reactid="52">Email</span><input type="text" class="mailchimp-signup-email-input" id="mailchimp-signup-email" name="mailchimp-signup-email" value="" data-reactid="53"/></label><input type="submit" class="mailchimp-signup-subscribe" value="Subscribe" data-reactid="54"/></form></div></div><div data-reactid="55"><div data-reactid="56"><div id="disqus_thread" data-reactid="57"></div></div></div></div></div></div></div></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-6a020c86979534cac2b5.js","99219681209289":"component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js","11305920230724":"component---src-templates-page-template-jsx-8bb23bfa2cd73414d601.js","108009296967943":"component---src-templates-post-template-jsx-ab0642351350b7586b5b.js","2638498282051":"component---src-templates-tag-template-jsx-a2e35ec6f4f30bc1fc0b.js","183328146348521":"component---src-pages-404-jsx-3d0441dd1a11b2f3a35b.js","186063380969677":"component---src-pages-blog-jsx-e23c8e4b47838d23591a.js","213534597649335":"component---src-pages-index-jsx-029c4a0db57aee7eb3bd.js","19843951674672":"component---src-pages-projects-jsx-dad5db99ca15c0a5ff3d.js","60335399758886":"path----557518bd178906f8d58a.js","210333531512890":"path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js","184662623972074":"path---contact-4bca182cf03eb9ef7036.js","170423813091579":"path---teaching-f645e3c7d8aa43468d94.js","24320307270559":"path---posts-a-new-multiturn-dialogue-dataset-4edf4501914583a31d90.js","90082704378494":"path---tags-natural-language-processing-2fcdcca4db341eaad883.js","145255384732013":"path---tags-dataset-214c5193859710386a99.js","47018759736853":"path---tags-dialogue-dbae69cda00453f29c65.js","137896375594443":"path---posts-a-software-interview-challenge-377e89138fde9ac5ec38.js","81309768047879":"path---tags-software-engineering-9d7258a121ef83acf597.js","61629294208894":"path---tags-interview-prep-a1c50464791b35c45934.js","13945927422362":"path---posts-fundamental-deep-learning-algorithms-to-learn-b099d8f0c8b806673f5d.js","8445401159708":"path---tags-a-i-ed18ccf7cdc3b1976886.js","258658386948370":"path---tags-deep-learning-e4c477cc5f3ee3008fc1.js","247668456180181":"path---tags-machine-learning-5c52c90ea6ccfa5425c5.js","5100582297487":"path---posts-review-of-sigdial-semdial-2017-0e2a7681d9c86ad53d17.js","187009377488776":"path---posts-being-a-good-machine-learning-data-scientist-48033587f36e481407b9.js","127884858547399":"path---tags-data-science-bfb67808935532d8cd60.js","273950069227526":"path---about-f3993bda9d6da6ff94bd.js","144795706247634":"path---posts-why-all-the-excitement-about-ai-d2c027e38630121b90c5.js","271319010811158":"path---posts-object-detection-with-rcnn-eccef86e7e12749cba08.js","68484039040875":"path---tags-computer-vision-06b69ea44f25ac1395be.js","254022195166212":"path---404-2ebdd16b740b0b99d391.js","49683490770531":"path---blog-a5a0ba0c16a6ec8bc47b.js","142629428675168":"path---index-521967ca622b09840194.js","97786326051841":"path---projects-2ebdd16b740b0b99d391.js","178698757827068":"path---404-html-2ebdd16b740b0b99d391.js","79611799117203":"component---src-layouts-index-jsx-b504d383bf535d8d5521.js"}/*]]>*/</script><script>
+            
+  
+  if(true) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  }
+  if (typeof ga === "function") {
+    ga('create', 'UA-120722682-1', 'auto');
+      }
+      </script><script>/*<![CDATA[*/["/commons-42e22243a7c7bc28ab91.js","/app-6a020c86979534cac2b5.js","/path---posts-object-detection-with-rcnn-eccef86e7e12749cba08.js","/component---src-templates-post-template-jsx-ab0642351350b7586b5b.js","/component---src-layouts-index-jsx-b504d383bf535d8d5521.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
