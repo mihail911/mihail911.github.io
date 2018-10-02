@@ -69,7 +69,7 @@ contains that class. Note, that the exact classes that can be identified depend 
 
 This step of the process looks as follows: 
 
-![support vector machine classifiers per class](./vector_through_svm_classifiers.png)
+![support vector machine classifiers per class for object detection](./vector_through_svm_classifiers.png)
 
 R-CNN will then label the region proposal with the class corresponding to the highest-scoring SVM, in this case
 *dog*. 
@@ -81,7 +81,7 @@ using a class-specific bounding-box regressor. This could adjust the region in t
 
 When the process is finished, the detected object for the region could look as follows:
 
-![scored dog region proposal](./scored_dog_region_proposal.png)
+![scored dog region proposal for object detection](./scored_dog_region_proposal.png)
 
 Note, this running example was only for a single region proposal. Running the algorithm on the other
 regions should detect that there is also a cat in the image. 
