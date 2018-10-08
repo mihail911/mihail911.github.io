@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Post from '../components/Post';
 import Sidebar from '../components/Sidebar';
+import 'katex/dist/katex.min.css';
 
 class BlogRoute extends React.Component {
   render() {
