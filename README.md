@@ -125,3 +125,5 @@ SOFTWARE.
 - Description of computer vision terminology (mAP + non-max suppression, etc.)
 - Ditto for NLP terminology
 
+## Command for uploading 
+./node_modules/gh-pages/bin/gh-pages.js -d public -b master
