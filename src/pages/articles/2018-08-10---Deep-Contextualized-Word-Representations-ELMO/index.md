@@ -13,16 +13,16 @@ description: "I describe ELMo, a recently released set of neural word representa
 
 ![Elmo deep contextualized word representations joke](./elmo_pensive.jpg)
 
-In this post, I want to discuss a recent paper from [AI2](https://allenai.org/) entitled *Deep Contextualized Word Representations*
+In this post, I will discuss a recent paper from [AI2](https://allenai.org/) entitled *Deep Contextualized Word Representations*
 that has caused quite a stir in the natural language processing community due to the fact that the model proposed 
-achieved state-of-the-art on literally every problem domain it was tested on! These are **extremely** impressive results. 
+achieved state-of-the-art on literally every benchmark task it was tested on! These are **extremely** impressive results. 
 
 This paper consolidates a lot of the work in large-scale neural language modelling
 and extends previous results on pretrained embeddings for language tasks that includes [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) and [GLoVe](https://nlp.stanford.edu/projects/glove/). It 
 proposes a collection of new neurally-derived representations called **ELMo** (Embeddings from Language Models), and the TLDR
 is quite simple:
 
-1) **Embeddings learned from large-scale neural language models can be extremely effective representations for transfer learning**
+1) **Embeddings learned from large-scale neural language models can be extremely effective representations for semisupervised transfer learning**
 2) **Add ELMo vectors to basically any NLP task and see performance gains**
 
 Now let's take a deeper dive into ELMo's details!
@@ -30,7 +30,9 @@ Now let's take a deeper dive into ELMo's details!
 ## How ELMo Works
 
 The ELMo architecture begins by training a fairly sophisticated neural network language model, heavily inspired by previous work
-on large-scale language models. If you are not familiar with language modelling, check out [this](https://en.wikipedia.org/wiki/Language_model), but the gist
+on large-scale language models. 
+
+If you are not familiar with language modelling, check out [this](https://en.wikipedia.org/wiki/Language_model), but the gist
 is that a language model seeks to compute the probability of a word, given some prior history of words seen. Such models 
 allow you to determine that if you see the phrase *I am going to write with a*, the word *pencil* seems to be a 
 more reasonable next word than *frog*.
@@ -44,8 +46,8 @@ For the purposes of ELMo, the language model used begins with a 2-layer bidirect
 </figure>
 
 Now, to this 2-layer network, a residual connection is added between the first and second layers (for a review of residual connections, check out this [beautiful paper](https://arxiv.org/abs/1512.03385)). 
-The high-level intuition is that residual connections help deep models train more successfully. Now the language model
-looks as follows:
+The high-level intuition is that residual connections help deep models train more successfully. The language model
+then looks as follows:
 
 <figure>
 	<img src="./biLM_with_residual.png" alt="Bidirectional LSTM language model with residual connections for ELMO paper">
@@ -53,8 +55,8 @@ looks as follows:
 	its output before being passed on as the input to the second layer.</figcaption>
 </figure>
 
-Now, in traditional neural language models, the tokens in the first input layer (in this case *The cat is happy*) are converted
-into fixed-length word embeddings before being passed into the recurrent unit. This is done either by initializing a word embedding
+Now, in traditional neural language models, each token in the first input layer (in this case *The cat is happy*) is converted
+into a fixed-length word embedding before being passed into the recurrent unit. This is done either by initializing a word embedding
 matrix of size *(Vocabulary size)* x *(Word embedding dimension)*, or by using a pretrained embedding such as GLoVe for each token.
 
 However, for the ELMo language model, we do something a bit more complex. Rather than simply looking up an embedding in a word embedding matrix,
@@ -71,12 +73,12 @@ For more details about this process,
 	and don't include the remainder of the model here for clarity.</figcaption>
 </figure>
 
-These transformations to in the input token have a number of advantages. First off, using character embeddings allows us to pick 
+These transformations to the input token have a number of advantages. First off, using character embeddings allows us to pick 
 up on morphological features that word-level embeddings could miss. In addition, using character embeddings ensures that we can form
-a valid representation even for out-of-vocabulary words, which is a huge advantage. 
+a valid representation even for out-of-vocabulary words, which is a huge win. 
 
 Next, using convolutional filters allows us
-to pick up on n-gram features that build more powerful representations, and the highway network layers allow for smoother information transfer 
+to pick up on n-gram features that build more powerful representations. The highway network layers allow for smoother information transfer 
 through the input. 
 
 This then forms the core of the ELMo language model. Phew! Now, if this is all the paper had presented there would be no
@@ -121,7 +123,7 @@ First off, the ELMo language model is trained on a sizable dataset: the [1B Word
 In addition, the language model really is large-scale with the LSTM layers containing 4096 units and the input embedding transform
 using 2048 convolutional filters. Here, we can imagine the residual connection between the first and second LSTM layer was quite important for training.
 
-Another significant detail is that the authors typically found that fine tuning the language model on task-specific data (where applicable)
+Another significant detail is that fine tuning the language model on task-specific data (where applicable)
 led to drops in perplexity and increases in downstream task performance. This is an important result as it attests to the importance
 of domain transfer in neural models.
 
@@ -141,9 +143,9 @@ extraction, coreference resolution, and sentiment analysis. In **all** cases, th
 | NER      | 91.93 |  92.22 |
 | SST-5 (sentiment analysis)      | 53.7 |  54.7 |
 
-Some further analyses of ELMo demonstrate some other interesting results. For example, ELMo is shown to increase the sample
-efficiency of certain models considerably. In the case of semantic role labelling, adding ELMo to a baseline model makes it
-so that **98% fewer** parameter updates are required to achieve comparable development performance to the baseline model alone. Impressive!
+Some further analyses of ELMo demonstrated other interesting results. For example, ELMo is shown to increase the sample
+efficiency of certain models considerably. In the case of semantic role labelling, adding ELMo to a baseline model made it
+so that **98% fewer** parameter updates were required to achieve comparable development performance to the baseline model alone. Impressive!
 
  
 ## Final Thoughts
@@ -154,7 +156,7 @@ in one task to new tasks, rather than having to learn a new model from scratch e
 
 We have already seen some tremendous results in computer vision transfer learning (as an 
 example, check out my [post on R-CNN](/posts/object-detection-with-rcnn/)). It's basically folk wisdom that
-pretraining on ImageNet is a great way to bootstrap a new model, especially when you have scarce data in your desired task.
+pretraining on ImageNet is a great way to bootstrap a new model, especially when data is scarce in your desired task.
 
 However, such all-encompassing results have thus far been quite elusive in natural language processing. ELMo is such an important
 paper because it has taken the first steps in demonstrating that language model transfer learning may be the ImageNet equivalent
