@@ -1,134 +1,162 @@
 ---
-title: "Why All The Excitement About Artificial Intelligence" 
-date: "2018-08-14T23:46:37.121"
+title: "Deep Contextualized Word Representations with ELMo" 
+date: "2018-10-08T23:46:37.121"
 layout: post
 draft: false
-path: "/posts/why-all-the-excitement-about-ai/"
+path: "/posts/deep-contextualized-word-representations-elmo/"
 tags:
   - "A.I."
-  - "Machine Learning"
+  - "Natural Language Processing"
   - "Deep Learning"
-description: "Given all the recent buzz around artificial intelligence, I discuss three reasons for why we are seeing such widespread interest in the field today."
+description: "I describe ELMo, a recently released set of neural word representations that are pushing the state-of-the-art in natural language processing pretraining methodology."
 ---
 
-![Artificial intelligence skyline](./ai-cover.jpeg)
+![Elmo deep contextualized word representations joke](./elmo_pensive.jpg)
 
-Nowadays it’s hard to go to any news source, social media outlet, or downtown bar without hearing the term artificial intelligence thrown around. Thanks to the wonder of [clickbaity articles](https://www.independent.co.uk/life-style/gadgets-and-tech/news/facebook-artificial-intelligence-ai-chatbot-new-language-research-openai-google-a7869706.html) and [outlandish journalism](https://www.youtube.com/watch?v=78-1MlkxyqI), artificial intelligence has become synonymous with everything from “that thing” Google and Facebook do (you know, “that thing”) to Skynet and the impending end of humanity as we know it.
+In this post, I want to discuss a recent paper from [AI2](https://allenai.org/) entitled *Deep Contextualized Word Representations*
+that has caused quite a stir in the natural language processing community due to the fact that the model proposed 
+achieved state-of-the-art on literally every problem domain it was tested on! These are **extremely** impressive results. 
 
-That’s all well and good, but we are still left with some big questions. Why are we talking about this in 2018? Why do people suddenly care so much about artificial intelligence?
+This paper consolidates a lot of the work in large-scale neural language modelling
+and extends previous results on pretrained embeddings for language tasks that includes [Word2Vec](https://en.wikipedia.org/wiki/Word2vec) and [GLoVe](https://nlp.stanford.edu/projects/glove/). It 
+proposes a collection of new neurally-derived representations called **ELMo** (Embeddings from Language Models), and the TLDR
+is quite simple:
 
-After all, Stanley Kubrick’s [Hal 9000](https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey_%28film%29) was stirring the public imagination about artificial intelligence back in 1968! And if we want to go more 21st century with the references, Steven Spielberg’s touching film (literally titled [A.I. Artificial Intelligence](https://www.imdb.com/title/tt0212720/)) was released in 2001.
+1) **Embeddings learned from large-scale neural language models can be extremely effective representations for transfer learning**
+2) **Add ELMo vectors to basically any NLP task and see performance gains**
 
-Moreover, even scientists were talking about AI back in the day. At a historic Dartmouth workshop in 1955, the great computer scientist John McCarthy is [credited](https://ai.stanford.edu/~nilsson/QAI/qai.pdf) with describing “the artificial intelligence problem...to be that of making a machine behave in ways that would be called intelligent if a human were so behaving.”
+Now let's take a deeper dive into ELMo's details!
 
-He also boldly proclaimed that a significant advance can be made in AI if “a carefully selected group of scientists work on it together for a summer.”
+## How ELMo Works
 
-For those of you out there storing canned beans in the bunker for when the machines attack, don’t worry: after many, many summers, we aren’t even close to solving AI.
+The ELMo architecture begins by training a fairly sophisticated neural network language model, heavily inspired by previous work
+on large-scale language models. If you are not familiar with language modelling, check out [this](https://en.wikipedia.org/wiki/Language_model), but the gist
+is that a language model seeks to compute the probability of a word, given some prior history of words seen. Such models 
+allow you to determine that if you see the phrase *I am going to write with a*, the word *pencil* seems to be a 
+more reasonable next word than *frog*.
 
-So then why did we choose to show up to the party now?
-
-These are especially relevant questions given that many of the actual techniques we use in modern-day AI systems have been around for decades. Today deep learning is one of the predominant flavors of AI on the market, and many of its core ideas were discovered by David Rumelhart, Geoffrey Hinton, and others [back in the 1980s](https://www.nature.com/articles/323533a0).
-
-Given all that backstory, I want to discuss how we got to this AI excitement we are feeling today, without appealing to the clickbait-lover inside all of us.
-
-It’s fair to say that there are at least three reasons why the AI boom has drastically taken off in the past few years:
-
-## 1. Modern-day computing power is changing the landscape of problems we can tackle
-
-In 1965, Gordon Moore, the cofounder of Intel, [announced](http://www.lithoguru.com/scientist/CHE323/Moore1995.pdf) that the number of components on a computer chip would double every year. Indeed, the number of transistors on a chip is a good measure for the computing power of a machine.
-
-This claim has become a self-fulfilling prophecy whereby industry chip developers have pursued aggressive technological development programs to sustain the pace of doubling transistor count **roughly every eighteen months**! Moore’s law has been consistently upheld for more than four decades.
+For the purposes of ELMo, the language model used begins with a 2-layer bidirectional LSTM backbone as follows:
 
 <figure>
-	<img src="./transistor-count-over-time.png" alt="Number of transistors on standard microprocessors over time">
-	<figcaption>Number of transistors on standard microprocessors over time. The y-axis uses a logarithmic scale, hence why the plot is roughly linear</figcaption>
+	<img src="./baseline_biLM.png" alt="Baseline bidirectional LSTM language model used for ELMo paper">
+	<figcaption>An unravelled 2-layer bidirectional LSTM. The red box represents the forward recurrent unit, and the blue 
+	represents the backward recurrent unit.</figcaption>
 </figure>
 
-So what? You can put a lot more electric components on a chip hidden in my laptop. It’s not like I can count them. What’s the big deal?
-
-This is an amazing feat not just because we’ve done it, but because of *what it enables us to do*. The dramatic increase in compute has allowed us to build far more powerful algorithms and tools that can perform orders of magnitude more computations per second.
-
-Just to put things into perspective: it takes an equivalent amount of computations to answer [**one Google search query**](https://thenextweb.com/google/2012/08/28/fun-fact-one-google-search-uses-computing-power-entire-apollo-space-mission/) as all the calculations done in flight and on ground for the **entire NASA Apollo program**. That means that the compute it takes you to open a browser and search “what is covfefe?” would have sent mankind to the moon in 1969. That’s insane!
-
-And that’s just CPU (central processing unit) power. Today GPUs (graphical processing units) are the go-to workhorse of building AI systems.
-
-It turns out that for certain highly-optimized mathematical operations (such as matrix multiplication), GPUs can achieve speeds that are more than [**10 times faster than CPUs**](https://medium.com/@andriylazorenko/tensorflow-performance-test-cpu-vs-gpu-79fcd39170c).
+Now, to this 2-layer network, a residual connection is added between the first and second layers (for a review of residual connections, check out this [beautiful paper](https://arxiv.org/abs/1512.03385)). 
+The high-level intuition is that residual connections help deep models train more successfully. Now the language model
+looks as follows:
 
 <figure>
-	<blockquote>
-		<p>With all these new computational superpowers, just imagine the types of questions society can ask and problems it can address.</p>
-	</blockquote>
+	<img src="./biLM_with_residual.png" alt="Bidirectional LSTM language model with residual connections for ELMO paper">
+	<figcaption>A residual connection is added between the first and second LSTM layers. The input to the first layer is added to
+	its output before being passed on as the input to the second layer.</figcaption>
 </figure>
 
-Modern AI systems eat up compute like the Cookie Monster breaking a diet, so this technology has truly broadened our horizons. With all these new computational superpowers, just imagine the types of questions society can ask and problems it can address.
+Now, in traditional neural language models, the tokens in the first input layer (in this case *The cat is happy*) are converted
+into fixed-length word embeddings before being passed into the recurrent unit. This is done either by initializing a word embedding
+matrix of size *(Vocabulary size)* x *(Word embedding dimension)*, or by using a pretrained embedding such as GLoVe for each token.
 
-## 2. Dataset sizes have seen unprecedented growth
+However, for the ELMo language model, we do something a bit more complex. Rather than simply looking up an embedding in a word embedding matrix,
+we first convert each token to an appropriate representation using *character embeddings*. This character embedding representation is then 
+run through a convolutional layer using some number of filters, followed by a max-pool layer. Finally this representation is passed through a 2-layer 
+[highway network](https://arxiv.org/abs/1505.00387) before being provided as the input to the LSTM layer. 
 
-Deep learning has unequivocally become the de facto technique for building artificially intelligent systems, and these algorithms need data to be effective.
-
-Recently, there have been a number of large public datasets that have become available across domains such as [image classification](http://image-net.org/about-overview) and [question answering](https://rajpurkar.github.io/SQuAD-explorer/). Public data is a wonderful resource that academic researchers, you, and I can use to work on cool projects and push the boundaries of human knowledge. 
-
-Additionally, in our increasingly interconnected and global world, the amount of new data being created by individuals is immense! [Studies](https://blog.microfocus.com/how-much-data-is-created-on-the-internet-each-day/) indicate that in 2017, **over 500,000 comments are posted and nearly 150,000 photos are uploaded every minute** on Facebook alone.
-
-Now pause. Let that last line sink in. 500,000 comments and 150,000 photos every minute. That is absolutely crazy!
-
-You know how many photos were uploaded to online platforms every year back in 1969? You guessed right: 0.
-
-The growing number of embedded systems (such as phones, tablets, etc.) and online platforms through which users interact have been and are going to continue to be rich sources of data.
-
-In AI, it is a predominantly accepted folk wisdom that more data leads to better systems. All this data created on a daily basis is powering AI technologies that are helping us derive meaningful insights about our *behaviors, preferences, and desires*, in ways we have never been able to before.
-
-## 3. Democratization of technological tools are enabling new and innovative solutions to problems
-
-More data and increased compute is nice, but those are things most people don’t get excited about on their own.
-
-Today, the emergence of cloud computing services such as Google Cloud, Microsoft Azure, and Amazon Web Services are making it easier than ever to build scalable, data-driven solutions to various problems. With these services, you can be sitting on your couch at home (or anywhere with WiFi for that matter), and within a few minutes you can have access to industry-grade computing power without burning a hole in your wallet.
-
-In addition, today we are at a point where powerful scientific computing libraries such as [Scikit-learn](http://scikit-learn.org/stable/) and [Tensorflow](https://www.tensorflow.org/) are accessible to just about anyone with basic programming proficiency.
-
-Whereas before deep learning and AI were typically only done by academics with PhDs, today anyone can download Tensorflow and build a neural network **in about an hour**.
-
-Imagine that: being able to do something in an hour that previously would have taken multiple years of a higher education degree program.
-
-As a further testament to the appeal of these libraries, as of this writing, **Tensorflow is the sixth most popular repository on [Github](https://github.com/search?q=stars:%3E1&s=stars&type=Repositories)** (popularity based on number of stars).
-
-## When the Stars Align...
-When momentous events happen in history, they are usually the product of years of slow build up, followed by some unforeseen occurrence that sets off a tsunami of change.
-
-Consider as an example the French Revolution. It took years of poor harvests, unpopular taxation, increasing debt, and widening social rifts between the aristocracy and everyday citizens to stir the cauldron of change. However, it was the sudden storming of the Bastille that piggybacked off these circumstances to trigger one of the greatest political revolutions in human history.
-
-In an analogous fashion, with AI, years of better compute power, increasing dataset sizes, and improved developer toolkits gradually set the stage for something transformative to happen.
-
-All of these factors came together in 2012 when a team from the University of Toronto led by Geoff Hinton trained a deep learning model that **trounced the competition** in the ImageNet challenge.
+For more details about this process, 
+[check out](https://arxiv.org/pdf/1508.06615.pdf). The gist of it works as follows:
 
 <figure>
-	<blockquote>
-		<p>For academics, this type of an improvement is career-making. For the rest of the world, this type of an improvement is society-changing.</p>
-	</blockquote>
+	<img src="./modified_input_embedding.png" alt="Character embeddings followed by convolutional layer with max pool followed by 2 layer highway network for ELMo paper">
+	<figcaption>Transformations applied for each token before being provided to input of first LSTM layer. We focus on only the first token
+	and don't include the remainder of the model here for clarity.</figcaption>
 </figure>
 
-ImageNet was an annual challenge held until 2017 that involved a number of tasks related to classifying and categorizing images. It was the premier competition for building systems with vision capabilities.
+These transformations to in the input token have a number of advantages. First off, using character embeddings allows us to pick 
+up on morphological features that word-level embeddings could miss. In addition, using character embeddings ensures that we can form
+a valid representation even for out-of-vocabulary words, which is a huge advantage. 
 
-The object recognition portion of the challenge involved giving participating teams several million images labelled according to 1000 categories. The goal was to build a system that could produce the most correct labels for the given images.
+Next, using convolutional filters allows us
+to pick up on n-gram features that build more powerful representations, and the highway network layers allow for smoother information transfer 
+through the input. 
+
+This then forms the core of the ELMo language model. Phew! Now, if this is all the paper had presented there would be no
+novel contributions, as the language model architecture is basically identical to [prior work](https://arxiv.org/abs/1602.02410). 
+
+Where ELMo takes big strides is in **how we use** the language model once it is trained. 
+
+Assume that we 
+are looking at the $k^{\textrm{th}}$ word in our input. 
+Using our trained 2-layer language model, we take the word representation $x_{k}$ as well as the bidirectional hidden layer 
+representations $h_{1, k}$ and $h_{2, k}$ and combine them into a new weighted task representation. This 
+look as follows:
 
 <figure>
-	<img src="./imagenet-bird-image.png" alt="An image from the ImageNet dataset. What is this a picture of?">
-	<figcaption>An image from the ImageNet dataset. What is this a picture of?</figcaption>
+	<img src="./elmo_combination.png" alt="Elmo task representation which is a weighted combination of the hidden layers and token representation">
+	<figcaption>An example of combining the bidirectional hidden representations and word representation for "happy" to get an
+	ELMo-specific representation. Note: here we omit visually showing the complex network for extracting the word representation that we
+	described in the previous section. </figcaption>
 </figure>
 
-In the [2012 competition](http://www.image-net.org/challenges/LSVRC/2012/results.html), the Toronto team trained a deep learning model that achieved **16.4% error, compared to the previous best of 25.8%** (lower is better)!
+To be more concrete about the mathematical details, the function *f* described performs the following operation on word $k$ of the input:
 
-For academics, this type of an improvement is career-making. For the rest of the world, this type of an improvement is society-changing.
+$$
+ELMo_k^{task} = \gamma_k \cdot (s_0^{task}\cdot x_{k} + s_1^{task}\cdot h_{1,k} + s_2^{task} \cdot h_{2,k})
+$$
 
-All of a sudden, systems became good enough at vision where they could be confidently applied to a score of different problems. Today vision companies are appearing every other day claiming to solve a new problem. Moreover, these new-and-improved vision systems are [already powering](https://www.iotforall.com/computer-vision-applications-in-daily-life/) many of the technologies we use all the time.
+Here the $s_i$ represent softmax-normalized weights on the hidden representations from the language model and $\gamma_k$ 
+represents a task-specific scaling factor.
 
-The 2012 ImageNet Toronto system delivered an unheard of improvement in performance and is widely credited with re-inspiring interest in deep learning research as well as beginning the current artificial intelligence wave. 
+Note here that we learn a separate ELMo representation for each task (question answering, sentiment analysis, etc.) the model is being used for.
+To use ELMo in a task, we first freeze the weights of the trained language model and then concatenate the $ELMo_k^{task}$
+for each token to the input representation of each task-specific model. The weighting factors $\gamma_k$ and $s_i$ are then learned during
+training of the task-specific model.
 
-Since that momentous achievement, the principles of deep learning have been applied to problems including [healthcare](https://cs.stanford.edu/people/esteva/nature/), [speech recognition](https://cloud.google.com/speech-to-text/), [translation](https://en.wikipedia.org/wiki/Google_Neural_Machine_Translation), [lip reading](https://www.newscientist.com/article/2113299-googles-deepmind-ai-can-lip-read-tv-shows-better-than-a-pro/), [self driving cars](https://devblogs.nvidia.com/deep-learning-self-driving-cars/), and so many other things.
+That is the essence of how ELMo works! A simple but **extremely powerful** idea. 
 
-The excitement is in the air both within academia as well as industry. There is an overwhelming belief that the current age of artificial intelligence has the potential to be the next major technological paradigm shift, similar to the birth of transistors, the rise of network routers, or the standardization of the web.
+## How ELMo is Built
 
-If artificial intelligence lives up to its promises, it will revolutionize the world as we know it.
+There are a few details worth mentioning about how the ELMo model is trained and used. 
+
+First off, the ELMo language model is trained on a sizable dataset: the [1B Word Benchmark](https://arxiv.org/abs/1312.3005).
+In addition, the language model really is large-scale with the LSTM layers containing 4096 units and the input embedding transform
+using 2048 convolutional filters. Here, we can imagine the residual connection between the first and second LSTM layer was quite important for training.
+
+Another significant detail is that the authors typically found that fine tuning the language model on task-specific data (where applicable)
+led to drops in perplexity and increases in downstream task performance. This is an important result as it attests to the importance
+of domain transfer in neural models.
 
 
-*Thanks to [Sabera Talukder](https://twitter.com/SaberaTalukder) for all the helpful feedback and insights on early versions of this article.*
+## Experiments
+
+The experimental results really speak to the power of the ELMo concept. ELMo representations were added to existing 
+architectures across six benchmark NLP tasks: question answering, textual entailment, semantic role labelling, named entity 
+extraction, coreference resolution, and sentiment analysis. In **all** cases, the enhanced models achieved state-of-the-art performance!
+
+|     **Task**    |   Previous SOTA | ELMo Results| 
+| ------------- |:-------------:| -----:| 
+| SQuAD (question/answering) | 84.4 | 85.8 | 
+| SNLI (textual entailment)      | 88.6 |  88.7 |
+| Semantic Role Labelling      | 81.7 |  84.6 |
+| Coref Resolution      | 67.2 |  70.4 |
+| NER      | 91.93 |  92.22 |
+| SST-5 (sentiment analysis)      | 53.7 |  54.7 |
+
+Some further analyses of ELMo demonstrate some other interesting results. For example, ELMo is shown to increase the sample
+efficiency of certain models considerably. In the case of semantic role labelling, adding ELMo to a baseline model makes it
+so that **98% fewer** parameter updates are required to achieve comparable development performance to the baseline model alone. Impressive!
+
+ 
+## Final Thoughts
+
+The ELMo paper follows in an increasingly interesting vein of deep learning research related to transfer learning and 
+semisupervised learning. There is a strong desire in the research community to be able to leverage knowledge gained by a model
+in one task to new tasks, rather than having to learn a new model from scratch each time.
+
+We have already seen some tremendous results in computer vision transfer learning (as an 
+example, check out my [post on R-CNN](/posts/object-detection-with-rcnn/)). It's basically folk wisdom that
+pretraining on ImageNet is a great way to bootstrap a new model, especially when you have scarce data in your desired task.
+
+However, such all-encompassing results have thus far been quite elusive in natural language processing. ELMo is such an important
+paper because it has taken the first steps in demonstrating that language model transfer learning may be the ImageNet equivalent
+for natural language processing. It will be exciting to see how these results are built upon in the future!
+
