@@ -120,3 +120,8 @@ SOFTWARE.
 ## TODO
 - Fix underline on links in markdown
 - Add excerpts programmatically https://using-remark.gatsbyjs.org/excerpts/
+
+## Blog Ideas
+- Description of computer vision terminology (mAP + non-max suppression, etc.)
+- Ditto for NLP terminology
+
