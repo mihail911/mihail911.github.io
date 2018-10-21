@@ -45,7 +45,7 @@ h2 {
 h3 {
     font-size: $typographic-base-font-size * 1.375;
     @include line-height(1);
-    @include margin-top(2);
+    @include margin-top(1);
     @include margin-bottom(.5);
 }
 
