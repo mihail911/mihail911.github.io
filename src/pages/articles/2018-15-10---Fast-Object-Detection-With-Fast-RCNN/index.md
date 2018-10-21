@@ -29,7 +29,7 @@ The Fast R-CNN work set out to address a number of problems in the original R-CN
 Against that backdrop, Fast R-CNN proposed a hodge-podge of improvements and design modifications that improved the state-of-the-art
 in object detection as well as the speed of real systems (more than **200x** speedup at inference time). 
 
-The key takeaways from the paper are as follows. TLDR: 
+As always, let's give our key takeaways from the paper:  
 1) **Fast R-CNN created a single stage training pipeline making clever use of a multi-task loss function**
 2) **Efficient training methods allowed for feature sharing across minibatches of samples, resulting in huge training speedups**
 2) **No disk storage was needed for intermediate features because of the single-stage pipeline**
@@ -90,19 +90,19 @@ we perform a number of transformations:
 1) Modify the pretrained network inputs to accept a list of images and a list of RoIs
 for those images
 2) Replace the last max-pooling layer of the pretrained network with an RoI pooling layer 
-as discussed in the last section
+as discussed in the previous section
 3) Replace the 1000-way ImageNet classification layer with two sibling output layers to enable a multi-task loss for training
 
 The multi-task loss is one of the huge novelties of this work. It allows us to take the original R-CNN, which was a three-stage
 training pipeline (train convolutional network, train SVM classifiers, and train bounding box regressors) and collapse it
-into a single stage process. This is an awesome design choice for improving efficiency!
+into a single stage process. This is a very clever design choice for improving efficiency!
 
 **DISCLAIMER: The next section is a bit math-heavy! Get a coffee and skip to the end if you aren't interested 🙂**
  
 What is the exact form of this multi-task loss? Assume that we are training for an RoI with a ground-truth class
-$g$ and a bounding-box regression target $r$. In addition, let $p$ be the output of our softmax output sibling layer, which is a 
-probability distribution over the $K$ data classes. We can also denote the output of the regressor sibling layer as $t^k=(t_x^k, t_y^k, t_w^k, t_h^k)$,
-a bounding-box tuple for class $k$. 
+$g$ and a bounding-box regression target $r$. In addition, let $p$ be the output of our softmax sibling layer, which is a 
+probability distribution over the $K$ data classes plus the background class. We can also denote the output of the regressor sibling layer as a set of $t^k=(t_x^k, t_y^k, t_w^k, t_h^k)$,
+a bounding-box tuple for each class $k$. 
 
 Our multi-task loss then looks as follows:
 
@@ -137,7 +137,7 @@ the *background* class.
 Fast R-CNN also introduced a number of optimizations that sped up both training and testing time for the model. 
 
 First off, rather than use training minibatches consisting completely of RoIs from different images (which leads to slow convergence),
-Fast R-CNN samples a set of RoIs (like 64) from two images. This ends up being roughly **64x** faster than sampling one RoI
+Fast R-CNN samples a set of RoIs (around 64) from two images. This ends up being roughly **64x** faster than sampling one RoI
 from 128 different images!
 
 Another source of inefficiency for R-CNN-based architectures is that nearly half of the forward pass time 
@@ -157,11 +157,11 @@ achieves a mAP of 68.4, compared to a previous best of 63.8.
 
 In the Fast R-CNN paper, there were also a number of experiments done that validated certain design decisions. For example,
 the authors tried a few training variants including using only a classification loss and keeping classification parameters
-frozen while using a pure regressions loss. In all cases, the variants underperformed compared to a system trained on the joint
+frozen while using a pure regression loss. In all cases, the variants underperformed compared to a system trained on the joint
 classification/regression loss described in the previous section.
 
 Since Fast R-CNN replaced the SVM classifiers from the original R-CNN with a simple softmax classifier output, the authors
-also showed that the system with a softmax classifier *consistently outperforms* the SVM-based model.
+also showed that the system with a softmax classifier *consistently outperforms* the SVM-classifier-based model.
 
 In another experiment, the authors tested the folk wisdom that more region proposals will always lead to better performance.
 It turns out that in practice more proposals will lead to better accuracy **up to a point**, after which accuracy actually starts decreasing.
