@@ -28,7 +28,7 @@ in the details.
 But first, the TLDR for the paper:
 1) **Transformers demonstrate that recurrence and convolution are not essential for building high-performance natural language models**
 2) **They achieve state-of-the-art machine translation results using a self-attention operation**
-3) **Self-attention is a highly-efficient operation due to its parallelizability and runtime characteristics**
+3) **Attention is a highly-efficient operation due to its parallelizability and runtime characteristics**
 
 If that sounds exciting, read onward!
 
@@ -37,8 +37,8 @@ If that sounds exciting, read onward!
 While the Transformer does not use traditional recurrent units or convolutions, it still takes inspiration from 
 sequence-to-sequence architectures where we encode some input and iteratively decode a desired output. 
 
-How does this play out in practice? Let's focus on the encoder first. There are quite a few details to the process,
-so don't get too lost in the details. All we are doing is encoding some inputs. (include smiley)
+How does this play out in practice? Let's focus on the encoder first. There are quite a few elements to the process,
+so don't get too lost in the details. All we are doing is encoding some inputs 🙂.
 
 Assume we start with a certain phrase that we would like to translate from Spanish to English. The Transformer
 begins by embedding the tokens of the Spanish phrase into a conventional embedding matrix:
@@ -52,7 +52,9 @@ in the next section:
 ![Positional encoding added to embedding matrix in Transformer model](./positional_encoding_added.png)
 
 Our modified input is fed into the first layer of the Transformer encoder. Within each encoder layer,
-we perform a series of operations on the inputs. First off, we feed the input through a multi-head attention operation:
+we perform a series of operations on the inputs.
+ 
+First off, we feed the input through a multi-head attention operation:
 
 ![Multi-head attention operation in encoder of Transformer model](./multihead_attention_encoder.png)
 
@@ -98,7 +100,7 @@ quite a few aspects that warrant some further description.
 The positional encoding added to the encoder and decoder inputs is the first question mark in the model. What's up with that?
 
 Recall that the positional encoding is designed to help the model learn some notion of sequences and relative
-positioning of tokens. This is important of course for language-based tasks and is necessary because we are not making use of any
+positioning of tokens. This is crucial for language-based tasks especially here because we are not making use of any
 traditional recurrent units.
 
 In the Transformer architecture, the positional encoding is a vector described by the following equations:
@@ -121,14 +123,15 @@ tokens at different positions), we form a sinusoid:
 This particular form for the positional encoding was chosen because the value for the encoding at a given position 
 $PE_{pos+k}$ can be represented as a linear function of values for the encoding at earlier positions $PE_{pos}$. This 
 follows from trigonometric identities and is equivalent to saying that a given token can learn to attend to earlier tokens
-in a sequence. This is a **crucial** property for the Transformer.
+in a sequence. This is an **essential** property for the Transformer.
 
 ### Multi-head Attention
 
 The multi-head attention operation is one of the main contributions of this model. So let's dive into how it works.
 
 At a high-level, an attention operation is designed to help a certain token in a natural language architecture focus on certain aspects of another part of the model,
-usually another collection of tokens. Keep in mind that attention operations can be used in other problem domains like computer vision.
+usually another collection of tokens. Keep in mind that attention operations can be used in other problem domains like computer vision,
+even though here we are focusing on natural language.
 
 More formally, an attention takes a *query*, computes some weights with respect to a set of *keys*, and uses those weights
 to form a weighted combination of a collection of *values*. In mathematical terms, the Transformer attention can be
@@ -144,7 +147,7 @@ the previous layer of encoding.
 In the case of the masked decoder self-attention, the same is true except that a mask is applied so that a position of decoding
 can only attend to previous positions. 
 
-In the case of the encoder-decoder self-attention, the keys and values are the output of the encoder layer stack and the
+In the case of the encoder-decoder attention, the keys and values are the output of the encoder layer stack and the
 queries are the output of the previous decoder layer. 
 
 The multi-head attention operation basically means that instead of applying an attention operation once, we will do it several
@@ -166,7 +169,7 @@ outperform its recurrent counterparts. On the English-to-German and English-to-F
 state-of-the-art BLEU scores (41.8 on EN-FR and 28.4 on EN-DE). 
 
 Not only that, but because of its highly parallelizable nature, the Transformer is able to do this at a significantly-reduced
-numbers of FLOPs for training! So the Transformer is *better* and *faster*!
+numbers of FLOPs (floating-point operations) for training! So the Transformer is *better* and *faster*!
 
 
 ## Analysis 
@@ -194,6 +197,8 @@ to recurrence which requires linear-time computations.
 
 ## Final Thoughts
 
-The Transformer is a real rebel on the natural language deep learning scene because of how it eschews conventional network constructs
+The Transformer is a real rebel in the natural language deep learning scene because of how it eschews conventional network constructs
 while still outperforming existing systems. It has challenged a lot of folk wisdom about the necessity of recurrence
 in natural language models. Since being released, the Transformer has been extended and used in new architectures, most recently [BERT](https://arxiv.org/abs/1810.04805).
+
+Is attention *really* all you need? Future work will answer that question!
