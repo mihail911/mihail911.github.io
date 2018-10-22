@@ -5,40 +5,40 @@
       "component---src-templates-tag-template-jsx-a2e35ec6f4f30bc1fc0b.js.map"
     ],
     "path---posts-review-of-sigdial-semdial-2017": [
-      "path---posts-review-of-sigdial-semdial-2017-cf9320127aaf6036171e.js",
-      "path---posts-review-of-sigdial-semdial-2017-cf9320127aaf6036171e.js.map"
+      "path---posts-review-of-sigdial-semdial-2017-db4ed19f80050cc0b23f.js",
+      "path---posts-review-of-sigdial-semdial-2017-db4ed19f80050cc0b23f.js.map"
     ],
     "path---tags-a-i": [
-      "path---tags-a-i-c5d99e2ff8fcb0a350c4.js",
-      "path---tags-a-i-c5d99e2ff8fcb0a350c4.js.map"
+      "path---tags-a-i-d733420c1bf541836cac.js",
+      "path---tags-a-i-d733420c1bf541836cac.js.map"
     ],
     "component---src-templates-page-template-jsx": [
       "component---src-templates-page-template-jsx-8bb23bfa2cd73414d601.js",
       "component---src-templates-page-template-jsx-8bb23bfa2cd73414d601.js.map"
     ],
     "path---posts-fundamental-deep-learning-algorithms-to-learn": [
-      "path---posts-fundamental-deep-learning-algorithms-to-learn-0d7273881bac1351dac7.js",
-      "path---posts-fundamental-deep-learning-algorithms-to-learn-0d7273881bac1351dac7.js.map"
+      "path---posts-fundamental-deep-learning-algorithms-to-learn-eb0c5cb8eaf0fedb8274.js",
+      "path---posts-fundamental-deep-learning-algorithms-to-learn-eb0c5cb8eaf0fedb8274.js.map"
     ],
     "component---src-pages-projects-jsx": [
       "component---src-pages-projects-jsx-dad5db99ca15c0a5ff3d.js",
       "component---src-pages-projects-jsx-dad5db99ca15c0a5ff3d.js.map"
     ],
     "path---posts-a-new-multiturn-dialogue-dataset": [
-      "path---posts-a-new-multiturn-dialogue-dataset-11bf9bec1398284f0921.js",
-      "path---posts-a-new-multiturn-dialogue-dataset-11bf9bec1398284f0921.js.map"
+      "path---posts-a-new-multiturn-dialogue-dataset-dafa4663a4864d3f439f.js",
+      "path---posts-a-new-multiturn-dialogue-dataset-dafa4663a4864d3f439f.js.map"
     ],
     "path---posts-deep-contextualized-word-representations-elmo": [
-      "path---posts-deep-contextualized-word-representations-elmo-80962cfaa3b9e7576a3a.js",
-      "path---posts-deep-contextualized-word-representations-elmo-80962cfaa3b9e7576a3a.js.map"
+      "path---posts-deep-contextualized-word-representations-elmo-2e89ed9ce9ca872e2e59.js",
+      "path---posts-deep-contextualized-word-representations-elmo-2e89ed9ce9ca872e2e59.js.map"
     ],
     "path---tags-dialogue": [
       "path---tags-dialogue-dbae69cda00453f29c65.js",
       "path---tags-dialogue-dbae69cda00453f29c65.js.map"
     ],
     "path---blog": [
-      "path---blog-dfabdcdc868a3cd16dde.js",
-      "path---blog-dfabdcdc868a3cd16dde.js.map"
+      "path---blog-2581e9490ba98196913b.js",
+      "path---blog-2581e9490ba98196913b.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -49,8 +49,8 @@
       "path---tags-interview-prep-a1c50464791b35c45934.js.map"
     ],
     "path---tags-computer-vision": [
-      "path---tags-computer-vision-7bcd731d12ccffbc132e.js",
-      "path---tags-computer-vision-7bcd731d12ccffbc132e.js.map"
+      "path---tags-computer-vision-da8532de90c55af7c94d.js",
+      "path---tags-computer-vision-da8532de90c55af7c94d.js.map"
     ],
     "component---src-layouts-index-jsx": [
       "component---src-layouts-index-jsx-b504d383bf535d8d5521.js",
@@ -61,8 +61,8 @@
       "path---tags-software-engineering-9d7258a121ef83acf597.js.map"
     ],
     "path---tags-natural-language-processing": [
-      "path---tags-natural-language-processing-4db766c0ac91e46195e3.js",
-      "path---tags-natural-language-processing-4db766c0ac91e46195e3.js.map"
+      "path---tags-natural-language-processing-b78a0173e663d5fda037.js",
+      "path---tags-natural-language-processing-b78a0173e663d5fda037.js.map"
     ],
     "path---projects": [
       "path---projects-2ebdd16b740b0b99d391.js",
@@ -80,17 +80,21 @@
       "path---tags-data-science-bfb67808935532d8cd60.js",
       "path---tags-data-science-bfb67808935532d8cd60.js.map"
     ],
+    "path---posts-transformers-attention-in-disguise": [
+      "path---posts-transformers-attention-in-disguise-f1ab348cd3ad92d53b2a.js",
+      "path---posts-transformers-attention-in-disguise-f1ab348cd3ad92d53b2a.js.map"
+    ],
     "path---posts-a-software-interview-challenge": [
-      "path---posts-a-software-interview-challenge-ddaf1f2a234fd7aaf91b.js",
-      "path---posts-a-software-interview-challenge-ddaf1f2a234fd7aaf91b.js.map"
+      "path---posts-a-software-interview-challenge-fc8c8da1a27955e887c3.js",
+      "path---posts-a-software-interview-challenge-fc8c8da1a27955e887c3.js.map"
     ],
     "path---index": [
       "path---index-521967ca622b09840194.js",
       "path---index-521967ca622b09840194.js.map"
     ],
     "path---posts-why-all-the-excitement-about-ai": [
-      "path---posts-why-all-the-excitement-about-ai-bc6d2fbecb9402911743.js",
-      "path---posts-why-all-the-excitement-about-ai-bc6d2fbecb9402911743.js.map"
+      "path---posts-why-all-the-excitement-about-ai-6b7eda83067ac7f57716.js",
+      "path---posts-why-all-the-excitement-about-ai-6b7eda83067ac7f57716.js.map"
     ],
     "path---tags-dataset": [
       "path---tags-dataset-214c5193859710386a99.js",
@@ -123,8 +127,8 @@
       "component---src-pages-blog-jsx-c213e9dfd099e47ed564.js.map"
     ],
     "path---posts-being-a-good-machine-learning-data-scientist": [
-      "path---posts-being-a-good-machine-learning-data-scientist-4e2fdae0f84c9c58f194.js",
-      "path---posts-being-a-good-machine-learning-data-scientist-4e2fdae0f84c9c58f194.js.map"
+      "path---posts-being-a-good-machine-learning-data-scientist-2509f47a37bc307219fb.js",
+      "path---posts-being-a-good-machine-learning-data-scientist-2509f47a37bc307219fb.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
@@ -135,30 +139,30 @@
       "component---src-pages-index-jsx-029c4a0db57aee7eb3bd.js.map"
     ],
     "path---posts-fast-object-detection-with-fast-rcnn": [
-      "path---posts-fast-object-detection-with-fast-rcnn-df7ec98dd274ca4f117e.js",
-      "path---posts-fast-object-detection-with-fast-rcnn-df7ec98dd274ca4f117e.js.map"
+      "path---posts-fast-object-detection-with-fast-rcnn-93c4dd421fd5ba1f0ed7.js",
+      "path---posts-fast-object-detection-with-fast-rcnn-93c4dd421fd5ba1f0ed7.js.map"
     ],
     "app": [
-      "app-9e3d64cf5cafa2dbe4b7.js",
+      "app-120441d2d530a47155f4.js",
       "build-js-styles.css",
-      "app-9e3d64cf5cafa2dbe4b7.js.map",
+      "app-120441d2d530a47155f4.js.map",
       "build-js-styles.css.map"
     ],
     "path---tags-machine-learning": [
-      "path---tags-machine-learning-57bae1e6df8cfc1bd1c7.js",
-      "path---tags-machine-learning-57bae1e6df8cfc1bd1c7.js.map"
+      "path---tags-machine-learning-24f78d34820239064063.js",
+      "path---tags-machine-learning-24f78d34820239064063.js.map"
     ],
     "path---404": [
       "path---404-2ebdd16b740b0b99d391.js",
       "path---404-2ebdd16b740b0b99d391.js.map"
     ],
     "path---tags-deep-learning": [
-      "path---tags-deep-learning-51a1044cf91b43a9332a.js",
-      "path---tags-deep-learning-51a1044cf91b43a9332a.js.map"
+      "path---tags-deep-learning-427494530326dba4775a.js",
+      "path---tags-deep-learning-427494530326dba4775a.js.map"
     ],
     "path---posts-object-detection-with-rcnn": [
-      "path---posts-object-detection-with-rcnn-45ec5c5fbc342c3ad29c.js",
-      "path---posts-object-detection-with-rcnn-45ec5c5fbc342c3ad29c.js.map"
+      "path---posts-object-detection-with-rcnn-bdb217f8aee57118f64c.js",
+      "path---posts-object-detection-with-rcnn-bdb217f8aee57118f64c.js.map"
     ],
     "path---about": [
       "path---about-f3993bda9d6da6ff94bd.js",
