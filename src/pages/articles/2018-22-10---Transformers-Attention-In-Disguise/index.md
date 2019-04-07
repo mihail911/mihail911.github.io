@@ -1,6 +1,6 @@
 ---
 title: "Transformers: Attention in Disguise"
-date: "2018-10-01T23:46:37.121"
+date: "2018-10-22T23:46:37.121"
 layout: post
 draft: false
 path: "/posts/transformers-attention-in-disguise/"

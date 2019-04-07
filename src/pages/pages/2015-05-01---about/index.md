@@ -6,8 +6,8 @@ path: "/about"
 
 Hi there! If you're stopping by my site, you're probably someone who has questions and wants answers. Life is short and the internet is large, so let's get to it.  
 
-## What I Do Now 💻 + 🚗
-Engineer at [RideOS](https://rideos.ai/) working on ensuring the safe, global rollout of autonomous vehicles.
+## What I Do Now 💻 + 🎤
+Machine learning scientist at [Alexa AI](https://developer.amazon.com/alexa-skills-kit/conversational-ai) working on the future of conversational artificial intelligence.
 
 ## What I Did Before 🎓 + 👨‍🔬
 Graduate student at [Stanford University](https://www.stanford.edu/) where I studied computer science and artificial intelligence. I spent 3 wonderful years as a researcher in the [Stanford Natural Language Processing Group](https://nlp.stanford.edu/), where I had the unbelievable fortune to work with [Christopher Manning](https://nlp.stanford.edu/manning/), [Percy Liang](https://cs.stanford.edu/~pliang/), [Christopher Potts](https://web.stanford.edu/~cgpotts/), and other brilliant people. 
@@ -23,7 +23,9 @@ I am the creator of a mobile app for learning artificial intelligence, machine l
 
 ## News 📰
 
-**August 2018**: Check out my [blog post](/posts/why-all-the-excitement-about-ai/) on why AI is so exciting.  
+**September 2018**: I was a reviewer for [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639).  
+**August 2018**: Check out my [blog post](/posts/why-all-the-excitement-about-ai/) on why AI is so exciting!  
+**July 2018**: I was a reviewer for [EMNLP 2018](https://emnlp2018.org/).  
 **July 2018**: I was selected as a [top reviewer for ACL 2018](https://acl2018.org/2018/07/02/top-reviewers/)! Thanks to the community for the acknowledgment!  
 **February 2018**: I led a Deep Learning Workshop at the Harvard Westlake School's annual hackathon. Check out the [slides here](./Deep-HWack.pdf) and the [accompanying code](https://github.com/mihail911/deep-hwack).  
 **August 2017**: I gave a talk on [key-value retrieval networks](https://arxiv.org/abs/1705.05414) at [SIGDial 2017](http://workshops.sigdial.org/conference18/main.htm) in Saarbrücken, Germany. Thanks to all the organizers for a fantastic conference!  
