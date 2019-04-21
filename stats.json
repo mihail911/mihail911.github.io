@@ -9,8 +9,8 @@
       "path---posts-review-of-sigdial-semdial-2017-e30c34ab9392940d7cda.js.map"
     ],
     "path---tags-a-i": [
-      "path---tags-a-i-e9fdce7f9f6d75204c10.js",
-      "path---tags-a-i-e9fdce7f9f6d75204c10.js.map"
+      "path---tags-a-i-4a70ee44c8d4b4400983.js",
+      "path---tags-a-i-4a70ee44c8d4b4400983.js.map"
     ],
     "component---src-templates-page-template-jsx": [
       "component---src-templates-page-template-jsx-8bb23bfa2cd73414d601.js",
@@ -41,8 +41,8 @@
       "path---posts-fundamentals-of-linear-regression-01e967efdeed7c20bfe5.js.map"
     ],
     "path---blog": [
-      "path---blog-ecb4ff78a2a00b293ca5.js",
-      "path---blog-ecb4ff78a2a00b293ca5.js.map"
+      "path---blog-d9fd3f680e58fe2d56c8.js",
+      "path---blog-d9fd3f680e58fe2d56c8.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -81,8 +81,8 @@
       "component---src-templates-post-template-jsx-ab0642351350b7586b5b.js.map"
     ],
     "path---tags-data-science": [
-      "path---tags-data-science-0549ce4f2629cc32c739.js",
-      "path---tags-data-science-0549ce4f2629cc32c739.js.map"
+      "path---tags-data-science-66dd0fd0e749d44e2a12.js",
+      "path---tags-data-science-66dd0fd0e749d44e2a12.js.map"
     ],
     "path---posts-transformers-attention-in-disguise": [
       "path---posts-transformers-attention-in-disguise-ba826e5d80695871429a.js",
@@ -105,8 +105,8 @@
       "path---tags-dataset-214c5193859710386a99.js.map"
     ],
     "path---posts-support-vector-machines": [
-      "path---posts-support-vector-machines-6f46f03482db59462bdb.js",
-      "path---posts-support-vector-machines-6f46f03482db59462bdb.js.map"
+      "path---posts-support-vector-machines-68ad835caf169931defc.js",
+      "path---posts-support-vector-machines-68ad835caf169931defc.js.map"
     ],
     "commons": [
       "commons-42e22243a7c7bc28ab91.js",
@@ -119,8 +119,8 @@
       "path---teaching-f645e3c7d8aa43468d94.js.map"
     ],
     "path---posts-not-so-naive-bayes": [
-      "path---posts-not-so-naive-bayes-53e7bc9109b1004be4b3.js",
-      "path---posts-not-so-naive-bayes-53e7bc9109b1004be4b3.js.map"
+      "path---posts-not-so-naive-bayes-2ff672d7a8919189f9bf.js",
+      "path---posts-not-so-naive-bayes-2ff672d7a8919189f9bf.js.map"
     ],
     "path---404-html": [
       "path---404-html-2ebdd16b740b0b99d391.js",
@@ -159,14 +159,14 @@
       "path---posts-fast-object-detection-with-fast-rcnn-364bd6a55ad27ee964ed.js.map"
     ],
     "app": [
-      "app-d462f6e3361900a5e628.js",
+      "app-cbe57af2e34ed349dc73.js",
       "build-js-styles.css",
-      "app-d462f6e3361900a5e628.js.map",
+      "app-cbe57af2e34ed349dc73.js.map",
       "build-js-styles.css.map"
     ],
     "path---tags-machine-learning": [
-      "path---tags-machine-learning-a6bd9a4079e33561d7bc.js",
-      "path---tags-machine-learning-a6bd9a4079e33561d7bc.js.map"
+      "path---tags-machine-learning-278e64533f51c15806bd.js",
+      "path---tags-machine-learning-278e64533f51c15806bd.js.map"
     ],
     "path---404": [
       "path---404-2ebdd16b740b0b99d391.js",
