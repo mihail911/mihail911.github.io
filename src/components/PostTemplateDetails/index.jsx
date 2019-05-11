@@ -2,7 +2,6 @@ import React from 'react';
 import { Set } from 'immutable';
 import Link from 'gatsby-link';
 import moment from 'moment';
-import Disqus from '../Disqus/Disqus';
 import PostSocialPanel from '../PostSocialPanel';
 import MailchimpSignupForm from '../MailchimpSignupForm'
 import './style.scss';
@@ -72,12 +71,6 @@ class PostTemplateDetails extends React.Component {
       </div>
     );
 
-    const commentsBlock = (
-      <div>
-        <Disqus postNode={post} siteMetadata={this.props.data.site.siteMetadata} />
-      </div>
-    );
-
     return (
       <div className="post-full-wrapper">
         {homeBlock}
@@ -97,7 +90,6 @@ class PostTemplateDetails extends React.Component {
             <p className="post-single__footer-text" />
             <PostSocialPanel />
             <MailchimpSignupForm />
-            {commentsBlock}
           </div>
         </div>
       </div>

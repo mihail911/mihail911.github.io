@@ -3,7 +3,6 @@ module.exports = {
     url: 'https://mihaileric.com',
     title: 'Mihail Eric',
     subtitle: 'Engineer, researcher, educator.',
-    disqusShortname: 'mihaileric',
     menu: [
       {
         label: 'Blog',
