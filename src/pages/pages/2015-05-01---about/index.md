@@ -20,13 +20,14 @@ I also believe artificial intelligence will be one of the **most transformative 
 ## Fun Stuff 📲
 I am the creator of a mobile app for learning artificial intelligence, machine learning, and deep learning. Check it out on the [App Store](https://itunes.apple.com/us/app/artificial-intelligence-school/id1369987569?mt=8) and [Google Play](https://play.google.com/store/apps/details?id=com.theaischool)! 
 
+## Professional Service 👨‍💼
+Reviewer: [ACL 2018](https://acl2018.org/) ([top reviewer](https://acl2018.org/2018/07/02/top-reviewers/)), [ACL 2019](http://www.acl2019.org/EN/index.xhtml), [EMNLP 2018](https://emnlp2018.org/), [EMNLP 2019](https://www.emnlp-ijcnlp2019.org/), [NLP for Conversational AI Workshop 2019](https://sites.google.com/view/nlp4convai/), [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639)
 
 ## News 📰
 
-**September 2018**: I was a reviewer for [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639).  
+**July 2019**: We just released a modified version of the [MultiWOZ dataset](https://www.repository.cam.ac.uk/handle/1810/294507) with corrected dialogue state annotations. For a description of the dataset, check out [our writeup](https://arxiv.org/abs/1907.01669).  
+**June 2019**: I've been collecting a [list of essential papers in NLP](https://github.com/mihail911/nlp-library) for practitioners and researchers. Feel free to submit a pull request, if there's a paper you think should be there!   
 **August 2018**: Check out my [blog post](/posts/why-all-the-excitement-about-ai/) on why AI is so exciting!  
-**July 2018**: I was a reviewer for [EMNLP 2018](https://emnlp2018.org/).  
-**July 2018**: I was selected as a [top reviewer for ACL 2018](https://acl2018.org/2018/07/02/top-reviewers/)! Thanks to the community for the acknowledgment!  
 **February 2018**: I led a Deep Learning Workshop at the Harvard Westlake School's annual hackathon. Check out the [slides here](./Deep-HWack.pdf) and the [accompanying code](https://github.com/mihail911/deep-hwack).  
 **August 2017**: I gave a talk on [key-value retrieval networks](https://arxiv.org/abs/1705.05414) at [SIGDial 2017](http://workshops.sigdial.org/conference18/main.htm) in Saarbrücken, Germany. Thanks to all the organizers for a fantastic conference!  
 **July 2017**: Our recent paper on the [pragmatics of commands](https://arxiv.org/abs/1705.03454) was accepted to the [International Conference on Computational Semantics (IWCS) 2017](https://www.lirmm.fr/iwcs2017/).  

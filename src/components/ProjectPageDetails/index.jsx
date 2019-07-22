@@ -27,6 +27,15 @@ class ProjectPageDetails extends React.Component {
           Publications
         </div>
         <ProjectDescription
+          title="MultiWOZ 2.1: Multi-Domain Dialogue State Corrections and State Tracking Baselines"
+          picName="dst"
+          link="https://arxiv.org/abs/1907.01669"
+          authors="Mihail Eric*, Rahul Goel*, Shachi Paul, Abhishek Sethi,
+            Sanchit Agarwal, Shuyag Gao, Dilek Hakkani-Tur"
+          description="We release an updated version of the Cambridge MultiWOZ dataset with dialogue state annotation corrections and corresponding state tracking baselines."
+          meta="Preprint 2019, arXiv:1907.01669"
+        />
+        <ProjectDescription
           title="Key Value Retrieval Networks for Task-Oriented Dialogue"
           picName="kv"
           link="https://arxiv.org/abs/1705.05414"

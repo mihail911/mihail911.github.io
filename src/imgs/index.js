@@ -6,7 +6,9 @@ import kvPic from './kv.png';
 import mutualPic from './mutual.png';
 import nnliPic from './nnli.png';
 import sceneseerPic from './sceneseer.png';
-import wienPic from './random_forest.png'
+import wienPic from './random_forest.png';
+import dstPic from './dst.png';
+
 
 const nameToPic = {
   adversarial: adversarialPic,
@@ -17,7 +19,8 @@ const nameToPic = {
   mutual: mutualPic,
   nnli: nnliPic,
   sceneseer: sceneseerPic,
-  wien: wienPic
+  wien: wienPic,
+  dst: dstPic
 };
 
 export default nameToPic;
