@@ -21,8 +21,8 @@
       "path---posts-fundamental-deep-learning-algorithms-to-learn-ee6f8b2e573dbe69cb7c.js.map"
     ],
     "component---src-pages-projects-jsx": [
-      "component---src-pages-projects-jsx-dad5db99ca15c0a5ff3d.js",
-      "component---src-pages-projects-jsx-dad5db99ca15c0a5ff3d.js.map"
+      "component---src-pages-projects-jsx-28df0cbae174b20f516c.js",
+      "component---src-pages-projects-jsx-28df0cbae174b20f516c.js.map"
     ],
     "path---posts-a-new-multiturn-dialogue-dataset": [
       "path---posts-a-new-multiturn-dialogue-dataset-4be5bd4fa9e3383fb1a5.js",
@@ -109,8 +109,8 @@
       "path---posts-a-software-interview-challenge-4daf76ee00c9da526d07.js.map"
     ],
     "path---index": [
-      "path---index-b4289235c48be7630166.js",
-      "path---index-b4289235c48be7630166.js.map"
+      "path---index-e7e1f852da8c61034d12.js",
+      "path---index-e7e1f852da8c61034d12.js.map"
     ],
     "path---posts-why-all-the-excitement-about-ai": [
       "path---posts-why-all-the-excitement-about-ai-4424f44cee2f85dc15ff.js",
@@ -175,9 +175,9 @@
       "path---posts-fast-object-detection-with-fast-rcnn-125dd7cf354a5e08c2fe.js.map"
     ],
     "app": [
-      "app-54a1cfac7449bd2e68a0.js",
+      "app-5d9b01cef3972e16affd.js",
       "build-js-styles.css",
-      "app-54a1cfac7449bd2e68a0.js.map",
+      "app-5d9b01cef3972e16affd.js.map",
       "build-js-styles.css.map"
     ],
     "path---tags-machine-learning": [
@@ -197,8 +197,8 @@
       "path---posts-object-detection-with-rcnn-b285ea1dbc8d7601bb6c.js.map"
     ],
     "path---about": [
-      "path---about-31f7d09b2dae9db61e80.js",
-      "path---about-31f7d09b2dae9db61e80.js.map"
+      "path---about-810aff4329e05c28ead4.js",
+      "path---about-810aff4329e05c28ead4.js.map"
     ]
   }
 }
