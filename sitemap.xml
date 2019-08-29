@@ -37,6 +37,7 @@
 <url> <loc>https://mihaileric.com/posts/deep-dive-into-neural-networks/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/posts/nlp-trends-acl-2019/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/posts/bias-variance-tradeoff/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mihaileric.com/posts/model-evaluation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
