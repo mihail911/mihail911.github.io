@@ -25,6 +25,8 @@ Reviewer: [ACL 2018](https://acl2018.org/) ([top reviewer](https://acl2018.org/2
 
 ## News 📰
 
+**October 2019**: I'm co-organizing the [2nd NLP for Conversational AI Workshop](https://sites.google.com/view/2ndnlp4convai/) at ACL 2020! If you love NLP and dialogue systems, we look forward to seeing you in Seattle. 😎   
+**August 2019**: I wrote a blog post describing [trends in modern NLP](/posts/nlp-trends-acl-2019/), based on my trip to [ACL 2019](http://www.acl2019.org/EN/index.xhtml).    
 **July 2019**: We just released a modified version of the [MultiWOZ dataset](https://www.repository.cam.ac.uk/handle/1810/294507) with corrected dialogue state annotations. For a description of the dataset, check out [our writeup](https://arxiv.org/abs/1907.01669).  
 **June 2019**: I've been collecting a [list of essential papers in NLP](https://github.com/mihail911/nlp-library) for practitioners and researchers. Feel free to submit a pull request, if there's a paper you think should be there!   
 **August 2018**: Check out my [blog post](/posts/why-all-the-excitement-about-ai/) on why AI is so exciting!  
