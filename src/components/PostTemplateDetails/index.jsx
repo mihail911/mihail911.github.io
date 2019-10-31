@@ -73,7 +73,7 @@ class PostTemplateDetails extends React.Component {
 
     return (
       <div className="post-full-wrapper">
-        {homeBlock}
+        {/* {homeBlock} */}
         <div className="post-single">
           <div className="post-single__inner">
             <h1 className="post-single__title">{post.frontmatter.title}</h1>
