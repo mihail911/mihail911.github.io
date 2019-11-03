@@ -15,7 +15,7 @@ In this post, we are going to learn about Venus, my deep learning computer and h
 
 ![deep learning computer hardware parts](./parts.JPG)
 
-to a functional system, running Ubuntu and able to train GPU-accelerated deep learning architectures:
+to a functional system, running Ubuntu 18.04 and able to train GPU-accelerated deep learning architectures:
 
 ![completed deep learning computer](./completed.JPG)
 
@@ -97,7 +97,7 @@ Now let's talk about disk storage. As mentioned previously, disk is your machine
 
 There are two primary types of disk storage. Hard drive disks (or HDD) are disks that consist of moving physical parts. They are fairly old-school and big, consisting of a spinning disk with a header that reads/writes data off of it. 
 
-On the other hand, solid state drives (or SSD) do not have moving parts. They are flash-based, faster, smaller, and more expensive than HDDs. Within the world of SSDs, there is another major factor to consider when choosing what type of component to buy. It turns out there are two different methods a PC can use to read data from an SSD: SATA 3 and NVMe. SATA 3 involves actually connecting a data/power cable into your motherboard whereas the NVMe protocol involves connecting to a PCI-E slot on the board. 
+On the other hand, solid state drives (or SSD) do not have moving parts. They are flash-based, faster, smaller, and more expensive than HDDs. Within the world of SSDs, there is another major factor to consider when choosing what type of component to buy. It turns out there are two different methods a PC can use to read data from an SSD: SATA 3 and NVMe. SATA 3 involves actually connecting a data/power cable into your motherboard whereas the NVMe protocol involves connecting to a PCIe slot on the board. 
 
 Ok, what are all the practical implications of these different terms? Some benchmarks cite that HDDs can sustain an average of 80-160 MB/second of data read/write speeds, SATA 3 SSDs about 550 MB/second, and NVMe SSD up to 3500 MB/second. Those are pretty large differences!
 
@@ -167,11 +167,45 @@ For my build, I may have gone a bit overkill with my power supply choice. I ende
 Phew! And with that, we are officially done with our hardware odyssey. Let's get to some actual computer building!
 
 
-## Fitting the Jigsaw Pieces Together
+## Fitting the Lego Blocks Together
+
+After you've done the harder job of picking the hardware components for your system, putting the pieces together is like big-person Lego block fitting. One piece of overarching advice I have for the physical building is to *carefully* read the manuals for your various components. Some are more important than others (I read the motherboard manual page-to-page), but in general, when in doubt, consult the relevant manual.
+
+My workflow for getting the machine roughly involved 1) setting the motherboard up outside the case 2) disassembling and prepping the case 3) mounting the motherboard and 4) connecting any relevant cables appropriately. You are, of course, not required to do it this way so do whatever makes the most sense to you.
+
+![raw MSI SLI Plus motherboard out of box](./raw_motherboard.JPG)
+
+![back of AMD Threadripper CPU](./back_of_cpu.JPG)
+
+![mounting the AMD Threadripper CPU](./mounting_cpu.JPG)
+
+![AMD Threadripper CPU mounted in motherboard](./cpu_mounted.JPG)
+
+![GPU out of box closeup](./gpu_closeup.JPG)
+
+![mid setup getting ready to post](./midsetup.JPG)
+
+![testing the computer POST](./test_post.JPG)
+
+![mid-build prepping the computer case](./midbuild.JPG)
+
+![installing GPU in computer case](./installing_gpu_motherboard.JPG)
+
+![nearly complete build in case with cpu cooler attached and GPU](./nearly_complete_build.JPG)
+
+![BIOS starting up after build finished](./bios.JPG)
+
+
+
+
+
 
 * Good lesson: do a debug setup to see the system POST
 
 ## Software Installation
+
+![installing Ubuntu 18.04](./installing_ubuntu.JPG)
+
 
 * Ubuntu installation
 * Getting Nvidia drivers setup
@@ -185,13 +219,21 @@ Why would I name my deep learning machine, Venus? Well, around the time I began 
 
 ![botticelli birth of venus](./birth_of_venus.jpg)
 
+A truly beautiful piece. In ancient mythology Venus was claimed to have been born of a sea-foam, and in Botticelli's masterwork she is depicted as arriving to the shore on a shell after her birth.
 
-Nazaré, Portugal
+Now around the same time I was looking around for parts, I discovered videos of Nazaré, Portugal. For those that don't know, Nazaré is a coastal town admired by surfers internationally because it boasts some of the largest waves on the planet, with some reaching upwards of 60 feet in size!
 
 ![nazare, portugal waves](./nazare.jpg)
 
+When you see [videos of waves at Nazaré](https://www.youtube.com/watch?v=Ftok14M5p8g), it is truly awe-inspiring. The sheer force, the pure might of nature crashing onto the shore, something equally frightening and enticing. 
 
-Power meets elegance. Truly amazing things happen when art meets science. 
+And here is where this artistic and natural juxtaposition fascinated me. The idea that such waves, so incredible and destructive in their might could break and birth something so refined and elegant as a goddess. 
+
+My build certainly packs a computational punch with components named *Turbo* and *ThreadRipper*. But I want the system to honor the notion that amazing things happen when power meets poise, when force meets finesse, when science meets art. 
+
+Hence, Venus. 
+
+Now before I continue to wax philosophical, let's wrap this post up so you can get on with your day.
 
 * Thanks to [Sabera Talukder](https://twitter.com/SaberaTalukder) for her help with the build. 
 * Thanks to other builds people wrote up (Jeff Chen + Tim Dettmers)
