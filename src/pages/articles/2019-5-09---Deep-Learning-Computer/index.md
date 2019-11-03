@@ -11,19 +11,19 @@ tags:
 description: "In which I describe how I built a deep learning computer"
 ---
 
-TODO (mihail): Add more emojis
-
 In this post, we are going to learn about Venus, my deep learning computer and how I built it. More specifically, I will describe how I went from a collection of hardware parts:
 
-![IMAGE OF HARDWARE PARTS](./nonlinearDataDiagram_clear.png)
+![deep learning computer hardware parts](./parts.JPG)
 
 to a functional system, running Ubuntu and able to train GPU-accelerated deep learning architectures:
 
-![IMAGE OF COMPLETED BUILD](./nonlinearDataDiagram_clear.png)
+![completed deep learning computer](./completed.JPG)
 
 Along the way, I will describe at a high-level what each hardware component of a computer does and how I navigated the landscape of selecting parts for a functional build.
 
 TODO (mihail): ADD NAVIGATABLE MENU ITEMS
+TODO (mihail): Add more emojis
+
 
 ## A Brief Introduction
 
@@ -112,33 +112,89 @@ With all that in mind, when it come to choosing a disk storage option, I decided
 
 ### GPU
 
-And now we get to the main workhorse of any deep learning build: the GPU (or graphical processing unit). One thing that's worth mentioning before we dive into GPU details, is that no part of a deep learning train loop strictly requires a GPU. You can certainly get away with training systems using nothing but a CPU. However, the nature of deep learning architectures makes them especially amenable to reaping the benefits of GPU computation workloads.
+And now we get to the main workhorse of any deep learning build: the GPU (or graphical processing unit). One thing that's worth mentioning before we dive into GPU details, is that no part of a deep learning train loop strictly requires a GPU. You can certainly get away with training systems using nothing but a CPU. However, the nature of deep learning architectures makes them especially amenable to GPU computation workloads. For example by [some benchmarks](https://medium.com/@andriylazorenko/tensorflow-performance-test-cpu-vs-gpu-79fcd39170c), using a GPU can speed up model training times by over 10x as compared to a CPU. That's the difference between training a model in a day and 1.5 *weeks*!
 
-By [some benchmarks](https://medium.com/@andriylazorenko/tensorflow-performance-test-cpu-vs-gpu-79fcd39170c), using a GPU can increase training times by over 10x as compared to a CPU.
+Now that you're hopefully very committed to supplementing your deep learning build with a solid GPU, let's dive deeply into some considerations. There are a several things that impact a GPU's performance: the number of tensor cores it has, its memory bandwidth, the amount of GPU memory it has, and whether it has 16-bit capabilities. 
+
+The number of tensor cores roughly correlates to the GPU's raw processing power, namely how many operations it can compute every second. The  memory bandwidth determines how quickly data can be transferred to the GPU for processing. The amount of memory is like the GPU's equivalent of RAM, namely how much space the GPU has for performing CUDA operations. 16-bit capabilities are a recent addition in some GPU architectures which allow them to handle mixed-precision training. This essentially means you can represent weights and losses with 16-bit floats rather than 32-bit floats, which allows you to train larger models in shorter times.
+
+To make it concrete, in our loop above, the GPU memory will determine whether the `model = AwesomeModel` will be able to fit entirely on the GPU. As dataset and model sizes have been on an increasing trend upwards in recent years, there is value in having a GPU with a solid amount of memory. In addition, the GPU's raw compute power will determine how quickly it can go through forward (`loss = model.forward(processed)`) and backward passes (`loss.backward()`).  
+
+What does the space of consumer GPUs then look like? There have been some [incredibly helpful posts](https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/) benchmarking the performance of various GPUs across a number of deep learning architectures. There the RTX 2060 is shown to be the most cost-effective choice. I chose to use a RTX 2080Ti, as I wanted something with more computer firepower. In addition, at 11Gb of memory compared to the RTX2060's 6GB, I felt the RTX 2080Ti was substantially better for training many of the larger scale models that dominate modern deep learning. 
+
+One small additional note I want to include: if you're thinking of eventually upgrading to multiple GPUs in your build, it's useful to pick a GPU with blower-style single-fan design, which essentially allows the GPU to expel hot air out of the computer case. If you have two GPUs stacked next to each other and one is expelling hot air into the other one, this can unnecessarily increase the other GPU's temperature which can hurt its performance. The Asus Turbo 2080Ti edition includes blower style fans. 
 
 ### Motherboard
-* Needs to have support for NVME (comes in form of PCI-E lanes)
-* sufficient PCI-E lanes
+
+The motherboard is the circuit board upon which all your other goodies sit and the medium by which all of your various components talk to each other and receive power. Motherboards come with different specifications depending on what you want and need as well as what your other hardware components are. 
+
+First off, you want to ensure that your motherboard is compatible with your CPU. This is often expressed in terms of the *chipset* the motherboard supports in its specification. In the case of the AMD Threadripper series, you'll want to look for a motherboard that supports the X399 chipset. This is a very important detail to be mindful of!
+
+Another important aspect of motherboards it their form factor, which roughly determines their size and hence how many slots/ports they have for various components to connect to. The largest form factor is ATX, and it will give you the most flexibility for integrating various components and upgrading your system. 
+
+Different motherboards also support different numbers of PCIe expansion slots. PCIe is essentially an interface standard that provides slots on motherboards which can be used for connecting high-speed components like GPUs. GPUs typically are connected to PCIe x16 slots, and so if you want to include one or multiple GPUs in your system, you want to ensure there are sufficient PCIe x16 slots provided. 
+
+Finally, motherboards also have different number of slots for attaching RAM. Depending on what you want in your system, you should make sure to check the max RAM supported on a motherboard. 
+
+For the purposes of my build, I used an MSI X399 SLI Plus Motherboard. While I only used 64GB of RAM for my build, this motherboard supports going up to 128GB should I choose to upgrade. It supports DDR4 RAM, has sufficient M.2 slots, and provides 4 PCIe x16 slots (so up to 4 GPUs can be added).
 
 ### Cooler
 
+A deep learning machine at peak performance will typically run pretty hot, with the GPU crunching gradients and the CPU processing data. Therefore you should make sure to pick reliable cooling solutions. You definitely want to use a separate cooler for your CPU (and optionally one for your GPU). 
+
+Within the world of CPU cooling, you can either go with air cooling (where you are essentially just blowing fans on top of your CPU) or water cooling (where water is circulated in a loop between a heat source and a cooling radiator). Water coolers tend to be quieter and are more efficient for dissipating heat, whereas air coolers are easier to deal with and a bit larger. 
+
+I chose to go with a water cooler, specifically the Fractal Design Celsius S24 model.
+
 ### Computer Case
+
+The computer case will be the home for your build, so make sure you make your components comfortable. 🙂 Here it's important to ensure that your case supports your motherboard's form factor. In addition, you want to make sure that it has enough expansion slots so that you can fit as many GPUs as you want.
+
+For my build, I used the Lian Li PC-11 Full Tower Case which provides 8 expansion slots for up to 4 GPUs. 
 
 ### Power Supply
 
+Finally you need a decent power supply to, well, power all of the components we have been talking about. The two things to think about when picking a power supply is its max supported wattage and its efficiency rating.
+
+As a rough heuristic for how much wattage you need for your build, consider that a typical GPU will use \~250W, a CPU will use \~200W, and other peripherals may use \~200W. 
+
+Additionally, different power supplies have different efficiency ratings. This rating is computed as the wattage provided to the system divided by the total wattage drawn from a wall socket. So a power supply with 80\% efficiency would supply 80W for every 100W it draws. This mainly determines how much you'll be paying to provide your machine with the needed power.
+
+There are also some more fine-grained designations for power supplies (bronze, silver, gold, etc.) that basically dictate the supplies efficiency at different load percentages. 
+
+For my build, I may have gone a bit overkill with my power supply choice. I ended up using a 1600W EVGA SuperNova. Given that I only have a single GPU for now, this is certainly a far higher max supported wattage than I need. My saving grace here is that I do hope to expand my system in the future to handle more GPUs, so it's nice to have that leeway in what the power supply is capable of. A good power supply also can last for a very long time, so I'm sure this piece will persist across several builds.
+
+Phew! And with that, we are officially done with our hardware odyssey. Let's get to some actual computer building!
 
 
 ## Fitting the Jigsaw Pieces Together
 
+* Good lesson: do a debug setup to see the system POST
+
 ## Software Installation
+
+* Ubuntu installation
+* Getting Nvidia drivers setup
+
 
 ## Benchmarking
 
 ## Why "Venus"?
 
+Why would I name my deep learning machine, Venus? Well, around the time I began shopping for computer parts I had just come back from a trip to Florence, Italy. Florence is a truly gorgeous city home to historical artwork, including Botticelli's *The Birth of Venus*.
+
+![botticelli birth of venus](./birth_of_venus.jpg)
+
+
 Nazaré, Portugal
 
+![nazare, portugal waves](./nazare.jpg)
+
+
+Power meets elegance. Truly amazing things happen when art meets science. 
+
 * Thanks to [Sabera Talukder](https://twitter.com/SaberaTalukder) for her help with the build. 
+* Thanks to other builds people wrote up (Jeff Chen + Tim Dettmers)
 
 https://blog.slavv.com/the-1700-great-deep-learning-box-assembly-setup-and-benchmarks-148c5ebe6415
 
