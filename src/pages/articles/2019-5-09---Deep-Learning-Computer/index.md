@@ -1,5 +1,5 @@
 ---
-title: "The Birth of Venus: Building a Deep Learning Computer"
+title: "The Birth of Venus: Building a Deep Learning Computer From Scratch"
 date: "2019-11-03T23:40:37.121"
 layout: post
 draft: false 
@@ -8,10 +8,10 @@ tags:
   - "Machine Learning"
   - "A.I."
   - "Deep Learning"
-description: "In which I describe how I built a deep learning computer"
+description: "In which I describe how I built a deep learning computer starting from nothing but a pile of hardware components and a dream."
 ---
 
-In this post, we are going to learn about Venus, my deep learning computer and how I built it. More specifically, I will describe how I went from a collection of hardware parts:
+In this post we are going to learn about Venus, my deep learning computer, and how I built it. More specifically, I will describe how I went from a collection of hardware parts:
 
 ![deep learning computer hardware parts](./parts.JPG)
 
@@ -21,17 +21,19 @@ to a functional system, running Ubuntu 18.04 and able to train GPU-accelerated d
 
 Along the way, I will describe at a high-level what each hardware component of a computer does and how I navigated the landscape of selecting parts for a functional build. I'll also describe how I installed relevant software for the machine and include some benchmarks showing the superior performance of a GPU system over a pure CPU system. 
 
-Fair warning: this is a pretty long post that functions as a **complete** tutorial for building a deep learning computer literally from scratch, no assumptions made. But...since it's long I highly encourage you to peruse and skip the sections depending on your interest. 
+Fair warning: this is a pretty long post that functions as a **complete** tutorial for building a deep learning computer literally from scratch, no assumptions made. 
+
+But...since it's long I highly encourage you to peruse and skip any sections depending on your interest. 
 
 Sound good? Let's get to it.
 
-TODO (mihail): Add more emojis
+## A Brief Introduction 📚
 
-## A Brief Introduction
+While there are numerous build descriptions out there showing how people constructed their own deep learning rigs, as I went about consulting some of them, I often felt there was some crucial component missing. As you start on your build journey, it's easy to get mired in the weeds of hardware terminology. 
 
-While there are numerous build descriptions out there showing how people constructed their own deep learning rigs, as I went about consulting some of them, I often felt there was some crucial component missing. As you start on your build journey, it's easy to get mired in the weeds of hardware terminology. Should I pick an M.2 SSD or will SATA suffice? Can I get away with HDD? How many PCIe x16 slots do I need? Should I pick DDR4-3000 or DDR4-2400 memory? 2080Ti or 1080Ti GPU? All this lingo can be very overwhelming especially for newcomers to hardware. 
+Should I pick an M.2 SSD or will SATA suffice? Can I get away with HDD? How many PCIe x16 slots do I need? Should I pick DDR4-3000 or DDR4-2400 memory? 2080Ti or 1080Ti GPU? All this lingo can be very overwhelming especially for newcomers to hardware. 
 
-But before we start name-dropping so that we sound smart, let's get our bearings. You're here reading this because you care about deep learning, right? So what is the backbone of any deep learning architecture?
+But before we start shamelessly name-dropping so that we sound smart, let's go back to the fundamentals. You're here reading this because you care about deep learning, right? So what is the backbone of any deep learning architecture?
 
 Allow me to drastically oversimplify for a moment. At the core of every deep learning model there is roughly the following loop:
 
@@ -47,47 +49,67 @@ for datapoint in dataset:
 
 But what about the train dataset and the validation dataset?? What about your number of epochs?! What about your optimization algorithm?!? 
 
-Yes, yes I know. It's a deliberate simplification to illustrate what is at the core of most deep learning models (and in a sense modern AI by extension). Putting aside the fluff for now, as deep learning whisperers this is our bread and butter. This loop will be our motivation through this post, guiding our discussion.
+Yes, yes, I know. I'm deliberately oversimplifying to illustrate what is at the core of most deep learning models (and in a sense modern AI by extension). Putting aside the fluff for now, as deep learning whisperers the loop above is our bread🍞 and butter🍯. This loop will be our motivation through this post, guiding our discussion.
 
-My goal in this post is certainly to describe what each computer hardware components means and is responsible for. But more importantly, I want to explain how they fit into the framework of what we really care about building: a functional and efficient system for training diverse models. Without that context, we might as well be throwing together random parts with no real aim in mind. Builds happen for a reason (deep...), and they bring with them various tradeoffs based on circumstances. Since we are in the business of deep learning, that end goal will be our North Star. 
+My goal in this post is certainly to describe what each computer hardware component means and is responsible for. But more importantly, I want to explain how each component fits into the framework of what we really care about building: a functional and efficient system for training diverse models. 
 
-With that in mind, we will come back to this simplistic deep learning procedure often throughout this post.
+Without that context, it's easy to get lost in the details. Builds bring with them various tradeoffs based on circumstances. Since we are in the business of deep learning, building *for* deep learning will be our North Star🌟. 
 
-## A Hardware Odyssey
+With that in mind, we will come back to the simplistic deep learning procedure above often throughout this post.
 
-Now that the intro is out of the way, let's dive into the first major part of a build: picking the parts. As you read this section, keep in mind that there are *many* different combinations of parts that could all lead to completely functional and durable builds. To a first approximation, many of the parts are swappable (which is truly one of the marvels of computer architecture design). However there are some components that are fairly coupled to each other (more on that later...). To weed out any incompatilities in the parts you pick, I highly recommend browsing and constructing your build via [PCPartPicker](https://pcpartpicker.com/). 
+## A Hardware Odyssey ⛰️
+
+Now that the intro is out of the way, let's dive into the first major part of a build: picking the parts. As you read this section, keep in mind that there are *many* different combinations of parts that could all lead to completely functional and durable builds. 
+
+To a first approximation, many of the parts are swappable which is truly one of the most brilliant features of computer architecture design. However there are some components that are fairly coupled to each other (more on that later...). To weed out any incompatilities in the parts you pick, I highly recommend browsing and constructing your build via [PCPartPicker](https://pcpartpicker.com/). 
 
 Typically a deep learning build will consist of the following components: CPU, GPU, motherboard, RAM, disk storage, computer case, power supply, and a CPU (and optionally GPU) cooler. So let's dive into each of these pieces and learn some terminology along the way!
 
 ### CPU
 
-The CPU or central processing unit (also referred to as a *processor*) is one of the compute workhorses of any machine. In fact, it is one of the central components (yes names make sense some times). A computer can exist and function perfectly well without a GPU. In fact, most common consumer machines do. However, a machine **can not** exist without its CPU. You can play sports without chiselled abs, but you can't play without a heart!
+The CPU or central processing unit (also referred to as a *processor*) is one of the compute workhorses of any machine. In fact, it is one of the central components (yes names make sense some times). 
 
-At its core (:D), the CPU is responsible for taking instructions from an application and performing computations. These instructions are typically fetched from a computer's RAM.
+A computer can exist and function perfectly well without a GPU. In fact, most common consumer machines do. However, a machine **can not** exist without its CPU. You can play sports without chiselled abs, but you can't play without a heart!
 
-You'll often see the performance of a CPU measured in terms of its clock speed which is the 2.4GHz (or whatever) you'll see on a CPU's product description. This roughly determines the number of instructions the CPU can perform per second and influences how quickly it can process a set of instructions. 
+At its core 😄, the CPU is responsible for taking instructions from an application and performing computations. These instructions are typically fetched from a computer's RAM.
 
-Nowadays modern CPUs have been built to contain multiple of what are called *cores*. A core effectively is a self-contained processing unit within a CPU that can handle an independent task. Thus if you have 4-cores, your CPU can in principle handle four independent tasks simultaneously which clearly can speed up its computing output.
+You'll often see the performance of a CPU measured in terms of its clock speed which is the 2.4GHz (or whatever) you'll see on a CPU's product specification. This roughly determines the number of instructions and how quickly the CPU can process them per second. 
 
-Another neat bit of technology that can also speed up your CPU is *threading*. This refers to the process of taking a physical core and breaking it up into a certain number of virtual cores. Thus a four-core system might have support enabled for eight threads, which allow it to boost the number of simultaneous operations it can perform every second. While threads give your computer's operating system the *illusion* of multiple logical cores for a single core, in practice this is just a product of clever software and you are still bounded by the physical limitation of how many cores you have. Thus, the speedups from additional threads don't scale as linearly as additional physical cores in a CPU do.
+Nowadays most modern CPUs have been built to contain multiple of what are called *cores*. A core effectively is a self-contained processing unit within a CPU that can handle an independent task. Thus if you have 4 cores, your CPU can in principle handle 4 independent tasks simultaneously which clearly can speed up its computing output.
 
-Here we encounter our first fork in the road. In CPU-world the rough equivalent of the Window-Mac split is choosing between an Intel or an AMD processor. Serious computer enthusiasts will go to war for their choices, but I'm going to be annoyingly simplistic in my generalization. For a long time, Intel dominated the CPU market offering higher-quality, more performant chips. Nowadays, with the introduction of AMD's Ryzen and Threadripper series of chips, the playing field is a lot more level. In general, today the consensus is that AMD offers comparable CPUs for cheaper. As a comparison, the AMD Threadripper 1920x is a 3.6GHz/12-core processor going for \$250 while an Intel i9-9900K is a 3.6GHz/8-core going for ~$490.
+Another neat bit of technology that can also speed up your CPU is *threading*. This refers to the process of taking a physical core and breaking it up into a certain number of virtual cores. Thus a  4 core system might have support enabled for 8 threads, which allow it to boost the number of simultaneous operations it can perform every second. 
 
-But we're getting a bit mired in details. Let's bring it back to what we care about again. In the deep learning loop above, the CPU will be the main driving force behind any data preprocessing (tokenization of text, manipulating raw image data, etc.) in line 2. So if you want snappy preprocessing that can feed data to your GPU to munch on, you'll want a solid CPU. This is especially important to ensure that your GPU utilization is as high as it can be, namely so that there aren't any periods of time where the GPU is waiting idly for some compute tasks to show up as its doorstep from the CPU. 
+While threads give your computer's operating system the *illusion* of multiple logical cores for a single core, in practice this is just a product of clever software and you are still bounded by the physical limitation of how many cores you actually have. Thus, the speedups from additional threads don't scale as linearly as additional physical cores in a CPU do.
+
+Here we encounter our first fork in the road🍴. In CPU-world the rough equivalent of the Window-Mac split is choosing between an Intel or an AMD processor. Serious computer enthusiasts will go to war for their choices, but I'm going to be annoyingly simplistic in my generalization. 
+
+For a long time, Intel dominated the CPU market offering higher-quality, more performant chips. Nowadays, with the introduction of AMD's Ryzen and Threadripper series of chips, the playing field is a lot more level. In general, today the consensus is that AMD offers comparable CPUs for cheaper. As a comparison, the AMD Threadripper 1920x is a 3.6GHz/12-core processor going for \$250 while an Intel i9-9900K is a 3.6GHz/8-core going for ~$490.
+
+But we're getting a bit mired in details. Let's bring it back to what we care about again. 
+
+In the deep learning loop above, the CPU will be the main driving force behind any data preprocessing (tokenization of text, manipulating raw image data, etc.) in the `processed = process(datapoint)` line. So if you want snappy preprocessing that can feed data to your GPU to munch on, you'll want a solid CPU. 
+
+This is especially important to ensure that your GPU utilization is as high as it can be, namely so that there aren't any periods of time where the GPU is waiting idly for some compute tasks to show up as its doorstep from the CPU. 
 
 The number of cores ends up being crucial here as well, as if you are processing a particularly large dataset you will want to be able to parallelize these operations, since there's only so much gain to be had from higher clock speeds. 
 
-Now, with all that in mind, how did that manifest itself into the decision-making process for my machine? I ended up opting for the AMD Threadripper 1920x which seemed like a good bang-for-your-buck choice, with many favorable reviews online. It has a base clock rate of 3.5GHz and can go up to 4.0GHz. Additionally at 12 cores and 24 threads supported, it offers plenty of opportunity for massively parallel data processing. Also its name is particularly awesome! 😎
+Now, with all that in mind, how did that manifest itself in the decision-making process for my machine? I ended up opting for the AMD Threadripper 1920x which seemed like a good bang-for-your-buck choice, with many favorable reviews online. It has a base clock rate of 3.5GHz and can go up to 4.0GHz. Additionally at 12 cores and 24 threads supported, it offers plenty of opportunity for massively parallel data processing. Also its name is particularly cool! 😎
 
 ### RAM
 
-Let's now discuss RAM (Random Access Memory), or *main memory* as it is often called. RAM is the address space your computer uses for all the tasks it is actively running. So when you are reading this post in a browser, the application responsible for running the browser is being held in RAM. The same goes for when you are listening to Spotify, working on an Excel spreadsheet, or loading up data for processing. Reading something from RAM is significantly faster than reading it from disk (described in the next section). By [some benchmarks](https://www.directionsmag.com/article/3794), RAM data access is on the order of nanoseconds ($10^{-9}$) while disk access is measured in milliseconds ($10^{-3}$)! 
+Let's now discuss RAM (Random Access Memory), or *main memory* as it is often called. RAM is the address space your computer uses for all the tasks it is actively running. So while you are reading this post in a browser, the application responsible for running the browser is being held in RAM. The same goes for when you are listening to Spotify, working on an Excel spreadsheet, or loading up data for processing. 
 
-So RAM seems like the bomb-dot-com right? Well, yes, it is but RAM brings with it a few major caveats. First off, RAM is substantially more expensive than disk per unit volume. Secondly, RAM must always be connected to power to retain its data (referred to as *volatility*). This means when you turn off your computer, everything stored in RAM is lost, which is not the case for disk. This means that RAM is not a good medium for persistent storage. 
+Reading something from RAM is significantly faster than reading it from disk (described in the next section). By [some benchmarks](https://www.directionsmag.com/article/3794), RAM data access is on the order of nanoseconds ($10^{-9}$) while disk access is measured in milliseconds ($10^{-3}$)! 
 
-What does the modern-day market look like for picking RAM? The most recent incarnation of RAM that people use is called *DDR4*. It now holds the throne, having usurped it from its ancestor DDR3. DDR4 boasts higher data transfer rates at lower voltages. RAM is typically named in terms of its clock cycle rating. For example, when you are purchasing DDR4 RAM, you might see it annotated as DDDR-2400 which is simply a frequency value indicating that it performs 2.4 billion cycles per second. A higher frequency value allows for faster data access and writes when the memory is interacting with the CPU. 
+So RAM seems like the bomb-dot-com right? Well, yes, it is but RAM brings with it a few major caveats. 
 
-Bringing it back to our topic of interest, RAM is important in the deep learning capacity in two ways. First having a good amount of RAM (measured in terms of GB) is important because this is where your data will be read into before it is passed on to the CPU for processing. In fact, there's a joke in the software engineering community that any programmatic speed issue can be solved with more RAM. While this might be true, it's a pretty expensive fix!
+First off, RAM is substantially more expensive than disk per unit volume. Secondly, RAM must always be connected to power to retain its data (referred to as *volatility*). This means when you turn off your computer, everything stored in RAM is lost, which is not the case for disk. This means that RAM is not a good medium for persistent storage. 
+
+What does the modern-day market look like for picking RAM? The most recent incarnation of RAM that people use is called *DDR4*. It now holds the throne, having usurped it from its ancestor DDR3. DDR4 boasts higher data transfer rates at lower voltages. 
+
+RAM is typically named in terms of its clock cycle rating. For example, when you are purchasing DDR4 RAM, you might see it annotated as DDDR-2400 which is simply a frequency value indicating that it performs 2.4 billion cycles per second. A higher frequency value allows for faster data access and writes when the memory is interacting with the CPU. 
+
+Bringing it back to our topic of interest, RAM is important in the deep learning capacity for two reasons. First having a good amount of RAM (measured in terms of GB) is important because this is where your data will be read into before it is passed on to the CPU for processing. In fact, there's a joke in the software engineering community that any programmatic speed issue can be solved with more RAM. While this might be true, it's a pretty expensive fix!
 
 A second way in which RAM is important is that it's clock cycle frequency determines how quickly data can be fetched or stored in the memory. In our deep learning loop above, when we call `dataset = TrickyDataset()` we are effectively loading the dataset into main memory. From there, when we are doing `for datapoint in dataset`, we are loading instances of the data from this memory for processing. If you don't have enough RAM and you are loading a big dataset, your machine may either crash or it will default to swap memory, which effectively means it is being stored on disk and is therefore much slower to interact with.
 
@@ -311,10 +333,6 @@ NVMe SSD (3GBps, 0.02ms seek) >> SATA SSD (550 MBps, 0.2ms seek)
 * as a result are smaller and take up less space in PC case
 * HDD is made of magnetic tape and has mechanical parts inside
 * laptops are increasingly using M.2 SSDs because they take up less room than traditional, 2.5-inch SATA drives (M.2 shaped like stick of gum)
-* determines reads/writes to disk
-* If you’re reading data from a file on a disk, the processor needs to wait for the file to be read (the same goes for writing)
-* Advantages of SSD
-  * Boot times will be significantly reduced.
 
 ## Cooling
 * as soon as the GPU hits a temperature barrier – often 80 °C – the GPU will decrease the speed so that the temperature threshold is not breached
@@ -329,6 +347,5 @@ What are PCI lanes
 * PCI is a 64-bit bus, though it is usually implemented as a 32-bit bus. It can run at clock speeds of 33 or 66 MHz.
 * PCI-Express: point-to-point switching connection. This means that a direct connection between two devices (nodes) on the bus is established while they are communicating with each other. Basically, while these two nodes are talking, no other device can access that path. By providing multiple direct links, such a bus can allow several devices to communicate with no chance of slowing each other down.
 
-* For multi-gpu builds (up to 4 gpus) --> 40-44 PCIe Lanes
 * GPU would require 16 PCIe lanes to work at full capacity
 * https://www.pugetsystems.com/labs/hpc/PCIe-X16-vs-X8-for-GPUs-when-running-cuDNN-and-Caffe-887/
