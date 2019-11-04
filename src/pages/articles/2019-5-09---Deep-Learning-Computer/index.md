@@ -19,11 +19,13 @@ to a functional system, running Ubuntu 18.04 and able to train GPU-accelerated d
 
 ![completed deep learning computer](./completed.JPG)
 
-Along the way, I will describe at a high-level what each hardware component of a computer does and how I navigated the landscape of selecting parts for a functional build.
+Along the way, I will describe at a high-level what each hardware component of a computer does and how I navigated the landscape of selecting parts for a functional build. I'll also describe how I installed relevant software for the machine and include some benchmarks showing the superior performance of a GPU system over a pure CPU system. 
 
-TODO (mihail): ADD NAVIGATABLE MENU ITEMS
+Fair warning: this is a pretty long post that functions as a **complete** tutorial for building a deep learning computer literally from scratch, no assumptions made. But...since it's long I highly encourage you to peruse and skip the sections depending on your interest. 
+
+Sound good? Let's get to it.
+
 TODO (mihail): Add more emojis
-
 
 ## A Brief Introduction
 
@@ -169,53 +171,113 @@ Phew! And with that, we are officially done with our hardware odyssey. Let's get
 
 ## Fitting the Lego Blocks Together
 
-After you've done the harder job of picking the hardware components for your system, putting the pieces together is like big-person Lego block fitting. One piece of overarching advice I have for the physical building is to *carefully* read the manuals for your various components. Some are more important than others (I read the motherboard manual page-to-page), but in general, when in doubt, consult the relevant manual.
+After you've done the harder job of picking the hardware components for your system, putting the pieces together is like big-person Lego block fitting. One piece of overarching advice I have for the physical building is to *carefully* read the manuals for your various components. Some are more important than others (I read the motherboard manual page-to-page), but when in doubt, consult the relevant manual.
 
 My workflow for getting the machine roughly involved 1) setting the motherboard up outside the case 2) disassembling and prepping the case 3) mounting the motherboard and 4) connecting any relevant cables appropriately. You are, of course, not required to do it this way so do whatever makes the most sense to you.
 
+A small note: since you are working with multiple very sensitive hardware components, make sure to take any relevant measures to prevent unwanted static discharge. Such discharge could ruin components. I used anti-static wrist straps during the build, though this is not absolutely necessary. What is more important is to do your build on a non-conductive surface like wood.
+
+Here is the MSI motherboard I used.
+
 ![raw MSI SLI Plus motherboard out of box](./raw_motherboard.JPG)
+
+This is a close-up of the AMD Threadripper CPU from the back. Amazing circuitry!
 
 ![back of AMD Threadripper CPU](./back_of_cpu.JPG)
 
+Here is the mount of the CPU into the slot on the motherboard.
+
 ![mounting the AMD Threadripper CPU](./mounting_cpu.JPG)
+
+And the CPU mounted. 
 
 ![AMD Threadripper CPU mounted in motherboard](./cpu_mounted.JPG)
 
+A shot of our deep learning workhorse, the RTX 2080Ti.
+
 ![GPU out of box closeup](./gpu_closeup.JPG)
+
+This is mid-setup, adding the GPU to the motherboard.
 
 ![mid setup getting ready to post](./midsetup.JPG)
 
+Here it's worth pausing to describe a particular portion of the setup process I found to be immensely helpful. After I had mounted the CPU, RAM, and GPU to the motherboard, I attached the power supply and a monitor to check to see whether my machine could POST, which is basically an internal hardware check the machine runs to ensure the parts work and are compatible before the boot process.
+
+This is a useful debugging step because it ensures that no piece is broken, which would be an annoying thing to discover only after you've mounted everything into the case and set it up the way you want it.
+
 ![testing the computer POST](./test_post.JPG)
+
+Here is the computer case disassembly, removing any covers or compartments I didn't strictly need.
 
 ![mid-build prepping the computer case](./midbuild.JPG)
 
+Here is the motherboard and GPU being mounted in the case.
+
 ![installing GPU in computer case](./installing_gpu_motherboard.JPG)
+
+Here is the nearly finished build with the water cooler attached and many of the relevant cables included.
 
 ![nearly complete build in case with cpu cooler attached and GPU](./nearly_complete_build.JPG)
 
+And once everything was attached, here's the POST!
+
 ![BIOS starting up after build finished](./bios.JPG)
 
+Now with the hardware out of the way, let's get to the software! 🤗
 
-
-
-
-
-* Good lesson: do a debug setup to see the system POST
 
 ## Software Installation
 
+I decided to install a Linux-based operating system on my machine because Linux has very good developer support and it is configurable to my needs. Since I plan to use this system primarily for fun projects, I don't need something with good consumer driver capabilities. Among the Linux distributions, I have the most experience with Ubuntu, having used it extensively before I got a Macbook.
+
+
+As of this writing, Ubuntu 18.04 (Bionic Beaver) is the one of the most recent stable releases, currently in the middle of its lifetime release cycle. The release is expected to be supported through April 2023. So that's the version I went with. I used Ubuntu Desktop rather than Ubuntu Server because it's nice to have the option of a graphical user interface, rather than always having to run in headdless mode.
+
+To install Ubuntu, you need a USB drive with preferably at least 4GB of capacity. You then need to get a relevant Ubuntu ISO file which you can get [here](https://ubuntu.com/download/desktop). 
+
+To write the ISO file to your drive, it's not sufficient to just drag and drop the file to your USB. Instead you have to make the USB bootable which will be done by writing the ISO file to the USB with a program called [Etcher](https://www.balena.io/etcher/). Etcher is extremely easy to use though if you need additional instructions follow [this guide](https://tutorials.ubuntu.com/tutorial/tutorial-create-a-usb-stick-on-macos#0).
+
+With your bootable drive, you can now plug it into your machine while it is off in the relevant USB slot. Turn on the machine and force the BIOS to boot from the USB device. The way this is done varies from motherboard to motherboard, but typically it involves clicking a button like `Del` repeatedly while the machine is turning on. Then you'll be navigated to a menu where you can start running the Ubuntu launcher.
+
+The OS installation will look something like this:
+
 ![installing Ubuntu 18.04](./installing_ubuntu.JPG)
 
+If you've gone through this step, congrats! You now have a fully functional computer running a Linux operating system. 🎉 🎊
 
-* Ubuntu installation
-* Getting Nvidia drivers setup
+We're just about there. Now we just need to install the relevant drivers for CUDA, so that we can use our GPU's capabilities. Here I found this [guide](https://www.pugetsystems.com/labs/hpc/How-to-install-CUDA-9-2-on-Ubuntu-18-04-1184/) particularly helpful. If you follow it, you should have a functional system decked out with the CUDA toolkit as well as any necessary graphics drivers.
 
 
 ## Benchmarking
 
+Once I had installed the OS and relevant drivers, I did some very basic benchmarks to see that the GPU was working as it should. For the benchmark, I used the code for the basic CIFAR 10 neural network on the [Pytorch website](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html#sphx-glr-beginner-blitz-cifar10-tutorial-py).
+
+I largely left the code unmodified except for a few small explicit calls I had to add to place relevant data and the model on the GPU rather than the CPU. The results are as follows:
+
+|         |   Time to Train (min) | Batch Size | 
+| ------------- |:-------------:| -----:| 
+| CPU  | 1:51 | 4 | 
+| GPU  | 1:24 | 4 | 
+| CPU | 0:35 |  256 | 
+| GPU | 0:17 |  256 | 
+
+Note, these are extremely rudimentary benchmarks where I didn't strive to achieve the best-performing system. I simply took a basic dataset and the code that was available online to see roughly how training times compared. I also wanted to see that my GPU would actually turn on when it was supposed to. 😅
+
+That being said, let's dive into a little bit of analysis. Here the architecture was a basic convolutional neural network with two convolutional layers and a few feedforward layers stacked together. For systems trained with a batch size of 4 images, the GPU was roughly 25% faster. This may not seem like much, but it's worth noting here that as the model was training, the GPU utilization never exceeded \~10% and the used memory never went beyond \~1.1GB. Recall that the 2080Ti has 11GB of available memory. 
+
+There are two takeaways from here: 1) the model is too small and batch size too small to see any huge speedups when using a GPU (as evidenced by low memory consumption) and 2) the GPU was clearly spending a lot of time sitting idly, with not enough data to munch on (as evidenced by low utilization).
+
+For a system trained with a a batch size of 256, we see the GPU speedup approaching \~50% over the CPU. Here I also increased the number of workers in the dataloader from 2 to 8 which allowed faster transfer of data to the GPU for processing. This was evidenced by the fact that the utilization went up to >30%, which means the GPU was certainly nowhere near fully utilized, but at least it's a step in the right direction. 
+
+The memory also increased slightly to about ~1.3GB, so it's clear I could certainly push the batch size even higher. The memory consumption would certainly increase if I were using a larger model, and that's why I think we would really have to deal with larger problem spaces to see the GPU really excel over the CPU. As an exercise in that direction, try increasing the number of convolutional layers or increase the size of the feedforward layers. 
+
+That being said, it was nice to see the GPU functional and ready for bigger horizons!
+
 ## Why "Venus"?
 
-Why would I name my deep learning machine, Venus? Well, around the time I began shopping for computer parts I had just come back from a trip to Florence, Italy. Florence is a truly gorgeous city home to historical artwork, including Botticelli's *The Birth of Venus*.
+And now that we've finished the technical portion of the post, feel free to close this browser tab at your discretion. For those of you that aren't sick of me yet🙃, allow me to entertain the question of why I would name my deep learning machine Venus.
+
+Well, around the time I began shopping for computer parts I had just come back from a trip to Florence, Italy. Florence is a truly gorgeous city home to historical artwork, including Botticelli's *The Birth of Venus*.
 
 ![botticelli birth of venus](./birth_of_venus.jpg)
 
@@ -236,35 +298,10 @@ Hence, Venus.
 Now before I continue to wax philosophical, let's wrap this post up so you can get on with your day.
 
 * Thanks to [Sabera Talukder](https://twitter.com/SaberaTalukder) for her help with the build. 
-* Thanks to other builds people wrote up (Jeff Chen + Tim Dettmers)
+* Thanks to other builds people wrote up (Jeff Chen + [Tim Dettmers](https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/))
 
 https://blog.slavv.com/the-1700-great-deep-learning-box-assembly-setup-and-benchmarks-148c5ebe6415
 
-## Power supply
-* 250W per GPU
-
-## GPU
-1080Ti Founder edition first
-2080TI (Asus Turbo) next
-
-## CPU
-* https://www.amazon.com/gp/product/B01GUAJQ08/ref=as_li_tl?ie=UTF8&tag=slavml-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01GUAJQ08&linkId=307562c96e03a8eb16e5a4b1860753f9
-
-* CPU will dictate the motherboard you need
-* AMD Threadripper CPU = X399 chipset motherboard, Intel 7900X CPU = X299 chipset motherboard
-* AMD vs Intel CPU?
-* 12 core machine
-
-
-## RAM
-* https://www.amazon.com/gp/product/B0134EW44S/ref=as_li_tl?ie=UTF8&tag=slavml-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B0134EW44S&linkId=c90104f2910ada98be9b61fa7a2ff43e
-* DDDR4 is latest version
-* DDR4-3200 memory -- 4x16Gb configuration (3200 is speed)
-* you increase the speed at which memory transfers information to other components
-* RAM speed measured in Megahertz to be processed with processor's clock speed
-* Faster RAM speeds allow your processor to access the data stored on it quicker, giving your system a boost in processor performance
-* Column Access Strobe (CAS) latency, or CL, is the delay time of your RAM receiving a command and then being able to issue it
-* Those numbers indicate how many clock cycles it takes for the RAM to respond to the command
 
 ## Hard Drive
 4x PCIe lanes for the M.2 SSD
@@ -278,39 +315,20 @@ NVMe SSD (3GBps, 0.02ms seek) >> SATA SSD (550 MBps, 0.2ms seek)
 * If you’re reading data from a file on a disk, the processor needs to wait for the file to be read (the same goes for writing)
 * Advantages of SSD
   * Boot times will be significantly reduced.
-  * Launching applications will occur in a near-instant.
-  * Saving and opening documents won't lag.
-  * File copying and duplication speeds will improve.
-
-## Case
-* https://www.amazon.com/gp/product/B01F6U86FE/ref=as_li_tl?ie=UTF8&tag=slavml-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B01F6U86FE&linkId=262d081ec348194f087dac1485c1ee06
-
-## Power supply
-* https://www.tomshardware.co.uk/evga-supernova-1600-p2-1600w-power-supply,review-33121-10.html
-* efficiency important
-* PSU will use what it needs, not always max
 
 ## Cooling
 * as soon as the GPU hits a temperature barrier – often 80 °C – the GPU will decrease the speed so that the temperature threshold is not breached
+* Nvidia lowers clock rate of GPU as it gets hot
+
 
 What are PCI lanes
-* PCI: Peripheral Component Interconnect
 * bus in computer is communication system that transfers data between components in computer
 * bus connecting cpu and main memory is system bus
 * SATA ports in modern computers, which allow a number of hard drives to be connected without the need for a card
 * local bus provides very fast throughput
 * PCI is a 64-bit bus, though it is usually implemented as a 32-bit bus. It can run at clock speeds of 33 or 66 MHz.
 * PCI-Express: point-to-point switching connection. This means that a direct connection between two devices (nodes) on the bus is established while they are communicating with each other. Basically, while these two nodes are talking, no other device can access that path. By providing multiple direct links, such a bus can allow several devices to communicate with no chance of slowing each other down.
-* x1, x4, x8, x16 determine number of data transmission lanes
 
 * For multi-gpu builds (up to 4 gpus) --> 40-44 PCIe Lanes
 * GPU would require 16 PCIe lanes to work at full capacity
-* 4x PCIe lanes for Gigabit ethernet
 * https://www.pugetsystems.com/labs/hpc/PCIe-X16-vs-X8-for-GPUs-when-running-cuDNN-and-Caffe-887/
-
-
-## Notes
-* form factor is a specification of its layout and physical dimensions
-* Nvidia lowers clock rate of GPU as it gets hot
-* overclocking means setting your CPU and memory to run at speeds higher than their official speed grade.
-* https://hackernoon.com/how-to-create-your-own-deep-learning-rig-a-complete-hardware-guide-7cdc71e174aa
