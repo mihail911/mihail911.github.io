@@ -19,9 +19,9 @@ to a functional system, running Ubuntu 18.04 and able to train GPU-accelerated d
 
 ![completed deep learning computer](./completed.JPG)
 
-Along the way, I will describe at a high-level what each hardware component of a computer does and how I navigated the landscape of selecting parts for a functional build. I'll also describe how I installed relevant software for the machine and include some benchmarks showing the superior performance of a GPU system over a pure CPU system. 
+Along the way, I will explain at a high-level what each hardware component of a computer does and how I navigated the landscape of selecting parts for a functional build. I'll also describe how I installed relevant software for the machine and include some benchmarks showing the superior performance of a GPU system over a pure CPU system. 
 
-Fair warning: this is a pretty long post that functions as a **complete** tutorial for building a deep learning computer literally from scratch, no assumptions made. 
+**WARNING**: this is a pretty long post that functions as a **complete** tutorial for building a deep learning computer literally from scratch, no assumptions made. 
 
 But...since it's long I highly encourage you to peruse and skip any sections depending on your interest. 
 
@@ -49,7 +49,7 @@ for datapoint in dataset:
 
 But what about the train dataset and the validation dataset?? What about your number of epochs?! What about your optimization algorithm?!? 
 
-Yes, yes, I know. I'm deliberately oversimplifying to illustrate what is at the core of most deep learning models (and in a sense modern AI by extension). Putting aside the fluff for now, as deep learning whisperers the loop above is our bread🍞 and butter🍯. This loop will be our motivation through this post, guiding our discussion.
+Yes, yes, I know. I'm deliberately oversimplifying to illustrate what is at the core of most deep learning models (and in a sense modern AI). Putting aside the fluff for now, as deep learning whisperers the loop above is our bread🍞 and butter🍯. This loop will be our motivation through this post, guiding our discussion.
 
 My goal in this post is certainly to describe what each computer hardware component means and is responsible for. But more importantly, I want to explain how each component fits into the framework of what we really care about building: a functional and efficient system for training diverse models. 
 
@@ -59,21 +59,21 @@ With that in mind, we will come back to the simplistic deep learning procedure a
 
 ## A Hardware Odyssey ⛰️
 
-Now that the intro is out of the way, let's dive into the first major part of a build: picking the parts. As you read this section, keep in mind that there are *many* different combinations of parts that could all lead to completely functional and durable builds. 
+Now that the intro is out of the way, let's dive into the first major part of a build: picking the parts. As you read this section, keep in mind that there are *many* different combinations of parts that could all lead to completely functional and durable builds. This is just one of them.
 
-To a first approximation, many of the parts are swappable which is truly one of the most brilliant features of computer architecture design. However there are some components that are fairly coupled to each other (more on that later...). To weed out any incompatilities in the parts you pick, I highly recommend browsing and constructing your build via [PCPartPicker](https://pcpartpicker.com/). 
+To a first approximation, many hardware parts are swappable in a typical build which is truly one of the most brilliant features of computer architecture design 🤓. However there are some components that are fairly coupled to each other (more on that later...). To weed out any incompatilities in the parts you pick, I highly recommend browsing and constructing your build via [PCPartPicker](https://pcpartpicker.com/). 
 
 Typically a deep learning build will consist of the following components: CPU, GPU, motherboard, RAM, disk storage, computer case, power supply, and a CPU (and optionally GPU) cooler. So let's dive into each of these pieces and learn some terminology along the way!
 
 ### CPU
 
-The CPU or central processing unit (also referred to as a *processor*) is one of the compute workhorses of any machine. In fact, it is one of the central components (yes names make sense some times). 
+The CPU or central processing unit (also referred to as a *processor*) is one of the compute workhorses of any machine. In fact, it is one of the *central* components (...yes names make sense some times). 
 
 A computer can exist and function perfectly well without a GPU. In fact, most common consumer machines do. However, a machine **can not** exist without its CPU. You can play sports without chiselled abs, but you can't play without a heart!
 
-At its core 😄, the CPU is responsible for taking instructions from an application and performing computations. These instructions are typically fetched from a computer's RAM.
+At its core, the CPU is responsible for taking instructions from an application and performing computations. These instructions are typically fetched from a computer's RAM.
 
-You'll often see the performance of a CPU measured in terms of its clock speed which is the 2.4GHz (or whatever) you'll see on a CPU's product specification. This roughly determines the number of instructions and how quickly the CPU can process them per second. 
+You'll often see the performance of a CPU measured in terms of its clock speed which is the 2.4GHz (or whatever) you'll see on a CPU's product specification. This roughly determines the number of instructions the CPU can process per second. 
 
 Nowadays most modern CPUs have been built to contain multiple of what are called *cores*. A core effectively is a self-contained processing unit within a CPU that can handle an independent task. Thus if you have 4 cores, your CPU can in principle handle 4 independent tasks simultaneously which clearly can speed up its computing output.
 
@@ -81,11 +81,11 @@ Another neat bit of technology that can also speed up your CPU is *threading*. T
 
 While threads give your computer's operating system the *illusion* of multiple logical cores for a single core, in practice this is just a product of clever software and you are still bounded by the physical limitation of how many cores you actually have. Thus, the speedups from additional threads don't scale as linearly as additional physical cores in a CPU do.
 
-Here we encounter our first fork in the road🍴. In CPU-world the rough equivalent of the Window-Mac split is choosing between an Intel or an AMD processor. Serious computer enthusiasts will go to war for their choices, but I'm going to be annoyingly simplistic in my generalization. 
+Here we encounter our first fork in the road🍴. In CPU-world the rough equivalent of the Window-Mac split is choosing between an Intel or an AMD processor. Serious computer enthusiasts will go to war for their choices, but I'm going to be annoyingly simplistic in my generalization 🤫.
 
-For a long time, Intel dominated the CPU market offering higher-quality, more performant chips. Nowadays, with the introduction of AMD's Ryzen and Threadripper series of chips, the playing field is a lot more level. In general, today the consensus is that AMD offers comparable CPUs for cheaper. As a comparison, the AMD Threadripper 1920x is a 3.6GHz/12-core processor going for \$250 while an Intel i9-9900K is a 3.6GHz/8-core going for ~$490.
+For a long time, Intel dominated the CPU market offering higher-quality, more performant chips. Nowadays, with the introduction of AMD's Ryzen and Threadripper series of chips, the playing field is a lot more level. In general, today the consensus is that AMD offers comparable CPUs to Intel for cheaper. As a comparison, the AMD Threadripper 1920x is a 3.6GHz/12-core processor going for \$250 while an Intel i9-9900K is a 3.6GHz/8-core going for ~$490.
 
-But we're getting a bit mired in details. Let's bring it back to what we care about again. 
+But we're getting a bit lost in details. Let's bring it back to what we care about again. 
 
 In the deep learning loop above, the CPU will be the main driving force behind any data preprocessing (tokenization of text, manipulating raw image data, etc.) in the `processed = process(datapoint)` line. So if you want snappy preprocessing that can feed data to your GPU to munch on, you'll want a solid CPU. 
 
@@ -101,7 +101,7 @@ Let's now discuss RAM (Random Access Memory), or *main memory* as it is often ca
 
 Reading something from RAM is significantly faster than reading it from disk (described in the next section). By [some benchmarks](https://www.directionsmag.com/article/3794), RAM data access is on the order of nanoseconds ($10^{-9}$) while disk access is measured in milliseconds ($10^{-3}$)! 
 
-So RAM seems like the bomb-dot-com right? Well, yes, it is but RAM brings with it a few major caveats. 
+So RAM seems like the bomb-dot-com right? Well yes it is, but RAM brings with it a few major caveats. 
 
 First off, RAM is substantially more expensive than disk per unit volume. Secondly, RAM must always be connected to power to retain its data (referred to as *volatility*). This means when you turn off your computer, everything stored in RAM is lost, which is not the case for disk. This means that RAM is not a good medium for persistent storage. 
 
@@ -109,13 +109,13 @@ What does the modern-day market look like for picking RAM? The most recent incar
 
 RAM is typically named in terms of its clock cycle rating. For example, when you are purchasing DDR4 RAM, you might see it annotated as DDDR-2400 which is simply a frequency value indicating that it performs 2.4 billion cycles per second. A higher frequency value allows for faster data access and writes when the memory is interacting with the CPU. 
 
-Bringing it back to our topic of interest, RAM is important in the deep learning capacity for two reasons. First having a good amount of RAM (measured in terms of GB) is important because this is where your data will be read into before it is passed on to the CPU for processing. In fact, there's a joke in the software engineering community that any programmatic speed issue can be solved with more RAM. While this might be true, it's a pretty expensive fix so don't bank on it!
+Bringing it back to our topic of interest, RAM is important in the deep learning capacity for two reasons. Firstly, having a good amount of RAM (measured in terms of GB) is important because this is where your data will be read into before it is passed on to the CPU for processing. In fact, there's a joke in the software engineering community that any programmatic speed issue can be solved with more RAM. While this might be true, it's a pretty expensive fix so don't bank on it! 💸
 
 A second way in which RAM is important is that its clock cycle frequency determines how quickly data can be fetched or stored in the memory. In our deep learning loop above, when we call `dataset = TrickyDataset()` we are effectively loading the dataset into main memory. From there, when we are doing `for datapoint in dataset`, we are loading instances of the data from this memory for processing. 
 
 If you don't have enough RAM and you are loading a big dataset, your machine may either crash or it will default to swap memory, which effectively means it is being stored on disk and is therefore much slower to interact with.
 
-For my build I purchased 64GB of DDR4-3000 RAM (stored as separate sticks of 16GB), though of course you should adjust this to meet your needs. This is quite a bit bigger than the 16GB of RAM that often come with higher end consumer machines. While I'm not a huge fan of brute-force hardware workarounds for inefficient software, it's nice to have that option.
+For my build I purchased 64GB of DDR4-3000 RAM, though of course you should adjust this to meet your needs. This is quite a bit bigger than the 16GB of RAM that often come with higher end consumer machines. While I'm not a huge fan of brute-force hardware workarounds for inefficient software, it's nice to have that option.
 
 ### Disk Storage
 
@@ -133,16 +133,16 @@ There's one other small piece of terminology to be aware of. You'll sometimes se
 
 Now, what does this all mean for deep learning systems? The disk storage can determine how quickly your system boots up, if that's where you have allocated your operating system. Additionally, since your datasets for training will always reside on some flavor of disk storage, picking between HDD, SATA 3 SSD, and NVMe SSD can drastically influence how quickly your data can be loaded into RAM (the `dataset = TrickyDataset()` line in our loop above). 
 
-One point that's worth bringing up: you might think that since your datasets might entirely fit in main memory, the choice of disk storage is not as important because any latency this incurs is only a one-time cost. That is not entirely true, because in the event that your dataset can not be loaded entirely into RAM (which is often the cast for huge datasets), you will have to process it lazily by continuously reading from disk. In these situations, your choice of disk type is much more significant.
+One point that's worth bringing up: you might think that since your datasets might entirely fit in main memory, the choice of disk storage is not as important because any latency this incurs is only a one-time cost. That is not entirely true, because in the event that your dataset can not be loaded entirely into RAM (which is often the case for huge datasets), you will have to process it lazily by continuously reading from disk. In these situations, your choice of disk type is much more significant.
 
-With all that in mind, when it come to choosing a disk storage option, I decided to go for a 1 TB M.2 NVMe SSD. This will allow me to load any (potentially large) datasets I use very quickly for model training.
+With all that in mind, when it came to choosing a disk storage option, I decided to go for a 1 TB M.2 NVMe SSD. This will allow me to load any (potentially large) datasets I use very quickly for model training.
 
 
 ### GPU
 
 And now we get to the main workhorse of any deep learning build: the GPU (or graphical processing unit). 
 
-One thing that's worth mentioning before we dive into GPU details, is that no part of a deep learning train loop strictly requires a GPU. You can certainly get away with training systems using nothing but a CPU. However, the nature of deep learning architectures makes them especially amenable to GPU computation workloads. For example by [some benchmarks](https://medium.com/@andriylazorenko/tensorflow-performance-test-cpu-vs-gpu-79fcd39170c), using a GPU can speed up model training times by over 10x as compared to a CPU. That's the difference between training a model in a day and 1.5 *weeks* 😳!
+Before we dive into GPU details, it's important to remember that no part of a deep learning train loop strictly requires a GPU. You can certainly get away with training systems using nothing but a CPU. However, the nature of deep learning architectures makes them especially amenable to GPU computation workloads. For example by [some benchmarks](https://medium.com/@andriylazorenko/tensorflow-performance-test-cpu-vs-gpu-79fcd39170c), using a GPU can speed up model training times by over 10x as compared to a CPU. That's the difference between training a model in a day and 1.5 *weeks* 😳!
 
 Now that you're hopefully very committed to supplementing your deep learning build with a solid GPU, let's dive deeply into some considerations. There are a several things that impact a GPU's performance: the number of tensor cores it has, its memory bandwidth, the amount of GPU memory it has, and whether it has 16-bit capabilities. 
 
@@ -152,7 +152,7 @@ The memory bandwidth determines how quickly data can be transferred to the GPU f
 
 The amount of memory is like the GPU's equivalent of RAM, namely how much space the GPU has for performing CUDA operations. 
 
-16-bit capabilities are a recent addition in some GPU architectures which allow them to handle mixed-precision training. This essentially means you can represent weights and losses with 16-bit floats rather than 32-bit floats, which means you can train larger models in shorter times.
+16-bit capabilities are a recent addition in some GPU architectures which allow them to handle mixed-precision training. This effectively means you can represent weights and losses with 16-bit floats rather than 32-bit floats, which allows you to train larger models in shorter times.
 
 To make it concrete, in our loop above, the GPU memory will determine whether the `model = AwesomeModel()` will be able to fit entirely on the GPU. As dataset and model sizes have been on an increasing trend upwards in recent years, there is value in having a GPU with a solid amount of memory. 
 
@@ -168,11 +168,11 @@ If you have two GPUs stacked next to each other and one is expelling hot air int
 
 ### Motherboard
 
-The motherboard is the circuit board upon which all your other goodies sit and the medium by which all of your various components talk to each other and receive power. Motherboards come with different specifications depending on what you want and need as well as what your other hardware components are. 
+The motherboard is the circuit board upon which all your other goodies sit and the medium by which all of your various components talk to each other and receive power 🔌. Motherboards come with different specifications depending on what you want and need as well as what your other hardware components are. 
 
-First off, you want to ensure that your motherboard is compatible with your CPU. This is often expressed in terms of the *chipset* the motherboard supports in its specification. In the case of the AMD Threadripper series, you'll want to look for a motherboard that supports the X399 chipset. This is a very important detail to be mindful of!
+First off, you want to ensure that your motherboard is compatible with your CPU. This is often expressed in terms of the *chipset* the motherboard supports in its specification. In the case of the AMD Threadripper series, you'll want to look for a motherboard that supports the X399 chipset. This is a very important detail to be mindful of!💡 
 
-Another important aspect of motherboards it their form factor, which roughly determines their size and hence how many slots/ports they have for various components to connect to. The largest form factor is ATX, and it will give you the most flexibility for integrating various components and upgrading your system. 
+Another important aspect of motherboards is their form factor, which roughly determines their size and hence how many slots/ports they have for various components to connect to. The largest form factor is ATX, and it will give you the most flexibility for integrating various components and upgrading your system. 
 
 Different motherboards also support different numbers of PCIe expansion slots. PCIe is essentially an interface standard that provides slots on motherboards which can be used for connecting high-speed components like GPUs. GPUs typically are connected to PCIe x16 slots, and so if you want to include one or multiple GPUs in your system, you want to ensure there are sufficient PCIe x16 slots provided. 
 
@@ -182,21 +182,21 @@ For the purposes of my build, I used an MSI X399 SLI Plus Motherboard. While I o
 
 ### Cooler
 
-A deep learning machine at peak performance will typically run pretty hot, with the GPU crunching gradients and the CPU processing data. Therefore you should make sure to pick reliable cooling solutions. You definitely want to use a separate cooler for your CPU (and optionally one for your GPU). 
+A deep learning machine at peak performance will typically run pretty hot, with the GPU crunching gradients and the CPU processing data 🔥. Therefore you should make sure to pick reliable cooling solutions. You definitely want to use a separate cooler for your CPU (and optionally one for your GPU). 
 
-Within the world of CPU cooling, you can either go with air cooling (where you are essentially just blowing fans on top of your CPU) or water cooling (where water is circulated in a loop between a heat source and a cooling radiator). Water coolers tend to be quieter and are more efficient for dissipating heat, whereas air coolers are easier to deal with and a bit larger. 
+Within the world of CPU cooling, you can either go with air cooling (where you are essentially just blowing air on top of your CPU via fans) or water cooling (where water is circulated in a loop between a heat source and a cooling radiator). Water coolers tend to be quieter and are more efficient for dissipating heat, whereas air coolers are easier to deal with and a bit larger. 
 
 I chose to go with a water cooler, specifically the Fractal Design Celsius S24 model.
 
 ### Computer Case
 
-The computer case will be the home for your build, so make sure you make your components comfortable 🙂. Here it's important to ensure that your case supports your motherboard's form factor. In addition, you want to make sure that it has enough expansion slots so that you can fit as many GPUs as you want.
+The computer case will be the home for your build, so make sure your components are comfortable 🙂. Here it's important to ensure that your case supports your motherboard's form factor. In addition, you want to make sure that it has enough expansion slots so that you can fit as many GPUs as you want.
 
 For my build, I used the Lian Li PC-11 Full Tower Case which provides 8 expansion slots for up to 4 GPUs. 
 
 ### Power Supply
 
-Finally you need a decent power supply to, well, power all of the components we have been talking about. The two things to think about when picking a power supply is its max supported wattage and its efficiency rating.
+Finally you need a decent power supply to, well you know, power all of the components we have been talking about. The two things to think about when picking a power supply is its max supported wattage and its efficiency rating.
 
 As a rough heuristic for how much wattage you need for your build, consider that a typical GPU will use \~250W, a CPU will use \~200W, and other peripherals may use \~200W. 
 
@@ -208,12 +208,12 @@ For my build, I may have gone a bit overkill with my power supply choice. I ende
 
 My saving grace here is that I do hope to expand my system in the future to handle more GPUs, so it's nice to have that leeway in what the power supply is capable of. A good power supply also can last for a very long time, so I'm sure this piece will persist across several builds.
 
-Phew! And with that, we are officially done with our hardware odyssey.🙌 Now let's get to some actual computer building!
+Phew 😓! And with that, we are officially done with our hardware odyssey 🙌. If you're still on the line, let's get to some actual computer building!
 
 
 ## Fitting the Lego Blocks Together 🏗️
 
-After you've done the job of picking the hardware components for your system, putting the pieces together is like big-person Lego block fitting. One piece of overarching advice I have for the physical building is to *carefully* read the manuals for your various components. Some are more important than others (I read the motherboard manual page-to-page), but when in doubt, consult the relevant manual.
+After you've picked the hardware components for your system, putting the pieces together is like big-person Lego block fitting. One piece of overarching advice I have for the physical building is to *carefully* read the manuals for your various components. Some are more important than others (I read the motherboard manual page-to-page), but when in doubt, consult the relevant manual.
 
 My workflow for getting the machine roughly involved 1) setting the motherboard up outside the case 2) disassembling and prepping the case 3) mounting the motherboard and 4) connecting any relevant cables appropriately. You are, of course, not required to do it this way so do whatever makes the most sense to you.
 
@@ -247,7 +247,7 @@ This is mid-setup, adding the GPU to the motherboard:
 
 Here it's worth pausing to describe a particular portion of the setup process I found to be immensely helpful. After I had mounted the CPU, RAM, and GPU to the motherboard, I attached the power supply and a monitor to check to see whether my machine could POST, which is basically an internal hardware check the machine runs to ensure the parts work and are compatible before the boot process.
 
-This is a useful debugging step because it ensures that no piece is broken, which would be an annoying thing to discover only after you've mounted everything into the case and set it up the way you want it. And here is a successful POST:
+This is a useful debugging step because it ensures that no piece is broken, which would be an annoying thing to discover only *after* you've mounted everything into the case and set it up the way you want it. And here is a successful POST:
 
 ![testing the computer POST](./test_post.JPG)
 
@@ -272,9 +272,9 @@ Now with the hardware out of the way, let's get to the software! 🤗
 
 ## Software Installation 👩🏼‍💻
 
-I decided to install a Linux-based operating system on my machine because Linux has very good developer support and it is configurable to my needs. Since I plan to use this system primarily for fun projects, I don't need something with good consumer driver capabilities. Among the Linux distributions, I have the most experience with Ubuntu, having used it extensively before I got a Macbook.
+I decided to install a Linux-based operating system on my machine because Linux has very good developer support and it is configurable to my needs. Since I plan to use this machine primarily for fun projects, I don't need something with good consumer driver capabilities. Among the Linux distributions, I have the most experience with Ubuntu, having used it extensively before I got a Macbook.
 
-As of this writing, Ubuntu 18.04 (Bionic Beaver) is the one of the most recent stable releases, currently in the middle of its lifetime cycle. The release is expected to be supported through April 2023, so that's the version I went with. I used Ubuntu Desktop rather than Ubuntu Server because it's nice to have the option of a graphical user interface, rather than always having to run in headdless mode.
+As of this writing, Ubuntu 18.04 (Bionic Beaver) is one of the most recent stable releases, currently in the middle of its lifetime cycle. The release is expected to be supported through April 2023, so that's the version I went with. I used Ubuntu Desktop rather than Ubuntu Server because it's nice to have the option of a graphical user interface, rather than always having to run in headdless mode.
 
 To install Ubuntu, you need a USB drive with preferably at least 4GB of capacity. You then need to get a relevant Ubuntu ISO file which you can find [here](https://ubuntu.com/download/desktop). 
 
@@ -291,7 +291,7 @@ If you've gone through this step, congrats! You now have a fully functional comp
 We're just about there. Now we just need to install the relevant drivers for CUDA, so that we can use our GPU's capabilities. Here I found this [guide](https://www.pugetsystems.com/labs/hpc/How-to-install-CUDA-9-2-on-Ubuntu-18-04-1184/) particularly helpful. If you follow it, you should have a functional system decked out with the CUDA toolkit as well as any necessary graphics drivers.
 
 
-## Benchmarking
+## Benchmarking 🏃‍💨
 
 Once I had installed the OS and relevant drivers, I did some very basic benchmarks to see that the GPU was working as it should. For the benchmark, I used the code for the basic CIFAR 10 neural network on the [Pytorch website](https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html#sphx-glr-beginner-blitz-cifar10-tutorial-py).
 
@@ -316,19 +316,19 @@ For a system trained with a a batch size of 256, we see the GPU speedup approach
 
 The memory also increased slightly to about ~1.3GB, so it's clear I could push the batch size even higher. The memory consumption would certainly increase if I were using a larger model, and that's why I think we would really have to deal with larger problem spaces to see the GPU really excel over the CPU. As an exercise, try increasing the number of convolutional layers or increase the size of the feedforward layers. 
 
-That being said, it was nice to see the GPU functional and ready for bigger horizons!
+That being said, it was nice to see the GPU functional and ready for bigger horizons! And with that, welcome Venus. 
 
-## Why "Venus"?
+## Why *Venus*? 🌊🎨
 
-And now that we've finished the technical portion of the post, feel free to close this browser tab at your discretion. For those of you that aren't sick of me yet🙃, allow me to entertain the question of why I would name my deep learning machine Venus.
+And now that we've finished the technical portion of the post, feel free to close this browser tab at your discretion. For those of you that aren't sick of me yet 🙃, allow me to entertain the question of why I would name my deep learning machine Venus.
 
-Well, around the time I began shopping for computer parts I had just come back from a trip to Florence, Italy. Florence is a truly gorgeous city home to historical artwork, including Botticelli's *The Birth of Venus*.
+Well, around the time I began shopping for computer parts I had just come back from a trip to Florence, Italy. Florence is a truly gorgeous city home to historical artwork, including Botticelli's *The Birth of Venus*:
 
 ![botticelli birth of venus](./birth_of_venus.jpg)
 
 A truly beautiful piece. In ancient mythology Venus was claimed to have been born of a sea-foam, and in Botticelli's masterwork she is depicted as arriving to the shore on a shell after her birth.
 
-Now around the same time I was looking around for parts, I also discovered videos of Nazaré, Portugal. For those that don't know, Nazaré is a coastal town admired by surfers internationally because it boasts some of the largest waves on the planet, with some reaching upwards of 60 feet in size!
+Now around the same time I was looking around for parts, I also discovered videos of Nazaré, Portugal. For those that don't know, Nazaré is a coastal town admired by surfers internationally because it boasts the largest waves on the planet, with some reaching upwards of 60 feet in size!
 
 ![nazare, portugal waves](./nazare.jpg)
 
@@ -336,11 +336,13 @@ When you see [videos of waves at Nazaré](https://www.youtube.com/watch?v=Ftok14
 
 And here is where this artistic and natural juxtaposition fascinated me. The idea that such waves, so incredible and destructive in their might could break and birth something so refined and elegant as a goddess. 
 
-My build certainly packs a computational punch with components named *Turbo* and *ThreadRipper*. But I want the system to honor the notion that amazing things happen when power meets poise, when force meets finesse, when science meets art. 
+My build certainly packs a computational punch with components named *Turbo* and *ThreadRipper*. But more than that I want the system to honor the notion that amazing things happen when power meets poise, when force meets finesse, when science meets art. 
 
 Hence, Venus. 
 
-Now before I continue to wax philosophical, let's wrap this post up so you can get on with your day.
+Now before I continue to wax philosophical, let's wrap this post up so you can get on with your day. Thanks for reading, and good luck with any builds you embark on! 
 
-*Thanks to [Sabera Talukder](https://twitter.com/SaberaTalukder) for her help with the build, and to [other people](https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/) whose [helpful descriptions](https://medium.com/the-mission/how-to-build-the-perfect-deep-learning-computer-and-save-thousands-of-dollars-9ec3b2eb4ce2) I referred to as I went about with my build.*
+
+
+*Thanks to [Sabera Talukder](https://twitter.com/SaberaTalukder) for her help with the build, and to [other people](https://timdettmers.com/2019/04/03/which-gpu-for-deep-learning/) whose [thorough descriptions](https://medium.com/the-mission/how-to-build-the-perfect-deep-learning-computer-and-save-thousands-of-dollars-9ec3b2eb4ce2) I referred to as I went about with this project.*
 
