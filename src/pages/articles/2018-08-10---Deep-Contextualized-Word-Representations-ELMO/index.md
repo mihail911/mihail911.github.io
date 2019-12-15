@@ -45,6 +45,8 @@ For the purposes of ELMo, the language model used begins with a 2-layer bidirect
 	represents the backward recurrent unit.</figcaption>
 </figure>
 
+*NOTE*: *As [Danqi Chen](https://www.cs.princeton.edu/~danqic/) pointed out, the diagram above is a bit misleading. The original ELMo paper runs separate multi-layer forward and backward LSTMs and then concatenates the representations at each layer. This is different then running a layer of forward and backward LSTM, concatenating, and then feeding into the next layer as the diagram above might suggest.*
+
 Now, to this 2-layer network, a residual connection is added between the first and second layers (for a review of residual connections, check out this [beautiful paper](https://arxiv.org/abs/1512.03385)). 
 The high-level intuition is that residual connections help deep models train more successfully. The language model
 then looks as follows:
