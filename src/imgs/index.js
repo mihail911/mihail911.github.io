@@ -8,6 +8,7 @@ import nnliPic from './nnli.png';
 import sceneseerPic from './sceneseer.png';
 import wienPic from './random_forest.png';
 import dstPic from './dst.png';
+import vdnPic from './vdn.png';
 
 
 const nameToPic = {
@@ -20,7 +21,8 @@ const nameToPic = {
   nnli: nnliPic,
   sceneseer: sceneseerPic,
   wien: wienPic,
-  dst: dstPic
+  dst: dstPic,
+  vdn: vdnPic
 };
 
 export default nameToPic;

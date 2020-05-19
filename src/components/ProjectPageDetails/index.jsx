@@ -27,11 +27,19 @@ class ProjectPageDetails extends React.Component {
           Publications
         </div>
         <ProjectDescription
+          title="Just Ask:An Interactive Learning Framework for Vision and Language Navigation"
+          picName="vdn"
+          link="https://arxiv.org/abs/1912.00915"
+          authors="Ta-Chung Chi, Mihail Eric, Seokhwan Kim, Minmin Shen, Dilek Hakkani-Tur"
+          description="We propose a novel scheme for interactive human-in-the-loop learning, achieving more data-efficient performance on a vision and language task."
+          meta="Preprint 2019, arXiv:1912.00915"
+        />
+        <ProjectDescription
           title="MultiWOZ 2.1: Multi-Domain Dialogue State Corrections and State Tracking Baselines"
           picName="dst"
           link="https://arxiv.org/abs/1907.01669"
           authors="Mihail Eric*, Rahul Goel*, Shachi Paul, Abhishek Sethi,
-            Sanchit Agarwal, Shuyag Gao, Dilek Hakkani-Tur"
+            Sanchit Agarwal, Shuyang Gao, Dilek Hakkani-Tur"
           description="We release an updated version of the Cambridge MultiWOZ dataset with dialogue state annotation corrections and corresponding state tracking baselines."
           meta="Preprint 2019, arXiv:1907.01669"
         />
