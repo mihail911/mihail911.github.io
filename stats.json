@@ -29,8 +29,8 @@
       "path---posts-fundamental-deep-learning-algorithms-to-learn-c2562cd2c78a2e14d786.js.map"
     ],
     "component---src-pages-projects-jsx": [
-      "component---src-pages-projects-jsx-04efd51a80783accc2eb.js",
-      "component---src-pages-projects-jsx-04efd51a80783accc2eb.js.map"
+      "component---src-pages-projects-jsx-bd306a411f3cb4d856a3.js",
+      "component---src-pages-projects-jsx-bd306a411f3cb4d856a3.js.map"
     ],
     "path---posts-regularization": [
       "path---posts-regularization-bd3eef1c303536336a22.js",
@@ -129,8 +129,8 @@
       "path---posts-a-software-interview-challenge-6cea00c0508345bbedb4.js.map"
     ],
     "path---index": [
-      "path---index-c52136fcc5b4038609ca.js",
-      "path---index-c52136fcc5b4038609ca.js.map"
+      "path---index-2a1b718a1b75d860fc17.js",
+      "path---index-2a1b718a1b75d860fc17.js.map"
     ],
     "path---posts-why-all-the-excitement-about-ai": [
       "path---posts-why-all-the-excitement-about-ai-fb94a31dc6ae629082d3.js",
@@ -227,9 +227,9 @@
       "path---posts-principal-components-analysis-08ba9f700b7e3df100bb.js.map"
     ],
     "app": [
-      "app-97f8e19648bb58a52839.js",
+      "app-fd1d7262268349b83154.js",
       "build-js-styles.css",
-      "app-97f8e19648bb58a52839.js.map",
+      "app-fd1d7262268349b83154.js.map",
       "build-js-styles.css.map"
     ],
     "path---posts-model-evaluation": [
@@ -261,8 +261,8 @@
       "path---posts-object-detection-with-rcnn-66300515aa863ce02de0.js.map"
     ],
     "path---about": [
-      "path---about-78475129c593200eb342.js",
-      "path---about-78475129c593200eb342.js.map"
+      "path---about-a84550ce77211311eaa0.js",
+      "path---about-a84550ce77211311eaa0.js.map"
     ]
   }
 }
