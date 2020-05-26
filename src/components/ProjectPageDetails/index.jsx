@@ -13,6 +13,14 @@ class ProjectPageDetails extends React.Component {
           Engineering Playground
         </div>
         <ProjectDescription
+          title="Confetti AI"
+          picName="confetti"
+          link="https://www.confetti.ai/"
+          authors="Mihail Eric"
+          description="Confetti AI is an educational platform helping people learn the skills to succeed in artificial intelligence careers. It provides a collection of targeted resources and tools to empower the next generation of AI practitioners."
+          meta="Subscribe to our newsletter!"
+        />
+        <ProjectDescription
           title="Artificial Intelligence School"
           picName="aiSchool"
           link="https://itunes.apple.com/us/app/artificial-intelligence-school/id1369987569?mt=8"
@@ -27,7 +35,7 @@ class ProjectPageDetails extends React.Component {
           Publications
         </div>
         <ProjectDescription
-          title="Just Ask:An Interactive Learning Framework for Vision and Language Navigation"
+          title="Just Ask: An Interactive Learning Framework for Vision and Language Navigation"
           picName="vdn"
           link="https://arxiv.org/abs/1912.00915"
           authors="Ta-Chung Chi, Mihail Eric, Seokhwan Kim, Minmin Shen, Dilek Hakkani-Tur"

@@ -9,6 +9,7 @@ import sceneseerPic from './sceneseer.png';
 import wienPic from './random_forest.png';
 import dstPic from './dst.png';
 import vdnPic from './vdn.png';
+import confettiPic from './logo_white_letter_vertical_512.png';
 
 
 const nameToPic = {
@@ -22,7 +23,8 @@ const nameToPic = {
   sceneseer: sceneseerPic,
   wien: wienPic,
   dst: dstPic,
-  vdn: vdnPic
+  vdn: vdnPic,
+  confetti: confettiPic
 };
 
 export default nameToPic;

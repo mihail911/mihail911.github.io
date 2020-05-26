@@ -53,20 +53,21 @@ class MailchimpSignupForm extends React.Component {
   // Renders Twitter feed extracted from following: https://publish.twitter.com/?link_color=%232B7BB9&maxheight=200&maxwidth=280&query=%40mihail_eric&theme=light&widget=Timeline
   render() {
     return (
-      <div className="mailchimp-signup">
-        <div className="mailchimp-signup-prompt">
-          I also run a newsletter with cool AI articles and projects (no spam). Sign up to get updates!
-        </div>
-        <div className="mailchimp-signup-form">
-          <form onSubmit={this.handleSubmit}>
-            <label>
-              <span className="mailchimp-signup-email-text">Email</span>
-              <input className="mailchimp-signup-email-input" id="mailchimp-signup-email" type="text" name="mailchimp-signup-email" value={this.state.email} onChange={this.handleChange} />
-            </label>
-            <input className="mailchimp-signup-subscribe" type="submit" value="Subscribe" />
-          </form>
-        </div>
-      </div>
+      null
+      // <div className="mailchimp-signup">
+      //   <div className="mailchimp-signup-prompt">
+      //     I also run a newsletter with cool AI articles and projects (no spam). Sign up to get updates!
+      //   </div>
+      //   <div className="mailchimp-signup-form">
+      //     <form onSubmit={this.handleSubmit}>
+      //       <label>
+      //         <span className="mailchimp-signup-email-text">Email</span>
+      //         <input className="mailchimp-signup-email-input" id="mailchimp-signup-email" type="text" name="mailchimp-signup-email" value={this.state.email} onChange={this.handleChange} />
+      //       </label>
+      //       <input className="mailchimp-signup-subscribe" type="submit" value="Subscribe" />
+      //     </form>
+      //   </div>
+      // </div>
     );
   }
 }
