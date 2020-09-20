@@ -35,6 +35,9 @@
                 }
             }
         }
+        & .gatsby-highlight {
+            font-size:$typographic-base-font-size * 0.875;
+        }
         & a {
             text-decoration: underline;
         }
