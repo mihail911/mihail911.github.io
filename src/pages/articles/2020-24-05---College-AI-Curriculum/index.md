@@ -15,13 +15,13 @@ description: "I describe in-depth the courses necessary for a 4-year undergradua
     <img src="./apple-on-books.jpg" alt="apple on books">
 </figure>
 
-Having been out of school for a while now, I've had a lot of time to reflect on how well certain courses prepared me for my career in artificial intelligence and machine learning. I finally decided to put my thoughts to the page and design a complete curriculum for a 4-year undergraduate degree in artificial intelligence. 
+Having been out of school for a while now, I've had a lot of time to reflect on how well certain courses prepared me for my career in artificial intelligence and machine learning. I finally decided to put my thoughts to the page and design a complete curriculum for a 4-year undergraduate degree in artificial intelligence.
 
-These courses are intended to provide both breadth and depth to newcomers in the fields of artificial intelligence and computer science. This curriculum is inspired heavily by the courses that I took and is a reflection of the skills I believe are necessary to succeed in an artificial intelligence career today. 
+These courses are intended to provide both breadth and depth to newcomers in the fields of artificial intelligence and computer science. This curriculum is inspired heavily by the courses that I took and is a reflection of the skills I believe are necessary to succeed in an artificial intelligence career today.
 
-While you might be able to acquire some knowledge of AI through a single Coursera class, my emphasis here is instead on developing a deep conceptual understanding coupled with practical application of those concepts. Thorough understanding of a domain really just takes time. Shortcuts don't work, and so that's why this list is geared toward people that want to methodically start from the basics. 
+While you might be able to acquire some knowledge of AI through a single Coursera class, my emphasis here is instead on developing a deep conceptual understanding coupled with practical application of those concepts. Thorough understanding of a domain really just takes time. Shortcuts don't work, and so that's why this list is geared toward people that want to methodically start from the basics.
 
-With that introduction out of the way, let's get started. 
+With that introduction out of the way, let's get started.
 
 ## Year 1: Build Out Your Fundamentals 🏁
 
@@ -29,10 +29,10 @@ In your first year of an artificial intelligence degree, you should focus on lea
 
 - **Programming Fundamentals**: Introduces object-oriented programming along with data structures (sets, graphs, etc.). Artificial intelligence practitioners need to have solid software engineering skills. Relevant course: [CS 106B](http://web.stanford.edu/class/cs106b/).
 - **Introduction to Computer Systems**: Teaches how computer science systems are designed and structured from a low-level standpoint. Here the emphasis is on learning the software compilation process, what happens when you execute a computer program, and how programs are organized in memory among other things. Relevant course: [CS 107](http://web.stanford.edu/class/cs107/).
-- **Algorithms**: Covers the math and theory behind widely used computer science algorithms such as breadth-first search and dynamics programming as well as how to analyze the memory and runtime characteristics of those algorithms. Relevant course: [CS 161](http://web.stanford.edu/class/cs161/). 
+- **Algorithms**: Covers the math and theory behind widely used computer science algorithms such as breadth-first search and dynamics programming as well as how to analyze the memory and runtime characteristics of those algorithms. Relevant course: [CS 161](http://web.stanford.edu/class/cs161/).
 - **Probability Theory**: Probability and statistics form the core of many machine learning algorithms, and learning how to interpret and analyze data will be crucial to any machine learning or data science career. Relevant course: [CS 109](http://web.stanford.edu/class/cs109/).
 - **Linear Algebra**:  Covers how to manipulate matrics and vectors, solve linear equations, and apply least-squares methods. These mathematical underpinnings are extensively used in machine learning. Relevant course: [EE 103](http://web.stanford.edu/class/ee103/).
-- **Multi-dimensional Calculus**: You should get comfortable taking the gradients of functions, as this is at the heart of techniques like backpropagation which are the main workhorses of modern deep learning. Relevant course: [Vector Calculus For Engineers](https://www.coursera.org/learn/vector-calculus-engineers). 
+- **Multi-dimensional Calculus**: You should get comfortable taking the gradients of functions, as this is at the heart of techniques like backpropagation which are the main workhorses of modern deep learning. Relevant course: [Vector Calculus For Engineers](https://www.coursera.org/learn/vector-calculus-engineers).
 
 
 ## Year 2: Explore Domains, Develop Systems Knowledge 💻
@@ -60,18 +60,20 @@ In your third year, you should focus on building out depth in machine learning a
 
 ## Year 4: Real-World Experience Is Essential 🌄
 
-The name of the game your fourth year should be all about practice, practice, practice! By the time you've gone through your first three years, you will have developed a solid understanding of low-level computer science and software engineering principles as well as the theory behind artificial intelligence concepts and their applications. At this point, you want to spend the time to get your hands dirty. 
+The name of the game your fourth year should be all about practice, practice, practice! By the time you've gone through your first three years, you will have developed a solid understanding of low-level computer science and software engineering principles as well as the theory behind artificial intelligence concepts and their applications. At this point, you want to spend the time to get your hands dirty.
 
-Find a problem space you are interested in, get an existing dataset (or develop your own), and start building models. Learn the nuances of data manipulation, hypothesis testing, and error analysis. Learn how to troubleshoot models. 
+Find a problem space you are interested in, get an existing dataset (or develop your own), and start building models. Learn the nuances of data manipulation, hypothesis testing, and error analysis. Learn how to troubleshoot models.
 
 Becoming an effective artificial intelligence specialist requires putting all the principles you have learned into practice. Here are a few options for how to get as much practice as you can:
 
 - **Take project classes**: Some universities offer courses where you spend the entire duration of the course rigorously tackling a single project in a problem space. These classes are nice because you have the time to really dive deep into all the complexities of the project. An example of a course like this that comes to mind is [CS 341](http://web.stanford.edu/class/cs341/).
-- **Get involved with research**: Doing research is a phenomenal way to get hands-on experience with all the intricacies of artificial intelligence work. Offer to help a graduate student with a project of theirs you are interested in, or ask a faculty mentor to sponsor your own project! By doing this you will gain great exposure to what the day-to-day looks like when working on artificial intelligence projects. 
-- **Do an industry internship**: If your schedule permits it, consider taking some time off from school to do an internship at an artificial intelligence-oriented company. Many companies offer 3-6 month long internships where you are exposed to real-world applications of the principles you've learned. If you are planning on going into industry right after school, there is no better way to experience the work of a data scientist or machine learning engineer. 
+- **Get involved with research**: Doing research is a phenomenal way to get hands-on experience with all the intricacies of artificial intelligence work. Offer to help a graduate student with a project of theirs you are interested in, or ask a faculty mentor to sponsor your own project! By doing this you will gain great exposure to what the day-to-day looks like when working on artificial intelligence projects.
+- **Do an industry internship**: If your schedule permits it, consider taking some time off from school to do an internship at an artificial intelligence-oriented company. Many companies offer 3-6 month long internships where you are exposed to real-world applications of the principles you've learned. If you are planning on going into industry right after school, there is no better way to experience the work of a data scientist or machine learning engineer.
 
 
-And with that, you have completed a thorough 4-year curriculum designed to prepare you for success in a machine learning or data science career! It's worth mentioning that going through all the above courses is not strictly necessary. 
+And with that, you have completed a thorough 4-year curriculum designed to prepare you for success in a machine learning or data science career! It's worth mentioning that going through all the above courses is not strictly necessary.
 
 An alternate route is to go through the above list and take courses to fill in your own conceptual/skill gaps. While there's a lot to learn, it's an exciting time to be involved with artificial intelligence with countless opportunities and promising problem spaces. Good luck!
+
+*Thanks to Vladimir who graciously translated this post to [Russian](https://howtorecover.me/polnyy-plan-kursa-bakalavriata-po-iskusstvennomu-intellektu).*
 
