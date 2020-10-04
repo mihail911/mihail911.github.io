@@ -35,12 +35,38 @@ class ProjectPageDetails extends React.Component {
           Publications
         </div>
         <ProjectDescription
+          title="Proceedings of 2nd ACL NLP for Conversational AI Workshop"
+          picName="nlp4convai"
+          link="https://www.aclweb.org/anthology/2020.nlp4convai-1.0.pdf"
+          authors="Tsung-Hsien Wen, Asli Celikyilmaz, Zhou Yu, Alexandros Papangelis, Mihail Eric, Anuj Kumar, Inigo Casanueva, Rushin Shah"
+          description="The goal of this workshop is to bring together  NLP researchers and practitioners in different fields,
+          alongside experts in speech and machine learning, to discuss the current state-of-the-art and new
+          approaches, to share insights and challenges, to bridge the gap between academic research and realworld product deployment, and to shed the light on future directions."
+          meta="ACL 2020"
+        />
+        <ProjectDescription
+          title="Beyond Domain APIs: Task-oriented Conversational Modeling with Unstructured Knowledge Access"
+          picName="kmdm"
+          link="https://arxiv.org/abs/2006.03533"
+          authors="Seokhwan Kim, Mihail Eric, Karthik Gopalakrishnan, Behnam Hedayatnia, Yang Liu, Dilek Hakkani-Tur"
+          description="We propose to expand coverage of task-oriented dialogue systems by incorporating external unstructured knowledge sources."
+          meta="SIGDial 2020, arXiv:2006.03533"
+        />
+        <ProjectDescription
+          title="Policy-Driven Neural Response Generation for Knowledge-Grounded Dialogue Systems"
+          picName="policy"
+          link="https://arxiv.org/abs/2005.12529"
+          authors="Behnam Hedayatnia, Karthik Gopalakrishnan, Seokhwan Kim, Yang Liu, Mihail Eric, Dilek Hakkani-Tur"
+          description="We propose a technique for using a dialogue policy to plan the content and style of target responses in the form of an action plan."
+          meta="Preprint 2020, arXiv:2005.12529"
+        />
+        <ProjectDescription
           title="Just Ask: An Interactive Learning Framework for Vision and Language Navigation"
           picName="vdn"
           link="https://arxiv.org/abs/1912.00915"
           authors="Ta-Chung Chi, Mihail Eric, Seokhwan Kim, Minmin Shen, Dilek Hakkani-Tur"
           description="We propose a novel scheme for interactive human-in-the-loop learning, achieving more data-efficient performance on a vision and language task."
-          meta="Preprint 2019, arXiv:1912.00915"
+          meta="AAAI 2020, arXiv:1912.00915"
         />
         <ProjectDescription
           title="MultiWOZ 2.1: Multi-Domain Dialogue State Corrections and State Tracking Baselines"

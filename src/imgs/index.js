@@ -10,7 +10,9 @@ import wienPic from './random_forest.png';
 import dstPic from './dst.png';
 import vdnPic from './vdn.png';
 import confettiPic from './logo_white_letter_vertical_512.png';
-
+import kmdmPic from './kmdm.png';
+import policyPic from './policy.png';
+import aclWorkshopPic from './aclworkshop.png';
 
 const nameToPic = {
   adversarial: adversarialPic,
@@ -24,7 +26,10 @@ const nameToPic = {
   wien: wienPic,
   dst: dstPic,
   vdn: vdnPic,
-  confetti: confettiPic
+  confetti: confettiPic,
+  kmdm: kmdmPic,
+  policy: policyPic,
+  nlp4convai: aclWorkshopPic
 };
 
 export default nameToPic;
