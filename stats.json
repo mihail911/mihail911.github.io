@@ -29,8 +29,8 @@
       "path---posts-fundamental-deep-learning-algorithms-to-learn-49aaef81c24b479f4cdf.js.map"
     ],
     "component---src-pages-projects-jsx": [
-      "component---src-pages-projects-jsx-73f3b1698d07d5df61be.js",
-      "component---src-pages-projects-jsx-73f3b1698d07d5df61be.js.map"
+      "component---src-pages-projects-jsx-d3f75bfc946c87b12145.js",
+      "component---src-pages-projects-jsx-d3f75bfc946c87b12145.js.map"
     ],
     "path---posts-regularization": [
       "path---posts-regularization-7664e455aa1327795470.js",
@@ -133,8 +133,8 @@
       "path---posts-state-of-the-art-question-answering-streamlit-huggingface-8af65f3647bd69c6d481.js.map"
     ],
     "path---index": [
-      "path---index-a6c90391ff35dd5aae54.js",
-      "path---index-a6c90391ff35dd5aae54.js.map"
+      "path---index-65abf31b77a35db635ed.js",
+      "path---index-65abf31b77a35db635ed.js.map"
     ],
     "path---posts-why-all-the-excitement-about-ai": [
       "path---posts-why-all-the-excitement-about-ai-3bf1e68b1ca539080591.js",
@@ -231,9 +231,9 @@
       "path---posts-principal-components-analysis-a3622b1e782d6ae1392f.js.map"
     ],
     "app": [
-      "app-9c410edf69a511646e9e.js",
+      "app-2aff51205c1ada0ea30a.js",
       "build-js-styles.css",
-      "app-9c410edf69a511646e9e.js.map",
+      "app-2aff51205c1ada0ea30a.js.map",
       "build-js-styles.css.map"
     ],
     "path---posts-model-evaluation": [
@@ -265,8 +265,8 @@
       "path---posts-object-detection-with-rcnn-f31b00cc5246896ba958.js.map"
     ],
     "path---about": [
-      "path---about-d7fb65d8f1833d8e4fa4.js",
-      "path---about-d7fb65d8f1833d8e4fa4.js.map"
+      "path---about-8ecd4d18c2b776ca6b30.js",
+      "path---about-8ecd4d18c2b776ca6b30.js.map"
     ]
   }
 }
