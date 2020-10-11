@@ -35,6 +35,22 @@ class ProjectPageDetails extends React.Component {
           Publications
         </div>
         <ProjectDescription
+          title="A Machine Learning Primer"
+          picName="primer"
+          link="https://www.confetti.ai/assets/ml-primer/ml_primer.pdf"
+          authors="Mihail Eric"
+          description="I provide an overview of key machine learning concepts that show up in data science and ML interviews. This primer includes core theory as well as practice problems to test your knowledge."
+          meta="Confetti AI"
+        />
+        <ProjectDescription
+          title="DialoGLUE: A Natural Language Understanding Benchmark for Task-Oriented Dialogue"
+          picName="dialoglue"
+          link="https://arxiv.org/abs/2009.13570"
+          authors="Shikib Mehri, Mihail Eric, Dilek Hakkani-Tur"
+          description="We introduce DialoGLUE (Dialogue Language Understanding Evaluation), a public benchmark consisting of 7 task-oriented dialogue datasets covering 4 distinct natural language understanding tasks. We introduce new models that achieve state-of-the-art results on 5/7 datasets in the benchmark."
+          meta="arXiv:2009.1357"
+        />
+        <ProjectDescription
           title="Proceedings of 2nd ACL NLP for Conversational AI Workshop"
           picName="nlp4convai"
           link="https://www.aclweb.org/anthology/2020.nlp4convai-1.0.pdf"

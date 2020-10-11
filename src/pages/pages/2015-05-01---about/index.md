@@ -28,6 +28,7 @@ Reviewer: [ACL 2018](https://acl2018.org/) ([top reviewer](https://acl2018.org/2
 
 ## News 📰
 
+**October 2020**: I created a primer on machine learning theory important for ML interviews. [Check it out!](https://www.confetti.ai/assets/ml-primer/ml_primer.pdf)   
 **September 2020**: I wrote up a post describing how to build a deployable, state-of-the-art question-answering system over all of Wikipedia with just 60 lines of Python: [post](/posts/state-of-the-art-question-answering-streamlit-huggingface/) and [code](https://github.com/mihail911/question-answering-with-streamlit).   
 **July 2020**: Our paper on task-oriented conversation modeling with unstructured knowledge access was presented at [SIGDial 2020](https://www.sigdial.org/files/workshops/conference21/pdf/2020.sigdial-1.35.pdf).   
 **May 2020**: I released a blog post describing the goals for [Confetti AI](https://www.confetti.ai/post/announcing-confetti-a-vision-for-the-future-of-artificial-intelligence-in-the-real-world), the educational AI platform I'm building.  

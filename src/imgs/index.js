@@ -13,6 +13,8 @@ import confettiPic from './logo_white_letter_vertical_512.png';
 import kmdmPic from './kmdm.png';
 import policyPic from './policy.png';
 import aclWorkshopPic from './aclworkshop.png';
+import gluePic from './glue2.jpg';
+import primerPic from './ml_primer_img.png';
 
 const nameToPic = {
   adversarial: adversarialPic,
@@ -29,7 +31,9 @@ const nameToPic = {
   confetti: confettiPic,
   kmdm: kmdmPic,
   policy: policyPic,
-  nlp4convai: aclWorkshopPic
+  nlp4convai: aclWorkshopPic,
+  dialoglue: gluePic,
+  primer: primerPic
 };
 
 export default nameToPic;
