@@ -18,11 +18,6 @@ Graduate student at [Stanford University](https://www.stanford.edu/) where I stu
 Natural language understanding and anything related to machine learning. I spent years building goal-oriented dialogue agents and have worked on [computational semantics](https://en.wikipedia.org/wiki/Computational_semantics) and [textual inference](https://nlp.stanford.edu/~wcmac/papers/nli-diss.pdf).
 I also believe artificial intelligence will be one of the **most transformative paradigm shifts in human history**, so thinking about the implications of that keeps me pretty busy 🙂.
 
-
-## Fun Stuff 📲
-
-I am the creator of a mobile app for learning artificial intelligence, machine learning, and deep learning. Check it out on the [App Store](https://itunes.apple.com/us/app/artificial-intelligence-school/id1369987569?mt=8) and [Google Play](https://play.google.com/store/apps/details?id=com.theaischool)!
-
 ## Professional Service 👨‍💼
 Reviewer: [ACL 2018](https://acl2018.org/) ([top reviewer](https://acl2018.org/2018/07/02/top-reviewers/)), [ACL 2019](http://www.acl2019.org/EN/index.xhtml), [EMNLP 2018](https://emnlp2018.org/), [EMNLP 2019](https://www.emnlp-ijcnlp2019.org/), [NLP for Conversational AI Workshop 2019](https://sites.google.com/view/nlp4convai/), [IEEE Access](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6287639)
 
