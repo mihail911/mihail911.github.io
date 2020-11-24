@@ -15,6 +15,7 @@ import policyPic from './policy.png';
 import aclWorkshopPic from './aclworkshop.png';
 import gluePic from './glue2.jpg';
 import primerPic from './ml_primer_img.png';
+import observersPic from './observers.png';
 
 const nameToPic = {
   adversarial: adversarialPic,
@@ -33,7 +34,8 @@ const nameToPic = {
   policy: policyPic,
   nlp4convai: aclWorkshopPic,
   dialoglue: gluePic,
-  primer: primerPic
+  primer: primerPic,
+  observers: observersPic
 };
 
 export default nameToPic;

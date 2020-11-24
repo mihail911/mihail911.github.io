@@ -2,6 +2,7 @@ import React from 'react';
 import './style.scss';
 import '../../assets/fonts/fontello-771c82e0/css/fontello.css';
 import '../../assets/fonts/fontello-b224adf3/css/fontello.css';
+import '../../assets/fonts/fontello-19db5942/css/fontello.css';
 
 class Links extends React.Component {
   render() {
@@ -28,8 +29,8 @@ class Links extends React.Component {
             </a>
           </li>
           <li className="links__list-item">
-            <a href={`mailto:${links.email}`}>
-              <i className="icon-mail" />
+            <a href="./mihaileric.resume.pdf">
+              <i className="icon-newspaper" />
             </a>
           </li>
           <li className="links__list-item">

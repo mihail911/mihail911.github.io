@@ -43,6 +43,14 @@ class ProjectPageDetails extends React.Component {
           meta="Confetti AI"
         />
         <ProjectDescription
+          title="Example-Driven Intent Prediction With Observers"
+          picName="observers"
+          link="https://arxiv.org/abs/2010.08684"
+          authors="Shikib Mehri, Mihail Eric, Dilek Hakkani-Tur"
+          description="We propose two approaches for improving the generalizability of utterance classification models (example-driven training and observers) that when used in combination achieve state-of-the-art results in full-data and few-shot settings on several intent prediction datasets."
+          meta="arXiv:2010.08684"
+        />
+        <ProjectDescription
           title="DialoGLUE: A Natural Language Understanding Benchmark for Task-Oriented Dialogue"
           picName="dialoglue"
           link="https://arxiv.org/abs/2009.13570"
