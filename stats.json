@@ -29,8 +29,8 @@
       "path---posts-fundamental-deep-learning-algorithms-to-learn-49aaef81c24b479f4cdf.js.map"
     ],
     "component---src-pages-projects-jsx": [
-      "component---src-pages-projects-jsx-d3f75bfc946c87b12145.js",
-      "component---src-pages-projects-jsx-d3f75bfc946c87b12145.js.map"
+      "component---src-pages-projects-jsx-eebfb474503de3530114.js",
+      "component---src-pages-projects-jsx-eebfb474503de3530114.js.map"
     ],
     "path---posts-regularization": [
       "path---posts-regularization-7664e455aa1327795470.js",
@@ -133,8 +133,8 @@
       "path---posts-state-of-the-art-question-answering-streamlit-huggingface-8af65f3647bd69c6d481.js.map"
     ],
     "path---index": [
-      "path---index-3c33abff956ef3bb7359.js",
-      "path---index-3c33abff956ef3bb7359.js.map"
+      "path---index-7a67103463aeb241d74d.js",
+      "path---index-7a67103463aeb241d74d.js.map"
     ],
     "path---posts-why-all-the-excitement-about-ai": [
       "path---posts-why-all-the-excitement-about-ai-3bf1e68b1ca539080591.js",
@@ -149,9 +149,9 @@
       "path---posts-support-vector-machines-32fa4794f5a2f2a7e55c.js.map"
     ],
     "commons": [
-      "commons-42e22243a7c7bc28ab91.js",
+      "commons-0bb2d41bfb39cf8296bb.js",
       "build-js-styles.css",
-      "commons-42e22243a7c7bc28ab91.js.map",
+      "commons-0bb2d41bfb39cf8296bb.js.map",
       "build-js-styles.css.map"
     ],
     "path---teaching": [
@@ -265,8 +265,8 @@
       "path---posts-object-detection-with-rcnn-f31b00cc5246896ba958.js.map"
     ],
     "path---about": [
-      "path---about-1992dea4e2fe31b0c116.js",
-      "path---about-1992dea4e2fe31b0c116.js.map"
+      "path---about-69633d1db6ffb4721296.js",
+      "path---about-69633d1db6ffb4721296.js.map"
     ]
   }
 }
