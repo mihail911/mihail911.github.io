@@ -1,5 +1,5 @@
 ---
-title: "Why So Naive, Bayes?"
+title: "Naive Bayes Classifier Tutorial"
 date: "2019-04-13T23:46:37.121"
 layout: post
 draft: false

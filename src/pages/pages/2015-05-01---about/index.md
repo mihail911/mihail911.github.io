@@ -4,7 +4,7 @@ layout: page
 path: "/about"
 ---
 
-I optimize for impact. I strive to work with talented people to do amazing things. If you are a misfit, a rebel, or a troublemaker working on something interesting, feel free to [drop me a line.](mailto:mihail911@gmail.com)
+I optimize for impact. I strive to work with talented people to do amazing things. If you are a misfit, a rebel, or a troublemaker working on something interesting, feel free to [send me a message.](https://twitter.com/mihail_eric)
 
 I'm a researcher, engineer, and educator currently working on the future of conversational artificial intelligence at [Alexa AI](https://developer.amazon.com/alexa-skills-kit/conversational-ai). I'm also building [Confetti AI](https://www.confetti.ai/). A few things I'm proud of:
 ### Research

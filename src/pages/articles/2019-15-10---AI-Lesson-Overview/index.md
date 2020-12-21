@@ -1,6 +1,6 @@
 ---
 title: "A Comprehensive Introduction to Machine Learning Fundamentals"
-date: "2019-09-30T23:46:37.121"
+date: "2019-10-15T23:46:37.121"
 layout: post
 draft: false
 path: "/posts/ml-lesson-curriculum/"
