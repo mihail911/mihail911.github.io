@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Logistic Regression"
+title: "Logistic Regression in Machine Learning Tutorial"
 date: "2019-04-08T23:46:37.121"
 layout: post
 draft: false
