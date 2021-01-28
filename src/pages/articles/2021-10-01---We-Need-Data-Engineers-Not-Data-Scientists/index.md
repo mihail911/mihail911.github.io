@@ -156,3 +156,5 @@ That's not to say that there isn't an important place for machine learning resea
 But you'll probably find more of those kinds of roles at industry research labs that can afford to take capital-intensive bets for long stretches of time rather than at a seed-stage startup trying to demonstrate product-market fit to investors as it raises a Series A. 
 
 If nothing else, I believe it's important to make the expectations of newcomers to data fields reasonable and calibrated. We must acknowledge that [data science is different now](https://veekaybee.github.io/2019/02/13/data-science-is-different/). I hope this post was able to shed some light on the state of the field today. It's only when we know where we are that we know where we need to go. 
+
+*This article has been graciously translated to [Chinese](https://mp.weixin.qq.com/s/WEaj0htYNzi1Q4E9wzvq3g) and [Japanese](https://itnews.org/news_contents/we-need-data-engineers-not-data-scientists) through a community effort.*

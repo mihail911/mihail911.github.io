@@ -17,7 +17,7 @@ description: "In this third post in a series on how to build a complete machine 
 
 In this post, we will continue where our [previous post](/posts/performing-exploratory-data-analysis) left off and tackle the next step in building a machine learning project which is making our first fully functional training/evaluation pipeline. 
 
-As a quick refresher, remember that our goal is to apply a data-driven solution to a problem taking it from initial setup through to deployment. The phases we will conduct include the following:
+As a quick refresher, remember that our goal is to apply a data-driven solution to the problem of fake news detection taking it from initial setup through to deployment. The phases we will conduct include the following:
 
 1. [Ideation, organizing your codebase, and setting up tooling](/posts/setting-up-a-machine-learning-project/)
 2. [Dataset acquisition and exploratory data analysis](/posts/performing-exploratory-data-analysis)
