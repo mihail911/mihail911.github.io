@@ -28,8 +28,8 @@ These posts will cover all of the following:
 1. Ideation, organizing your codebase, and setting up tooling (this post!)
 2. [Dataset acquisition and exploratory data analysis](/posts/performing-exploratory-data-analysis/)
 3. [Building and testing the pipeline with a v1 model](/posts/machine-learning-project-model-v1)
-4. Performing error analysis and iterating toward a v2 model
-5. Deploying the model and connecting a continuous integration solution
+4. [Performing error analysis and iterating toward a v2 model](/posts/machine-learning-project-error-analysis-model-v2/)
+5. [Deploying the model and connecting a continuous integration solution](/posts/machine-learning-project-model-deployment/)
 
 With that let's get started!
 
