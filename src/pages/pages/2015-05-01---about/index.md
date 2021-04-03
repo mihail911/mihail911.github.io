@@ -6,7 +6,11 @@ path: "/about"
 
 I optimize for impact. I strive to work with talented people to do amazing things. If you are a misfit, a rebel, or a troublemaker working on something interesting, feel free to [send me a message.](https://twitter.com/mihail_eric)
 
-I'm a researcher, engineer, and educator currently working on the future of conversational artificial intelligence at [Alexa AI](https://developer.amazon.com/alexa-skills-kit/conversational-ai). I'm also building [Confetti AI](https://www.confetti.ai/). A few things I'm proud of:
+I'm a researcher, engineer, and educator currently working on the future of conversational artificial intelligence as a senior machine learning scientist at [Alexa AI](https://developer.amazon.com/alexa-skills-kit/conversational-ai). 
+
+I'm also building [Confetti AI](https://www.confetti.ai/). 
+
+A few things I'm proud of:
 ### Research
 - I've been published at the top artificial intelligence conferences in the world. My work has also gotten [news coverage](https://venturebeat.com/2019/12/04/amazon-proposes-a-home-robot-that-asks-you-questions-when-its-confused/). Check out [my past projects](/projects) for a full list of publications.
 - I spent several years in the [Stanford Natural Language Processing Group](https://nlp.stanford.edu/), where I had the great fortune to work with [Christopher Manning](https://nlp.stanford.edu/manning/), [Percy Liang](https://cs.stanford.edu/~pliang/), and [Christopher Potts](https://web.stanford.edu/~cgpotts/).

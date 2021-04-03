@@ -23,7 +23,7 @@ As a reminder, recall that our goal is to apply a data-driven solution to the pr
 2. [Dataset acquisition and exploratory data analysis](/posts/performing-exploratory-data-analysis)
 3. [Building and testing the pipeline with a v1 model](/posts/machine-learning-project-model-v1/)
 4. **Performing error analysis and iterating toward a v2 model (this post!)**
-5. Deploying the model and connecting a continuous integration solution
+5. [Deploying the model and connecting a continuous integration solution](/posts/machine-learning-project-model-deployment/)
 
 This article will focus on performing error analysis with an emphasis on understanding our model's behavior and finding places to improve. Full source code is [here](https://github.com/mihail911/fake-news).
 

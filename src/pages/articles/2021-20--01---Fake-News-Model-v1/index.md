@@ -22,8 +22,8 @@ As a quick refresher, remember that our goal is to apply a data-driven solution 
 1. [Ideation, organizing your codebase, and setting up tooling](/posts/setting-up-a-machine-learning-project/)
 2. [Dataset acquisition and exploratory data analysis](/posts/performing-exploratory-data-analysis)
 3. **Building and testing the pipeline with a v1 model (this post!)**
-4. Performing error analysis and iterating toward a v2 model
-5. Deploying the model and connecting a continuous integration solution
+4. [Performing error analysis and iterating toward a v2 model](/posts/machine-learning-project-error-analysis-model-v2/)
+5. [Deploying the model and connecting a continuous integration solution](/posts/machine-learning-project-model-deployment/)
 
 This article will focus a lot on the machine learning modelling aspects but will also emphasize how to engineer a good pipeline using appropriate abstractions. Full source code is [here](https://github.com/mihail911/fake-news).
 
