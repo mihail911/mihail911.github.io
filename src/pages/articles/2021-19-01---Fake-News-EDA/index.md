@@ -300,3 +300,5 @@ That being said, it still may be worth exploring the usage of sentiment scores a
 That brings us to the close of our EDA on this dataset. We have gained a lot of interesting insights about the data characteristics, many which inspired possible features we should look at. After all, this is the point of EDA and why it's one of most crucial first steps in a machine learning development cycle. 
 
 Our [next post](/posts/machine-learning-project-model-v1/) will build on our insights to construct our first model for the task along with a fully-tested training pipeline. 
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=performing-exploratory-data-analysis) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

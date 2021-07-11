@@ -471,3 +471,5 @@ We've come a long way!
 There's still plenty more to do here, but hopefully this series has given you a snapshot of all the moving parts we need to get right for building a machine learning-powered application. 
 
 If you have any questions, don't hesitate to reach out.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=machine-learning-project-model-deployment) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

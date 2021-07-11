@@ -74,3 +74,5 @@ Becoming an effective artificial intelligence specialist requires putting all th
 And with that, you have completed a thorough 4-year curriculum designed to prepare you for success in a machine learning or data science career! It's worth mentioning that going through all the above courses is not strictly necessary.
 
 An alternate route is to go through the above list and take courses to fill in your own conceptual/skill gaps. While there's a lot to learn, it's an exciting time to be involved with artificial intelligence with countless opportunities and promising problem spaces. Good luck!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=complete-artificial-intelligence-undergraduate-course-plan) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

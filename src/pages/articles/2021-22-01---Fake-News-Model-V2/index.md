@@ -289,3 +289,5 @@ So pure textual features from the statement aren't going to cut it alone.
 Further work (left as an exercise to the reader) could explore encoding some other fields (credit history, etc.) from the data as inputs to Roberta. 
 
 In the [next post](/posts/machine-learning-project-model-deployment/), we'll look at deploying our model and setting up a continuous integration solution for our project!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=machine-learning-project-error-analysis-model-v2) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

@@ -668,3 +668,5 @@ Our goal was to get some reasonably good model that we could expose to users to 
 We could certainly eke out more performance on this model by performing hyperparameter tuning, playing with more features etc. But that is left as an exercise to the reader. 
 
 In the next post, we'll look at analyzing our model errors and building a v2 model!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=machine-learning-project-model-v1) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*
