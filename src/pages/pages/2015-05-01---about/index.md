@@ -17,8 +17,8 @@ A few things I'm proud of:
 - I think and write about trends in AI research. People have found my [past](/posts/nlp-trends-acl-2019/) [writeups](/posts/ml-trends-neurips-2019/) [helpful](/posts/review-of-sigdial-semdial-2017/). 
 
 ### Engineering
-- I was the 8th engineer at [RideOS](https://rideos.ai/) a Sequoia VC-backed autonomous mobility startup.
-- I'm problem-driven (not tool-driven) so I build across the full engineering stack from [hardware](https://www.mihaileric.com/posts/building-a-deep-learning-computer/) to [software](https://www.mihaileric.com/posts/state-of-the-art-question-answering-streamlit-huggingface/).
+- I was the 8th hire at [RideOS](https://rideos.ai/) a Sequoia VC-backed autonomous mobility startup [acquired by Gopuff](https://techcrunch.com/2021/06/17/delivery-service-gopuff-acquires-rideos-for-115-million-plus/).
+- I'm problem-driven (not tool-driven) so I build across the full engineering stack from [hardware](/posts/building-a-deep-learning-computer/) to [software](/posts/state-of-the-art-question-answering-streamlit-huggingface/).
 
 
 ### Education
