@@ -42,4 +42,4 @@ As you can see, being a machine learning engineer/data scientist oftentimes amou
 
 I’m also very confident that *anyone with a disciplined course of study can achieve the skills necessary to become a machine learning engineer/data scientist*, without having to spend years at some top university.
 
-If you're interested in learning the fundamentals of data science or machine learning, check out my app available for [iOS](https://itunes.apple.com/us/app/artificial-intelligence-school/id1369987569?mt=8) and [Android](https://play.google.com/store/apps/details?id=com.theaischool).
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=being-a-good-machine-learning-data-scientist) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

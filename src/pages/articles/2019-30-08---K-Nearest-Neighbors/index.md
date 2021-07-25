@@ -80,3 +80,5 @@ on new data points. However, the ideal value of $k$ really depends on the proble
 K-nearest neighbors is a unique model because it requires you to keep track of <Ital txt="all"/> your training data *all* the time. It is conceptually simple and data-intensive. As a result, it is often used as a baseline model in problems with small to moderate-sized datasets.
 
 Furthermore, while we used a classification example to motivate the algorithm, in practice k-nearest neighbors can be applied to both classification *and* regression.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=k-nearest-neighbors) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

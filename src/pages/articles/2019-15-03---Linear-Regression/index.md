@@ -155,3 +155,4 @@ However, if we don't think a line makes sense, we would pick a different
 model that has some different assumptions about the underlying structure of the data. We will investigate many other
 classes of models with their assumptions about the data in later posts.
 
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=fundamentals-of-linear-regression) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

@@ -92,3 +92,5 @@ One example of this could be if we are using the language in an email message
 to label whether it has positive or negative sentiment, and we use features for whether or not a message contains certain words.
 
 The presence of a given swear word would be highly correlated with the appearance of any other swear word, but Naive Bayes would disregard this correlation by making false independence assumptions. Our model could then severely underperform because it is ignoring information about the data. This is something to be careful about when using this model!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=not-so-naive-bayes) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

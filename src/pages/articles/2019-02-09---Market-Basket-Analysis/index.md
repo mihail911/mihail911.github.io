@@ -89,3 +89,5 @@ documents. Think about what kinds of association rules could be useful there.
 Market basket analysis can also be applied to fraud detection where we can analyze the spending patterns of users. Here users' credit card purchases over a given time period could be baskets, and the things they purchase could be items.
 
 There are many other uses, and the most amazing thing is that we are deriving very meaningful analyses completely in an unsupervised setting. No ground truth but still a lot of useful deductions. Neat!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=market-basket-analysis) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

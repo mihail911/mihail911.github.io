@@ -166,3 +166,5 @@ While your heart is in the right place, practically-speaking non-binary splits d
 data for subsequent feature splits. Moreover, we can always also achieve a non-binary split with a series of consecutive binary splits, so it's not like non-binary splits give us any more expressive power.
 
 Finally, while we only discussed a classification example, decision trees can also be applied to regression. This is yet another reason why they are so versatile!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=decision-trees) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

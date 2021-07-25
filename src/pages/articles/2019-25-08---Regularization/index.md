@@ -111,3 +111,5 @@ as compared to $L_2$ regularization that achieves a smoother continuous set of w
 In addition to these regularization techniques, there are **many** more ways to regularize a model out there, which
 we won't cover. In practice, the type of regularization you use very often depends on how you want to control your feature set. But regardless,
 it is a hugely important technique to keep under your belt as you venture into the machine learning jungle!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=regularization) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

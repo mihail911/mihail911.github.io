@@ -114,3 +114,5 @@ Besides the aforementioned techniques, there are a number of more sophisticated 
 approaches. These include simmulated annealing and genetic algorithms, just to name a few. For now, we will leave discussion of those
 techniques to another time! Regardless, feature selection is an important technique to add to the toolbox, as it enables us to be
 more careful in how we build out our models.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=feature-selection) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

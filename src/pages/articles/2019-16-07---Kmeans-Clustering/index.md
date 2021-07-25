@@ -97,3 +97,5 @@ We could represent each document as a vector, based on the frequency of words ap
 Perhaps we could even extract the centroids and compare them to essays whose authors we know and that could help us actually identify the unknown essays in our dataset!
 
 This is just a small example of how useful k-means can be in practice. There are many more scenarios where it can be *extremely useful* for analyzing datasets where we don't have labels.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=what-kmeans-clustering) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

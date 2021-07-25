@@ -196,3 +196,5 @@ recognize that neural networks require quite a bit of details to get right and u
 
 Sometimes building neural network models is more an art than a science. That being said, there do exist some systematic ways
 to build better models, many of which we have touched on in this post, so make sure to keep them in your machine learning toolkit!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=neural-network-grab-bag) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

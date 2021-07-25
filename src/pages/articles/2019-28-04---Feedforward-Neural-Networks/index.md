@@ -170,3 +170,5 @@ we can apply feedforward networks to many other problem domains.
 In general, the compute units in neural network hidden
 layers learn many powerful representations of the data during training.
 In the next lessons we will be building out some of the details of neural network theory.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=deep-dive-into-neural-networks) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

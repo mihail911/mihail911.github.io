@@ -137,3 +137,5 @@ As we finish up this lesson, keep in mind that all these model evaluation and se
 extensively in practice. It is basically guaranteed that anytime you are building a new model, you will inevitably
 employ one of these techniques. Which technique you use will depend on your data and problem characteristics, so remember
 to be flexible to all the options.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=machine-learning-model-selection) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

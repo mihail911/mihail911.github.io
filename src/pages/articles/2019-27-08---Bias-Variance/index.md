@@ -114,3 +114,5 @@ sources of error (bias and variance) that we will have to balance and calibrate.
 We can never hope to get perfect generalization, but through empirical analyses we can try to reduce the bias by adding more complexity to our model or reduce the variance by simplifying some of the assumptions of the model.
 
 We will discuss exact techniques on how to do this in later lessons. The important thing for now is to be aware of the existence of these two sources of error and how they affect our model's generalizability.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=bias-variance-tradeoff) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

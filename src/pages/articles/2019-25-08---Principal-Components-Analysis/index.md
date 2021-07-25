@@ -109,3 +109,5 @@ maybe 2 or 3 dimensions, to gain some insights into what the data represents.
 One last practical note regarding PCA is that it is common to normalize the dataset before running the algorithm, by subtracting out the dataset mean
 and also ensuring that the features are using the same units (you don't want to have a feature that is a distance in meters and one in feet). After
 that normalization is done, we can run the PCA algorithm as described above.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=principal-components-analysis) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

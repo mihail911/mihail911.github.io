@@ -103,3 +103,5 @@ to begin with when you are doing any type of classification.
 It has a fairly straightforward description, can be trained
 fairly quickly through techniques such as gradient descent because of its nice derivative, and often works well
 in practice. It is used frequently in biostatistical applications where there are many binary classification problems.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=introduction-to-logistic-regression) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

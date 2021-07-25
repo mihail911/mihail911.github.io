@@ -168,3 +168,5 @@ can adequately handle nonlinearly separable data scenarios
 As part of the machine learning toolkit, it is a great go-to model to try when
 starting on a new problem. However, one of its downsides is that using certain kernels, such as the radial basis function kernel, can sometimes make the model
 training slower, so be wary of that.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=support-vector-machines) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

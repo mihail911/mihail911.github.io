@@ -120,3 +120,5 @@ oftentimes in ensembling techniques we must train many models on a given dataset
 
 Because of this ensembling is often only used when you are trying to squeeze
 out a bit more performance on a certain problem. That being said, it is a fantastic technique for reducing overfitting in models.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=machine-learning-ensembling) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

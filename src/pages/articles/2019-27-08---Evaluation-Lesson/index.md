@@ -157,3 +157,5 @@ definitely demonstrates the superiority of a model.
 
 We'll end this lesson with a relevant note of caution from economist
 Charles Goodhart: *When a measure becomes a target, it ceases to be a good measure.*
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=model-evaluation) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

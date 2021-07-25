@@ -139,3 +139,5 @@ of alternative compute units that perform more sophisticated operations at each 
 To conclude our whirlwind tour of recurrent networks, let's leave with a few examples of problem spaces where they have been applied very successfully.
 
 Recurrent networks have been applied to a variety of tasks including speech recognition (given an audio input, generate the associated text), generating image descriptions, and machine translation (developing algorithms for translating from one language to another). These are just a few examples, but in all cases, the recurrent network has enabled unprecedented performance on these problems.
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=recurrent-neural-networks) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

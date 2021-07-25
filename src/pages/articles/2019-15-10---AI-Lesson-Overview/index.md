@@ -38,3 +38,5 @@ I've been writing a collection of tutorials on fundamental machine learning conc
 * [Grab Bag of Neural Network Practices](/posts/neural-network-grab-bag/)
 * [Convolutional Neural Networks](/posts/convolutional-neural-networks/)
 * [Recurrent Neural Networks](/posts/recurrent-neural-networks/)
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=ml-lessons-curriculum) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*

@@ -165,3 +165,5 @@ Typically as networks get more deep they get harder to train, but the University
 
 And with that, we've come full circle! From humble beginnings, we've successfully
 discussed the model that triggered the modern-day resurgence of artificial intelligence. What a phenomenal milestone in our AI journey!
+
+*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=convolutional-neural-networks) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*
