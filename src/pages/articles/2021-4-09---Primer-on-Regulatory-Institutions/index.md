@@ -1,6 +1,6 @@
 ---
 title: "Overview of the United States Financial Regulatory Ecosystem"
-date: "2021-09-04T23:40:37.121"
+date: "2021-10-04T23:40:37.121"
 layout: post
 draft: false
 path: "/posts/united-states-financial-regulatory-system/"
@@ -23,9 +23,9 @@ As an engineer, I'm accustomed to the mantra of *move fast and break things.* Wh
 
 While that policy may be sufficient when you're recommending items in someone's Facebook social feed, in the financial context, hasty and poorly thought-out practices can undermine the entire global economic system including the lives of millions of people, as it did in the [2008 financial crisis](https://en.wikipedia.org/wiki/Financial_crisis_of_2007%E2%80%932008).
 
-In this post, I will outline the US financial regulatory landscape by describing its motivational principles, organize, and the history and responsibilities of the main regulatory bodies. With the recent tidal wave of fintech companies seeking to revolutionize and, in some cases, overhaul the financial system, these groups stand to face regulatory headwinds. Building a financial services company is not liking building a social networking product. 
+In this post, I will outline the US financial regulatory landscape by describing its motivational principles, organizational structure, and the history and responsibilities of the main regulatory bodies. With the recent tidal wave of fintech companies seeking to revolutionize and in some cases, overhaul the financial system, these groups stand to face regulatory headwinds. 
 
-To truly appreciate this, I believe it's worth understanding the main players in the US regulatory maze, how they interact, and why things are the way they are.
+Building a financial services company is not like building a social networking product. To truly appreciate this, I believe it's worth understanding the main players in the US regulatory maze, how they interact, and why things are the way they are.
 
 ## Goals of Financial Regulation
 
@@ -45,6 +45,8 @@ At a high-level, the three primary objectives of financial regulation are as fol
 - Stability of the financial system
 - Safety and soundness of individual firms
 - Protection of investors and consumers through fair and transparent business conduct of financial institutions.
+
+Different regulatory organizations that we will discuss below prioritize some of these tenets more than others (i.e. SEC for investor protection). 
 
 Within this framework, regulators convey expectations through a combination of rule-based behavior (such as outlining strict policies for consumer protection and how to handle anti-money laundering) as well as more free-form principles-based behavior (typically concerning prudential matters such as management of a firm's liquidity, market, and capital risk).
 
@@ -76,7 +78,7 @@ One strange regulatory artifact is that every national bank must be a member of 
 
 The Federal Deposit Insurance Corporation, or FDIC, is the last major federal bank regulator. To provide some historical context, in the 1920s and 1930s, bank failures were still very common nationally amid banks' exposure to volatile equity markets. This culminated in the 1929 stock market crash and subsequent Great Depression. 
 
-With the passing of the 1933 Banking Act, the FDIC was created to help restore faith in the banking system by insuring deposits in institutions up to a certain amount for every consumer. This amount was \$2500 in the original law but has progressively been increased over the past few years, reaching \$250K in 2009. 
+With the passing of the 1933 Banking Act, the FDIC was created to help restore faith in the banking system by insuring deposits in institutions up to a certain amount for every consumer. This amount was \$2500 in the original law but has progressively been increased over the past few years, reaching \$250K in 2009. Note that this figure is per depositor, per bank, for each account ownership category. 
 
 So when you see the phrase *FDIC-insured* on your bank's website, that means that even if your bank were to go up in flames in some cataclysmic apocalypse 🔥, you wouldn't lose any of your funds held with the bank up to \$250K. 
 
@@ -91,7 +93,7 @@ Outside of the insurance it provides, the FDIC also acts as the primary regulato
 
 In addition, to the federal regulators mentioned above, each state also has its own financial regulatory authority that supervises banks and issues charters. In practice, virtually every state-chartered bank has both a state and a federal regulator. As you can imagine, this introduces the potential for conflicting oversight and regulatory arbitrage (i.e. when given two overlapping rules you have to follow, abide by the more favorable one). 
 
-In general, however, state regulatory authorities are considered to have more favorable working relationships with their banks.
+Depending on the state, the respective regulatory authorities may have more favorable working relationships with their banks than federal regulators.
 
 ## Securities and Exchange Commission
 
@@ -100,7 +102,9 @@ The Securities and Exchange Commission (SEC) is an independent federal regulator
 - Maintain fair, orderly, and efficient markets
 - Facilitate capital formation through public and private securities offerings
 
-Given that American households' investments in securities are not insured the way deposits at banks are, the SEC requires companies selling securities in the public markets to include appropriate disclosures about their businesses so that investors can evaluate the risks and rewards of purchasing the securities. 
+American households' investments in securities are insured through the Securities Investor Protection Corporation (or SIPC) which provides up to \$500K of insurance in the event that your brokerage fails (not if your \$GME stock drops in value).
+
+In addition, the SEC requires companies selling securities in the public markets to include appropriate disclosures about their businesses so that investors can evaluate the risks and rewards of purchasing the securities. 
 
 The size of the markets that the SEC regulates are mind-blowing. Today the SEC oversees roughly \$97T in US securities trading annually! As a result, SEC enforcement actions are aggressive and unrelenting. Some \$1.2B was returned to harmed investors through various actions committed by wrongdoers last year. 
 
@@ -108,12 +112,11 @@ The size of the markets that the SEC regulates are mind-blowing. Today the SEC o
 
 The Commodity Futures Trading Commission (CFTC) is a federal regulatory agency that focuses on administering and supervising the US derivatives markets. While the agency was created in 1974, derivatives trading has an interesting history in the US, going as far back as the mid 1800s with the introduction of some of the earliest futures markets focusing on grains. 
 
-Today the CFTC oversees a tremendous market for these alternative financial instruments. The gross value of over-the-counter derivatives was estimated to be about \$16T in the second half of 2020. With their regulatory powers, the CFTC also [fines a lot](https://twitter.com/CFTC). Given the ambiguous distinction between securities and derivatives instruments, the regulatory oversight between the CFTC and SEC can overlap requiring active collaboration between the two agencies.
+Today the CFTC oversees a tremendous market for these alternative financial instruments. The gross value of over-the-counter derivatives was estimated to be about \$16T in the second half of 2020. With their regulatory powers, the CFTC also [fines a lot](https://twitter.com/CFTC). Given the ambiguous distinction between securities and derivatives instruments, the regulatory oversight between the CFTC and SEC can overlap requiring active collaboration (and sometimes generating conflict as is happening with crypto now) between the two agencies.
 
 ## National Credit Union Administration
 
 The National Credit Union Administration, or NCUA, is the second US agency (besides the FDIC) that provides insurance to depositors in US depository institutions, focusing solely on federal credit unions. Established in 1970, the NCUA administers the National Credit Union Insurance Fund, which is backed by the full credit of the US government, and also insures member accounts up to \$250K. Today the NCUA insures, regulates, and supervises some 5000 credit unions.
-
 
 ## Consumer Financial Protection Bureau
 
@@ -122,6 +125,8 @@ The Consumer Financial Protection Bureau (CFPB) is the primary agency responsibl
 Founded in July 2010 in response to the Great Recession as part of the Dodd-Frank Wall Street Reform and Consumer Protection Act, the CPFB consolidated the regulation of these issues under a single umbrella. Prior to its creation, consumer protection responsibilities were balkanized across seven different federal agencies. 
 
 Today, any financial institution becomes regulated by the CFPB the moment its total assets exceed \$10B. This requirement persists some degree of regulatory fragmentation, as there are nearly 5000 regional banks alone that don't meet the threshold and therefore end up being regulated by one of the main banking agencies.
+
+Increasingly, the CFPB has assumed responsibility for regulations that don't fit nicely into other organizations' purviews. For example, the CPFB oversees Section 1071 of Dodd-Frank which is a rule focusing on small-business (not consumer) data. 
 
 Throughout its lifetime, the CFPB has alternated between being aggressive in enforcement actions for violation of consumer rights (\$6B in fines in 2015) to more lenient ($34M in fines in 2020). 
 
@@ -134,7 +139,7 @@ In practice, federal agencies may delegate some amount of regulatory oversight t
 
 One popular example of a self-regulatory organization is [FINRA](https://www.finra.org/#/), which writes and enforces rules concerning registered brokers in the US. FINRA also administers the exams securities professionals must pass to provide their services. 
 
-Self-regulatory organizations present an interesting regulatory conflict of interest. Because they are private and often run by member groups (like a credit union), there is an open question as to how strict these organizations can be expected to be in their rules given the bias built into the system.
+Self-regulatory organizations present an intriguing regulatory conflict-of-interest. Because they are private and often run by member groups (like a credit union), there is an open question as to how strict these organizations can be expected to be in their rules given the bias built into the system.
 
 
 ## Department of Justice
@@ -144,7 +149,9 @@ While the Department of Justice (DOJ) doesn't only concern itself with overlooki
 
 ## Final Thoughts
 
-Now that we've completed our whirlwind tour of the main players in the US financial regulatory ecosystem, it's worth reiterating how involved the whole environment is. Through two centuries of largely reactive financial policies, we've converged on this intricate regulatory Venn Diagram. 
+Now that we've completed our whirlwind tour of the main players in the US financial regulatory ecosystem, it's worth including a few notes: each state may also have its own slew of financial regulators (such as the Department of Financial Protection and Innovation in California), and there are several other bodies we have not discussed (such as the Federal Trade Commission) that get to swing the gavel in their own ways.
+
+Hopefully it's clear how involved this whole ecosystem is. Through two centuries of largely reactive financial policies, we've converged on this intricate regulatory Venn Diagram. 
 
 Many financial institutions deeply fear falling on the wrong side of the Financial Regulator but because of the ambiguous nature of laws and practice, their regulatory programs tend to be best-effort initiatives. 
 
@@ -165,3 +172,7 @@ https://www.sec.gov/about/what-we-do
 https://www.bis.org/publ/otc_hy2105.htm
 https://www.consumerfinance.gov/data-research/research-reports/building-the-cfpb/
 https://www.latimes.com/business/story/2021-01-11/column-cfpb-biden
+
+---
+
+*Thanks to [Alex Johnson](https://twitter.com/AlexH_Johnson) and [Reggie Young](https://twitter.com/ReggieCYoung) for their insightful and nuanced feedback on earlier versions of this post. The good stuff is theirs. Any mistakes are mine.* 
