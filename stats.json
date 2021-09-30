@@ -5,8 +5,8 @@
       "component---src-templates-tag-template-jsx-a2e35ec6f4f30bc1fc0b.js.map"
     ],
     "path---posts-review-of-sigdial-semdial-2017": [
-      "path---posts-review-of-sigdial-semdial-2017-56e99db817e7b2e0279a.js",
-      "path---posts-review-of-sigdial-semdial-2017-56e99db817e7b2e0279a.js.map"
+      "path---posts-review-of-sigdial-semdial-2017-30bd7dd5598ad5f39f5c.js",
+      "path---posts-review-of-sigdial-semdial-2017-30bd7dd5598ad5f39f5c.js.map"
     ],
     "path---tags-a-i": [
       "path---tags-a-i-d7fc180051b53bcfd7db.js",
@@ -17,44 +17,44 @@
       "component---src-templates-page-template-jsx-8bb23bfa2cd73414d601.js.map"
     ],
     "path---posts-nlp-trends-acl-2019": [
-      "path---posts-nlp-trends-acl-2019-735ae6846837d31398b7.js",
-      "path---posts-nlp-trends-acl-2019-735ae6846837d31398b7.js.map"
+      "path---posts-nlp-trends-acl-2019-9ec94ae0121ef463d4f0.js",
+      "path---posts-nlp-trends-acl-2019-9ec94ae0121ef463d4f0.js.map"
     ],
     "path---posts-ml-lesson-curriculum": [
-      "path---posts-ml-lesson-curriculum-8c7a63766ba51097c1e8.js",
-      "path---posts-ml-lesson-curriculum-8c7a63766ba51097c1e8.js.map"
+      "path---posts-ml-lesson-curriculum-a67edb8e714a73aed10d.js",
+      "path---posts-ml-lesson-curriculum-a67edb8e714a73aed10d.js.map"
     ],
     "path---posts-fundamental-deep-learning-algorithms-to-learn": [
-      "path---posts-fundamental-deep-learning-algorithms-to-learn-fd55fe6a1767b5ce3061.js",
-      "path---posts-fundamental-deep-learning-algorithms-to-learn-fd55fe6a1767b5ce3061.js.map"
+      "path---posts-fundamental-deep-learning-algorithms-to-learn-05954ba6324e4a6a72bd.js",
+      "path---posts-fundamental-deep-learning-algorithms-to-learn-05954ba6324e4a6a72bd.js.map"
     ],
     "component---src-pages-projects-jsx": [
       "component---src-pages-projects-jsx-eebfb474503de3530114.js",
       "component---src-pages-projects-jsx-eebfb474503de3530114.js.map"
     ],
     "path---posts-regularization": [
-      "path---posts-regularization-1156f831b0e0b907192d.js",
-      "path---posts-regularization-1156f831b0e0b907192d.js.map"
+      "path---posts-regularization-4bec236c76982c0cb88a.js",
+      "path---posts-regularization-4bec236c76982c0cb88a.js.map"
     ],
     "path---posts-a-new-multiturn-dialogue-dataset": [
-      "path---posts-a-new-multiturn-dialogue-dataset-26d4a85b37137660f4e1.js",
-      "path---posts-a-new-multiturn-dialogue-dataset-26d4a85b37137660f4e1.js.map"
+      "path---posts-a-new-multiturn-dialogue-dataset-772ffa54c1524de64f16.js",
+      "path---posts-a-new-multiturn-dialogue-dataset-772ffa54c1524de64f16.js.map"
     ],
     "path---posts-deep-contextualized-word-representations-elmo": [
-      "path---posts-deep-contextualized-word-representations-elmo-a9811c21c39af95f9e97.js",
-      "path---posts-deep-contextualized-word-representations-elmo-a9811c21c39af95f9e97.js.map"
+      "path---posts-deep-contextualized-word-representations-elmo-7afcb2075b85d40dc95a.js",
+      "path---posts-deep-contextualized-word-representations-elmo-7afcb2075b85d40dc95a.js.map"
     ],
     "path---tags-dialogue": [
       "path---tags-dialogue-dbae69cda00453f29c65.js",
       "path---tags-dialogue-dbae69cda00453f29c65.js.map"
     ],
     "path---posts-fundamentals-of-linear-regression": [
-      "path---posts-fundamentals-of-linear-regression-e360dd4d994558e436d6.js",
-      "path---posts-fundamentals-of-linear-regression-e360dd4d994558e436d6.js.map"
+      "path---posts-fundamentals-of-linear-regression-25cb1e71c56388d3c476.js",
+      "path---posts-fundamentals-of-linear-regression-25cb1e71c56388d3c476.js.map"
     ],
     "path---blog": [
-      "path---blog-1ac16c6abfcbe590d598.js",
-      "path---blog-1ac16c6abfcbe590d598.js.map"
+      "path---blog-26250b38fed856beddbb.js",
+      "path---blog-26250b38fed856beddbb.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
@@ -69,8 +69,8 @@
       "path---tags-computer-vision-da8532de90c55af7c94d.js.map"
     ],
     "path---posts-machine-learning-project-model-v-1": [
-      "path---posts-machine-learning-project-model-v-1-66aec6b2dac94e1e3133.js",
-      "path---posts-machine-learning-project-model-v-1-66aec6b2dac94e1e3133.js.map"
+      "path---posts-machine-learning-project-model-v-1-0f72fbcf8fef992010a0.js",
+      "path---posts-machine-learning-project-model-v-1-0f72fbcf8fef992010a0.js.map"
     ],
     "component---src-layouts-index-jsx": [
       "component---src-layouts-index-jsx-b504d383bf535d8d5521.js",
@@ -85,8 +85,12 @@
       "path---tags-natural-language-processing-420dc42aece70139ae53.js.map"
     ],
     "path---posts-neural-network-grab-bag": [
-      "path---posts-neural-network-grab-bag-107e8989287ac1279342.js",
-      "path---posts-neural-network-grab-bag-107e8989287ac1279342.js.map"
+      "path---posts-neural-network-grab-bag-53cf50e511b6d7db49e9.js",
+      "path---posts-neural-network-grab-bag-53cf50e511b6d7db49e9.js.map"
+    ],
+    "path---posts-united-states-financial-regulatory-system": [
+      "path---posts-united-states-financial-regulatory-system-abbd6ded0ea040ea48b3.js",
+      "path---posts-united-states-financial-regulatory-system-abbd6ded0ea040ea48b3.js.map"
     ],
     "path---projects": [
       "path---projects-2ebdd16b740b0b99d391.js",
@@ -97,80 +101,84 @@
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "path---posts-setting-up-a-machine-learning-project": [
-      "path---posts-setting-up-a-machine-learning-project-734d880b7e1caa213243.js",
-      "path---posts-setting-up-a-machine-learning-project-734d880b7e1caa213243.js.map"
+      "path---posts-setting-up-a-machine-learning-project-24565dd72bfc9ca54576.js",
+      "path---posts-setting-up-a-machine-learning-project-24565dd72bfc9ca54576.js.map"
     ],
     "path---posts-recurrent-neural-networks": [
-      "path---posts-recurrent-neural-networks-102bf58a0724abd94d1e.js",
-      "path---posts-recurrent-neural-networks-102bf58a0724abd94d1e.js.map"
+      "path---posts-recurrent-neural-networks-a61cc33f6bc858c26135.js",
+      "path---posts-recurrent-neural-networks-a61cc33f6bc858c26135.js.map"
     ],
     "component---src-templates-post-template-jsx": [
       "component---src-templates-post-template-jsx-76535058387f9039db29.js",
       "component---src-templates-post-template-jsx-76535058387f9039db29.js.map"
     ],
     "path---posts-convolutional-neural-networks": [
-      "path---posts-convolutional-neural-networks-ed68d5571f93ffe48b24.js",
-      "path---posts-convolutional-neural-networks-ed68d5571f93ffe48b24.js.map"
+      "path---posts-convolutional-neural-networks-6f532dad9d6fd3c37076.js",
+      "path---posts-convolutional-neural-networks-6f532dad9d6fd3c37076.js.map"
     ],
     "path---tags-data-science": [
       "path---tags-data-science-140793e1af387cff84a5.js",
       "path---tags-data-science-140793e1af387cff84a5.js.map"
     ],
     "path---posts-building-a-deep-learning-computer": [
-      "path---posts-building-a-deep-learning-computer-89087578b258eaf7ac3e.js",
-      "path---posts-building-a-deep-learning-computer-89087578b258eaf7ac3e.js.map"
+      "path---posts-building-a-deep-learning-computer-79e0e251dae9d8e5d7d0.js",
+      "path---posts-building-a-deep-learning-computer-79e0e251dae9d8e5d7d0.js.map"
     ],
     "path---posts-decision-trees": [
-      "path---posts-decision-trees-a6babf89b73486c89fc8.js",
-      "path---posts-decision-trees-a6babf89b73486c89fc8.js.map"
+      "path---posts-decision-trees-4bff3f328495277be793.js",
+      "path---posts-decision-trees-4bff3f328495277be793.js.map"
     ],
     "path---posts-deep-dive-into-neural-networks": [
-      "path---posts-deep-dive-into-neural-networks-94fbe033a77e320bb8de.js",
-      "path---posts-deep-dive-into-neural-networks-94fbe033a77e320bb8de.js.map"
+      "path---posts-deep-dive-into-neural-networks-b823ae5f31874a058241.js",
+      "path---posts-deep-dive-into-neural-networks-b823ae5f31874a058241.js.map"
     ],
     "path---posts-machine-learning-project-error-analysis-model-v-2": [
-      "path---posts-machine-learning-project-error-analysis-model-v-2-2a5a3c1418b2ac768faf.js",
-      "path---posts-machine-learning-project-error-analysis-model-v-2-2a5a3c1418b2ac768faf.js.map"
+      "path---posts-machine-learning-project-error-analysis-model-v-2-14fc618953c30fac0dd1.js",
+      "path---posts-machine-learning-project-error-analysis-model-v-2-14fc618953c30fac0dd1.js.map"
     ],
     "path---posts-transformers-attention-in-disguise": [
-      "path---posts-transformers-attention-in-disguise-abebcc3a4d9ca8fb3132.js",
-      "path---posts-transformers-attention-in-disguise-abebcc3a4d9ca8fb3132.js.map"
+      "path---posts-transformers-attention-in-disguise-0c429c30b5b8d4227424.js",
+      "path---posts-transformers-attention-in-disguise-0c429c30b5b8d4227424.js.map"
     ],
     "path---posts-a-software-interview-challenge": [
-      "path---posts-a-software-interview-challenge-08ddb072e8e9e94bf4f2.js",
-      "path---posts-a-software-interview-challenge-08ddb072e8e9e94bf4f2.js.map"
+      "path---posts-a-software-interview-challenge-d39d250bc6c0b0551f85.js",
+      "path---posts-a-software-interview-challenge-d39d250bc6c0b0551f85.js.map"
+    ],
+    "path---tags-fintech": [
+      "path---tags-fintech-5195ef233b93d2d6ac10.js",
+      "path---tags-fintech-5195ef233b93d2d6ac10.js.map"
     ],
     "path---posts-state-of-the-art-question-answering-streamlit-huggingface": [
-      "path---posts-state-of-the-art-question-answering-streamlit-huggingface-80f20cefc288a2c58e31.js",
-      "path---posts-state-of-the-art-question-answering-streamlit-huggingface-80f20cefc288a2c58e31.js.map"
+      "path---posts-state-of-the-art-question-answering-streamlit-huggingface-a9262edcd68e89aef965.js",
+      "path---posts-state-of-the-art-question-answering-streamlit-huggingface-a9262edcd68e89aef965.js.map"
     ],
     "path---index": [
-      "path---index-2550808c584ee00e677a.js",
-      "path---index-2550808c584ee00e677a.js.map"
+      "path---index-9ad1fd87f39351b72122.js",
+      "path---index-9ad1fd87f39351b72122.js.map"
     ],
     "path---posts-we-need-data-engineers-not-data-scientists": [
-      "path---posts-we-need-data-engineers-not-data-scientists-8f742115e7a27dcdeec6.js",
-      "path---posts-we-need-data-engineers-not-data-scientists-8f742115e7a27dcdeec6.js.map"
+      "path---posts-we-need-data-engineers-not-data-scientists-c4b7f48e87f56771bc70.js",
+      "path---posts-we-need-data-engineers-not-data-scientists-c4b7f48e87f56771bc70.js.map"
     ],
     "path---posts-why-all-the-excitement-about-ai": [
-      "path---posts-why-all-the-excitement-about-ai-8474a195e80ebc75811e.js",
-      "path---posts-why-all-the-excitement-about-ai-8474a195e80ebc75811e.js.map"
+      "path---posts-why-all-the-excitement-about-ai-460a0337217c7dc3b2cc.js",
+      "path---posts-why-all-the-excitement-about-ai-460a0337217c7dc3b2cc.js.map"
     ],
     "path---tags-dataset": [
       "path---tags-dataset-214c5193859710386a99.js",
       "path---tags-dataset-214c5193859710386a99.js.map"
     ],
     "path---posts-introduction-data-science-life-cycle": [
-      "path---posts-introduction-data-science-life-cycle-48c4749c972654fbea6e.js",
-      "path---posts-introduction-data-science-life-cycle-48c4749c972654fbea6e.js.map"
+      "path---posts-introduction-data-science-life-cycle-90c6e594e54f09f3a3b0.js",
+      "path---posts-introduction-data-science-life-cycle-90c6e594e54f09f3a3b0.js.map"
     ],
     "path---tags-engineering": [
       "path---tags-engineering-ceb71bbe196efd4eb266.js",
       "path---tags-engineering-ceb71bbe196efd4eb266.js.map"
     ],
     "path---posts-support-vector-machines": [
-      "path---posts-support-vector-machines-0c8d883b4ecabfc89d31.js",
-      "path---posts-support-vector-machines-0c8d883b4ecabfc89d31.js.map"
+      "path---posts-support-vector-machines-90ed2193c43432ad0879.js",
+      "path---posts-support-vector-machines-90ed2193c43432ad0879.js.map"
     ],
     "commons": [
       "commons-0bb2d41bfb39cf8296bb.js",
@@ -179,20 +187,20 @@
       "build-js-styles.css.map"
     ],
     "path---tags-business": [
-      "path---tags-business-a413c24055a9d8de9c7e.js",
-      "path---tags-business-a413c24055a9d8de9c7e.js.map"
+      "path---tags-business-2fb3577ef94be05ae7cf.js",
+      "path---tags-business-2fb3577ef94be05ae7cf.js.map"
     ],
     "path---teaching": [
       "path---teaching-f645e3c7d8aa43468d94.js",
       "path---teaching-f645e3c7d8aa43468d94.js.map"
     ],
     "path---posts-complete-artificial-intelligence-undergraduate-course-plan": [
-      "path---posts-complete-artificial-intelligence-undergraduate-course-plan-9ae59ef9dea8843579f9.js",
-      "path---posts-complete-artificial-intelligence-undergraduate-course-plan-9ae59ef9dea8843579f9.js.map"
+      "path---posts-complete-artificial-intelligence-undergraduate-course-plan-4144a2002185c9841ace.js",
+      "path---posts-complete-artificial-intelligence-undergraduate-course-plan-4144a2002185c9841ace.js.map"
     ],
     "path---posts-not-so-naive-bayes": [
-      "path---posts-not-so-naive-bayes-2632b68292bb01d20170.js",
-      "path---posts-not-so-naive-bayes-2632b68292bb01d20170.js.map"
+      "path---posts-not-so-naive-bayes-3900ea4b0dd9a83eb4a2.js",
+      "path---posts-not-so-naive-bayes-3900ea4b0dd9a83eb4a2.js.map"
     ],
     "path---404-html": [
       "path---404-html-2ebdd16b740b0b99d391.js",
@@ -211,66 +219,66 @@
       "component---src-pages-blog-jsx-c213e9dfd099e47ed564.js.map"
     ],
     "path---posts-being-a-good-machine-learning-data-scientist": [
-      "path---posts-being-a-good-machine-learning-data-scientist-cf902f11d08a8246f145.js",
-      "path---posts-being-a-good-machine-learning-data-scientist-cf902f11d08a8246f145.js.map"
+      "path---posts-being-a-good-machine-learning-data-scientist-a4a424c0b4dbf3578268.js",
+      "path---posts-being-a-good-machine-learning-data-scientist-a4a424c0b4dbf3578268.js.map"
     ],
     "path---posts-introduction-to-logistic-regression": [
-      "path---posts-introduction-to-logistic-regression-c5425a79b6c27a221321.js",
-      "path---posts-introduction-to-logistic-regression-c5425a79b6c27a221321.js.map"
+      "path---posts-introduction-to-logistic-regression-5c0481daa5364c9c681d.js",
+      "path---posts-introduction-to-logistic-regression-5c0481daa5364c9c681d.js.map"
     ],
     "path---posts-ml-trends-neurips-2019": [
-      "path---posts-ml-trends-neurips-2019-c63cd720f3d75e585f38.js",
-      "path---posts-ml-trends-neurips-2019-c63cd720f3d75e585f38.js.map"
+      "path---posts-ml-trends-neurips-2019-1667e2f2c35439c4267d.js",
+      "path---posts-ml-trends-neurips-2019-1667e2f2c35439c4267d.js.map"
     ],
     "path---posts-feature-selection": [
-      "path---posts-feature-selection-e1c5e8148a37ac368ebc.js",
-      "path---posts-feature-selection-e1c5e8148a37ac368ebc.js.map"
+      "path---posts-feature-selection-b6bd2f3aee5e7615ef7b.js",
+      "path---posts-feature-selection-b6bd2f3aee5e7615ef7b.js.map"
     ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
     "path---posts-k-nearest-neighbors": [
-      "path---posts-k-nearest-neighbors-efacdc125f395ab87c3b.js",
-      "path---posts-k-nearest-neighbors-efacdc125f395ab87c3b.js.map"
+      "path---posts-k-nearest-neighbors-129884cb4197aeb5b51b.js",
+      "path---posts-k-nearest-neighbors-129884cb4197aeb5b51b.js.map"
     ],
     "component---src-pages-index-jsx": [
       "component---src-pages-index-jsx-029c4a0db57aee7eb3bd.js",
       "component---src-pages-index-jsx-029c4a0db57aee7eb3bd.js.map"
     ],
     "path---posts-what-kmeans-clustering": [
-      "path---posts-what-kmeans-clustering-c5e30d8f886d91b71da8.js",
-      "path---posts-what-kmeans-clustering-c5e30d8f886d91b71da8.js.map"
+      "path---posts-what-kmeans-clustering-185245394f6165694d58.js",
+      "path---posts-what-kmeans-clustering-185245394f6165694d58.js.map"
     ],
     "path---posts-bias-variance-tradeoff": [
-      "path---posts-bias-variance-tradeoff-b6cf8816eb5214c818b7.js",
-      "path---posts-bias-variance-tradeoff-b6cf8816eb5214c818b7.js.map"
+      "path---posts-bias-variance-tradeoff-f6844227634a1fbf368a.js",
+      "path---posts-bias-variance-tradeoff-f6844227634a1fbf368a.js.map"
     ],
     "path---posts-market-basket-analysis": [
-      "path---posts-market-basket-analysis-f2981e9ed18fe71bb6a9.js",
-      "path---posts-market-basket-analysis-f2981e9ed18fe71bb6a9.js.map"
+      "path---posts-market-basket-analysis-66cdb6fc32d43c135c64.js",
+      "path---posts-market-basket-analysis-66cdb6fc32d43c135c64.js.map"
     ],
     "path---posts-fast-object-detection-with-fast-rcnn": [
-      "path---posts-fast-object-detection-with-fast-rcnn-548cbea84814ae42be64.js",
-      "path---posts-fast-object-detection-with-fast-rcnn-548cbea84814ae42be64.js.map"
+      "path---posts-fast-object-detection-with-fast-rcnn-b00e2a8070b19f258124.js",
+      "path---posts-fast-object-detection-with-fast-rcnn-b00e2a8070b19f258124.js.map"
     ],
     "path---posts-principal-components-analysis": [
-      "path---posts-principal-components-analysis-cf510f35cef2bc6ac223.js",
-      "path---posts-principal-components-analysis-cf510f35cef2bc6ac223.js.map"
+      "path---posts-principal-components-analysis-f6a6e28c024e313a2d65.js",
+      "path---posts-principal-components-analysis-f6a6e28c024e313a2d65.js.map"
     ],
     "app": [
-      "app-ef06dc21a6263bf0e5a9.js",
+      "app-f49c466abf76238c87cb.js",
       "build-js-styles.css",
-      "app-ef06dc21a6263bf0e5a9.js.map",
+      "app-f49c466abf76238c87cb.js.map",
       "build-js-styles.css.map"
     ],
     "path---posts-model-evaluation": [
-      "path---posts-model-evaluation-73686f14ea3c2c82b733.js",
-      "path---posts-model-evaluation-73686f14ea3c2c82b733.js.map"
+      "path---posts-model-evaluation-ef6399f662940f4546be.js",
+      "path---posts-model-evaluation-ef6399f662940f4546be.js.map"
     ],
     "path---posts-machine-learning-model-selection": [
-      "path---posts-machine-learning-model-selection-2dd8e9f53ef14edead3a.js",
-      "path---posts-machine-learning-model-selection-2dd8e9f53ef14edead3a.js.map"
+      "path---posts-machine-learning-model-selection-c482373189cb82a188fc.js",
+      "path---posts-machine-learning-model-selection-c482373189cb82a188fc.js.map"
     ],
     "path---tags-machine-learning": [
       "path---tags-machine-learning-ada0b1772e079b75b591.js",
@@ -281,28 +289,32 @@
       "path---404-2ebdd16b740b0b99d391.js.map"
     ],
     "path---posts-performing-exploratory-data-analysis": [
-      "path---posts-performing-exploratory-data-analysis-5cc9949e38fb14ba4211.js",
-      "path---posts-performing-exploratory-data-analysis-5cc9949e38fb14ba4211.js.map"
+      "path---posts-performing-exploratory-data-analysis-d0b0fa04841ca69b85cf.js",
+      "path---posts-performing-exploratory-data-analysis-d0b0fa04841ca69b85cf.js.map"
     ],
     "path---posts-machine-learning-ensembling": [
-      "path---posts-machine-learning-ensembling-aa4c95138b2a4a8d88ba.js",
-      "path---posts-machine-learning-ensembling-aa4c95138b2a4a8d88ba.js.map"
+      "path---posts-machine-learning-ensembling-835df6d8969961cebe89.js",
+      "path---posts-machine-learning-ensembling-835df6d8969961cebe89.js.map"
     ],
     "path---tags-deep-learning": [
       "path---tags-deep-learning-16102d5512db8e36a63a.js",
       "path---tags-deep-learning-16102d5512db8e36a63a.js.map"
     ],
     "path---posts-object-detection-with-rcnn": [
-      "path---posts-object-detection-with-rcnn-a229d2d0b7385bc68dfe.js",
-      "path---posts-object-detection-with-rcnn-a229d2d0b7385bc68dfe.js.map"
+      "path---posts-object-detection-with-rcnn-38636ded99524bcba205.js",
+      "path---posts-object-detection-with-rcnn-38636ded99524bcba205.js.map"
     ],
     "path---about": [
-      "path---about-cad6c03997b32755824c.js",
-      "path---about-cad6c03997b32755824c.js.map"
+      "path---about-5c86b01f075046b82025.js",
+      "path---about-5c86b01f075046b82025.js.map"
     ],
     "path---posts-machine-learning-project-model-deployment": [
-      "path---posts-machine-learning-project-model-deployment-74617cfb8f1289095a8b.js",
-      "path---posts-machine-learning-project-model-deployment-74617cfb8f1289095a8b.js.map"
+      "path---posts-machine-learning-project-model-deployment-b5751c7d43fca6cc84e6.js",
+      "path---posts-machine-learning-project-model-deployment-b5751c7d43fca6cc84e6.js.map"
+    ],
+    "path---tags-regulation": [
+      "path---tags-regulation-2c82c1efb1012ee6f487.js",
+      "path---tags-regulation-2c82c1efb1012ee6f487.js.map"
     ]
   }
 }
