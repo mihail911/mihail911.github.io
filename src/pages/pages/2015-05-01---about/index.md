@@ -36,3 +36,10 @@ I also consult companies on how to design machine learning and data-driven solut
 - [What is the Data Science Life Cycle?](/posts/introduction-data-science-life-cycle/)
 - [Building a V1 Machine Learning Model](/posts/machine-learning-project-model-v1/)
 - [Machine Learning Error Analysis](/posts/machine-learning-project-error-analysis-model-v2/)
+
+### Speaking
+- [What Researchers and Engineers Can Learn From Each Other](https://www.youtube.com/watch?v=d9xVXqKq3sU) - DataTalks.Club
+- [Pursuing a Career in Artificial Intelligence: Or How I Learned to Stop Worrying and Love the Data](https://drive.google.com/file/d/1b8aPqd_GTvCt5oACjGiJtrkm_czwIjBb/view?usp=sharing) - Georgia Tech Data Science Club
+- [State-of-the-Art is Just the Start: Data Science From Ideation to Deployment](https://drive.google.com/file/d/1Zvu_gNov0i-ceHU4MDHXr63vT-LgDXdr/view?usp=sharing) - University of Wisconsin Madison Data Science Club
+- [Key-Value Retrieval Networks For Task-Oriented Dialogue](https://www.superlectures.com/sigdial2017/key-value-retrieval-networks-for-task-oriented-dialogue) - SIGDial 2017
+
