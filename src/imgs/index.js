@@ -16,6 +16,7 @@ import aclWorkshopPic from './aclworkshop.png';
 import gluePic from './glue2.jpg';
 import primerPic from './ml_primer_img.png';
 import observersPic from './observers.png';
+import taxesPic from './wheredoestaxmoneygo.png';
 
 const nameToPic = {
   adversarial: adversarialPic,
@@ -27,6 +28,7 @@ const nameToPic = {
   nnli: nnliPic,
   sceneseer: sceneseerPic,
   wien: wienPic,
+  taxes: taxesPic,
   dst: dstPic,
   vdn: vdnPic,
   confetti: confettiPic,

@@ -41,7 +41,7 @@
   border: 2px solid $color-primary2;
   border-bottom-width: 0px;
   border-radius: 5px;
-
+  padding: 5px 0px 5px 0px;
   @include project-internal-styles();
 }
 
@@ -52,6 +52,7 @@
   flex-direction: row;
   border: 2px solid $color-primary2;
   border-radius: 5px;
+  padding: 5px 0px 5px 0px;
   @include project-internal-styles();
 }
 

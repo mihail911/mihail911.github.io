@@ -3,7 +3,6 @@ import './style.scss';
 import ProjectDescription from '../ProjectDescription';
 
 
-
 class ProjectPageDetails extends React.Component {
   render() {
     return (
@@ -16,15 +15,19 @@ class ProjectPageDetails extends React.Component {
           title="Confetti AI"
           picName="confetti"
           link="https://www.confetti.ai/"
-          authors="Mihail Eric"
           description="Confetti AI is an educational platform helping people learn the skills to succeed in artificial intelligence careers. It provides a collection of targeted resources and tools to empower the next generation of AI practitioners."
           meta="Subscribe to our newsletter!"
+        />
+        <ProjectDescription
+          title="Where Does Tax Money Go"
+          picName="taxes"
+          link="https://wheredoestaxmoneygo.mihaileric.com/"
+          description="Every year, your hard-earned money gets shuffled to taxes. The purpose of this little project was an attempt to answer the simple question: what does your tax money actually pay for?"
         />
         <ProjectDescription
           title="Artificial Intelligence School"
           picName="aiSchool"
           link="https://itunes.apple.com/us/app/artificial-intelligence-school/id1369987569?mt=8"
-          authors="Mihail Eric"
           description="AI School is a mobile app designed to teach the basics of artificial intelligence, machine learning, and deep learning. Includes a comprehensive lesson plan for learning fundamental principles."
           meta="Available on both the App Store and Google Play!"
           edge="true"

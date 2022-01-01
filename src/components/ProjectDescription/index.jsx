@@ -28,12 +28,18 @@ class ProjectDescription extends React.Component {
           <div className="description">
             {this.props.description}
           </div>
-          <div className="authors">
-            {this.props.authors}
-          </div>
-          <div className="meta">
-            {this.props.meta}
-          </div>
+          {
+            this.props.authors ? 
+              <div className="authors">
+                {this.props.authors}
+              </div> : null
+          }
+
+          {
+            this.props.meta ? <div className="meta">
+              {this.props.meta}
+            </div> : null
+          }
         </div>
       </div>
     );

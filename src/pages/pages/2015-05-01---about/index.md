@@ -8,9 +8,9 @@ I optimize for impact. I strive to work with talented people to do amazing thing
 
 I'm an engineer, researcher, and educator that has helped start teams at innovative organizations such as Amazon Alexa and RideOS.  
 
-I'm building [Confetti AI](https://www.confetti.ai/), the premier educational platform for training the next generation of machine learning practitioners. 
+I run a consultancy helping companies across verticals deliver machine learning and data-driven solutions to their hardest problems with a special focus on NLP, recommendation systems, tabular data, and computer vision domains. We've helped teams deliver 33% lift on key business metrics in <6 weeks. If that is of interest, don't hesitate to reach out. 
 
-I also consult companies on how to design machine learning and data-driven solutions to their hardest problems with a proven track record of delivering high ROI. If that is of interest, don't hesitate to reach out. 
+I also built [Confetti AI](https://www.confetti.ai/), the premier educational platform for training the next generation of machine learning practitioners.
 
 ### Research
 - I've been published at the top artificial intelligence conferences in the world. My work has also gotten [news coverage](https://venturebeat.com/2019/12/04/amazon-proposes-a-home-robot-that-asks-you-questions-when-its-confused/). Check out [my past projects](/projects) for a full list of publications.
@@ -27,7 +27,7 @@ I also consult companies on how to design machine learning and data-driven solut
 
 ### Writing
 **Popular**  
-- [We Need Data Engineers Not Data Scientists](/posts/we-need-data-engineers-not-data-scientists/) (>75K Views, Top of [Hacker News](https://news.ycombinator.com/) Front Page)  
+- [We Don't Need Data Scientists, We Need Data Engineers](/posts/we-need-data-engineers-not-data-scientists/) (>175K Views, Top of [Hacker News](https://news.ycombinator.com/) Front Page, Top [KDNuggets Article of 2021](https://www.kdnuggets.com/2021/12/top-stories-2021.html))  
 - [A Machine Learning Primer](https://www.confetti.ai/assets/ml-primer/ml_primer.pdf) (>50K Views, [Top All-Time Reddit r/datascience](https://www.reddit.com/r/datascience/top/?t=all))
 - [Complete Artificial Intelligence Undergraduate Course Plan](/posts/complete-artificial-intelligence-undergraduate-course-plan/) (>20K Views)  
 - [Setting Up a Machine Learning Project](/posts/setting-up-a-machine-learning-project/) (>15K Views) with [accompanying starter template](https://github.com/mihail911/e2eml-cookiecutter)
