@@ -8,7 +8,7 @@ I optimize for impact. I strive to work with talented people to do amazing thing
 
 I'm an engineer, researcher, and educator that has helped start teams at innovative organizations such as Amazon Alexa and RideOS.  
 
-I run a consultancy helping companies across verticals deliver machine learning and data-driven solutions to their hardest problems with a special focus on NLP, recommendation systems, tabular data, and computer vision domains. We've helped teams deliver 33% lift on key business metrics in <6 weeks. If that is of interest, don't hesitate to reach out. 
+I [run a consultancy](https://www.pametandata.com) helping companies across verticals deliver machine learning and data-driven solutions to their hardest problems with a special focus on NLP, recommendation systems, tabular data, and computer vision domains. We've helped teams deliver 33% lift on key business metrics in <6 weeks. If that is of interest, [don't hesitate to reach out](mailto:info@pametandata.com). 
 
 I also built [Confetti AI](https://www.confetti.ai/), the premier educational platform for training the next generation of machine learning practitioners.
 
