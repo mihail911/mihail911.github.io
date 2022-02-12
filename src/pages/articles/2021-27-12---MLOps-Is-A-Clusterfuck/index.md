@@ -46,7 +46,7 @@ You close your browser, pour yourself a glass of Scotch, and ponder the ficklene
 
 Today, the machine learning continues to be one of the most talked about and touted technology waves in society promising to revolutionize every corner of society. 
 
-And yet the ecosystem is in a frenzied state. New fundamental science advances come out of every week. Startups and enterprises spray new developer tools into the market trying to capture a chunk of what promises to be a market worth between [$40-120 billion by 2025](https://searchsoftwarequality.techtarget.com/feature/Analysts-mixed-on-future-growth-of-MLOps-AutoML-tools). 
+And yet the ecosystem is in a frenzied state. New fundamental science advances come out of every week. Startups and enterprises spray new developer tools into the market trying to capture a chunk of what many speculate to be a market worth between [$40-120 billion by 2025](https://searchsoftwarequality.techtarget.com/feature/Analysts-mixed-on-future-growth-of-MLOps-AutoML-tools). 
 
 Things are moving fast and furious. And yet if you're just entering the discourse, how do you make sense of it all?
 
@@ -72,7 +72,7 @@ It's a multidisciplinary field that exists at the intersection of devops, data s
 
 While there continue to be exciting new advances in AI research, today we are in the deployment phase of machine learning. As a consequence, we are seeing an overabundance of new tools being created to standardize and capture companies' workflows delivering machine learning value. 
 
-In the Gartner technology hype cycle paradigm, we are gradually entering the Slope of Enlightenment where we've passed the AGI fear-mongering and organizations are now asking the serious operational questions about how they can get the best best bang for their machine learning buck.
+In the Gartner technology hype cycle paradigm, we are gradually entering the Slope of Enlightenment where we've passed the AGI fear-mongering and Spike Jonze *Her* promises and organizations are now asking the serious operational questions about how they can get the best best bang for their machine learning buck.
 
 <figure>
     <img src="./hype_cycle_ml.png" alt="hype cycle for machine learning ops">
@@ -80,24 +80,61 @@ In the Gartner technology hype cycle paradigm, we are gradually entering the Slo
 
 
 # The State of Affairs Today
-- MLOps is an a frenzied state with regards to tooling
-- State of affairs is both incredibly exciting and anxiety-inducing. 
-- so many stores: model store, feature store, evaluation store - they're all just fancy databases
-- the people who really suffer are those newcomers to the field because the barrier to entry is really steep
-  - analogy to webdev, lucky to have someone handhold me through the process
-- unless you are a startup founder, many ML practitioners tend to be bearish on the current tooling landscape
 
-- at least bimodal distribution of customer segment, not everyone has uber scale problems but they define the narrative
-  - early wins companies
-  - refer to josh tobin's designation
-  - jacopo's resource
-  - include plot of distribution of companies, long-tail distribution
+MLOps is in a wild state today with the tooling landscape offering more rare breeds than an Amazonian rainforest. As an example, most practitioners would agree that monitoring your machine learning models in production is a crucial part of maintaining a robust, performant architecture. However when you get around to picking a provider I can name 6 different options without even trying: Fiddler, Arize, Evidently, Whylabs, Sagemaker Monitoring, Arthur, etc etc. And we haven't even mentioned the pure data monitoring tools. 
+
+Don't get me wrong: it's nice to have options but are these different monitoring tools really *so* differentiated that we need 6+ of them? Is the market for monitoring really *so* big that these are all billion dollar companies?
+
+At least with monitoring, there's generally agreement about what exact part of the machine learning life cycle these companies are trying to own. Other parts of the stack are not as crisply understood and accepted.  
+
+To illustrate this point, it's become popular among companies to make every new tool they build for the MLOps stack some kind of a *store*. We started with [model stores](https://neptune.ai/blog/mlops-model-stores). Then [feature stores](https://www.tecton.ai/blog/what-is-a-feature-store/) emerged on the scene. Now we also have [metric stores](https://medium.com/airbnb-engineering/how-airbnb-achieved-metric-consistency-at-scale-f23cc53dea70). Oh also [evaluation stores](https://gantry.io/). 
+
+My general take is that the machine learning community is particularly creative when it comes to making synonyms for *database*. A more serious take (when you disregard the effect of companies' marketing attempts) is that the entire field is still standardizing the best way to architect fully-fledged ML pipelines. Achieving consensus around best practices will be a 5-10+year transformation easily. 
+
+During a particularly intriguing discussion among practitioners within the [MLOps community](https://mlops.community/), [Lina Weichbrodt](Lina Weichbrodt) made a claim that the *ML stack* is about as general as the *backend programming development stack.* 
+
+There's something particularly astute about that observation, the idea that a canonical *ML stack* is still not well-defined. In that light, when we consider the phases of an MLOps pipeline rather than a clear architecture diagram like this
+
+<figure>
+    <img src="./hype_cycle_ml.png" alt="slide about ML ops stack from sculley paper">
+</figure>
+
+what we have today is probably something more like this
+
+<figure>
+    <img src="./hype_cycle_ml.png" alt="slide about ML ops stack from sculley paper but looking like an amoeba">
+</figure>
+
+We have a sense for what a lot of the right pieces are, but the true separation of concerns is still evolving. Hence MLOps tooling companies tend to enter the market addressing a certain niche and then inevitably start to expand amoeba-style into surrounding architectural responsibilities.
+
+I believe that the state of the tooling landscape with constantly changing responsibility shifts and new lines in the sand is especially hardest for newcomers to the field. It's a pretty rough time to be taking your first steps into MLOps. 
+
+I liken MLOps today to the state of modern web development where new tools are coming on the market all the time and there are about 300 different combinations of frameworks that you can use to build a simple "Hello World" webapp. 
+
+In these situations, my recommendation for newcomers is to 1) engage more experienced individuals to help you consider the options, think through different technology, and be a sounding board for "dumb" questions and 2) spend a lot of time building real systems so that you can experience first-hand the painpoints that you need different tools to address. 
+
+And recognize that no one has all the answers. We're all still figuring out the *right* way to do things.
+
+One other thing to appreciate is that it's easy to get the impression that machine learning sophistication among enterprises is incredibly advanced. Based on my experience and those of other practitioners I've spoken with, the reality of ML maturation among enterprises is far more demure than we would be led to believe based on the tooling and funding landscape. 
+
+The truth is there are only a handful of super sophisticated AI-first enterprises with robust machine learning infrastructure in place to handle their petabytes of data. While most companies don't have that scale of data and hence those types of ML requirements, these AI-first enterprises end up defining the narrative of tooling and standards.
+
+In reality, there's a huge long-tail distribution of awesome companies that are still figuring out their ML strategy.
+
+<figure>
+    <img src="./ml_sophistication_plot.png" alt="plot of machine learning sophistication among companies with huge long tail">
+</figure>
+
+These "ML at reasonable scale" companies (to use [Jacopo's terminology](http://www.jacopotagliabue.it/)), are fantastic businesses in their own right (in diverse verticals like automation, fashion, etc.) with good-sized proprietary datasets (hundreds of gigabytes to terabytes) that are still early in their ML adoption. 
+
+These companies still stand to get their "first-wins" with ML and generally have pretty low-hanging fruit to get those wins. They don't even necessarily require these super advanced sub-millisecond latency hyper-real-time pieces of infrastructure to start levelling up their machine learning. I believe that one of the big challenges for MLOps over the next 10 years will be helping to onboard these classes of businesses.
 
 
-# What MLOps Can Learn from CI/CD Revolution
+# What MLOps Can Learn From DevOps Over the Years
 - our abstractions are just not that clean yet, leaky in that many aspects of infrastructure trickle into data concerns
 - mlops is a mess because there are leaky abstractions across the architecture boundaries, things being redefined
 - We can look to past trends in tooling alla devops of 10+ years ago to see how things evolved
+- This is a transformation that will be 6-10+ years in the making easily
 
 # Strong Predictions, Weakly Held
 - Talk about things to look forward to - trends of the future
@@ -119,3 +156,7 @@ In the Gartner technology hype cycle paradigm, we are gradually entering the Slo
 
 
 
+Meanwhile experienced practitioners are inundated with new offerings everyday like a lucky [Bachelor](https://abc.com/shows/the-bachelor) contestant. 
+
+
+- unless you are a startup founder, many ML practitioners tend to be bearish on the current tooling landscape
