@@ -42,7 +42,9 @@ This is the first image you see:
 
 What. The. Actual. Hell. 
 
-You close your browser, pour yourself a glass of Scotch, and ponder the fickleness of life. Fin.
+You close your browser, pour yourself a glass of Scotch, and ponder the fickleness of life.
+
+---
 
 Today, the machine learning continues to be one of the most talked about and touted technology waves in society promising to revolutionize every corner of society. 
 
@@ -52,11 +54,11 @@ Things are moving fast and furious. And yet if you're just entering the discours
 
 In this post, I want to focus the discussion about the state of machine learning operations (MLOps for short) today, where we are, where we are going. 
 
-As a practitioner who's worked at leading AI organizations and also runs a [machine learning consultancy helping companies deliver data-driven value](https://www.pametandata.com/), I've experienced first-hand the trials and tribulations of bringing ML to the real world. I truly believe there's a lot to be optimistic about with machine learning, but the road is not without a handful of speed-bumps. 
+As a practitioner who's worked at leading AI organizations and also runs a [machine learning consultancy helping companies deliver data-driven value](https://www.pametandata.com/), I've experienced first-hand the trials and tribulations of bringing ML to the real world. I truly believe there's a lot to be optimistic about with machine learning, but the road is not without some speed-bumps. 
 
-Because Google Analytics tells me that 90% of readers are going to drop off after this intro, the TLDR of the post for those that want to be able to tell their colleagues "I got the gist of what he was saying."
+Because Google Analytics tells me that ~87% of readers are going to drop off after this intro, here's the TLDR of the post for those that want to be able to tell their colleagues "I got the gist of what he was saying."
 
-**TLDR**: TODO!
+**TLDR**: MLOps today is in a very messy and confusing state with regards to tooling, practices, and standards. However, this is to be expected given that we are still in the early phases of broader enterprise ML adoption. As this transformation continues over the coming years, expect the dust to settle while ML-driven value continues to be more widespread.
 
 Let's begin. 
 
@@ -72,7 +74,7 @@ It's a multidisciplinary field that exists at the intersection of devops, data s
 
 While there continue to be exciting new advances in AI research, today we are in the deployment phase of machine learning. As a consequence, we are seeing an overabundance of new tools being created to standardize and capture companies' workflows delivering machine learning value. 
 
-In the Gartner technology hype cycle paradigm, we are gradually entering the Slope of Enlightenment where we've passed the AGI fear-mongering and Spike Jonze *Her* promises and organizations are now asking the serious operational questions about how they can get the best best bang for their machine learning buck.
+In the Gartner technology hype cycle paradigm, we are gradually entering the Slope of Enlightenment where we've passed the AGI fear-mongering and [*Her*](https://en.wikipedia.org/wiki/Her_(film)) promises and organizations are now asking the serious operational questions about how they can get the best best bang for their machine learning buck.
 
 <figure>
     <img src="./hype_cycle_ml.png" alt="hype cycle for machine learning ops">
@@ -91,7 +93,7 @@ To illustrate this point, it's become popular among companies to make every new 
 
 My general take is that the machine learning community is particularly creative when it comes to making synonyms for *database*. A more serious take (when you disregard the effect of companies' marketing attempts) is that the entire field is still standardizing the best way to architect fully-fledged ML pipelines. Achieving consensus around best practices will be a 5-10+year transformation easily. 
 
-During a particularly intriguing discussion among practitioners within the [MLOps community](https://mlops.community/), [Lina Weichbrodt](Lina Weichbrodt) made a claim that the *ML stack* is about as general as the *backend programming development stack.* 
+During a particularly intriguing discussion among practitioners within the [MLOps community](https://mlops.community/), [Lina](Lina Weichbrodt) made a claim that the *ML stack* is about as general as the *backend programming development stack.* 
 
 There's something particularly astute about that observation, the idea that a canonical *ML stack* is still not well-defined. In that light, when we consider the phases of an MLOps pipeline rather than a clear architecture diagram like this
 
@@ -115,7 +117,7 @@ In these situations, my recommendation for newcomers is to 1) engage more experi
 
 And recognize that no one has all the answers. We're all still figuring out the *right* way to do things.
 
-One other thing to appreciate is that it's easy to get the impression that machine learning sophistication among enterprises is incredibly advanced. Based on my experience and those of other practitioners I've spoken with, the reality of ML maturation among enterprises is far more demure than we would be led to believe based on the tooling and funding landscape. 
+One other thing worth nothing is that it's easy to get the impression that machine learning sophistication among enterprises is incredibly advanced. Based on my experience and those of other practitioners I've spoken with, the reality of ML maturation among enterprises is far more demure than we would be led to believe based on the tooling and funding landscape. 
 
 The truth is there are only a handful of super sophisticated AI-first enterprises with robust machine learning infrastructure in place to handle their petabytes of data. While most companies don't have that scale of data and hence those types of ML requirements, these AI-first enterprises end up defining the narrative of tooling and standards.
 
@@ -131,32 +133,34 @@ These companies still stand to get their "first-wins" with ML and generally have
 
 
 # What MLOps Can Learn From DevOps Over the Years
-- our abstractions are just not that clean yet, leaky in that many aspects of infrastructure trickle into data concerns
-- mlops is a mess because there are leaky abstractions across the architecture boundaries, things being redefined
-- We can look to past trends in tooling alla devops of 10+ years ago to see how things evolved
-- This is a transformation that will be 6-10+ years in the making easily
+
+To help us contextualize where we are in the MLOps progression and where we are going, I believe it is helpful to consider the analogy of the DevOps movement.
+
+The adoption of DevOps practices in enterprises has been a multi-decade-long transformation. For a long time prior to the introduction of DevOps, software engineering and IT (or Ops) teams operated as functionally separate entities. This siloed organization incurred massive inefficiencies in product releases and updates. Google was among the first organizations to recognize this inefficiency, introducing the role of a site reliability engineer in 2003 to help bridge the gap between developers and ops people. 
+
+The principles of DevOps were further codified in a [landmark presentation](https://www.youtube.com/watch?v=LdOe18KhtT4) by John Allspaw and Paul Hammond in 2009 that argued enterprises should hire "ops who think like devs" and "devs who think like ops." Over the years, as DevOps matured we introduced concepts like continuous integration (and deployment) as well as new tools that have become staples of development teams around the world. 
+
+Okay, history lesson aside, how do we tie this back? 
+
+Devops is an interesting case study for understanding MLOps for a number of reasons: 1) it underscores the long period of transformation required for enterprise adoption, 2) it shows how the movement is comprised of both tooling advances as well as shifts in cultural mindset at organizations (both must go hand-in-hand), and 3) it highlights the emerging need for practitioners with cross-functional skills and expertise (silos be damned).
+
+MLOps today is in a frazzled state, but that's to be expected. It's still unclear how to best define clean abstractions around infrastructure, development, and data concerns. 
+
+We will adopt new practices and methodologies. Tools will come and go. There are a lot of questions, and as a community we are actively hypothesizing answers. The movement is still in its early innings. 
 
 # Strong Predictions, Weakly Held
-- Talk about things to look forward to - trends of the future
-  - closing the loop on machine learning systems (monitoring)
-  - declarative systems for ML, i do think analogy to DBs is an apt one
-- talent shortage is still rampant
-- Machine learning tapering Google trend, interest is slowing down?
-  - Deployment phase of cycle
 
+Now that the rant part of this post is over, I'd like to spend some time discussing things to look forward to. These trends for the future are an anecdotal combination of many discussions with ML practitioners as well as a healthy sprinkling of the stuff I'm most excited about.
 
+From a technology and architectural perspective, there are a few things we'll continue to see investment in:
+  - **Closing the loop in machine learning systems.** Right now many machine learning systems still largely adhere to a unidirectional flow of information from data source to prediction. But this leads to stale and fundamentally broken pipelines. We need to close these loops so the pipelines become more intelligent and flexible. The first step to achieving this is having a good monitoring system. While I did bash a bit on monitoring in earlier parts of this post, I do believe we should continue to think about monitoring of systems both at the predictive modelling layer as well as at the more upstream data layer. This is something that [Shreya](https://www.shreya-shankar.com/rethinking-ml-monitoring-1/) has done a lot of good writing about. 
+  - **Declarative systems for machine learning**. For a few years now, we've already seen the modelling tooling for ML become especially commoditized with the advent of software like [PyTorch](https://pytorch.org/) as well as higher-level libraries like [HF Transformers](https://huggingface.co/docs/transformers/index). This is all a welcome step for the field, but I believe we can do even more. Democratizing access to something involves developing abstractions that hide unnecessary implementation details for downstream users. [Declarative machine learning systems](https://arxiv.org/abs/2107.08148) are some of the most exciting next phases of this modelling evolution. Enabling a whole new generation of domain experts to apply ML to their problems requires tools that approximate what [Webflow and others](https://webflow.com/) did for web development.
+  - **Real-time machine learning**. ML systems are data-driven by design and so for most applications having the most up-to-date data allows for more accurate predictions. Real-time ML can mean a lot of things, but in general it's better to have fresher models. This is something we will continue to see investment in over the next few years, as building real-time systems is a difficult infrastructure challenge. I should add that I don't believe many companies (especially those at the "reasonable scale" described above) need real-time ML to get their first wins. But eventually we'll get to the point where it's not a huge lift to integrate these types of systems from day 1. [Chip](https://huyenchip.com/2020/12/27/real-time-machine-learning.html) has done very good work on this front. 
+  - **Better data management**. Data is the life-blood of every machine learning system, and in a world where ML powers most enterprise functions, the life-blood of every organization. And yet, I think we have a long way to go with developing tools for management of data across its lifecycle from sourcing and curating to labelling and analyzing. Don't get me wrong: I love Postgres as much as the next person. But I believe we can do better than just a handful of siloed tables sitting around in an organization's VPN. How can we make it easy for data practitioners to quickly answer questions about what data they have, what they can do with the data, and what they still need? In my experience, the deficiencies in tooling are especially pronounced when we consider unstructured data.
+  - **Merging business insight tooling with data science workflows**. The tooling around business insights has always been [more mature](https://www.hashpath.com/2020/11/build-a-modern-data-analytics-stack-from-scratch-in-under-an-hour/) than that of data science. One reason for this has to do with the fact that data analysts' output tends to be more readily surfaced to business leaders and hence BI tooling investment is deemed more critical to an organization's bottom line. As we get to the point where data science outputs more directly deliver value to organizations, I believe we will see an increasing synergy amongst the two stacks. When all is said and done, machine learning is a tool that can enable more efficient operations, improved metrics, and better products. In that way its goals are not that different from those of BI.
 
+And now stepping back from the tech, on the more meta trends side we will see a few things moving forward:
+- **Talent shortage remains rampant**. For many organizations these days it's hard to attract quality machine learning talent. When the big tech companies are dropping a median salary of [$330K/year](https://aipaygrad.es/) for AI talent, you can only imagine how heated the recruiting playing field is. It'll take years to have the supply eventually normalize the demand, but in the meantime this shortage will continue to justify companies' investment in MLOps tooling. If you can't hire a machine learning engineer, replace them! 😅
+- **Cultural adoption of ML thinking**. As we continue to get more advances in tooling and tech, organizations will adopt a machine learning mindset around their products and teams. In many ways, this also echoes the cultural shift that happened as [DevOps principles](https://www.atlassian.com/agile/devops) were adopted. A few things we can expect to see here are more holistic systems thinking (break the silos), augmenting feedback loops in products, and instilling a mentality of continual experimentation and learning. 
 
-- data engineering as an artifact position of the transition
-
-
-
-
-
-
-
-
-Meanwhile experienced practitioners are inundated with new offerings everyday like a lucky [Bachelor](https://abc.com/shows/the-bachelor) contestant. 
-
-
-- unless you are a startup founder, many ML practitioners tend to be bearish on the current tooling landscape
+Phew, that was a long post. If you're still with me, thanks for reading. While MLOps is a bit messy today, I am as optimistic as ever for the value machine learning promises to deliver for society. The future is bright.
