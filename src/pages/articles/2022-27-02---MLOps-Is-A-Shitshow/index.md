@@ -218,4 +218,4 @@ And all the pieces are lining up: an evolving tool chain to build systems that w
 The future is bright.
 
 
-*Thanks to [Goku Mohandas](https://twitter.com/gokumohandas), [Shreya Shankar](https://twitter.com/sh_reya), [Eugene Yan](https://twitter.com/eugeneyan), and [Demetrios Brinkmann](https://twitter.com/Dpbrinkm) for their insightful and thoughtful feedback on earlier versions of this post. The good stuff is theirs. Any bad jokes are mine.* 
+*Thanks to [Goku Mohandas](https://twitter.com/gokumohandas), [Shreya Shankar](https://twitter.com/sh_reya), [Eugene Yan](https://twitter.com/eugeneyan), [Demetrios Brinkmann](https://twitter.com/Dpbrinkm), and [Sarah Catanzaro](https://twitter.com/sarahcat21) for their insightful and thoughtful feedback on earlier versions of this post. The good stuff is theirs. Any bad jokes are mine.* 
