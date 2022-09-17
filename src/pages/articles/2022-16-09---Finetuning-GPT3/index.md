@@ -2,7 +2,7 @@
 title: "How to Fine-tune GPT3"
 date: "2022-09-16T23:40:37.121"
 layout: post
-draft: false
+draft: true
 path: "/posts/how-to-finetune-gpt3/"
 tags:
   - "Machine Learning"
