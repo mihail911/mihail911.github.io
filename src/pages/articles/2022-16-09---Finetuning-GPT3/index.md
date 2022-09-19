@@ -8,6 +8,7 @@ tags:
   - "Machine Learning"
   - "Natural Language Processing"
 description: "I discuss how to fine-tune GPT3, a state-of-the-art large language model that is revolutionizing natural language processing and understanding systems."
+img_url: "https://miro.medium.com/max/1024/1*b7nswbO9BHxFvO4TfFCU_Q@2x.jpeg"
 ---
 
 <figure>

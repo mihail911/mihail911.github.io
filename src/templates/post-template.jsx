@@ -8,12 +8,16 @@ class PostTemplate extends React.Component {
     const post = this.props.data.markdownRemark;
     const { title: postTitle, description: postDescription } = post.frontmatter;
     const description = postDescription !== null ? postDescription : subtitle;
-
+    const twitterCardUrl = post.frontmatter.img_url;
+    const DEFAULT_IMG_URL = "https://cdn.searchenginejournal.com/wp-content/uploads/2021/08/20-awesome-sources-of-free-data-612c26257336f-sej.jpg";
     return (
       <div>
         <Helmet>
           <title>{`${postTitle} - ${title}`}</title>
           <meta name="description" content={description} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={postTitle} />
+          <meta name="twitter:image" content={twitterCardUrl ? twitterCardUrl: DEFAULT_IMG_URL} />
         </Helmet>
         <PostTemplateDetails {...this.props} />
       </div>
@@ -67,6 +71,7 @@ export const pageQuery = graphql`
         tags
         date
         description
+        img_url
       }
     }
   }

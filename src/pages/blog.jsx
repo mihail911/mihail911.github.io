@@ -18,8 +18,6 @@ class BlogRoute extends React.Component {
         <Helmet>
           <title>{title}</title>
           <meta name="description" content={subtitle} />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:image" content="https://media.istockphoto.com/photos/stock-market-investment-graph-with-indicator-and-volume-data-picture-id1221293664?s=612x612" />
         </Helmet>
         <Sidebar {...this.props} />
         <div className="content">
