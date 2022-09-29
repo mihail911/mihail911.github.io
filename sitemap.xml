@@ -62,6 +62,7 @@
 <url> <loc>https://mihaileric.com/about</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/posts/mlops-is-a-mess/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/posts/how-to-finetune-gpt3/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://mihaileric.com/posts/i-sold-my-first-bootstrapped-saas-company/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/blog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://mihaileric.com/projects/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
