@@ -1,23 +1,23 @@
 ---
-title: "How to Fine-tune GPT3"
+title: "How to Finetune GPT3"
 date: "2022-09-16T23:40:37.121"
 layout: post
-draft: true
+draft: false
 path: "/posts/how-to-finetune-gpt3/"
 tags:
   - "Machine Learning"
   - "Natural Language Processing"
-description: "I discuss how to fine-tune GPT3, a state-of-the-art large language model that is revolutionizing natural language processing and understanding systems."
+description: "I discuss how to finetune GPT3, a state-of-the-art large language model that is revolutionizing natural language processing and understanding systems."
 img_url: "https://miro.medium.com/max/1024/1*b7nswbO9BHxFvO4TfFCU_Q@2x.jpeg"
 ---
 
 <figure>
-    <img src="./mountain.jpg" alt="mountain climbing as an analogy for GPT3 fine-tuning">
+    <img src="./mountain.jpg" alt="mountain climbing as an analogy for GPT3 finetuning">
 </figure>
 
 Since its announcement in 2020, [OpenAI's GPT3](https://openai.com/api/) model has taken the natural language processing community by storm, enabling a completely new paradigm for designing text-based applications and functionalities. 
 
-In this article, I am going to walk through how to fine-tune a GPT3 model for your use-case. In particular, I will be building a named entity recognition system over a legal document dataset.
+In this article, I am going to walk through how to finetune a GPT3 model for your use-case. To make the walk through concrete, I will be building a named entity recognition system over a legal document dataset.
 
 Let's begin. 
 
@@ -30,7 +30,7 @@ GPT3 was pretrained on a combined corpus of datasets including a filtered versio
 
 While there is not a huge amount of novelty around the fundamental modeling architecture, GPT3 showed that at scale in terms of data and number of parameters, the model developed impressive few-shot and zero-shot learning capabilities. 
 
-In order to elicit these capabilities, the model relies on what is called prompting, where it is provided a prompt with a set of natural language instructions describing a task and the model completes the prompt in a manner consistent with those instructions.
+In order to elicit these capabilities, the model relies on what is called *prompting*, where it is provided a prompt with a set of natural language instructions describing a task and the model completes the prompt in a manner consistent with those instructions.
 
 As one example, the model may be prompted to:
 ```
@@ -92,7 +92,7 @@ vat
 
 Interacting with GPT3, either for inference or finetuning, requires usage of the [OpenAI GPT3 API](https://beta.openai.com/docs/). 
 
-In order to finetune our model,we first need to construct a training dataset in accordance with the OpenAI API specification. In this case, we need to provide a JSONL format with newline-delimited examples each of which is formatted as follows:
+In order to finetune our model,we first need to construct a training dataset in accordance with the OpenAI API specification. In this case, we need to provide a JSONL file with newline-delimited examples each of which is formatted as follows:
 ```
 {
     "prompt": "Some prompt we provide.",
@@ -113,7 +113,9 @@ Concretely, we get examples such as this one:
 }
 ```
 
-There are a few things to note here. First observe that we end each prompt with the sequence `\n\n-->\n\n`. This is to ensure the model knows when to actually start generating the completion to the prompt. This is a really important formatting step to include. 
+There are a few things to note here. 
+
+First observe that we end each prompt with the sequence `\n\n-->\n\n`. This is to ensure the model knows when to actually start generating the completion to the prompt. This is a really important formatting step to include. 
 
 In addition, we end each completion with the sequence `\n###` to also indicate when the model's completion of the prompt is done. It's important that this stop sequence does not appear in any completion, so make sure that it is unique. 
 
@@ -127,7 +129,9 @@ Finally, for our purposes because we are building an NER model, we need to teach
 }
 ```
 
-One empirical observation, the ratio of negative examples to positive examples in the dataset will have a big impact on the model's ability to extract certain named entities because it determines the degree to which our dataset is imbalanced. We must tune this carefully, otherwise the model will learn to just always predict `no entity`. In practice, I've found that for a dataset of a few hundred positive examples, providing three negative examples ends up striking a good balance.
+One empirical observation: the ratio of negative examples to positive examples in the dataset will have a big impact on the model's ability to extract certain named entities because it determines the degree to which our dataset is imbalanced. 
+
+We must tune this carefully, otherwise the model will learn to just always predict `no entity`. In practice, I've found that for a dataset of a few hundred positive examples, providing three negative examples for each positive example ends up striking a good balance.
 
 Now we can turn to using the API.
 
@@ -137,14 +141,14 @@ pip install openai
 export OPENAI_API_KEY=[SECRET_API_KEY]
 ```
 
-Afterwards, we can use the installed commandline tool to validate our data file:
+Afterwards, we can use the installed command-line tool to validate our data file:
 ```
-openai tools finetunes.prepare_data -f [JSONL-DATA-FILE]
+openai tools fine_tunes.prepare_data -f [JSONL-DATA-FILE]
 ```
 
 This tool will give us suggestions for how to format the data in case we need to change something for optimal finetuning.
 
-Once this is done, we can actually do the fine-tuning:
+Once this is done, we can actually do the finetuning:
 ```
 openai api fine_tunes.create -t [JSONL-DATA-FILE] -m [BASE_MODEL]
 ```
@@ -155,9 +159,9 @@ OpenAI doesn't report official sizes for the models, but it seems likely based o
 
 For my experiments, I ended up using Curie and found it to perform reasonably well with only a handful of datapoints per label. 
 
-Once we launch the finetuning, expect it to take on the order of 1-10 minutes though this has a big dependence on how much traffic the API is getting as well as how many examples you are providing for fine-tuning. 
+Once we launch the finetuning, expect it to take on the order of 1-10 minutes though this has a big dependence on how much traffic the API is getting as well as how many examples you are providing for finetuning. 
 
-In my experience, for several hundred examples in the train dataset, it took on the order of 5-7 minutes to fine-tune the model.
+In my experience, for several hundred examples in the train dataset, it took on the order of 5-7 minutes to finetune the model.
 
 
 ## Evaluation
@@ -174,7 +178,7 @@ completion = openai.Completion.create(
                         stop=["\n###", "\n\n"])
 ```
 
-We can plot the performance of our system for a fixed prompt and different numbers of examples for each label. Here we are evaluating on a fixed held out validation set. We get the following performance behavior of the model:
+We can plot the performance of our system for a fixed prompt and different numbers of examples for each label. Here we are evaluating on a fixed held-out validation set. We get the following performance behavior of the model:
 
 <figure>
     <img src="./gpt3_ner_exp1.png" alt="gpt3 performance on ner for different numbers of examples">
@@ -185,9 +189,11 @@ What's crazy is how with just 25 examples per label we can get nearly 75% accura
 
 ## Final Thoughts
 
-And with just a few simple lines of code, we have fine-tuned one of the largest and most powerful language processing models available today for our usecase. It's incredible that we've been able to build a custom model in this fashion, something that would be impossible to do using commodity consumer hardware. 
+And with just a few simple lines of code, we have finetuned one of the largest and most powerful language processing models available today for our usecase. It's incredible that we've been able to build a custom model in this fashion, something that would be impossible to do using commodity consumer hardware. 
 
-We'll conclude with a final set of considerations. First off, cost can still be a concern for using GPT3. For a single finetune run of a few hundred examples, it cost over $3. This makes running large-scale hyperparameter tuning experiments relatively intractable for hobbyists unless you have the funds to spare. 
+We'll conclude with a final set of considerations.
+
+First off, cost can still be a concern for using GPT3. For a single finetune run of a few hundred examples, it cost over $3. This makes running large-scale hyperparameter tuning experiments relatively intractable for hobbyists unless you have the funds to spare. 
 
 Secondly, you should note that the performance of the model is quite sensitive to the prompt formulation. Modifying our prompt to say "from this statement" to "from the following legal statement" increased accuracy by ~6%. This certainly justifies the need for the emerging discipline of prompt engineering.
 
