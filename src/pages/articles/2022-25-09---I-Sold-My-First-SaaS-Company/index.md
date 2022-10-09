@@ -6,8 +6,9 @@ draft: false
 path: "/posts/i-sold-my-first-bootstrapped-saas-company/"
 tags:
   - "Machine Learning"
-  - "Natural Language Processing"
-description: "I discuss the recent acquisition of Confetti AI, an education company I boostrapped, and my lessons going through this process."
+  - "Business"
+  - "Data Science"
+description: "I discuss the recent acquisition of Confetti AI, an education company I bootstrapped, and my lessons going through this process."
 img_url: "https://townsquare.media/site/442/files/2020/02/SHRUNK-THE-AUDIENCE.jpg?w=1602&q=75"
 ---
 
@@ -15,7 +16,7 @@ img_url: "https://townsquare.media/site/442/files/2020/02/SHRUNK-THE-AUDIENCE.jp
     <img src="./victory.jpg" alt="standing atop a mountain as analogy for victory in getting my business acquired">
 </figure>
 
-This past August, I sold my first [SaaS company](https://www.confetti.ai/) closing the final chapter on a 2.5 year journey into  developing a user-focused technology platform, bootstrapping a business, and all the trials and tribulations that brought with it. 
+This past August, I sold my first [SaaS company](https://www.confetti.ai/) closing the final chapter on a 2.5 year journey into developing a user-focused technology platform, bootstrapping a business, and all the trials and tribulations that brought with it. 
 
 Now that I've had a few weeks to digest and reflect on this first foray into entrepreneurship I wanted to put my thoughts down. Hopefully the the process and learnings I went through can be helpful for future founders that are going through a similar adventure. 
 
