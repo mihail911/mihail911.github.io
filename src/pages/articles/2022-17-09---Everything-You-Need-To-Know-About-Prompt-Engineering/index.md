@@ -40,9 +40,14 @@ For this reason, prompt engineering is also sometimes called prompt programming 
 
 In this post, I will provide a comprehensive review of the most interesting research, techniques, and use-cases in prompt engineering as applied to large language models. My goal is also to provide a set of actionable steps for being a more effective prompt engineer. 
 
-Let's begin.
+If you're looking for a TLDR, here's a cheatsheet with tips/tricks when designing LLM prompts:
 
-TODO: Provide a TLDR of practical prompt engineering tips/tricks (using Monica Lent-style template).
+<figure>
+	<img src="./llm_cheatsheet.png" alt="Prompt engineering cheatsheet for large language models">
+</figure>
+
+Otherwise, let's begin.
+
 
 
 ## Principles for Prompt Engineering
@@ -102,7 +107,7 @@ Other research by [Reynolds and McDonell](https://arxiv.org/pdf/2102.07350.pdf) 
 This further justifies the need for really carefully-designed prompt engineering. Thus, they propose a few principles that should be employed when prompting:
 - Use declarative and direct signifiers for tasks such as *translate* or *rephrase this paragraph so that a 2nd grader can understand it*.
 - Use few-shot demonstrations when the task requires a bespoke format, recognizing that few-shot examples may be interpreted holistically by the model rather than as independent samples.
-- Specify tasks using characters or characteristic situations as a proxy for an intention such as asking Gandhi or Nietzsche to solve a task. Here you are tappin g into LLMs' sophisticated understanding of analogies.
+- Specify tasks using characters or characteristic situations as a proxy for an intention such as asking Gandhi or Nietzsche to solve a task. Here you are tapping into LLMs' sophisticated understanding of analogies.
 - Constrain the possible completion output using careful syntactic and lexical prompt formulations such as saying *Translate this French **sentence** to English*  or by adding quotes around the French sentence.
 - Encourage the model to break down problems into sub problems via step-by-step reasoning.
 
