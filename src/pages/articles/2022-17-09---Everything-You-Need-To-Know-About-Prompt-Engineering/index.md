@@ -49,7 +49,6 @@ If you're looking for a TLDR, here's a cheatsheet with tips/tricks when designin
 Otherwise, let's begin.
 
 
-
 ## Principles for Prompt Engineering
 
 Prompting for large language models typically takes one of two forms: few-shot and zero-shot. In the few-shot setting, a translation prompt may be phrased as follows:
