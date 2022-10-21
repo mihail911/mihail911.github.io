@@ -29,8 +29,8 @@
       "path---posts-fundamental-deep-learning-algorithms-to-learn-f450c24edaab54da3649.js.map"
     ],
     "component---src-pages-projects-jsx": [
-      "component---src-pages-projects-jsx-57b44ffd7c5533a6c636.js",
-      "component---src-pages-projects-jsx-57b44ffd7c5533a6c636.js.map"
+      "component---src-pages-projects-jsx-949da9f52662f5e4bf55.js",
+      "component---src-pages-projects-jsx-949da9f52662f5e4bf55.js.map"
     ],
     "path---posts-regularization": [
       "path---posts-regularization-d2722431a1ad137def71.js",
@@ -161,8 +161,8 @@
       "path---posts-state-of-the-art-question-answering-streamlit-huggingface-22315036e5c80dc46d54.js.map"
     ],
     "path---index": [
-      "path---index-417f10671b3477240138.js",
-      "path---index-417f10671b3477240138.js.map"
+      "path---index-1f38fc88dab331d57a8c.js",
+      "path---index-1f38fc88dab331d57a8c.js.map"
     ],
     "path---posts-we-need-data-engineers-not-data-scientists": [
       "path---posts-we-need-data-engineers-not-data-scientists-7663bb2021e737cc595e.js",
@@ -283,9 +283,9 @@
       "path---posts-principal-components-analysis-ff652afc922903cfac18.js.map"
     ],
     "app": [
-      "app-de8700c8a7ab1f99fd4b.js",
+      "app-2ad74706ad32fc7432b9.js",
       "build-js-styles.css",
-      "app-de8700c8a7ab1f99fd4b.js.map",
+      "app-2ad74706ad32fc7432b9.js.map",
       "build-js-styles.css.map"
     ],
     "path---posts-model-evaluation": [
@@ -321,8 +321,8 @@
       "path---posts-object-detection-with-rcnn-02377032049dc1049b92.js.map"
     ],
     "path---about": [
-      "path---about-f7cb1eb2bad9dbfe6015.js",
-      "path---about-f7cb1eb2bad9dbfe6015.js.map"
+      "path---about-b52407c275dde61b23d8.js",
+      "path---about-b52407c275dde61b23d8.js.map"
     ],
     "path---posts-mlops-is-a-mess": [
       "path---posts-mlops-is-a-mess-422460867a847fee0416.js",
