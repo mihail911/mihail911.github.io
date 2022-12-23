@@ -7,16 +7,20 @@ class ProjectPageDetails extends React.Component {
   render() {
     return (
       <div>
-        {/* ENGINEERING PLAYGROUND */}
         <div className="section-title">
           Engineering Playground
         </div>
         <ProjectDescription
+          title="AutoPlot"
+          picName="autoplot"
+          link="https://autoplot.app"
+          description="What if you could do any data analysis by just speaking in natural language? AutoPlot is a tool we developed to explore the limits of next generation human interfaces for visually understanding data."
+        />
+        <ProjectDescription
           title="Confetti AI"
           picName="confetti"
           link="https://www.confetti.ai/"
-          description="Confetti AI is an educational platform helping people learn the skills to succeed in artificial intelligence careers. It provides a collection of targeted resources and tools to empower the next generation of AI practitioners."
-          meta="Subscribe to our newsletter!"
+          description="Confetti AI is an educational platform helping people learn the skills to succeed in artificial intelligence careers. It provides a collection of targeted resources and tools to empower the next generation of AI practitioners. We were acquired by Towards AI in 2022."
         />
         <ProjectDescription
           title="Where Does Tax Money Go"

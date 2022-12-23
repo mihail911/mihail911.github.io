@@ -20,6 +20,7 @@ I also built [Confetti AI](https://www.confetti.ai/), the premier educational pl
 ### Engineering
 - I was the 8th hire at [RideOS](https://rideos.ai/) a Sequoia VC-backed autonomous mobility startup [acquired by Gopuff](https://techcrunch.com/2021/06/17/delivery-service-gopuff-acquires-rideos-for-115-million-plus/).
 - I'm problem-driven (not tool-driven) so I build across the full engineering stack from [hardware](/posts/building-a-deep-learning-computer/) to [software](/posts/state-of-the-art-question-answering-streamlit-huggingface/).
+- I like to hack for fun. [Here](/projects/) are some side projects I've worked on.
 
 ### Education
 - I have studied at the [top institutions](https://www.exeter.edu/) in [the world](https://www.stanford.edu/).

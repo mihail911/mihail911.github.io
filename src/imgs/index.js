@@ -17,6 +17,7 @@ import gluePic from './glue2.jpg';
 import primerPic from './ml_primer_img.png';
 import observersPic from './observers.png';
 import taxesPic from './wheredoestaxmoneygo.png';
+import autoplotPic from './autoplot_ex.jpeg';
 
 const nameToPic = {
   adversarial: adversarialPic,
@@ -37,7 +38,8 @@ const nameToPic = {
   nlp4convai: aclWorkshopPic,
   dialoglue: gluePic,
   primer: primerPic,
-  observers: observersPic
+  observers: observersPic,
+  autoplot: autoplotPic
 };
 
 export default nameToPic;
