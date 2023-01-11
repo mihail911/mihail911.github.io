@@ -11,6 +11,12 @@ class ProjectPageDetails extends React.Component {
           Engineering Playground
         </div>
         <ProjectDescription
+          title="Rick and Mortify"
+          picName="randm"
+          link="https://rickandmortify.com/"
+          description="When will we see an AI system listed in the closing credits of your favorite feature-length film? Rick and Mortify is a tool we built using the state-of-the-art in large vision and language models to create never-before-seen episodes of Rick and Morty with minimal human intervention."
+        />
+        <ProjectDescription
           title="AutoPlot"
           picName="autoplot"
           link="https://autoplot.app"

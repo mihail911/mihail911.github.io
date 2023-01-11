@@ -18,6 +18,7 @@ import primerPic from './ml_primer_img.png';
 import observersPic from './observers.png';
 import taxesPic from './wheredoestaxmoneygo.png';
 import autoplotPic from './autoplot_ex.jpeg';
+import randmPic from './randm.png';
 
 const nameToPic = {
   adversarial: adversarialPic,
@@ -39,7 +40,8 @@ const nameToPic = {
   dialoglue: gluePic,
   primer: primerPic,
   observers: observersPic,
-  autoplot: autoplotPic
+  autoplot: autoplotPic,
+  randm: randmPic
 };
 
 export default nameToPic;

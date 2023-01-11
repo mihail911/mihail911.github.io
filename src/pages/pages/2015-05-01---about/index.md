@@ -36,9 +36,9 @@ I also built [Confetti AI](https://www.confetti.ai/), the premier educational pl
 - I got into writing answers on Quora a few years back and amassed [~450K views on my answers](https://www.quora.com/profile/Mihail-Eric) from a 2 week stretch on the platform. 
 
 **Trending**
-- [What is the Data Science Life Cycle?](/posts/introduction-data-science-life-cycle/)
+- [A Complete Introduction to Prompt Engineering](/posts/a-complete-introduction-to-prompt-engineering/)
 - [Building a V1 Machine Learning Model](/posts/machine-learning-project-model-v1/)
-- [Machine Learning Error Analysis](/posts/machine-learning-project-error-analysis-model-v2/)
+- [How to Finetune GPT3](/posts/how-to-finetune-gpt3/)
 
 ### Speaking
 - I'm a regular co-host on the [MLOps Community](https://mlops.community/) podcast, where we bring in ML and data industry leaders to get spicy takes on tooling and future trends. The MLOps community is the largest group of MLOps practitioners globally. A sample of some of our shows:
@@ -48,6 +48,8 @@ I also built [Confetti AI](https://www.confetti.ai/), the premier educational pl
     - [Everything Kubeflow: Ryan Russon](https://www.youtube.com/watch?v=mbwwKf-nz3U&t=12s&ab_channel=MLOps.community) - A discussion with a Kubeflow expert on when and why to use this orchestration platform
     - [Turning Redis into a Composable, ML Data Platform: Sam Partee](https://www.youtube.com/watch?v=5jzPkHGwYMs) - A discussion with a Redis Principal AI Engineer on how everyone's favorite cache is evolving into new ML use-cases 
     - [Building Better Data Teams: Leanne Fitzpatrick](https://www.youtube.com/watch?v=JxVS3-4wyKc) - A discussion with the Director of Data Science at the Financial Times on how to organize and manage effective data teams 
+- Everything Prompt Engineering, Generative AI [[Apple Podcasts](https://podcasts.apple.com/us/podcast/prompt-engineering-generative-ai-mihail-eric-founder/id1615142314?i=1000587796567), [Google Podcasts](https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5idXp6c3Byb3V0LmNvbS8xOTQwMDExLnJzcw/episode/QnV6enNwcm91dC0xMTc3NDg3OQ?sa=X&ved=0CAUQkfYCahcKEwi4wf-TjY_8AhUAAAAAHQAAAAAQAQ), [Spotify](https://open.spotify.com/episode/5peRMzkpOKYNPsdNrPoDV3?si=h8DuAJgPSiSM74V6FPFPFQ)] - [Infinite Machine Learning](https://podcasts.apple.com/us/podcast/infinite-machine-learning/id1615142314)
+- [Machine Learning Operations: Delivering on the Data-Driven Promises of Artificial Intelligence](https://www.youtube.com/watch?v=tMf9aSbVwXQ&ab_channel=TTI%2FVanguard) - [TTI/Vanguard Artificial Intelligence](https://www.ttivanguard.com/node/23651)
 - [Delivering Machine Learning Value: A Guide For Humans](./Delivering-Machine-Learning-Value-A-Guide-For-Humans.pdf) - Discord Distinguished Speaker Series
 - Interview on ML Career, Education, and More [[Apple Podcasts](https://lnkd.in/gfnUPTsC), [Google Podcasts](https://lnkd.in/gukS-7AP), [Spotify](https://lnkd.in/g8JwirzE)] - [Infinite Machine Learning](https://podcasts.apple.com/us/podcast/infinite-machine-learning/id1615142314)
 - [What Researchers and Engineers Can Learn From Each Other](https://www.youtube.com/watch?v=d9xVXqKq3sU) - [DataTalks.Club](https://datatalks.club/)
