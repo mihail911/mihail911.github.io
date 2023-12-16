@@ -75,4 +75,4 @@ And with that, you have completed a thorough 4-year curriculum designed to prepa
 
 An alternate route is to go through the above list and take courses to fill in your own conceptual/skill gaps. While there's a lot to learn, it's an exciting time to be involved with artificial intelligence with countless opportunities and promising problem spaces. Good luck!
 
-*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=complete-artificial-intelligence-undergraduate-course-plan) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*
+*Shameless Pitch Alert: If you're interested in cool generative AI tools, I'm currently building the [most advanced AI-powered image and video editor](https://storia.ai/lab?utm_source=website&utm_campaign=mihail-personal-page) which has been used by thousands of marketers, designers, and creatives to drastically improve their speed and quality of visual asset creation.*

@@ -197,6 +197,7 @@ Prompt engineering may evolve in the same way that hyperparameter tuning did whe
 
 In any case, there's exciting stuff happening on the horizon in prompting for large language models. Keep an eye out for this field. 
 
+*Shameless Pitch Alert: If you're interested in cool generative AI tools, I'm currently building the [most advanced AI-powered image and video editor](https://storia.ai/lab?utm_source=website&utm_campaign=mihail-personal-page) which has been used by thousands of marketers, designers, and creatives to drastically improve their speed and quality of visual asset creation.*
 
 ## Further Reading
 

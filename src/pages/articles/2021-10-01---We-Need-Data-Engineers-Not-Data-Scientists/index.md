@@ -157,4 +157,6 @@ But you'll probably find more of those kinds of roles at industry research labs 
 
 If nothing else, I believe it's important to make the expectations of newcomers to data fields reasonable and calibrated. We must acknowledge that [data science is different now](https://veekaybee.github.io/2019/02/13/data-science-is-different/). I hope this post was able to shed some light on the state of the field today. It's only when we know where we are that we know where we need to go. 
 
+*Shameless Pitch Alert: If you're interested in cool generative AI tools, I'm currently building the [most advanced AI-powered image and video editor](https://storia.ai/lab?utm_source=website&utm_campaign=mihail-personal-page) which has been used by thousands of marketers, designers, and creatives to drastically improve their speed and quality of visual asset creation.*
+
 *This article has been graciously translated to [Chinese](https://mp.weixin.qq.com/s/WEaj0htYNzi1Q4E9wzvq3g) and [Japanese](https://itnews.org/news_contents/we-need-data-engineers-not-data-scientists) through a community effort.*

@@ -164,3 +164,5 @@ However, such all-encompassing results have thus far been quite elusive in natur
 paper because it has taken the first steps in demonstrating that language model transfer learning may be the ImageNet equivalent
 for natural language processing. It will be exciting to see how these results are built upon in the future!
 
+*Shameless Pitch Alert: If you're interested in cool generative AI tools, I'm currently building the [most advanced AI-powered image and video editor](https://storia.ai/lab?utm_source=website&utm_campaign=mihail-personal-page) which has been used by thousands of marketers, designers, and creatives to drastically improve their speed and quality of visual asset creation.*
+

@@ -217,5 +217,7 @@ And all the pieces are lining up: an evolving tool chain to build systems that w
 
 The future is bright.
 
+*Shameless Pitch Alert: If you're interested in cool generative AI tools, I'm currently building the [most advanced AI-powered image and video editor](https://storia.ai/lab?utm_source=website&utm_campaign=mihail-personal-page) which has been used by thousands of marketers, designers, and creatives to drastically improve their speed and quality of visual asset creation.*
+
 
 *Thanks to [Goku Mohandas](https://twitter.com/gokumohandas), [Shreya Shankar](https://twitter.com/sh_reya), [Eugene Yan](https://twitter.com/eugeneyan), [Demetrios Brinkmann](https://twitter.com/Dpbrinkm), and [Sarah Catanzaro](https://twitter.com/sarahcat21) for their insightful and thoughtful feedback on earlier versions of this post. The good stuff is theirs. Any bad jokes are mine.* 

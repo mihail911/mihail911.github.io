@@ -153,4 +153,4 @@ I will also be using an [Anaconda environment](https://docs.conda.io/projects/co
 
 And with that organization completed, we are ready to move on to the [next step](/posts/performing-exploratory-data-analysis/) of getting our dataset and doing some exploratory data analysis. 
 
-*Shameless Pitch Alert: If you're interested in practicing MLOps, data science, and data engineering concepts, check out [Confetti AI](https://www.confetti.ai/?utm_source=personal-blog&utm_medium=web&utm_campaign=setting-up-a-machine-learning-project) the premier educational machine learning platform used by students at Harvard, Stanford, Berkeley, and more!*
+*Shameless Pitch Alert: If you're interested in cool generative AI tools, I'm currently building the [most advanced AI-powered image and video editor](https://storia.ai/lab?utm_source=website&utm_campaign=mihail-personal-page) which has been used by thousands of marketers, designers, and creatives to drastically improve their speed and quality of visual asset creation.*
