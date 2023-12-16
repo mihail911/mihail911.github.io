@@ -6,9 +6,15 @@ path: "/about"
 
 I optimize for impact. I strive to work with talented people to do amazing things. If you are a misfit, a rebel, or a troublemaker working on something interesting, feel free to [send me a message.](https://twitter.com/mihail_eric)
 
+I'm currently working on the [first comprehensive prompting for artists course](https://promptingforartists.storia.ai/?utm_source=website&utm_campaign=mihail-personal-page) designed to teach artists and creatives how to use text-to-image prompting systems effectively for their work. The goal is to take anyone from beginner to expert prompting practitioner in a matter of weeks!
+
+### Background
+
 I'm an engineer, researcher, and educator that has helped start teams at innovative organizations such as Amazon Alexa and RideOS.  
 
-I [run a consultancy](https://www.pametandata.com) helping companies across verticals deliver machine learning and data-driven solutions to their hardest problems with a special focus on NLP, recommendation systems, tabular data, and computer vision domains. We've helped teams deliver 33% lift on key business metrics in <6 weeks. If that is of interest, [don't hesitate to reach out](mailto:info@pametandata.com). 
+I'm a cofounder of [Storia AI](https://storia.ai?utm_source=website&utm_campaign=mihail-personal-page) where we are building an AI-powered creative assistant for fast and delightful video production. We're backed by [incredible investors](https://www.madronavl.com/) and are working on game-changing technology. If that's of interest of you, [don't hesitate to reach out](mailto:info@storia.ai).
+
+In the past I've [run a consultancy](https://www.pametandata.com) helping companies across verticals deliver machine learning and data-driven solutions to their hardest problems with a special focus on NLP, recommendation systems, tabular data, and computer vision domains. 
 
 I also built [Confetti AI](https://www.confetti.ai/), the premier educational platform for training the next generation of machine learning practitioners, which was acquired by [Towards AI](https://towardsai.net/p/news/towards-ai-announces-acquisition-of-confetti-ai-a-leading-platform-for-ai-interview-preparation).
 
