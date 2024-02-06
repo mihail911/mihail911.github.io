@@ -94,7 +94,7 @@ After the mic ended, I went to the host and finally admitted it was my first tim
 
 Since that first time onstage, I've done over 100 open mics around Los Angeles and the Bay Area. 
 
-In the early days, I was bombing a lot. So to make the process of bombing a bit more palatable, I named every set where I bombed after a US nuclear weapon detonation. This is what the recordings of my sets looked like in my phone:
+In the early days, I was bombing a lot. So to make the process of bombing a bit more palatable, I named every set where I bombed after a US nuclear weapon detonation codename. This is what the recordings of my sets looked like in my phone:
 
 <figure>
     <img src="./bombs.jpeg" alt="my early bombs">
