@@ -19,7 +19,7 @@ Software engineers don't typically do standup comedy. It's not something we're k
 
 Two years ago, I decided to try my hand at comedy. 
 
-Since then I've done over 100 open mics and shows trying to get strangers to laugh at my jokes.
+Since then I've done over 100 shows in the Bay Area and Los Angeles trying to get strangers to laugh at my jokes.
 
 And next fall my Netflix special will be released (as soon as I get the producers to stop putting it in the **horror** category). 
 
@@ -88,11 +88,9 @@ As someone in tech who went to good schools, had a stable job, and so ended up l
 
 It felt so visceral, so raw, so unhinged. There's a reason why people say standup comedy is like therapy (and at $5/5 min it's certainly the cheapest therapy you can get). Somehow even in the at times vast misfortune of everyday life, these people found ways to laugh. What an incredible art form. 
 
-I was hooked. 
-
 After the mic ended, I went to the host and finally admitted it was my first time so I could get feedback. The biggest advice given to me was *just do it again*. Most people get scared after their harrowingly bad experience and never come back.
 
-Since that first time onstage, I've done over 100 open mics around Los Angeles and the Bay Area. 
+But I was hooked. 
 
 In the early days, I was bombing a lot. So to make the process of bombing a bit more palatable, I named every set where I bombed after a US nuclear weapon detonation codename. This is what the recordings of my sets looked like in my phone:
 
