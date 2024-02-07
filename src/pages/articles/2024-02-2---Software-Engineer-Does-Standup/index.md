@@ -33,7 +33,7 @@ First and foremost, I wanted to get better at public speaking. I had seen and do
 
 Tough standard to compare to admittedly.
 
-But I wanted to learn how to own a room through oration, how to feel the ebs and flows of a crowd, to guide an audience to a place and incite feeling in them like a flame. 
+But I wanted to learn how to own a room through oration, how to feel the ebbs and flows of a crowd, to guide an audience to a place and incite feeling in them like a flame. 
 
 I had previously done a public speaking course in college and tried [Toastmasters](https://www.toastmasters.org/) but neither really clicked for me. 
 
