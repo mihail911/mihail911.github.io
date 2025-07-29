@@ -169,8 +169,8 @@
       "path---posts-state-of-the-art-question-answering-streamlit-huggingface-fcb86bc47503c4d3f23f.js.map"
     ],
     "path---index": [
-      "path---index-753e1d51168b3ea06fb6.js",
-      "path---index-753e1d51168b3ea06fb6.js.map"
+      "path---index-c2f1921cc6c49d6531f5.js",
+      "path---index-c2f1921cc6c49d6531f5.js.map"
     ],
     "path---posts-we-need-data-engineers-not-data-scientists": [
       "path---posts-we-need-data-engineers-not-data-scientists-82579ca164b58578073f.js",
@@ -295,9 +295,9 @@
       "path---posts-principal-components-analysis-3cf1c0afd4d4cfcaa3e3.js.map"
     ],
     "app": [
-      "app-8e35bf6fcc4c0436fc84.js",
+      "app-24921f055fcb92a1c2e0.js",
       "build-js-styles.css",
-      "app-8e35bf6fcc4c0436fc84.js.map",
+      "app-24921f055fcb92a1c2e0.js.map",
       "build-js-styles.css.map"
     ],
     "path---posts-model-evaluation": [
@@ -341,8 +341,8 @@
       "path---posts-object-detection-with-rcnn-53dd6d5ba022198fa92a.js.map"
     ],
     "path---about": [
-      "path---about-af699a64948d8959b7d5.js",
-      "path---about-af699a64948d8959b7d5.js.map"
+      "path---about-311c3c97c7649ee5fd6b.js",
+      "path---about-311c3c97c7649ee5fd6b.js.map"
     ],
     "path---posts-mlops-is-a-mess": [
       "path---posts-mlops-is-a-mess-5032840bbd6915772bd9.js",
