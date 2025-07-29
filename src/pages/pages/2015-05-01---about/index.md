@@ -6,13 +6,15 @@ path: "/about"
 
 I optimize for impact. I strive to work with talented people to do amazing things. If you are a misfit, a rebel, or a troublemaker working on something interesting, feel free to [send me a message.](https://twitter.com/mihail_eric)
 
-I'm currently working on the [most advanced AI-powered image and video editor](https://storia.ai/lab?utm_source=website&utm_campaign=mihail-personal-page) which has been used by thousands of marketers, designers, and creatives to drastically improve their speed and quality of visual asset creation. 
+I'm Head of AI at a stealth startup building the future AI-powered revenue platform for GTM teams.
+
+I run a [free email course](https://course.aiengineermastery.com) helping teach fundamental skills to ace AI engineer interviews based on my experience interviewing 100s of people for AI roles. I'm also building a [platform to help people practice AI engineering skills](https://aiengineermastery.com). 
 
 ### Background
 
 I'm an engineer, researcher, and educator that has helped start teams at innovative organizations such as Amazon Alexa and RideOS.  
 
-I'm a cofounder of [Storia AI](https://storia.ai?utm_source=website&utm_campaign=mihail-personal-page) where we are building an AI-powered creative assistant for fast and delightful image and video generation. We're backed by [incredible investors](https://www.madronavl.com/) and are working on game-changing technology. If that's of interest of you, [don't hesitate to reach out](mailto:info@storia.ai).
+Previously I was a cofounder of [Storia AI](https://storia.ai?utm_source=website&utm_campaign=mihail-personal-page), a [YC](https://www.ycombinator.com/) company, where we we built an open-source AI copilot that knows your codebase and its context. 
 
 In the past I've [run a consultancy](https://www.pametandata.com) helping companies across verticals deliver machine learning and data-driven solutions to their hardest problems with a special focus on NLP, recommendation systems, tabular data, and computer vision domains. 
 
@@ -33,7 +35,8 @@ I also built [Confetti AI](https://www.confetti.ai/), the premier educational pl
 - I believe in paying things forward, so I [build tools](https://www.confetti.ai) and [create resources](/posts/complete-artificial-intelligence-undergraduate-course-plan/) to help people learn. Check out my [blog](/blog/) to see what I teach about.
 
 ### Writing
-**Popular**  
+**Popular** 
+- [How Alexa Dropped the Ball on Being the Top Conversational System on the Planet](https://x.com/mihail_eric/status/1800578001564057754) (>1M Views, top of [Hacker News](https://news.ycombinator.com/item?id=40659281)) 
 - [We Don't Need Data Scientists, We Need Data Engineers](/posts/we-need-data-engineers-not-data-scientists/) (>180K Views, Top of [Hacker News](https://news.ycombinator.com/item?id=25775872) Front Page, Top [KDNuggets Article of 2021](https://www.kdnuggets.com/2021/12/top-stories-2021.html))  
 - [A Machine Learning Primer](https://www.confetti.ai/assets/ml-primer/ml_primer.pdf) (>50K Views, [Top All-Time Reddit r/datascience](https://www.reddit.com/r/datascience/comments/j4auif/i_created_a_complete_overview_of_machine_learning/))
 - [MLOps Is a Mess But That's to be Expected](/posts/mlops-is-a-mess/) (>35K Views, Top of [Hacker News](https://news.ycombinator.com/item?id=30529305) Front Page) 
