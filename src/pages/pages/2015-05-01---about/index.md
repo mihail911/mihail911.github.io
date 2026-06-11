@@ -6,9 +6,14 @@ path: "/about"
 
 I optimize for impact. I strive to work with talented people to do amazing things. If you are a misfit, a rebel, or a troublemaker working on something interesting, feel free to [send me a message.](https://twitter.com/mihail_eric)
 
-I'm Head of AI at a stealth startup building the future AI-powered revenue platform for GTM teams.
+I'm Head of AI at [Monaco](https://www.monaco.com/), where we are building the future AI-powered revenue platform for GTM teams. We are backed by Founders Fund, Benchmark, Human Capital, Garry Tan, and other world-class investors.
 
-I run a [free email course](https://course.aiengineermastery.com) helping teach fundamental skills to ace AI engineer interviews based on my experience interviewing 100s of people for AI roles. I'm also building a [platform to help people practice AI engineering skills](https://aiengineermastery.com). 
+I'm a lecturer at Stanford where I teach [The Modern Software Developer](https://themodernsoftware.dev). It's the first class of its kind in the world focusing on how every aspect of software engineering is changing because of coding LLMs and how you can learn the tools/methodologies to best prepare yourself for the future. 
+
+I am also teaching a public version of the course geared toward professional developers called [AI Software Development: From First Prompt to Production Code](https://maven.com/the-modern-software-developer/ai-course). I've trained engineers at AWS, Google, Cisco, Dell, and other F500 enterprises. **Next cohort starting in June 2026**!
+
+Subscribe to [my newsletter](https://themodernsoftware.dev/) where I teach 32000+ developers state-of-the-art techniques in AI software engineering. I also run a Youtube series called [The Build System](https://www.youtube.com/@modernsoftwaredeveloper) where I have the top AI engineers build something using AI coding tools showcasing their end-to-end workflows. 
+
 
 ### Background
 
@@ -36,6 +41,7 @@ I also built [Confetti AI](https://www.confetti.ai/), the premier educational pl
 
 ### Writing
 **Popular** 
+- [How to Code Claude Code in 200 Lines of Code](https://www.mihaileric.com/The-Emperor-Has-No-Clothes/) (>100K View, top of [Hacker News](https://news.ycombinator.com/item?id=46545620))
 - [How Alexa Dropped the Ball on Being the Top Conversational System on the Planet](https://x.com/mihail_eric/status/1800578001564057754) (>1M Views, top of [Hacker News](https://news.ycombinator.com/item?id=40659281)) 
 - [We Don't Need Data Scientists, We Need Data Engineers](/posts/we-need-data-engineers-not-data-scientists/) (>180K Views, Top of [Hacker News](https://news.ycombinator.com/item?id=25775872) Front Page, Top [KDNuggets Article of 2021](https://www.kdnuggets.com/2021/12/top-stories-2021.html))  
 - [A Machine Learning Primer](https://www.confetti.ai/assets/ml-primer/ml_primer.pdf) (>50K Views, [Top All-Time Reddit r/datascience](https://www.reddit.com/r/datascience/comments/j4auif/i_created_a_complete_overview_of_machine_learning/))
@@ -44,12 +50,9 @@ I also built [Confetti AI](https://www.confetti.ai/), the premier educational pl
 - [Complete Artificial Intelligence Undergraduate Course Plan](/posts/complete-artificial-intelligence-undergraduate-course-plan/) (>22K Views)  
 - I got into writing answers on Quora a few years back and amassed [~450K views on my answers](https://www.quora.com/profile/Mihail-Eric) from a 2 week stretch on the platform. 
 
-**Trending**
-- [A Complete Introduction to Prompt Engineering](/posts/a-complete-introduction-to-prompt-engineering/)
-- [Building a V1 Machine Learning Model](/posts/machine-learning-project-model-v1/)
-- [How to Finetune GPT3](/posts/how-to-finetune-gpt3/)
 
 ### Speaking
+- I was interviewed by EO on [becoming an AI-native engineer](https://www.youtube.com/watch?v=wEsjK3Smovw). Accompanying [video in Korean](https://www.youtube.com/watch?v=qEF-eUaTq0Y). 
 - I'm a regular co-host on the [MLOps Community](https://mlops.community/) podcast, where we bring in ML and data industry leaders to get spicy takes on tooling and future trends. The MLOps community is the largest group of MLOps practitioners globally. A sample of some of our shows:
     - [Model Monitoring in Practice: Krishnaram Kenthapadi](https://www.youtube.com/watch?v=xnNtq3Swfk4&t=924s&ab_channel=MLOps.community) - A discussion with the Chief Scientist of Fiddler AI, a leading model monitoring company
     - [Real-time Data Processing: Jacob Tsafatinos](https://www.youtube.com/watch?v=GU00tNFmasY&ab_channel=MLOps.community) - A discussion with the lead architect of Uber's ad events processing system
